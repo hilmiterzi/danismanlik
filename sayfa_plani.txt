@@ -1,0 +1,44 @@
+
+- We don't want to do wordpress because this is just a portfolio website.
+- We wanna do plain CSS and HTML, on one index file
+- We wanna minimize Javascript as much as possible.
+- we want responsiveness, for general mobile format as well.
+
+Yurtdışı Eğitim Ve Vize Danışmanlığı
+
+
+[BİLGİSAYAR
+hero kismi yap, slide'lı, 
+- Sınavsız Üniversite ( Altında bir cümle, ve tıkla linki)
+- Work And Travel ( Altında bir cümle, ve tıkla linki)
+- Çin'de Üniversite Eğitimi Ve Avantajları (Deepseek örneği)( Altında bir cümle, ve tıkla linki)
+- Çin'de burslu Eğitim ( Altında bir cümle, ve tıkla linki)
+- Yurtdışında dil okulları ( Altında bir cümle, ve tıkla linki)
+- MBA Master ( Altında bir cümle, ve tıkla linki)
+]
+
+2. KISIM HEADER'in ALTINDA BAŞLIKLAR
+
+[3 tane başlıkla birlikte tam altında kısa paragraflar]
+[sol tarafta bir resim (resim boş olsun şimdilik), sağında bir paragraf yazı, Work and travel ile ilgil]
+[sağ tarafta bir resim (resim boş olsun şimdilik), solunda bir paragraf yazı]
+
+
+[MOBİL FORMATI
+- SOLDA MENÜ, TIKLADIĞINDA AÇILSIN VE SEÇENEKLER SUNSUN
+hero kismi yap, slide'lı, İÇERİSİNDE ŞUNLAR OLSUN:
+- Sınavsız Üniversite ( Altında bir cümle, ve tıkla linki)
+- Work And Travel ( Altında bir cümle, ve tıkla linki)
+- Çin'de Üniversite Eğitimi Ve Avantajları (Deepseek örneği)( Altında bir cümle, ve tıkla linki)
+- Çin'de burslu Eğitim ( Altında bir cümle, ve tıkla linki)
+- Yurtdışında dil okulları ( Altında bir cümle, ve tıkla linki)
+- MBA Master ( Altında bir cümle, ve tıkla linki)
+]
+
+Hero kısmı bittikten sonra bilgilendirmeler. MOBİL ufak bir resim, altında başlık ve yazılar. Yazılar kısa gözüksün. " Daha fazla"ya tıkladıktan sonra yazının tamamı gözüksün.
+
+Dediğim gibi farklı
+
+
+
+
