@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yurtdışı Eğitim Ve Vize Danışmanlığı</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <style>
         :root {
@@ -747,6 +747,77 @@
                 font-size: 2rem;
             }
         }
+
+        /* Hero Dots Navigation */
+        .hero-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .hero-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero-dot:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-dot.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+
+        /* Hero Arrow Navigation */
+        .hero-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(26, 64, 121, 0.8);
+            border: 2px solid white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .hero-arrow:hover {
+            background: var(--primary-color);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .hero-arrow-left {
+            left: 20px;
+        }
+
+        .hero-arrow-right {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-arrow {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -809,6 +880,13 @@
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
+        <div class="hero-dots"></div>
+        <button class="hero-arrow hero-arrow-left" aria-label="Önceki slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-arrow hero-arrow-right" aria-label="Sonraki slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </section>
 
     <section class="info-section desktop-content">
@@ -1232,17 +1310,54 @@
             document.querySelector('.nav-menu').classList.toggle('active');
         });
 
-        // Simple hero slider
+        // Hero slider with dots and arrows
         let currentSlide = 0;
         const slides = document.querySelectorAll('.hero-slide');
+        const dotsContainer = document.querySelector('.hero-dots');
+        const prevButton = document.querySelector('.hero-arrow-left');
+        const nextButton = document.querySelector('.hero-arrow-right');
 
-        function nextSlide() {
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('hero-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.hero-dot');
+
+        function goToSlide(index) {
             slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
             slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
         }
 
-        setInterval(nextSlide, 5000);
+        function nextSlide() {
+            goToSlide((currentSlide + 1) % slides.length);
+        }
+
+        function prevSlide() {
+            goToSlide((currentSlide - 1 + slides.length) % slides.length);
+        }
+
+        // Add click events for arrows
+        prevButton.addEventListener('click', prevSlide);
+        nextButton.addEventListener('click', nextSlide);
+
+        // Auto slide
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        // Pause auto slide when hovering over arrows
+        [prevButton, nextButton].forEach(button => {
+            button.addEventListener('mouseenter', () => clearInterval(slideInterval));
+            button.addEventListener('mouseleave', () => {
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
 
         // Read more functionality for mobile
         document.querySelectorAll('.read-more').forEach(button => {
