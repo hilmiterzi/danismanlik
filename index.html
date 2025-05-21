@@ -161,36 +161,128 @@
             background-color: var(--light-bg);
         }
 
-        .featured-content {
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        .featured-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 4rem;
-            gap: 2rem;
+        .featured-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        .featured-item.reverse {
-            flex-direction: row-reverse;
+        .featured-card:hover {
+            transform: translateY(-5px);
         }
 
         .featured-image {
-            flex: 1;
-            min-height: 300px;
-            background-color: #ddd;
-            border-radius: 8px;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
         }
 
-        .featured-text {
-            flex: 1;
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .featured-text h2 {
+        .featured-content {
+            padding: 1.5rem;
+        }
+
+        .featured-content h3 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .featured-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .featured-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .featured-button:hover {
+            background-color: #c1121f;
+        }
+
+        /* Mobile Blog Styles */
+        .mobile-blog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .mobile-blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .mobile-blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .mobile-blog-content {
+            padding: 1.5rem;
+        }
+
+        .mobile-blog-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .mobile-blog-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .mobile-blog-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .mobile-blog-button:hover {
+            background-color: #c1121f;
+        }
+
+        @media (max-width: 768px) {
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Mobile Content */
@@ -696,19 +788,73 @@
     </section>
 
     <section class="featured-section desktop-content">
-        <div class="featured-content">
-            <div class="featured-item">
-                <div class="featured-image"></div>
-                <div class="featured-text">
-                    <h2>Work and Travel Programı</h2>
-                    <p>Work and Travel programı ile yurtdışında hem çalışın hem de İngilizcenizi geliştirin. Amerika'nın en güzel şehirlerinde unutulmaz bir deneyim yaşayın.</p>
+        <div class="container">
+            <h2 class="section-title">Blog</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="blog/step-by-step.jpg" alt="Adım Adım Yurtdışı Eğitim">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Adım Adım Yurtdışı Eğitim</h3>
+                        <p>Yurtdışında eğitim almak için izlemeniz gereken adımlar, gerekli belgeler ve süreç hakkında detaylı bilgi.</p>
+                        <a href="#" class="featured-button">Devamını Oku</a>
+                    </div>
                 </div>
-            </div>
-            <div class="featured-item reverse">
-                <div class="featured-image"></div>
-                <div class="featured-text">
-                    <h2>Çin'de Eğitim Fırsatları</h2>
-                    <p>Çin'in önde gelen üniversitelerinde eğitim alın. Uygun fiyatlar ve kaliteli eğitim ile geleceğinizi şekillendirin.</p>
+
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="blog/guide.jpg" alt="Yurtdışı Eğitim Rehberi">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Yurtdışı Eğitim Rehberi</h3>
+                        <p>Yurtdışında eğitim almak isteyenler için kapsamlı rehber. Ülke seçimi, konaklama, yaşam maliyetleri ve daha fazlası.</p>
+                        <a href="#" class="featured-button">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="blog/no-exam.jpg" alt="Sınavsız Üniversite">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Sınavsız Üniversite</h3>
+                        <p>Sınavsız üniversite eğitimi fırsatları, başvuru koşulları ve avantajları hakkında detaylı bilgi.</p>
+                        <a href="#" class="featured-button">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="blog/work-travel.jpg" alt="Work and Travel">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Work and Travel Programı</h3>
+                        <p>Work and Travel programı ile yurtdışında hem çalışın hem de İngilizcenizi geliştirin. Amerika'nın en güzel şehirlerinde unutulmaz bir deneyim yaşayın.</p>
+                        <a href="#" class="featured-button">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="blog/china-education.jpg" alt="Çin'de Eğitim">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Çin'de Eğitim Fırsatları</h3>
+                        <p>Çin'in önde gelen üniversitelerinde eğitim alın. Uygun fiyatlar ve kaliteli eğitim ile geleceğinizi şekillendirin.</p>
+                        <a href="#" class="featured-button">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-image">
+                        <img src="blog/visa.jpg" alt="Vize">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Vize Başvuru Süreci</h3>
+                        <p>Yurtdışı eğitim için vize başvuru sürecinizi adım adım planlayın. Gerekli belgeler ve başvuru takvimi hakkında detaylı bilgi.</p>
+                        <a href="#" class="featured-button">Devamını Oku</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -716,25 +862,59 @@
 
     <section class="mobile-content">
         <div class="container">
-            <div class="mobile-card">
-                <img src="placeholder.jpg", loading="lazy" alt="Work and Travel">
-                <div class="mobile-card-content">
-                    <h3>Work and Travel</h3>
-                    <p>Yurtdışında çalışarak İngilizcenizi geliştirin...</p>
-                    <span class="read-more">Daha fazla</span>
-                    <div class="full-text">
-                        <p>Work and Travel programı ile Amerika'nın en güzel şehirlerinde hem çalışın hem de İngilizcenizi geliştirin. Unutulmaz bir deneyim için hemen başvurun!</p>
+            <h2 class="section-title">Blog</h2>
+            <div class="mobile-blog-grid">
+                <div class="mobile-blog-card">
+                    <img src="blog/step-by-step.jpg" alt="Adım Adım Yurtdışı Eğitim">
+                    <div class="mobile-blog-content">
+                        <h3>Adım Adım Yurtdışı Eğitim</h3>
+                        <p>Yurtdışında eğitim almak için izlemeniz gereken adımlar, gerekli belgeler ve süreç hakkında detaylı bilgi.</p>
+                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
                     </div>
                 </div>
-            </div>
-            <div class="mobile-card">
-                <img src="placeholder.jpg", loading="lazy" alt="Çin'de Eğitim">
-                <div class="mobile-card-content">
-                    <h3>Çin'de Eğitim</h3>
-                    <p>Çin'in önde gelen üniversitelerinde eğitim alın...</p>
-                    <span class="read-more">Daha fazla</span>
-                    <div class="full-text">
-                        <p>Çin'in prestijli üniversitelerinde uygun fiyatlarla kaliteli eğitim alın. Geleceğinizi şekillendirmek için mükemmel bir fırsat!</p>
+
+                <div class="mobile-blog-card">
+                    <img src="blog/guide.jpg" alt="Yurtdışı Eğitim Rehberi">
+                    <div class="mobile-blog-content">
+                        <h3>Yurtdışı Eğitim Rehberi</h3>
+                        <p>Yurtdışında eğitim almak isteyenler için kapsamlı rehber. Ülke seçimi, konaklama, yaşam maliyetleri ve daha fazlası.</p>
+                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <div class="mobile-blog-card">
+                    <img src="blog/no-exam.jpg" alt="Sınavsız Üniversite">
+                    <div class="mobile-blog-content">
+                        <h3>Sınavsız Üniversite</h3>
+                        <p>Sınavsız üniversite eğitimi fırsatları, başvuru koşulları ve avantajları hakkında detaylı bilgi.</p>
+                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <div class="mobile-blog-card">
+                    <img src="blog/work-travel.jpg" alt="Work and Travel">
+                    <div class="mobile-blog-content">
+                        <h3>Work and Travel Programı</h3>
+                        <p>Work and Travel programı ile yurtdışında hem çalışın hem de İngilizcenizi geliştirin...</p>
+                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <div class="mobile-blog-card">
+                    <img src="blog/china-education.jpg" alt="Çin'de Eğitim">
+                    <div class="mobile-blog-content">
+                        <h3>Çin'de Eğitim Fırsatları</h3>
+                        <p>Çin'in önde gelen üniversitelerinde eğitim alın. Uygun fiyatlar ve kaliteli eğitim...</p>
+                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
+                    </div>
+                </div>
+
+                <div class="mobile-blog-card">
+                    <img src="blog/visa.jpg" alt="Vize">
+                    <div class="mobile-blog-content">
+                        <h3>Vize Başvuru Süreci</h3>
+                        <p>Yurtdışı eğitim için vize başvuru sürecinizi adım adım planlayın...</p>
+                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
                     </div>
                 </div>
             </div>
