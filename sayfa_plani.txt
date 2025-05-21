@@ -37,8 +37,9 @@ hero kismi yap, slide'lı, İÇERİSİNDE ŞUNLAR OLSUN:
 
 Hero kısmı bittikten sonra bilgilendirmeler. MOBİL ufak bir resim, altında başlık ve yazılar. Yazılar kısa gözüksün. " Daha fazla"ya tıkladıktan sonra yazının tamamı gözüksün.
 
-Dediğim gibi farklı
-
+- Referanslar
+- Üniversitelerin logosu
+- harita
 
 
 
