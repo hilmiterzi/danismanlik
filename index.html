@@ -237,6 +237,87 @@
             display: block;
         }
 
+        /* Countries Section Styles */
+        .countries-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .countries-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .country-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .country-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .country-flag {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+        }
+
+        .placeholder-flag {
+            background: linear-gradient(45deg, #f3f3f3, #e0e0e0);
+            border: 1px solid #ddd;
+        }
+
+        .country-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .country-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .country-button:hover {
+            background-color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .countries-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .countries-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .mobile-menu-btn {
@@ -340,7 +421,7 @@
         </div>
         <div class="hero-slide">
             <div class="slide-content">
-                <h2>MBA Master</h2>
+                <h2>Work and Travel</h2>
                 <p>Yurtdışında MBA programları ile kariyerinizi ilerletin!</p>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
@@ -358,8 +439,76 @@
                 <p>Dünyanın en iyi dil okullarında İngilizce eğitimi fırsatları.</p>
             </div>
             <div class="info-card">
-                <h3>MBA Master</h3>
-                <p>Yurtdışında MBA programları ile kariyerinizi ilerletin.</p>
+                <h3>Work and Travel</h3>
+                <p>Yurtdışında çalışarak İngilizcenizi geliştirin.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="countries-section">
+        <div class="container">
+            <h2 class="section-title">Ülkeler</h2>
+            <div class="countries-grid">
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Almanya</h3>
+                    <a href="countries/germany.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Polonya</h3>
+                    <a href="countries/poland.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Macaristan</h3>
+                    <a href="countries/hungary.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Slovenya</h3>
+                    <a href="countries/slovenia.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Slovakya</h3>
+                    <a href="countries/slovakia.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Çekya</h3>
+                    <a href="countries/czech.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Letonya</h3>
+                    <a href="countries/latvia.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Litvanya</h3>
+                    <a href="countries/lithuania.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Çin</h3>
+                    <a href="countries/china.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Kazakistan</h3>
+                    <a href="countries/kazakhstan.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Azerbaycan</h3>
+                    <a href="countries/azerbaijan.html" class="country-button">Detaylı Bilgi</a>
+                </div>
+                <div class="country-card">
+                    <div class="country-flag placeholder-flag"></div>
+                    <h3>Rusya</h3>
+                    <a href="countries/russia.html" class="country-button">Detaylı Bilgi</a>
+                </div>
             </div>
         </div>
     </section>
