@@ -575,11 +575,80 @@
         .faq-section {
             padding: 4rem 2rem;
             background-color: var(--light-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq-wrapper {
+            display: flex;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .faq-decoration {
+            flex: 1;
+            position: relative;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 600px;
+        }
+
+        .decoration-circle {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .decoration-icons {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .decoration-icons i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .decoration-icons i:hover {
+            transform: scale(1.2);
+            color: var(--secondary-color);
+        }
+
+        .decoration-text {
+            text-align: center;
+            position: relative;
+        }
+
+        .decoration-text h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .decoration-text p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
+            flex: 2;
         }
 
         .faq-item {
@@ -637,6 +706,46 @@
 
         .faq-item.active .faq-answer {
             display: block;
+        }
+
+        @media (max-width: 992px) {
+            .faq-wrapper {
+                flex-direction: column;
+            }
+
+            .faq-decoration {
+                min-height: auto;
+                padding: 2rem 0;
+            }
+
+            .decoration-circle {
+                width: 300px;
+                height: 300px;
+            }
+
+            .decoration-icons {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+
+            .decoration-icons i {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .decoration-circle {
+                width: 200px;
+                height: 200px;
+            }
+
+            .decoration-icons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .decoration-text h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -922,93 +1031,134 @@
     </section>
 
     <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+        <div class="faq-wrapper">
+            <div class="faq-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-icons">
+                    <i class="fas fa-plane"></i>
+                    <i class="fas fa-passport"></i>
+                    <i class="fas fa-globe-americas"></i>
+                    <i class="fas fa-hotel"></i>
+                    <i class="fas fa-briefcase"></i>
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="decoration-text">
+                    <h2>Sıkça Sorulan Sorular</h2>
+                </div>
+            </div>
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
+                        <h3>Work & Travel programı nedir?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Work & Travel, öğrencilerin yaz tatillerini yurtdışında geçirerek hem çalışıp hem de seyahat etmelerini sağlayan bir kültürel değişim programıdır. Bu program sayesinde farklı bir ülkede yaşama, çalışma ve kültürü tanıma fırsatı elde edersiniz.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kimler başvurabilir?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Programa katılmak için üniversite öğrencisi olmanız ve en az orta seviyede İngilizce bilmeniz gerekmektedir. Ayrıca 18-26 yaş arasında olmanız ve aktif bir öğrenci statüsünde bulunmanız şarttır.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Program süresi ne kadardır?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Program genellikle 3-4 ay sürmektedir. Bu süre içerisinde 2-3 ay çalışıp, kalan sürede Amerika'yı gezme fırsatı bulabilirsiniz.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hangi ülkelerde Work & Travel yapılabilir?</h3>
+                        <div class="faq-toggle">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>En popüler Work & Travel destinasyonu Amerika Birleşik Devletleri'dir. Bunun yanı sıra Kanada, Avustralya ve Yeni Zelanda gibi ülkelerde de benzer programlar bulunmaktadır.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
                         <h3>Yurtdışında üniversite eğitimi için hangi ülkeyi tercih etmeliyim?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Ülke seçimi, eğitim almak istediğiniz alan, bütçeniz, dil tercihiniz ve kariyer hedeflerinize göre değişiklik gösterir. Size en uygun ülkeyi belirlemek için danışmanlarımızla görüşebilirsiniz.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Yurtdışında ingilizceyi öğrenebileceğim en iyi ülkeler hangisi?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>İngilizce öğrenmek için İngiltere, Amerika, Kanada, Malta ve İrlanda gibi ülkeler öne çıkmaktadır. Her ülkenin kendine özgü avantajları bulunmaktadır.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Yurtdışında burslu okuyabileceğim ülkeler hangisi?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Çin, Almanya, Polonya, Macaristan ve Çek Cumhuriyeti gibi ülkelerde burslu eğitim imkanları mevcuttur. Özellikle Çin'de %100 burslu eğitim fırsatları sunuyoruz.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Yurtdışında mühendislik eğitimi için hangi ülkeleri tercih etmeliyim?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Almanya, Çin, Polonya ve Çek Cumhuriyeti mühendislik eğitimi için öne çıkan ülkelerdir. Bu ülkelerdeki üniversitelerin mühendislik programları dünya standartlarında eğitim sunmaktadır.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Yazılım mühendisliği için hangi ülkeyi tercih etmeliyim?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Çin, ABD, Ukrayna, Rusya ve Japonya yazılım mühendisliği eğitimi için öne çıkan ülkelerdir. Her ülkenin kendine özgü avantajları ve eğitim programları bulunmaktadır.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Doğru bir yurtdışı eğitim danışmanlığı tercihi nasıl olmalıdır?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Deneyimli, güvenilir ve şeffaf bir danışmanlık firması seçilmelidir. University Park Yurtdışı Eğitim olarak, öğrencilerimize kişiselleştirilmiş danışmanlık hizmeti sunuyoruz.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Yurtdışında aldığım diploma Türkiye'de geçerli mi?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Evet, YÖK tarafından tanınan üniversitelerden alınan diplomalar Türkiye'de geçerlidir. Danışmanlarımız size bu konuda detaylı bilgi verecektir.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Dünya'da en çok konuşulan diller hangileridir?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Çince, İngilizce, Hintçe, İspanyolca ve Arapça dünyada en çok konuşulan dillerdir. İş dünyasında İngilizce ve Çince öne çıkmaktadır.</p>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
                         <h3>Avrupa'da Üniversite eğitiminin avantajları nelerdir?</h3>
-                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        <div class="faq-toggle">+</div>
                     </div>
                     <div class="faq-answer">
                         <p>Avrupa'da eğitim almanın başlıca avantajları: kaliteli eğitim, uygun maliyetler, Schengen vizesi ile seyahat özgürlüğü, çok dilli ortam ve uluslararası iş fırsatlarıdır.</p>
@@ -1104,24 +1254,28 @@
         });
 
         // FAQ Accordion functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const isActive = faqItem.classList.contains('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const toggle = item.querySelector('.faq-toggle');
                 
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                    const icon = item.querySelector('.faq-toggle i');
-                    icon.className = 'fas fa-plus';
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-toggle').textContent = '+';
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                    toggle.textContent = isActive ? '+' : '-';
                 });
-
-                // If the clicked item wasn't active, open it
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                    const icon = question.querySelector('.faq-toggle i');
-                    icon.className = 'fas fa-minus';
-                }
             });
         });
     </script>
