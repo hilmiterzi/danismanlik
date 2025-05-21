@@ -48,6 +48,14 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
         }
 
         /* Mobile Menu */
@@ -392,11 +400,12 @@
             object-fit: cover;
             margin-bottom: 1rem;
             border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
-        .placeholder-flag {
-            background: linear-gradient(45deg, #f3f3f3, #e0e0e0);
-            border: 1px solid #ddd;
+        .country-flag:hover {
+            transform: scale(1.05);
         }
 
         .country-card h3 {
@@ -568,6 +577,10 @@
 
             .mobile-content {
                 display: block;
+            }
+
+            .logo img {
+                height: 30px;
             }
         }
 
@@ -841,7 +854,9 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">Yurtdışı Eğitim</div>
+            <div class="logo">
+                <img src="universitypark.png" alt="University Park">
+            </div>
             <button class="mobile-menu-btn">☰</button>
             <nav class="nav-menu">
                 <a href="#universite">ÜNİVERSİTE</a>
@@ -929,62 +944,62 @@
             <h2 class="section-title">Çalıştığımız Ülkeler</h2>
             <div class="countries-grid">
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/germany.png" alt="Almanya Bayrağı" class="country-flag">
                     <h3>Almanya</h3>
                     <a href="countries/germany.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/poland.png" alt="Polonya Bayrağı" class="country-flag">
                     <h3>Polonya</h3>
                     <a href="countries/poland.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/hungary.png" alt="Macaristan Bayrağı" class="country-flag">
                     <h3>Macaristan</h3>
                     <a href="countries/hungary.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/slovenia.png" alt="Slovenya Bayrağı" class="country-flag">
                     <h3>Slovenya</h3>
                     <a href="countries/slovenia.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/slovakia.png" alt="Slovakya Bayrağı" class="country-flag">
                     <h3>Slovakya</h3>
                     <a href="countries/slovakia.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/czech.png" alt="Çekya Bayrağı" class="country-flag">
                     <h3>Çekya</h3>
                     <a href="countries/czech.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/latvia.png" alt="Letonya Bayrağı" class="country-flag">
                     <h3>Letonya</h3>
                     <a href="countries/latvia.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/lithuania.png" alt="Litvanya Bayrağı" class="country-flag">
                     <h3>Litvanya</h3>
                     <a href="countries/lithuania.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/china.png" alt="Çin Bayrağı" class="country-flag">
                     <h3>Çin</h3>
                     <a href="countries/china.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/kazakhstan.png" alt="Kazakistan Bayrağı" class="country-flag">
                     <h3>Kazakistan</h3>
                     <a href="countries/kazakhstan.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/azerbaijan.png" alt="Azerbaycan Bayrağı" class="country-flag">
                     <h3>Azerbaycan</h3>
                     <a href="countries/azerbaijan.html" class="country-button">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
-                    <div class="country-flag placeholder-flag"></div>
+                    <img src="flags/russia.png" alt="Rusya Bayrağı" class="country-flag">
                     <h3>Rusya</h3>
                     <a href="countries/russia.html" class="country-button">Detaylı Bilgi</a>
                 </div>
