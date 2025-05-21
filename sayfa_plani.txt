@@ -6,7 +6,7 @@
 
 Yurtdışı Eğitim Ve Vize Danışmanlığı
 
-
+[CANLI CHAT] FLOATING RIGHT UNDER CORNER
 [BİLGİSAYAR
 hero kismi yap, slide'lı, 
 - Sınavsız Üniversite ( Altında bir cümle, ve tıkla linki)
@@ -38,6 +38,18 @@ hero kismi yap, slide'lı, İÇERİSİNDE ŞUNLAR OLSUN:
 Hero kısmı bittikten sonra bilgilendirmeler. MOBİL ufak bir resim, altında başlık ve yazılar. Yazılar kısa gözüksün. " Daha fazla"ya tıkladıktan sonra yazının tamamı gözüksün.
 
 - Referanslar
+    
+- Sıkça Sorulan Sorular (10 adet)
+    - Yurtdışında üniversite eğitimi için hangi ülkeyi tercih etmeliyim?
+    - Yurtdışında ingilizceyi öğrenebileceğim en iyi ülkeler hangisi?
+    - Yurtdışında burslu okuyabileceğim ülkeler hangisi?
+    - Yurtdışında mühendislik eğitimi için hangi ülkeleri tercih etmeliyim?
+    - Yazılım mühendisliği için hangi ülkeyi tercih etmeliyim (Çin, ABD, Ukrayna, Rusya, Japonya) 
+    - Doğru bir yurtdışı eğitim danışmanlığı tercihi nasıl olmalıdır?
+    - Yurtdışında aldığım diploma Türkiye'de geçerli mi?
+    - Dünya'da en çok konuşulan diller hangileridir?
+    - Avrupa'da Üniversite eğitiminin avantajları nelerdir?
+
 - Üniversitelerin logosu
 - harita
 
