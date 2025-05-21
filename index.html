@@ -93,7 +93,20 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background-color: var(--light-bg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
 
         .hero-slide.active {
@@ -103,16 +116,21 @@
         .slide-content {
             max-width: 800px;
             padding: 2rem;
+            position: relative;
+            z-index: 2;
+            color: white;
         }
 
         .slide-content h2 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--primary-color);
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .slide-content p {
             margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
 
         .cta-button {
@@ -838,42 +856,42 @@
     </header>
 
     <section class="hero">
-        <div class="hero-slide active">
+        <div class="hero-slide active" style="background-image: url('Sınavsız üniversite.png')">
             <div class="slide-content">
                 <h2>Sınavsız Üniversite</h2>
                 <p>Hayalinizdeki üniversiteye sınavsız giriş fırsatı!</p>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
-        <div class="hero-slide">
+        <div class="hero-slide" style="background-image: url('Work & travel.png')">
             <div class="slide-content">
                 <h2>Work and Travel</h2>
                 <p>Yurtdışında çalışarak İngilizcenizi geliştirin!</p>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
-        <div class="hero-slide">
+        <div class="hero-slide" style="background-image: url('çinli öğrenciler.png')">
             <div class="slide-content">
                 <h2>Çin'de Üniversite Eğitimi</h2>
                 <p>Çin'in prestijli üniversitelerinde eğitim fırsatı!</p>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
-        <div class="hero-slide">
+        <div class="hero-slide" style="background-image: url('Sınavsız üniversite (2).png')">
             <div class="slide-content">
                 <h2>Çin'de Burslu Eğitim</h2>
                 <p>Çin'in önde gelen üniversitelerinde burslu eğitim imkanları!</p>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
-        <div class="hero-slide">
+        <div class="hero-slide" style="background-image: url('dil eğitimi.png')">
             <div class="slide-content">
                 <h2>Yurtdışında Dil Okulları</h2>
                 <p>Dünyanın en iyi dil okullarında İngilizce eğitimi!</p>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
-        <div class="hero-slide">
+        <div class="hero-slide" style="background-image: url('1. work and travel.png')">
             <div class="slide-content">
                 <h2>Work and Travel</h2>
                 <p>Yurtdışında MBA programları ile kariyerinizi ilerletin!</p>
@@ -980,7 +998,7 @@
             <div class="featured-grid">
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="blog/step-by-step.jpg" alt="Adım Adım Yurtdışı Eğitim">
+                        <img src="ofis.png" alt="Adım Adım Yurtdışı Eğitim">
                     </div>
                     <div class="featured-content">
                         <h3>Adım Adım Yurtdışı Eğitim</h3>
@@ -991,7 +1009,7 @@
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="blog/guide.jpg" alt="Yurtdışı Eğitim Rehberi">
+                        <img src="danisman.png" alt="Yurtdışı Eğitim Rehberi">
                     </div>
                     <div class="featured-content">
                         <h3>Yurtdışı Eğitim Rehberi</h3>
@@ -1002,7 +1020,7 @@
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="blog/no-exam.jpg" alt="Sınavsız Üniversite">
+                        <img src="Sınavsız üniversite.png" alt="Sınavsız Üniversite">
                     </div>
                     <div class="featured-content">
                         <h3>Sınavsız Üniversite</h3>
@@ -1013,7 +1031,7 @@
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="blog/work-travel.jpg" alt="Work and Travel">
+                        <img src="1. work and travel.png" alt="Work and Travel">
                     </div>
                     <div class="featured-content">
                         <h3>Work and Travel Programı</h3>
@@ -1024,7 +1042,7 @@
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="blog/china-education.jpg" alt="Çin'de Eğitim">
+                        <img src="çinli öğrenciler.png" alt="Çin'de Eğitim">
                     </div>
                     <div class="featured-content">
                         <h3>Çin'de Eğitim Fırsatları</h3>
@@ -1035,7 +1053,7 @@
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="blog/visa.jpg" alt="Vize">
+                        <img src="pasaport.png" alt="Vize">
                     </div>
                     <div class="featured-content">
                         <h3>Vize Başvuru Süreci</h3>
@@ -1052,7 +1070,7 @@
             <h2 class="section-title">Blog</h2>
             <div class="mobile-blog-grid">
                 <div class="mobile-blog-card">
-                    <img src="blog/step-by-step.jpg" alt="Adım Adım Yurtdışı Eğitim">
+                    <img src="Sınavsız üniversite.png" alt="Adım Adım Yurtdışı Eğitim">
                     <div class="mobile-blog-content">
                         <h3>Adım Adım Yurtdışı Eğitim</h3>
                         <p>Yurtdışında eğitim almak için izlemeniz gereken adımlar, gerekli belgeler ve süreç hakkında detaylı bilgi.</p>
@@ -1061,7 +1079,7 @@
                 </div>
 
                 <div class="mobile-blog-card">
-                    <img src="blog/guide.jpg" alt="Yurtdışı Eğitim Rehberi">
+                    <img src="danisman.png" alt="Yurtdışı Eğitim Rehberi">
                     <div class="mobile-blog-content">
                         <h3>Yurtdışı Eğitim Rehberi</h3>
                         <p>Yurtdışında eğitim almak isteyenler için kapsamlı rehber. Ülke seçimi, konaklama, yaşam maliyetleri ve daha fazlası.</p>
@@ -1070,7 +1088,7 @@
                 </div>
 
                 <div class="mobile-blog-card">
-                    <img src="blog/no-exam.jpg" alt="Sınavsız Üniversite">
+                    <img src="çinli öğrenciler.png" alt="Sınavsız Üniversite">
                     <div class="mobile-blog-content">
                         <h3>Sınavsız Üniversite</h3>
                         <p>Sınavsız üniversite eğitimi fırsatları, başvuru koşulları ve avantajları hakkında detaylı bilgi.</p>
@@ -1079,7 +1097,7 @@
                 </div>
 
                 <div class="mobile-blog-card">
-                    <img src="blog/work-travel.jpg" alt="Work and Travel">
+                    <img src="1. work and travel.png" alt="Work and Travel">
                     <div class="mobile-blog-content">
                         <h3>Work and Travel Programı</h3>
                         <p>Work and Travel programı ile yurtdışında hem çalışın hem de İngilizcenizi geliştirin...</p>
@@ -1088,7 +1106,7 @@
                 </div>
 
                 <div class="mobile-blog-card">
-                    <img src="blog/china-education.jpg" alt="Çin'de Eğitim">
+                    <img src="Sınavsız üniversite.png" alt="Çin'de Eğitim">
                     <div class="mobile-blog-content">
                         <h3>Çin'de Eğitim Fırsatları</h3>
                         <p>Çin'in önde gelen üniversitelerinde eğitim alın. Uygun fiyatlar ve kaliteli eğitim...</p>
@@ -1097,7 +1115,7 @@
                 </div>
 
                 <div class="mobile-blog-card">
-                    <img src="blog/visa.jpg" alt="Vize">
+                    <img src="Vize.png" alt="Vize">
                     <div class="mobile-blog-content">
                         <h3>Vize Başvuru Süreci</h3>
                         <p>Yurtdışı eğitim için vize başvuru sürecinizi adım adım planlayın...</p>
