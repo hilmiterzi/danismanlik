@@ -478,6 +478,63 @@
             margin-bottom: 3rem;
             font-size: 2.5rem;
         }
+
+        /* FAQ Section Styles */
+        .faq-section {
+            padding: 4rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+        }
+
+        .faq-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .faq-toggle:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -670,9 +727,106 @@
         </div>
     </section>
 
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Yurtdışında üniversite eğitimi için hangi ülkeyi tercih etmeliyim?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ülke seçimi, eğitim almak istediğiniz alan, bütçeniz, dil tercihiniz ve kariyer hedeflerinize göre değişiklik gösterir. Size en uygun ülkeyi belirlemek için danışmanlarımızla görüşebilirsiniz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Yurtdışında ingilizceyi öğrenebileceğim en iyi ülkeler hangisi?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>İngilizce öğrenmek için İngiltere, Amerika, Kanada, Malta ve İrlanda gibi ülkeler öne çıkmaktadır. Her ülkenin kendine özgü avantajları bulunmaktadır.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Yurtdışında burslu okuyabileceğim ülkeler hangisi?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Çin, Almanya, Polonya, Macaristan ve Çek Cumhuriyeti gibi ülkelerde burslu eğitim imkanları mevcuttur. Özellikle Çin'de %100 burslu eğitim fırsatları sunuyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Yurtdışında mühendislik eğitimi için hangi ülkeleri tercih etmeliyim?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Almanya, Çin, Polonya ve Çek Cumhuriyeti mühendislik eğitimi için öne çıkan ülkelerdir. Bu ülkelerdeki üniversitelerin mühendislik programları dünya standartlarında eğitim sunmaktadır.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Yazılım mühendisliği için hangi ülkeyi tercih etmeliyim?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Çin, ABD, Ukrayna, Rusya ve Japonya yazılım mühendisliği eğitimi için öne çıkan ülkelerdir. Her ülkenin kendine özgü avantajları ve eğitim programları bulunmaktadır.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Doğru bir yurtdışı eğitim danışmanlığı tercihi nasıl olmalıdır?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Deneyimli, güvenilir ve şeffaf bir danışmanlık firması seçilmelidir. University Park Yurtdışı Eğitim olarak, öğrencilerimize kişiselleştirilmiş danışmanlık hizmeti sunuyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Yurtdışında aldığım diploma Türkiye'de geçerli mi?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Evet, YÖK tarafından tanınan üniversitelerden alınan diplomalar Türkiye'de geçerlidir. Danışmanlarımız size bu konuda detaylı bilgi verecektir.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Dünya'da en çok konuşulan diller hangileridir?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Çince, İngilizce, Hintçe, İspanyolca ve Arapça dünyada en çok konuşulan dillerdir. İş dünyasında İngilizce ve Çince öne çıkmaktadır.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Avrupa'da Üniversite eğitiminin avantajları nelerdir?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Avrupa'da eğitim almanın başlıca avantajları: kaliteli eğitim, uygun maliyetler, Schengen vizesi ile seyahat özgürlüğü, çok dilli ortam ve uluslararası iş fırsatlarıdır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="reviews-section">
         <div class="container">
-            <h2 class="section-title">Müşteri Yorumları</h2>
+            <h2 class="section-title">Danışanlarımızın Yorumları</h2>
             <div class="elfsight-app-1168d6ab-4fc7-4c58-8879-bbd693f2711b" data-elfsight-app-lazy></div>
         </div>
     </section>
@@ -752,6 +906,28 @@
                 const fullText = this.nextElementSibling;
                 fullText.classList.toggle('active');
                 this.textContent = fullText.classList.contains('active') ? 'Daha az' : 'Daha fazla';
+            });
+        });
+
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    const icon = item.querySelector('.faq-toggle i');
+                    icon.className = 'fas fa-plus';
+                });
+
+                // If the clicked item wasn't active, open it
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    const icon = question.querySelector('.faq-toggle i');
+                    icon.className = 'fas fa-minus';
+                }
             });
         });
     </script>
