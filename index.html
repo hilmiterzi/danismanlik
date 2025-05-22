@@ -938,7 +938,16 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="universitypark.webp" loading="lazy" alt="University Park">
+                <img src="universitypark-small.webp" 
+                     srcset="universitypark-small.webp 120w,
+                             universitypark-medium.webp 240w,
+                             universitypark.webp 480w"
+                     sizes="(max-width: 460px) 120px,
+                            (max-width: 768px) 240px,
+                            480px"
+                     alt="University Park"
+                     width="120"
+                     height="40">
             </div>
             <button class="mobile-menu-btn">☰</button>
             <nav class="nav-menu">
