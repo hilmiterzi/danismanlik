@@ -11,9 +11,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://universitypark.com.tr">
     <title>Yurtdışı Eğitim Ve Vize Danışmanlığı | University Park</title>
-    <!-- Preload first hero image -->
-    <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 460px)">
-    <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)">
+    <!-- Preload first hero image with proper attributes -->
+    <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 300px)" fetchpriority="high">
+    <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)" fetchpriority="high">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -100,6 +100,7 @@
             position: relative;
             height: 80vh;
             overflow: hidden;
+            will-change: transform;
         }
 
         .hero-slide {
@@ -115,6 +116,9 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            will-change: opacity, transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
         .hero-slide::before {
@@ -126,6 +130,7 @@
             bottom: 0;
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
+            will-change: opacity;
         }
 
         .hero-slide.active {
@@ -138,6 +143,8 @@
             position: relative;
             z-index: 2;
             color: white;
+            will-change: transform;
+            transform: translateZ(0);
         }
 
         .slide-content h2 {
@@ -145,6 +152,7 @@
             margin-bottom: 1rem;
             color: white;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            will-change: transform;
         }
 
         .slide-content p {
@@ -160,6 +168,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
+            will-change: transform, background-color;
         }
 
         .cta-button:hover {
@@ -966,7 +975,8 @@
     <section class="hero">
         <div class="hero-slide active"
              data-bg-desktop="Sınavsız-üniversite-desktop.webp"
-             data-bg-mobile="Sınavsız-üniversite-mobile.webp">
+             data-bg-mobile="Sınavsız-üniversite-mobile.webp"
+             style="background-image: url('Sınavsız-üniversite-mobile.webp');">
             <div class="slide-content">
                 <h2>Sınavsız Üniversite</h2>
                 <p>Hayalinizdeki üniversiteye sınavsız giriş fırsatı!</p>
@@ -1471,31 +1481,29 @@
     </footer>
 
     <script>
-        // Minimal JavaScript for mobile menu and hero slider
+        // Optimized JavaScript for mobile menu and hero slider
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
 
-        // Hero slider with dots and arrows
+        // Optimized hero slider with dots and arrows
         let currentSlide = 0;
         const slides = document.querySelectorAll('.hero-slide');
         const dotsContainer = document.querySelector('.hero-dots');
         const prevButton = document.querySelector('.hero-arrow-left');
         const nextButton = document.querySelector('.hero-arrow-right');
 
-        // Set background image for a specific slide
+        // Optimized background image loading
         function setSlideBackground(slide) {
             const isMobile = window.innerWidth <= 460;
             const bgImage = isMobile ? 
                 slide.getAttribute('data-bg-mobile') : 
                 slide.getAttribute('data-bg-desktop');
             
-            // Create a new image object to preload
-            const img = new Image();
-            img.onload = () => {
+            // Use requestAnimationFrame for smoother transitions
+            requestAnimationFrame(() => {
                 slide.style.backgroundImage = `url(${bgImage})`;
-            };
-            img.src = bgImage;
+            });
         }
 
         // Set initial background for first slide immediately
@@ -1506,9 +1514,13 @@
             firstSlide.getAttribute('data-bg-desktop');
         firstSlide.style.backgroundImage = `url(${firstBgImage})`;
 
-        // Update background on window resize for active slide
+        // Debounced resize handler
+        let resizeTimeout;
         window.addEventListener('resize', () => {
-            setSlideBackground(slides[currentSlide]);
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                setSlideBackground(slides[currentSlide]);
+            }, 100);
         });
 
         // Create dots
