@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yurtdışı Eğitim Ve Vize Danışmanlığı</title>
+    <!-- Preload first hero image -->
+    <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 768px)">
+    <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 769px)">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -1445,11 +1448,22 @@
             const bgImage = isMobile ? 
                 slide.getAttribute('data-bg-mobile') : 
                 slide.getAttribute('data-bg-desktop');
-            slide.style.backgroundImage = `url(${bgImage})`;
+            
+            // Create a new image object to preload
+            const img = new Image();
+            img.onload = () => {
+                slide.style.backgroundImage = `url(${bgImage})`;
+            };
+            img.src = bgImage;
         }
 
-        // Set initial background for first slide
-        setSlideBackground(slides[0]);
+        // Set initial background for first slide immediately
+        const firstSlide = slides[0];
+        const isMobile = window.innerWidth <= 768;
+        const firstBgImage = isMobile ? 
+            firstSlide.getAttribute('data-bg-mobile') : 
+            firstSlide.getAttribute('data-bg-desktop');
+        firstSlide.style.backgroundImage = `url(${firstBgImage})`;
 
         // Update background on window resize for active slide
         window.addEventListener('resize', () => {
