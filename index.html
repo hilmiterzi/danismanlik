@@ -1439,22 +1439,22 @@
         const prevButton = document.querySelector('.hero-arrow-left');
         const nextButton = document.querySelector('.hero-arrow-right');
 
-        // Set background images for hero slides
-        function setHeroBackgrounds() {
+        // Set background image for a specific slide
+        function setSlideBackground(slide) {
             const isMobile = window.innerWidth <= 768;
-            slides.forEach(slide => {
-                const bgImage = isMobile ? 
-                    slide.getAttribute('data-bg-mobile') : 
-                    slide.getAttribute('data-bg-desktop');
-                slide.style.backgroundImage = `url(${bgImage})`;
-            });
+            const bgImage = isMobile ? 
+                slide.getAttribute('data-bg-mobile') : 
+                slide.getAttribute('data-bg-desktop');
+            slide.style.backgroundImage = `url(${bgImage})`;
         }
 
-        // Set initial backgrounds
-        setHeroBackgrounds();
+        // Set initial background for first slide
+        setSlideBackground(slides[0]);
 
-        // Update backgrounds on window resize
-        window.addEventListener('resize', setHeroBackgrounds);
+        // Update background on window resize for active slide
+        window.addEventListener('resize', () => {
+            setSlideBackground(slides[currentSlide]);
+        });
 
         // Create dots
         slides.forEach((_, index) => {
@@ -1471,6 +1471,8 @@
             slides[currentSlide].classList.remove('active');
             dots[currentSlide].classList.remove('active');
             currentSlide = index;
+            // Set background image for the new active slide
+            setSlideBackground(slides[currentSlide]);
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
         }
