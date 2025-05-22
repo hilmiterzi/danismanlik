@@ -1154,7 +1154,7 @@
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="çinli öğrenciler.png" loading="lazy" alt="Çin'de Eğitim">
+                        <img src="çinli-öğrenciler-desktop.webp" loading="lazy" alt="Çin'de Eğitim">
                     </div>
                     <div class="featured-content">
                         <h3>Çin'de Eğitim Fırsatları</h3>
@@ -1165,7 +1165,7 @@
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="pasaport.png" loading="lazy" alt="Vize">
+                        <img src="pasaport.webp" loading="lazy" alt="Vize">
                     </div>
                     <div class="featured-content">
                         <h3>Vize Başvuru Süreci</h3>
@@ -1438,6 +1438,23 @@
         const dotsContainer = document.querySelector('.hero-dots');
         const prevButton = document.querySelector('.hero-arrow-left');
         const nextButton = document.querySelector('.hero-arrow-right');
+
+        // Set background images for hero slides
+        function setHeroBackgrounds() {
+            const isMobile = window.innerWidth <= 768;
+            slides.forEach(slide => {
+                const bgImage = isMobile ? 
+                    slide.getAttribute('data-bg-mobile') : 
+                    slide.getAttribute('data-bg-desktop');
+                slide.style.backgroundImage = `url(${bgImage})`;
+            });
+        }
+
+        // Set initial backgrounds
+        setHeroBackgrounds();
+
+        // Update backgrounds on window resize
+        window.addEventListener('resize', setHeroBackgrounds);
 
         // Create dots
         slides.forEach((_, index) => {
