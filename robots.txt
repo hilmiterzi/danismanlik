@@ -5,8 +5,8 @@ Sitemap: https://universitypark.com.tr/sitemap.xml
 # Allow all crawlers
 Disallow:
 
-# Allow all content
+# Allow all paths
 Allow: /*
 
-# Crawl-delay
+# Set crawl delay
 Crawl-delay: 10 
