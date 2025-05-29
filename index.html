@@ -939,6 +939,69 @@
                 font-size: 1.2rem;
             }
         }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--primary-color);
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1001;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown-trigger::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+
+        @media (max-width: 460px) {
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.1);
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .nav-menu .dropdown-content a {
+                padding-left: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -958,11 +1021,20 @@
             </div>
             <button class="mobile-menu-btn">☰</button>
             <nav class="nav-menu">
-                <a href="#universite">ÜNİVERSİTE</a>
-                <a href="#dil-okullari">DİL OKULLARI</a>
+                <div class="dropdown">
+                    <a href="#eğitim-programları" class="dropdown-trigger">EĞİTİM PROGRAMLARI</a>
+                    <div class="dropdown-content">
+                        <a href="#üniversite">Üniversite</a>
+                        <a href="#dil-okulları">Dil Okulları</a>
+                        <a href="#work-study">Work & Study</a>
+                        <a href="#yaz-okulu">Yaz Okulu</a>
+                        <a href="#master-mba">Master/MBA</a>
+                        <a href="#pathway">Pathway Programı</a>
+                    </div>
+                </div>
                 <a href="#work-travel">WORK & TRAVEL</a>
                 <a href="#vize">VİZE</a>
-                <a href="#ulkeler">ÜLKELER</a>
+                <a href="#blog">BLOG</a>
                 <a href="#hakkimizda">HAKKIMIZDA</a>
                 <a href="#iletisim">İLETİŞİM</a>
             </nav>
