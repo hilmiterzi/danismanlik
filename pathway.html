@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="University Park Yurtdışı Eğitim - Work and Travel Programı. Amerika'da yaz tatilinde çalışma ve seyahat etme fırsatı. J-1 vizesi ile yasal çalışma imkanı.">
-    <meta name="keywords" content="work and travel, amerika'da çalışma, j-1 vizesi, yaz tatili programı, kültürel değişim">
-    <title>Work and Travel | University Park</title>
+    <meta name="description" content="University Park Yurtdışı Eğitim - Pathway (Hazırlık) Programları. Yurtdışında üniversite eğitimi için hazırlık programları, INTO, Kaplan, Navitas ve Study Group ile anlaşmalı üniversiteler.">
+    <meta name="keywords" content="pathway programı, hazırlık programı, yurtdışı eğitim, üniversite hazırlık, INTO, Kaplan, Navitas">
+    <title>Pathway Programı | University Park</title>
     <style>
         :root {
             --primary-color: rgb(26,64,121);
@@ -61,7 +61,7 @@
         /* Hero Section */
         .hero {
             margin-top: 60px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('work-travel-hero.webp');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('pathway-hero.webp');
             background-size: cover;
             background-position: center;
             height: 300px;
@@ -102,15 +102,11 @@
             background-color: var(--secondary-color);
             color: white;
             padding: 1.5rem;
-            display: inline-block;
-            margin-bottom: 1rem;
-            border-radius: 0 8px 8px 0;
         }
 
         .section-header h2 {
             margin: 0;
             font-size: 1.8rem;
-            font-weight: 600;
         }
 
         .section-content {
@@ -120,6 +116,12 @@
         .section-content p {
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
+        }
+
+        .section-content h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
         }
 
         .list-box {
@@ -144,6 +146,28 @@
             color: var(--secondary-color);
             position: absolute;
             left: 0;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .country-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .country-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .country-card p {
+            margin-bottom: 0.8rem;
         }
 
         /* Footer Styles */
@@ -206,6 +230,10 @@
                 font-size: 1.5rem;
             }
 
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+
             .footer-grid {
                 grid-template-columns: 1fr;
             }
@@ -223,42 +251,41 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Work and Travel</h1>
-            <p>Yaz Tatilinde Amerika'da Çalışma ve Seyahat Fırsatı</p>
+            <h1>Pathway Programı</h1>
+            <p>Yurtdışında Üniversite Eğitimine Hazırlık</p>
         </div>
     </section>
 
     <main class="main-content">
         <section class="section">
             <div class="section-header">
-                <h2>Program Hakkında</h2>
+                <h2>Pathway Programı Hakkında</h2>
             </div>
             <div class="section-content">
-                <p>Work and Travel, Amerika Birleşik Devletleri tarafından düzenlenen ve üniversite öğrencilerine yaz tatilleri boyunca hem çalışıp hem de kültürel deneyim kazanmalarına olanak sağlayan bir değişim programıdır. ABD Dışişleri Bakanlığı'nın gözetiminde yürütülen bu program, öğrencilerin yaz aylarında hem İngilizcelerini geliştirmelerini hem de farklı bir kültürü yakından tanımalarını hedefler.</p>
+                <p>Yurtdışında üniversite eğitimi almak isteyen ancak doğrudan kabul şartlarını karşılamayan öğrenciler için sunulan Pathway (Hazırlık) Programları, dünya çapında birçok üniversitenin sunduğu akademik geçiş yollarından biridir. Bu programlar sayesinde öğrenciler hem dil yeterliliklerini hem de akademik bilgi seviyelerini geliştirerek üniversiteye sorunsuz bir geçiş yapabilirler.</p>
             </div>
         </section>
 
         <section class="section">
             <div class="section-header">
-                <h2>Program Nedir?</h2>
+                <h2>Pathway Programı Nedir?</h2>
             </div>
             <div class="section-content">
-                <p>Work and Travel (WAT), 18-28 yaş arası lisans veya yüksek lisans öğrencilerinin yaz tatili döneminde Amerika'da yasal olarak çalışmasına ve sonrasında bir süre ülkeyi gezmesine olanak tanır. Program genellikle Mayıs ile Ekim ayları arasında gerçekleşir ve ortalama 3-4 ay sürer.</p>
+                <p>Pathway Programları; lisans (Undergraduate) veya yüksek lisans (Postgraduate) seviyelerinde yurtdışında eğitim almak isteyen öğrenciler için tasarlanmış hazırlık programlarıdır. Bu programlar, öğrencilerin akademik bilgi, İngilizce dil yeterliliği ve üniversite hayatına adaptasyon konularında gelişmesini hedefler.</p>
             </div>
         </section>
 
         <section class="section">
             <div class="section-header">
-                <h2>Katılım Şartları</h2>
+                <h2>Kimler İçin Uygundur?</h2>
             </div>
             <div class="section-content">
                 <div class="list-box">
                     <ul>
-                        <li>18-28 yaş arasında olmak</li>
-                        <li>Türkiye'de tam zamanlı bir üniversite öğrencisi olmak</li>
-                        <li>En az orta seviyede İngilizce bilgisine sahip olmak</li>
-                        <li>Akademik olarak başarılı bir öğrenci olmak</li>
-                        <li>Daha önce programa katılmamış olmak</li>
+                        <li>Lise veya lisans mezunu olup yurtdışında eğitim almak isteyen ama direkt kabul alamayan öğrenciler</li>
+                        <li>İngilizce seviyesi üniversite için yeterli olmayanlar</li>
+                        <li>Uluslararası geçerli bir diploma (IB, A-Level, AP) olmayanlar</li>
+                        <li>Farklı bir eğitim sisteminden gelen öğrenciler</li>
                     </ul>
                 </div>
             </div>
@@ -266,17 +293,24 @@
 
         <section class="section">
             <div class="section-header">
-                <h2>Program Avantajları</h2>
+                <h2>Pathway Programı Türleri</h2>
             </div>
             <div class="section-content">
+                <h3>1. Undergraduate Pathway (Lisans Hazırlık)</h3>
                 <div class="list-box">
                     <ul>
-                        <li>Amerika'da yasal olarak çalışma ve gelir elde etme fırsatı</li>
-                        <li>İngilizce pratik yapma ve gelişim</li>
-                        <li>Kültürel değişim ve farklı ülkelerden gelen öğrencilerle tanışma</li>
-                        <li>Amerika'nın farklı eyaletlerini gezme imkânı</li>
-                        <li>Uluslararası deneyim kazanarak özgeçmişe değer katma</li>
-                        <li>Sorumluluk, bağımsızlık ve özgüven kazanma</li>
+                        <li>Lise mezunları içindir</li>
+                        <li>1 yıllık hazırlık sonrası üniversiteye geçiş sağlanır</li>
+                        <li>Bazı programlar doğrudan 1. sınıf sayılabilir (Foundation veya International Year One)</li>
+                    </ul>
+                </div>
+
+                <h3>2. Postgraduate Pathway (Yüksek Lisans Hazırlık)</h3>
+                <div class="list-box">
+                    <ul>
+                        <li>Lisans mezunları içindir</li>
+                        <li>İngilizce seviyesi ya da akademik eksikleri olan adaylar için uygundur</li>
+                        <li>6–9 aylık programlar sonrası yüksek lisansa geçiş yapılır</li>
                     </ul>
                 </div>
             </div>
@@ -284,16 +318,16 @@
 
         <section class="section">
             <div class="section-header">
-                <h2>Çalışma Alanları</h2>
+                <h2>Pathway Programı Avantajları</h2>
             </div>
             <div class="section-content">
                 <div class="list-box">
                     <ul>
-                        <li>Restoran ve kafelerde garsonluk, baristalık, mutfak elemanlığı</li>
-                        <li>Otel ve tatil köylerinde temizlik görevlisi, resepsiyonist, kat görevlisi</li>
-                        <li>Eğlence parklarında bilet satışı, oyuncak operatörlüğü, servis personeli</li>
-                        <li>Marketlerde kasa görevlisi veya raf düzenleme</li>
-                        <li>Plaj ve havuzlarda cankurtaranlık (sertifika gerektirir)</li>
+                        <li>Akademik ve dil hazırlık: İngilizce yeterliliğiniz gelişirken akademik derslere de alışırsınız</li>
+                        <li>Üniversite garantisi: Program başarıyla tamamlandığında anlaşmalı üniversiteye geçiş garantisi sunulur</li>
+                        <li>Uyum kolaylığı: Yeni ülkeye ve eğitim sistemine daha kolay adapte olursunuz</li>
+                        <li>Sosyal entegrasyon: Uluslararası öğrencilerle kaynaşarak sosyal çevre edinirsiniz</li>
+                        <li>Başarı oranı yüksek: Doğrudan üniversiteye başlayanlara göre daha yüksek başarı ve mezuniyet oranı</li>
                     </ul>
                 </div>
             </div>
@@ -301,16 +335,17 @@
 
         <section class="section">
             <div class="section-header">
-                <h2>Başvuru Süreci</h2>
+                <h2>Pathway Programı Nerelerde Var?</h2>
             </div>
             <div class="section-content">
+                <p>Pathway programları dünya genelinde birçok ülkede sunulmaktadır.</p>
+                
+                <h3>En popüler ülkeler:</h3>
                 <div class="list-box">
                     <ul>
-                        <li>Başvuru: Danışmanlık ofisleri aracılığıyla başvuru yapılır</li>
-                        <li>İngilizce Mülakat: İşe yerleştirme için seviye tespit görüşmeleri</li>
-                        <li>İş Eşleştirmesi: İngilizce seviyesi ve tercih edilen lokasyona göre uygun iş seçimi</li>
-                        <li>DS-2019 Formu: İş teklifi sonrası vize başvurusu için gerekli form</li>
-                        <li>Vize Randevusu: Amerikan Konsolosluğu'ndan J-1 vizesi için görüşme</li>
+                        <li>İngiltere: INTO, Kaplan, Navitas, Study Group gibi sağlayıcılarla birçok üniversitede</li>
+                        <li>Amerika: Oregon State, George Mason, University of South Florida vb.</li>
+                        <li>Hollanda, İrlanda, Avustralya, Kanada: Artan seçeneklerle uluslararası öğrencilere kapı açıyor</li>
                     </ul>
                 </div>
             </div>
@@ -318,15 +353,16 @@
 
         <section class="section">
             <div class="section-header">
-                <h2>Çalışma Detayları</h2>
+                <h2>Başvuru Şartları</h2>
             </div>
             <div class="section-content">
                 <div class="list-box">
                     <ul>
-                        <li>Ortalama saatlik ücret: $10 – $17</li>
-                        <li>Haftalık çalışma: 32 – 40 saat (ek işlerle 60 saate kadar)</li>
-                        <li>Aylık gelir: $1300 – $2000</li>
-                        <li>Ek iş yapma hakkı: Sponsor bilgilendirmeli olarak mümkün</li>
+                        <li>Lise diploması (Undergraduate için) / Lisans diploması (Postgraduate için)</li>
+                        <li>Transkript</li>
+                        <li>Orta düzeyde İngilizce (IELTS 4.5–5.5 arası genellikle kabul edilir)</li>
+                        <li>Pasaport</li>
+                        <li>Niyet mektubu ve referans mektubu (bazı okullarda)</li>
                     </ul>
                 </div>
             </div>
@@ -334,15 +370,14 @@
 
         <section class="section">
             <div class="section-header">
-                <h2>Konaklama</h2>
+                <h2>Eğitim Süresi ve Başlangıç Dönemleri</h2>
             </div>
             <div class="section-content">
                 <div class="list-box">
                     <ul>
-                        <li>Paylaşımlı apartman daireleri</li>
-                        <li>Motel veya pansiyonlar</li>
-                        <li>Üniversite yurtları (bazen)</li>
-                        <li>Haftalık konaklama ücreti: $80 – $150</li>
+                        <li>Undergraduate Pathway: Genellikle 9–12 ay</li>
+                        <li>Postgraduate Pathway: 6–9 ay</li>
+                        <li>Başlangıç Tarihleri: Eylül, Ocak, bazen Nisan/Mayıs dönemlerinde de bulunabilir</li>
                     </ul>
                 </div>
             </div>
@@ -350,20 +385,37 @@
 
         <section class="section">
             <div class="section-header">
-                <h2>Vize İşlemleri</h2>
+                <h2>Pathway Programı Ücretleri</h2>
             </div>
             <div class="section-content">
-                <p>Work and Travel programı kapsamında J-1 Exchange Visitor vizesi alınır. Vize başvurusu için gerekenler:</p>
+                <p>Eğitim ücretleri ülkeye ve kuruma göre değişiklik gösterir. Genel aralıklar:</p>
                 <div class="list-box">
                     <ul>
-                        <li>DS-2019 formu</li>
-                        <li>SEVIS ücreti (yaklaşık $35)</li>
-                        <li>Geçerli pasaport</li>
-                        <li>Fotoğraf ve vize başvuru formu (DS-160)</li>
-                        <li>Konsolosluk mülakatı</li>
+                        <li>İngiltere: 10.000 – 20.000 GBP</li>
+                        <li>ABD: 15.000 – 25.000 USD</li>
+                        <li>Avustralya: 12.000 – 18.000 AUD</li>
+                        <li>Hollanda/Avrupa: 7.000 – 13.000 Euro</li>
                     </ul>
                 </div>
-                <p>Vize mülakatı sırasında adaydan İngilizce konuşması ve programa dönüp dönmeyeceğiyle ilgili niyet beyanı istenir. Belgeleriniz eksiksizse ve mülakat iyi geçerse genellikle vize olumlu sonuçlanır.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Popüler Pathway Sağlayıcıları ve Üniversiteleri</h2>
+            </div>
+            <div class="section-content">
+                <div class="list-box">
+                    <ul>
+                        <li>INTO University Partnerships: Exeter, Manchester, Oregon State</li>
+                        <li>Kaplan International: Nottingham Trent, Arizona State</li>
+                        <li>Navitas: Brunel University, La Trobe, UMass</li>
+                        <li>Study Group: Durham, Royal Holloway, Leeds</li>
+                        <li>OnCampus: University of Amsterdam, Lund University</li>
+                    </ul>
+                </div>
+
+                <p>Pathway programları, doğrudan yurtdışındaki üniversitelere girişte zorluk yaşayan öğrenciler için mükemmel bir alternatiftir. Hem akademik hem dil açısından sizi üniversiteye hazırlar, kültürel geçiş sürecini kolaylaştırır ve üniversite başarınızı artırır. Eğer siz de yurtdışında eğitim hedefliyorsanız ama hazır hissetmiyorsanız, Pathway programlarıyla doğru bir başlangıç yapabilirsiniz.</p>
             </div>
         </section>
     </main>
