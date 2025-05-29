@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University Park Yurtdışı Eğitim - Work and Study programları. İrlanda, Kanada, Avustralya ve Yeni Zelanda'da eğitim alırken çalışma fırsatları.">
+    <meta name="keywords" content="work and study, yurtdışında çalışma, yurtdışında eğitim, irlanda work and study, kanada work and study, avustralya work and study">
+    <title>Work and Study Programı | University Park</title>
+    <style>
+        :root {
+            --primary-color: rgb(26,64,121);
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('work-study-hero.webp');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .section-content {
+            padding: 2rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .advantages {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .advantages h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .advantages ul {
+            list-style: none;
+        }
+
+        .advantages li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .advantages li:before {
+            content: "✓";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .info-box {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .info-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .info-box li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .country-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .country-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .country-card ul {
+            list-style: none;
+        }
+
+        .country-card li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .country-card li:before {
+            content: "→";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="universitypark-small.webp" alt="University Park">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Work and Study Programı</h1>
+            <p>Yurtdışında Eğitim Alırken Çalışma Fırsatı</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="section">
+            <div class="section-header">
+                <h2>Work and Study Nedir?</h2>
+            </div>
+            <div class="section-content">
+                <p>Yurtdışında eğitim almak isteyen birçok öğrenci için en büyük engellerden biri maliyettir. Ancak hem eğitim alıp hem de yasal olarak çalışarak bu maliyetleri azaltmak mümkün! Work and Study (Çalış ve Eğitim Al) programları, bu ihtiyaca mükemmel bir çözüm sunar.</p>
+                
+                <p>Work and Study; öğrencilerin yurtdışında dil eğitimi veya sertifika programlarına katılırken yasal çalışma izniyle haftalık belirli saatlerde çalışabildiği programlardır. Özellikle İngilizce dil eğitimi almak isteyen öğrenciler için İrlanda, Kanada, Avustralya ve Yeni Zelanda gibi ülkelerde oldukça popülerdir.</p>
+
+                <div class="advantages">
+                    <h3>Programın Sunduğu Avantajlar</h3>
+                    <ul>
+                        <li>Maliyetleri düşürme imkânı: Eğitiminizi finanse etmek için çalışabilirsiniz.</li>
+                        <li>Dil pratiği: Sınıf dışında gerçek hayatta İngilizce pratiği yaparsınız.</li>
+                        <li>İş deneyimi: Uluslararası iş ortamında deneyim kazanırsınız.</li>
+                        <li>Sosyal çevre: Farklı milletlerden insanlarla tanışıp ağınızı genişletirsiniz.</li>
+                        <li>Kültürel entegrasyon: Gittiğiniz ülkenin kültürüne daha kolay adapte olursunuz.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Hangi Ülkelerde Work and Study Yapılır?</h2>
+            </div>
+            <div class="section-content">
+                <div class="country-grid">
+                    <div class="country-card">
+                        <h3>İrlanda</h3>
+                        <ul>
+                            <li>25 haftalık dil eğitimi alan öğrencilere haftada 20 saat yasal çalışma hakkı</li>
+                            <li>Tatil dönemlerinde haftalık 40 saat çalışma imkanı</li>
+                            <li>Popüler şehirler: Dublin, Cork, Galway</li>
+                        </ul>
+                    </div>
+
+                    <div class="country-card">
+                        <h3>Kanada</h3>
+                        <ul>
+                            <li>Kolej ya da sertifika programlarına kayıtlı öğrenciler için çalışma hakkı</li>
+                            <li>Eğitim süresince haftada 20 saat, tatillerde 40 saat çalışma imkanı</li>
+                            <li>Mezuniyet sonrası çalışma izni (PGWP) alma hakkı</li>
+                        </ul>
+                    </div>
+
+                    <div class="country-card">
+                        <h3>Avustralya</h3>
+                        <ul>
+                            <li>Dil okulu, mesleki eğitim veya üniversite programlarında çalışma hakkı</li>
+                            <li>Haftada 24 saat çalışma imkanı (2024 itibarıyla)</li>
+                            <li>Yüksek minimum ücret avantajı</li>
+                        </ul>
+                    </div>
+
+                    <div class="country-card">
+                        <h3>Yeni Zelanda</h3>
+                        <ul>
+                            <li>14 hafta ve üzeri İngilizce programlarında çalışma hakkı</li>
+                            <li>Sertifika/diploma programlarında çalışma izni</li>
+                            <li>Esnek çalışma saatleri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Kimler Başvurabilir?</h2>
+            </div>
+            <div class="section-content">
+                <div class="info-box">
+                    <ul>
+                        <li>En az lise mezunu bireyler</li>
+                        <li>B1-B2 düzeyinde İngilizce bilenler (bazı ülkeler için)</li>
+                        <li>Eğitim alacağı süreye göre bütçesini ayarlayabilen öğrenciler</li>
+                        <li>Yurtdışında yaşama ve çalışma motivasyonu yüksek olanlar</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Başvuru Süreci ve Belgeler</h2>
+            </div>
+            <div class="section-content">
+                <div class="info-box">
+                    <ul>
+                        <li>Pasaport</li>
+                        <li>Mezuniyet belgesi (veya öğrenci belgesi)</li>
+                        <li>Niyet mektubu</li>
+                        <li>CV</li>
+                        <li>Vize başvuru evrakları</li>
+                        <li>Dil seviyesi belgesi (varsa)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Çalışılabilecek İşler ve Ücretler</h2>
+            </div>
+            <div class="section-content">
+                <div class="info-box">
+                    <h3>Çalışılabilecek İşler</h3>
+                    <ul>
+                        <li>Kafeler, restoranlar (barista, garson)</li>
+                        <li>Market ve mağazalar</li>
+                        <li>Oteller (resepsiyon, kat hizmetleri)</li>
+                        <li>Temizlik ve depo işleri</li>
+                        <li>Bazı sektörlerde ofis içi pozisyonlar (İngilizce seviyesi yüksek olanlar için)</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>Ortalama Saatlik Ücretler</h3>
+                    <ul>
+                        <li>İrlanda: 12–14 Euro</li>
+                        <li>Kanada: 15–18 CAD</li>
+                        <li>Avustralya: 22–26 AUD</li>
+                        <li>Yeni Zelanda: 21–24 NZD</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>Konaklama ve Yaşam Giderleri</h3>
+                    <p>Aile yanı konaklama, paylaşımlı ev, öğrenci yurdu seçenekleri bulunur.</p>
+                    <p>Aylık yaşam giderleri (ülkeye göre değişken):</p>
+                    <ul>
+                        <li>İrlanda: 800–1200 Euro</li>
+                        <li>Kanada: 1000–1500 CAD</li>
+                        <li>Avustralya: 1000–1600 AUD</li>
+                        <li>Yeni Zelanda: 1000–1400 NZD</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Vize Süreci</h2>
+            </div>
+            <div class="section-content">
+                <p>Her ülkenin vize şartları farklıdır, ancak genel olarak şunlara dikkat edilir:</p>
+                <div class="info-box">
+                    <ul>
+                        <li>Eğitim süresi</li>
+                        <li>Finansal yeterlilik belgeleri</li>
+                        <li>Okul kabul mektubu</li>
+                        <li>Sağlık sigortası</li>
+                        <li>Konaklama planı</li>
+                        <li>Niyet mektubu</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>EĞİTİM PROGRAMLARI</h3>
+                    <ul>
+                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
+                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
+                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
+                        <li><a href="#">WORK AND TRAVEL</a></li>
+                        <li><a href="#">VİZE</a></li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>HAKKIMIZDA</h3>
+                    <ul>
+                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İLETİŞİM</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 324 326 4600</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+90 541 430 4808</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

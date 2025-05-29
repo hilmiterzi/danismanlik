@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University Park Yurtdışı Eğitim - Yaz Okulu programları. İngiltere, Amerika, Kanada, İrlanda ve Malta'da yaz okulu fırsatları.">
+    <meta name="keywords" content="yaz okulu, yurtdışında yaz okulu, yaz kampı, dil eğitimi, ingiltere yaz okulu, amerika yaz okulu, kanada yaz okulu">
+    <title>Yaz Okulu Programları | University Park</title>
+    <style>
+        :root {
+            --primary-color: rgb(26,64,121);
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('yaz-okulu-hero.webp');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .section-content {
+            padding: 2rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .advantages {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .advantages h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .advantages ul {
+            list-style: none;
+        }
+
+        .advantages li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .advantages li:before {
+            content: "✓";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .info-box {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .info-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+        }
+
+        .info-box li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .info-box li:before {
+            content: "•";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .country-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .country-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .country-card p {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="universitypark-small.webp" alt="University Park">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Yaz Okulu Programları</h1>
+            <p>Dünyayı Keşfet, Dilini Geliştir, Ufuk Aç!</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="section">
+            <div class="section-header">
+                <h2>Yaz Okulu Nedir?</h2>
+            </div>
+            <div class="section-content">
+                <p>Yaz okulu programları, genellikle 2 ila 8 hafta arasında süren, öğrencilerin yaz tatili boyunca yabancı dil öğrenmelerine, kültürel geziler yapmalarına ve sosyal gelişim kazanmalarına imkan tanıyan kısa süreli eğitim programlarıdır.</p>
+                
+                <p>Yaz aylarını verimli geçirmenin en keyifli ve öğretici yollarından biri: yurtdışında yaz okulu programları! Hem dil becerilerinizi geliştirebilir, hem de farklı kültürlerle tanışarak unutulmaz bir deneyim yaşayabilirsiniz.</p>
+
+                <div class="advantages">
+                    <h3>Yaz Okulunun Avantajları</h3>
+                    <ul>
+                        <li>Yoğunlaştırılmış yabancı dil eğitimi</li>
+                        <li>Farklı ülkelerden öğrencilerle sosyal etkileşim</li>
+                        <li>Kültürel turlar ve etkinliklerle eğlenerek öğrenme</li>
+                        <li>Erken yaşta yurtdışı deneyimi kazanma</li>
+                        <li>Özgüven, sorumluluk ve bağımsızlık gelişimi</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Kimler Katılabilir?</h2>
+            </div>
+            <div class="section-content">
+                <div class="info-box">
+                    <ul>
+                        <li>8 – 18 yaş arası çocuk ve gençler</li>
+                        <li>Üniversite öğrencileri ve yeni mezunlar</li>
+                        <li>Dilini geliştirmek isteyen yetişkin bireyler</li>
+                        <li>Programlar yaş grubuna ve seviyeye özel olarak hazırlanır</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Popüler Yaz Okulu Ülkeleri</h2>
+            </div>
+            <div class="section-content">
+                <div class="country-grid">
+                    <div class="country-card">
+                        <h3>İngiltere</h3>
+                        <p>Güçlü akademik içerik, tarihi şehirler</p>
+                    </div>
+
+                    <div class="country-card">
+                        <h3>Amerika</h3>
+                        <p>Kampüs hayatı ve dil pratiği</p>
+                    </div>
+
+                    <div class="country-card">
+                        <h3>Kanada</h3>
+                        <p>Doğa, güvenlik ve kaliteli eğitim</p>
+                    </div>
+
+                    <div class="country-card">
+                        <h3>İrlanda</h3>
+                        <p>Sıcak bir atmosferde İngilizce eğitimi</p>
+                    </div>
+
+                    <div class="country-card">
+                        <h3>Malta</h3>
+                        <p>Akdeniz'in eşsiz güzelliğinde dil öğrenme</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Program İçeriği</h2>
+            </div>
+            <div class="section-content">
+                <div class="info-box">
+                    <ul>
+                        <li>Haftalık 15–25 saat arasında dil dersi</li>
+                        <li>Konaklama (aile yanı veya kampüs yurdu)</li>
+                        <li>Günlük sosyal aktiviteler ve hafta sonu gezileri</li>
+                        <li>7/24 rehberlik ve gözetmen desteği</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <h2>Kayıt ve Vize Süreci</h2>
+            </div>
+            <div class="section-content">
+                <p>Universitypark Yurtdışı Eğitim olarak, başvuru belgelerinden konaklama rezervasyonlarına, vize işlemlerinden uçak biletine kadar her adımda yanınızdayız. Yaz okuluna güvenle ve hazır bir şekilde adım atmanız için size özel danışmanlık sunuyoruz.</p>
+                <p>Yaz tatilini fırsata dönüştür, eğlenerek öğren!</p>
+                <p>Hemen bizimle iletişime geçin, size en uygun yaz okulu programını birlikte belirleyelim!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>EĞİTİM PROGRAMLARI</h3>
+                    <ul>
+                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
+                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
+                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
+                        <li><a href="#">WORK AND TRAVEL</a></li>
+                        <li><a href="#">VİZE</a></li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>HAKKIMIZDA</h3>
+                    <ul>
+                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İLETİŞİM</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 324 326 4600</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+90 541 430 4808</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
