@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University Park Yurtdışı Eğitim - Yurtdışında dil okulu programları. İngiltere, Kanada, Amerika, Avustralya, Malta ve İrlanda'da dil eğitimi fırsatları.">
+    <meta name="keywords" content="yurtdışı dil okulu, ingiltere dil okulu, kanada dil okulu, amerika dil okulu, avustralya dil okulu, malta dil okulu, irlanda dil okulu">
+    <title>Yurtdışında Dil Okulları | University Park</title>
+    <style>
+        :root {
+            --primary-color: rgb(26,64,121);
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('dil-okulu-hero.webp');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .country-section {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .country-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .country-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .country-content {
+            padding: 2rem;
+        }
+
+        .country-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .advantages {
+            background-color: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .advantages h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .advantages ul {
+            list-style: none;
+        }
+
+        .advantages li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .advantages li:before {
+            content: "✓";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .info-box {
+            background-color: var(--light-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .info-box p {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .country-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="universitypark-small.webp" alt="University Park">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Yurtdışında Dil Eğitimi</h1>
+            <p>Dünyanın en iyi dil okullarında İngilizce öğrenin</p>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="country-section">
+            <div class="country-header">
+                <h2>İngiltere'de Dil Eğitimi</h2>
+            </div>
+            <div class="country-content">
+                <p>İngiltere, İngilizce'nin ana vatanı olması nedeniyle dil eğitimi için en çok tercih edilen ülkelerin başında gelir. Oxford, Cambridge, Londra gibi şehirlerde bulunan prestijli dil okulları, öğrencilere kaliteli bir eğitim sunar.</p>
+                
+                <div class="advantages">
+                    <h3>Avantajları:</h3>
+                    <ul>
+                        <li>Ana dili İngilizce olan eğitmenlerden eğitim</li>
+                        <li>Zengin tarihî ve kültürel ortam</li>
+                        <li>Sertifika ve diploma programları geniş yelpazeye sahiptir</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Popüler Şehirler:</strong> Londra, Brighton, Manchester, Oxford, Cambridge</p>
+                    <p><strong>Eğitim Süresi:</strong> 2 haftadan 1 yıla kadar</p>
+                    <p><strong>Vize:</strong> Kısa ve uzun dönem öğrenci vizeleri uygulanır</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="country-section">
+            <div class="country-header">
+                <h2>Kanada'da Dil Eğitimi</h2>
+            </div>
+            <div class="country-content">
+                <p>Kanada, yüksek yaşam kalitesi ve güvenliğiyle öne çıkan bir dil eğitimi destinasyonudur. Özellikle resmi iki dili olması (İngilizce ve Fransızca) öğrencilere çift dil avantajı sağlar.</p>
+                
+                <div class="advantages">
+                    <h3>Avantajları:</h3>
+                    <ul>
+                        <li>Kaliteli eğitim kurumları ve uygun yaşam maliyetleri</li>
+                        <li>Göçmenlik için eğitim sonrası avantajlar</li>
+                        <li>Doğayla iç içe bir öğrenme ortamı</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Popüler Şehirler:</strong> Toronto, Vancouver, Montreal, Ottawa</p>
+                    <p><strong>Eğitim Süresi:</strong> 4 hafta – 1 yıl</p>
+                    <p><strong>Vize:</strong> Study Permit başvurusu yapılır</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="country-section">
+            <div class="country-header">
+                <h2>Amerika'da Dil Eğitimi</h2>
+            </div>
+            <div class="country-content">
+                <p>ABD, dünya genelinde tanınan birçok dil okuluna ev sahipliği yapar. Yoğun akademik içerikli programlardan genel İngilizceye kadar birçok seçenek sunar.</p>
+                
+                <div class="advantages">
+                    <h3>Avantajları:</h3>
+                    <ul>
+                        <li>Uluslararası tanınırlığa sahip okullar</li>
+                        <li>TOEFL/IELTS hazırlık kursları yaygın</li>
+                        <li>Üniversiteye geçiş fırsatları</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Popüler Şehirler:</strong> New York, Los Angeles, San Francisco, Boston, Miami</p>
+                    <p><strong>Eğitim Süresi:</strong> 1 ay – 1 yıl</p>
+                    <p><strong>Vize:</strong> F-1 Öğrenci Vizesi</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="country-section">
+            <div class="country-header">
+                <h2>Avustralya'da Dil Eğitimi</h2>
+            </div>
+            <div class="country-content">
+                <p>Avustralya, dil eğitimiyle birlikte tatil yapma fırsatı sunar. Work and Study programları sayesinde öğrenciler hem okuyup hem çalışabilirler.</p>
+                
+                <div class="advantages">
+                    <h3>Avantajları:</h3>
+                    <ul>
+                        <li>Öğrencilere çalışma izni (haftada 24 saate kadar)</li>
+                        <li>Güvenli ve rahat yaşam tarzı</li>
+                        <li>Modern ve yenilikçi eğitim sistemi</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Popüler Şehirler:</strong> Sydney, Melbourne, Brisbane, Perth</p>
+                    <p><strong>Eğitim Süresi:</strong> 2 ay – 1 yıl</p>
+                    <p><strong>Vize:</strong> Student Visa (Subclass 500)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="country-section">
+            <div class="country-header">
+                <h2>Malta'da Dil Eğitimi</h2>
+            </div>
+            <div class="country-content">
+                <p>Akdeniz'in ortasında küçük bir ada ülkesi olan Malta, dil eğitimi ve tatili bir araya getiren ekonomik bir seçenektir.</p>
+                
+                <div class="advantages">
+                    <h3>Avantajları:</h3>
+                    <ul>
+                        <li>Avrupa'nın en uygun fiyatlı dil eğitimi destinasyonlarından biri</li>
+                        <li>Sıcak iklim ve deniz kenarında eğitim</li>
+                        <li>Schengen bölgesi avantajı</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Popüler Şehirler:</strong> St. Julian's, Sliema, Valletta</p>
+                    <p><strong>Eğitim Süresi:</strong> 2 hafta – 6 ay</p>
+                    <p><strong>Vize:</strong> Schengen vizesi yeterli (90 güne kadar)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="country-section">
+            <div class="country-header">
+                <h2>İrlanda'da Dil Eğitimi</h2>
+            </div>
+            <div class="country-content">
+                <p>İrlanda, İngiltere'ye göre daha ekonomik seçenekler sunan, ana dili İngilizce olan bir Avrupa ülkesidir. Öğrenciler burada çalışma iznine de sahip olurlar.</p>
+                
+                <div class="advantages">
+                    <h3>Avantajları:</h3>
+                    <ul>
+                        <li>Haftada 20 saat çalışma izni</li>
+                        <li>Öğrenci dostu şehirler</li>
+                        <li>Avrupa içi seyahat kolaylığı</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Popüler Şehirler:</strong> Dublin, Cork, Galway, Limerick</p>
+                    <p><strong>Eğitim Süresi:</strong> 3 ay – 1 yıl</p>
+                    <p><strong>Vize:</strong> 25 hafta ve üzeri programlarda çalışma izni alınabilir</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>EĞİTİM PROGRAMLARI</h3>
+                    <ul>
+                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
+                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
+                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
+                        <li><a href="#">WORK AND TRAVEL</a></li>
+                        <li><a href="#">VİZE</a></li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>HAKKIMIZDA</h3>
+                    <ul>
+                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İLETİŞİM</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 324 326 4600</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+90 541 430 4808</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
