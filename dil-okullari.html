@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="University Park Yurtdışı Eğitim - Yurtdışında dil okulu programları. İngiltere, Kanada, Amerika, Avustralya, Malta ve İrlanda'da dil eğitimi fırsatları.">
+    <meta name="description" content="Yurtdışında dil eğitimi fırsatları - İngiltere, Kanada, Amerika, Avustralya, Malta ve İrlanda'da dil okulları hakkında detaylı bilgi.">
     <meta name="keywords" content="yurtdışı dil okulu, ingiltere dil okulu, kanada dil okulu, amerika dil okulu, avustralya dil okulu, malta dil okulu, irlanda dil okulu">
     <title>Yurtdışında Dil Okulları | University Park</title>
     <style>
@@ -58,168 +58,69 @@
             object-fit: contain;
         }
 
-        /* Hero Section */
-        .hero {
-            margin-top: 60px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('dil-okulu-hero.webp');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
+        /* Content Styles */
+        .content-section {
+            margin-top: 80px;
             padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        /* Main Content */
-        .main-content {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .country-section {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .country-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .country-header h2 {
-            margin: 0;
-            font-size: 1.8rem;
-        }
-
-        .country-content {
             padding: 2rem;
-        }
-
-        .country-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .advantages {
-            background-color: var(--light-bg);
-            padding: 1.5rem;
             border-radius: 8px;
-            margin: 1.5rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .advantages h3 {
+        .country-section h2 {
             color: var(--primary-color);
             margin-bottom: 1rem;
+            font-size: 2rem;
         }
 
-        .advantages ul {
+        .country-section p {
+            margin-bottom: 1.5rem;
+        }
+
+        .advantages-list {
             list-style: none;
+            margin-bottom: 1.5rem;
         }
 
-        .advantages li {
-            margin-bottom: 0.8rem;
+        .advantages-list li {
+            margin-bottom: 0.5rem;
             padding-left: 1.5rem;
             position: relative;
         }
 
-        .advantages li:before {
+        .advantages-list li::before {
             content: "✓";
             color: var(--secondary-color);
             position: absolute;
             left: 0;
         }
 
-        .info-box {
-            background-color: var(--light-bg);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-
-        .info-box p {
-            margin: 0.5rem 0;
-        }
-
-        /* Footer Styles */
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 4rem 2rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-section ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section ul li a:hover {
-            color: var(--secondary-color);
-        }
-
-        .footer-bottom {
+        .section-title {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+            .content-section {
+                padding: 1rem;
             }
 
-            .country-header h2 {
-                font-size: 1.5rem;
+            .country-section {
+                padding: 1.5rem;
             }
 
-            .footer-grid {
-                grid-template-columns: 1fr;
+            .country-section h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -233,158 +134,93 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Yurtdışında Dil Eğitimi</h1>
-            <p>Dünyanın en iyi dil okullarında İngilizce öğrenin</p>
+    <section class="content-section">
+        <h1 class="section-title">Yurtdışında Dil Okulları</h1>
+
+        <div class="country-section">
+            <h2>İngiltere'de Dil Eğitimi</h2>
+            <p>İngiltere, İngilizce'nin ana vatanı olması nedeniyle dil eğitimi için en çok tercih edilen ülkelerin başında gelir. Oxford, Cambridge, Londra gibi şehirlerde bulunan prestijli dil okulları, öğrencilere kaliteli bir eğitim sunar.</p>
+            <h3>Avantajları:</h3>
+            <ul class="advantages-list">
+                <li>Ana dili İngilizce olan eğitmenlerden eğitim</li>
+                <li>Zengin tarihî ve kültürel ortam</li>
+                <li>Sertifika ve diploma programları geniş yelpazeye sahiptir</li>
+                <li>Popüler Şehirler: Londra, Brighton, Manchester, Oxford, Cambridge</li>
+                <li>Eğitim Süresi: 2 haftadan 1 yıla kadar</li>
+                <li>Vize: Kısa ve uzun dönem öğrenci vizeleri uygulanır</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2>Kanada'da Dil Eğitimi</h2>
+            <p>Kanada, yüksek yaşam kalitesi ve güvenliğiyle öne çıkan bir dil eğitimi destinasyonudur. Özellikle resmi iki dili olması (İngilizce ve Fransızca) öğrencilere çift dil avantajı sağlar.</p>
+            <h3>Avantajları:</h3>
+            <ul class="advantages-list">
+                <li>Kaliteli eğitim kurumları ve uygun yaşam maliyetleri</li>
+                <li>Göçmenlik için eğitim sonrası avantajlar</li>
+                <li>Doğayla iç içe bir öğrenme ortamı</li>
+                <li>Popüler Şehirler: Toronto, Vancouver, Montreal, Ottawa</li>
+                <li>Eğitim Süresi: 4 hafta – 1 yıl</li>
+                <li>Vize: Study Permit başvurusu yapılır</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2>Amerika'da Dil Eğitimi</h2>
+            <p>ABD, dünya genelinde tanınan birçok dil okuluna ev sahipliği yapar. Yoğun akademik içerikli programlardan genel İngilizceye kadar birçok seçenek sunar.</p>
+            <h3>Avantajları:</h3>
+            <ul class="advantages-list">
+                <li>Uluslararası tanınırlığa sahip okullar</li>
+                <li>TOEFL/IELTS hazırlık kursları yaygın</li>
+                <li>Üniversiteye geçiş fırsatları</li>
+                <li>Popüler Şehirler: New York, Los Angeles, San Francisco, Boston, Miami</li>
+                <li>Eğitim Süresi: 1 ay – 1 yıl</li>
+                <li>Vize: F-1 Öğrenci Vizesi</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2>Avustralya'da Dil Eğitimi</h2>
+            <p>Avustralya, dil eğitimiyle birlikte tatil yapma fırsatı sunar. Work and Study programları sayesinde öğrenciler hem okuyup hem çalışabilirler.</p>
+            <h3>Avantajları:</h3>
+            <ul class="advantages-list">
+                <li>Öğrencilere çalışma izni (haftada 24 saate kadar)</li>
+                <li>Güvenli ve rahat yaşam tarzı</li>
+                <li>Modern ve yenilikçi eğitim sistemi</li>
+                <li>Popüler Şehirler: Sydney, Melbourne, Brisbane, Perth</li>
+                <li>Eğitim Süresi: 2 ay – 1 yıl</li>
+                <li>Vize: Student Visa (Subclass 500)</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2>Malta'da Dil Eğitimi</h2>
+            <p>Akdeniz'in ortasında küçük bir ada ülkesi olan Malta, dil eğitimi ve tatili bir araya getiren ekonomik bir seçenektir.</p>
+            <h3>Avantajları:</h3>
+            <ul class="advantages-list">
+                <li>Avrupa'nın en uygun fiyatlı dil eğitimi destinasyonlarından biri</li>
+                <li>Sıcak iklim ve deniz kenarında eğitim</li>
+                <li>Schengen bölgesi avantajı</li>
+                <li>Popüler Şehirler: St. Julian's, Sliema, Valletta</li>
+                <li>Eğitim Süresi: 2 hafta – 6 ay</li>
+                <li>Vize: Schengen vizesi yeterli (90 güne kadar)</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2>İrlanda'da Dil Eğitimi</h2>
+            <p>İrlanda, İngiltere'ye göre daha ekonomik seçenekler sunan, ana dili İngilizce olan bir Avrupa ülkesidir. Öğrenciler burada çalışma iznine de sahip olurlar.</p>
+            <h3>Avantajları:</h3>
+            <ul class="advantages-list">
+                <li>Haftada 20 saat çalışma izni</li>
+                <li>Öğrenci dostu şehirler</li>
+                <li>Avrupa içi seyahat kolaylığı</li>
+                <li>Popüler Şehirler: Dublin, Cork, Galway, Limerick</li>
+                <li>Eğitim Süresi: 3 ay – 1 yıl</li>
+                <li>Vize: 25 hafta ve üzeri programlarda çalışma izni alınabilir</li>
+            </ul>
         </div>
     </section>
-
-    <main class="main-content">
-        <section class="country-section">
-            <div class="country-header">
-                <h2>İngiltere'de Dil Eğitimi</h2>
-            </div>
-            <div class="country-content">
-                <p>İngiltere, İngilizce'nin ana vatanı olması nedeniyle dil eğitimi için en çok tercih edilen ülkelerin başında gelir. Oxford, Cambridge, Londra gibi şehirlerde bulunan prestijli dil okulları, öğrencilere kaliteli bir eğitim sunar.</p>
-                
-                <div class="advantages">
-                    <h3>Avantajları:</h3>
-                    <ul>
-                        <li>Ana dili İngilizce olan eğitmenlerden eğitim</li>
-                        <li>Zengin tarihî ve kültürel ortam</li>
-                        <li>Sertifika ve diploma programları geniş yelpazeye sahiptir</li>
-                    </ul>
-                </div>
-
-                <div class="info-box">
-                    <p><strong>Popüler Şehirler:</strong> Londra, Brighton, Manchester, Oxford, Cambridge</p>
-                    <p><strong>Eğitim Süresi:</strong> 2 haftadan 1 yıla kadar</p>
-                    <p><strong>Vize:</strong> Kısa ve uzun dönem öğrenci vizeleri uygulanır</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="country-section">
-            <div class="country-header">
-                <h2>Kanada'da Dil Eğitimi</h2>
-            </div>
-            <div class="country-content">
-                <p>Kanada, yüksek yaşam kalitesi ve güvenliğiyle öne çıkan bir dil eğitimi destinasyonudur. Özellikle resmi iki dili olması (İngilizce ve Fransızca) öğrencilere çift dil avantajı sağlar.</p>
-                
-                <div class="advantages">
-                    <h3>Avantajları:</h3>
-                    <ul>
-                        <li>Kaliteli eğitim kurumları ve uygun yaşam maliyetleri</li>
-                        <li>Göçmenlik için eğitim sonrası avantajlar</li>
-                        <li>Doğayla iç içe bir öğrenme ortamı</li>
-                    </ul>
-                </div>
-
-                <div class="info-box">
-                    <p><strong>Popüler Şehirler:</strong> Toronto, Vancouver, Montreal, Ottawa</p>
-                    <p><strong>Eğitim Süresi:</strong> 4 hafta – 1 yıl</p>
-                    <p><strong>Vize:</strong> Study Permit başvurusu yapılır</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="country-section">
-            <div class="country-header">
-                <h2>Amerika'da Dil Eğitimi</h2>
-            </div>
-            <div class="country-content">
-                <p>ABD, dünya genelinde tanınan birçok dil okuluna ev sahipliği yapar. Yoğun akademik içerikli programlardan genel İngilizceye kadar birçok seçenek sunar.</p>
-                
-                <div class="advantages">
-                    <h3>Avantajları:</h3>
-                    <ul>
-                        <li>Uluslararası tanınırlığa sahip okullar</li>
-                        <li>TOEFL/IELTS hazırlık kursları yaygın</li>
-                        <li>Üniversiteye geçiş fırsatları</li>
-                    </ul>
-                </div>
-
-                <div class="info-box">
-                    <p><strong>Popüler Şehirler:</strong> New York, Los Angeles, San Francisco, Boston, Miami</p>
-                    <p><strong>Eğitim Süresi:</strong> 1 ay – 1 yıl</p>
-                    <p><strong>Vize:</strong> F-1 Öğrenci Vizesi</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="country-section">
-            <div class="country-header">
-                <h2>Avustralya'da Dil Eğitimi</h2>
-            </div>
-            <div class="country-content">
-                <p>Avustralya, dil eğitimiyle birlikte tatil yapma fırsatı sunar. Work and Study programları sayesinde öğrenciler hem okuyup hem çalışabilirler.</p>
-                
-                <div class="advantages">
-                    <h3>Avantajları:</h3>
-                    <ul>
-                        <li>Öğrencilere çalışma izni (haftada 24 saate kadar)</li>
-                        <li>Güvenli ve rahat yaşam tarzı</li>
-                        <li>Modern ve yenilikçi eğitim sistemi</li>
-                    </ul>
-                </div>
-
-                <div class="info-box">
-                    <p><strong>Popüler Şehirler:</strong> Sydney, Melbourne, Brisbane, Perth</p>
-                    <p><strong>Eğitim Süresi:</strong> 2 ay – 1 yıl</p>
-                    <p><strong>Vize:</strong> Student Visa (Subclass 500)</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="country-section">
-            <div class="country-header">
-                <h2>Malta'da Dil Eğitimi</h2>
-            </div>
-            <div class="country-content">
-                <p>Akdeniz'in ortasında küçük bir ada ülkesi olan Malta, dil eğitimi ve tatili bir araya getiren ekonomik bir seçenektir.</p>
-                
-                <div class="advantages">
-                    <h3>Avantajları:</h3>
-                    <ul>
-                        <li>Avrupa'nın en uygun fiyatlı dil eğitimi destinasyonlarından biri</li>
-                        <li>Sıcak iklim ve deniz kenarında eğitim</li>
-                        <li>Schengen bölgesi avantajı</li>
-                    </ul>
-                </div>
-
-                <div class="info-box">
-                    <p><strong>Popüler Şehirler:</strong> St. Julian's, Sliema, Valletta</p>
-                    <p><strong>Eğitim Süresi:</strong> 2 hafta – 6 ay</p>
-                    <p><strong>Vize:</strong> Schengen vizesi yeterli (90 güne kadar)</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="country-section">
-            <div class="country-header">
-                <h2>İrlanda'da Dil Eğitimi</h2>
-            </div>
-            <div class="country-content">
-                <p>İrlanda, İngiltere'ye göre daha ekonomik seçenekler sunan, ana dili İngilizce olan bir Avrupa ülkesidir. Öğrenciler burada çalışma iznine de sahip olurlar.</p>
-                
-                <div class="advantages">
-                    <h3>Avantajları:</h3>
-                    <ul>
-                        <li>Haftada 20 saat çalışma izni</li>
-                        <li>Öğrenci dostu şehirler</li>
-                        <li>Avrupa içi seyahat kolaylığı</li>
-                    </ul>
-                </div>
-
-                <div class="info-box">
-                    <p><strong>Popüler Şehirler:</strong> Dublin, Cork, Galway, Limerick</p>
-                    <p><strong>Eğitim Süresi:</strong> 3 ay – 1 yıl</p>
-                    <p><strong>Vize:</strong> 25 hafta ve üzeri programlarda çalışma izni alınabilir</p>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <footer class="footer">
         <div class="footer-container">
