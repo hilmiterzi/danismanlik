@@ -1903,10 +1903,20 @@
                 overlay.classList.remove('active');
             });
 
-            // Handle empty hrefs and # hrefs
+            // Handle all links
             document.querySelectorAll('a').forEach(link => {
                 const href = link.getAttribute('href');
-                if (href === '#' || href === '' || !href) {
+                
+                // Check if it's an internal link (not starting with http, https, mailto, tel, etc.)
+                if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.startsWith('tel') && !href.startsWith('#')) {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        banner.classList.add('active');
+                        overlay.classList.add('active');
+                    });
+                }
+                // Also handle empty or # hrefs
+                else if (href === '#' || href === '' || !href) {
                     link.addEventListener('click', (e) => {
                         e.preventDefault();
                         banner.classList.add('active');
