@@ -3,367 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="University Park Yurtdışı Eğitim - Work and Travel Programı. Amerika'da yaz tatilinde çalışma ve seyahat etme fırsatı. J-1 vizesi ile yasal çalışma imkanı.">
-    <meta name="keywords" content="work and travel, amerika'da çalışma, j-1 vizesi, yaz tatili programı, kültürel değişim">
-    <title>Work and Travel | University Park</title>
-    <style>
-        :root {
-            --primary-color: rgb(26,64,121);
-            --secondary-color: #e63946;
-            --text-color: #333;
-            --light-bg: #f5f5f5;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-
-        /* Header Styles */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 60px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('work-travel-hero.webp');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        /* Main Content */
-        .main-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section {
-            margin-bottom: 4rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .section-header {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 1.5rem;
-            display: inline-block;
-            margin-bottom: 1rem;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .section-header h2 {
-            margin: 0;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        .section-content {
-            padding: 2rem;
-        }
-
-        .section-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-        }
-
-        .list-box {
-            background-color: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-
-        .list-box ul {
-            list-style: none;
-        }
-
-        .list-box li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .list-box li:before {
-            content: "•";
-            color: var(--secondary-color);
-            position: absolute;
-            left: 0;
-        }
-
-        /* Footer Styles */
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 4rem 2rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-section ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section ul li a:hover {
-            color: var(--secondary-color);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .section-header h2 {
-                font-size: 1.5rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <meta name="description" content="Work and Study Programı - Yurtdışında eğitim alırken çalışma fırsatı. İrlanda, Kanada, Avustralya ve Yeni Zelanda'da eğitim ve çalışma imkanları.">
+    <meta name="keywords" content="work and study, yurtdışında eğitim, yurtdışında çalışma, dil eğitimi, irlanda, kanada, avustralya, yeni zelanda">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Work and Study Programı - Yurtdışında Eğitim ve Çalışma Fırsatı">
+    <meta property="og:description" content="Yurtdışında eğitim alırken yasal olarak çalışma fırsatı. İrlanda, Kanada, Avustralya ve Yeni Zelanda'da Work and Study programları.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://universitypark.com.tr/work-and-study.html">
+    <title>Work and Study Programı | Yurtdışında Eğitim ve Çalışma Fırsatı</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="universitypark-small.webp" alt="University Park">
+                <img src="universitypark-small.webp" 
+                     srcset="universitypark-small.webp 120w,
+                             universitypark-medium.webp 240w,
+                             universitypark.webp 480w"
+                     sizes="(max-width: 460px) 120px,
+                            (max-width: 768px) 240px,
+                            480px"
+                     alt="University Park"
+                     width="120"
+                     height="40">
             </div>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-menu">
+                <a href="index.html#countries-section">ÜNİVERSİTE</a>
+                <div class="dropdown">
+                    <a href="eğitim-programları" class="dropdown-trigger">EĞİTİM PROGRAMLARI</a>
+                    <div class="dropdown-content">
+                        <a href="dil-okullari.html">Dil Okulları</a>
+                        <a href="work-and-study.html">Work & Study</a>
+                        <a href="yaz-okulu.html">Yaz Okulu</a>
+                        <a href="master-mba.html">Master/MBA</a>
+                        <a href="pathway.html">Pathway Programı</a>
+                    </div>
+                </div>
+                <a href="work-and-travel.html">WORK & TRAVEL</a>
+                <a href="vize.html">VİZE</a>
+                <a href="index.html#blog">BLOG</a>
+                <a href="index.html#hakkimizda">HAKKIMIZDA</a>
+                <a href="iletisim.html">İLETİŞİM</a>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Work and Travel</h1>
-            <p>Yaz Tatilinde Amerika'da Çalışma ve Seyahat Fırsatı</p>
-        </div>
-    </section>
-
-    <main class="main-content">
-        <section class="section">
-            <div class="section-header">
-                <h2>Program Hakkında</h2>
-            </div>
-            <div class="section-content">
-                <p>Work and Travel, Amerika Birleşik Devletleri tarafından düzenlenen ve üniversite öğrencilerine yaz tatilleri boyunca hem çalışıp hem de kültürel deneyim kazanmalarına olanak sağlayan bir değişim programıdır. ABD Dışişleri Bakanlığı'nın gözetiminde yürütülen bu program, öğrencilerin yaz aylarında hem İngilizcelerini geliştirmelerini hem de farklı bir kültürü yakından tanımalarını hedefler.</p>
+    <main class="program-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Work and Study Programı</h1>
+                <h2>Yurtdışında Eğitim Alırken Çalışma Fırsatı</h2>
             </div>
         </section>
 
-        <section class="section">
-            <div class="section-header">
-                <h2>Program Nedir?</h2>
-            </div>
-            <div class="section-content">
-                <p>Work and Travel (WAT), 18-28 yaş arası lisans veya yüksek lisans öğrencilerinin yaz tatili döneminde Amerika'da yasal olarak çalışmasına ve sonrasında bir süre ülkeyi gezmesine olanak tanır. Program genellikle Mayıs ile Ekim ayları arasında gerçekleşir ve ortalama 3-4 ay sürer.</p>
-            </div>
-        </section>
+        <section class="content-section">
+            <div class="container">
+                <div class="intro-text">
+                    <p>Yurtdışında eğitim almak isteyen birçok öğrenci için en büyük engellerden biri maliyettir. Ancak hem eğitim alıp hem de yasal olarak çalışarak bu maliyetleri azaltmak mümkün! Work and Study (Çalış ve Eğitim Al) programları, bu ihtiyaca mükemmel bir çözüm sunar.</p>
+                </div>
 
-        <section class="section">
-            <div class="section-header">
-                <h2>Katılım Şartları</h2>
-            </div>
-            <div class="section-content">
-                <div class="list-box">
-                    <ul>
-                        <li>18-28 yaş arasında olmak</li>
-                        <li>Türkiye'de tam zamanlı bir üniversite öğrencisi olmak</li>
-                        <li>En az orta seviyede İngilizce bilgisine sahip olmak</li>
-                        <li>Akademik olarak başarılı bir öğrenci olmak</li>
-                        <li>Daha önce programa katılmamış olmak</li>
+                <div class="program-section">
+                    <h2>Work and Study Nedir?</h2>
+                    <p>Work and Study; öğrencilerin yurtdışında dil eğitimi veya sertifika programlarına katılırken yasal çalışma izniyle haftalık belirli saatlerde çalışabildiği programlardır. Özellikle İngilizce dil eğitimi almak isteyen öğrenciler için İrlanda, Kanada, Avustralya ve Yeni Zelanda gibi ülkelerde oldukça popülerdir.</p>
+                </div>
+
+                <div class="program-section">
+                    <h2>Programın Sunduğu Avantajlar</h2>
+                    <ul class="benefits-list">
+                        <li>Maliyetleri düşürme imkânı: Eğitiminizi finanse etmek için çalışabilirsiniz.</li>
+                        <li>Dil pratiği: Sınıf dışında gerçek hayatta İngilizce pratiği yaparsınız.</li>
+                        <li>İş deneyimi: Uluslararası iş ortamında deneyim kazanırsınız.</li>
+                        <li>Sosyal çevre: Farklı milletlerden insanlarla tanışıp ağınızı genişletirsiniz.</li>
+                        <li>Kültürel entegrasyon: Gittiğiniz ülkenin kültürüne daha kolay adapte olursunuz.</li>
                     </ul>
                 </div>
-            </div>
-        </section>
 
-        <section class="section">
-            <div class="section-header">
-                <h2>Program Avantajları</h2>
-            </div>
-            <div class="section-content">
-                <div class="list-box">
-                    <ul>
-                        <li>Amerika'da yasal olarak çalışma ve gelir elde etme fırsatı</li>
-                        <li>İngilizce pratik yapma ve gelişim</li>
-                        <li>Kültürel değişim ve farklı ülkelerden gelen öğrencilerle tanışma</li>
-                        <li>Amerika'nın farklı eyaletlerini gezme imkânı</li>
-                        <li>Uluslararası deneyim kazanarak özgeçmişe değer katma</li>
-                        <li>Sorumluluk, bağımsızlık ve özgüven kazanma</li>
+                <div class="program-section">
+                    <h2>Hangi Ülkelerde Work and Study Yapılır?</h2>
+                    
+                    <div class="country-info">
+                        <h3>1. İrlanda</h3>
+                        <ul>
+                            <li>25 haftalık dil eğitimi alan öğrencilere haftada 20 saat yasal çalışma hakkı verilir.</li>
+                            <li>Tatil dönemlerinde haftalık 40 saat çalışılabilir.</li>
+                            <li>Popüler şehirler: Dublin, Cork, Galway</li>
+                        </ul>
+                    </div>
+
+                    <div class="country-info">
+                        <h3>2. Kanada</h3>
+                        <ul>
+                            <li>Kolej ya da sertifika programlarına kayıtlı öğrenciler, eğitim süresince haftada 20 saat, tatillerde 40 saat çalışabilir.</li>
+                            <li>Mezuniyet sonrası çalışma izni (PGWP) alma hakkı mümkündür.</li>
+                        </ul>
+                    </div>
+
+                    <div class="country-info">
+                        <h3>3. Avustralya</h3>
+                        <ul>
+                            <li>Dil okulu, mesleki eğitim veya üniversite programlarına kayıtlı öğrenciler haftada 24 saat çalışabilir (2024 itibarıyla).</li>
+                            <li>Minimum ücret saati oldukça yüksektir.</li>
+                        </ul>
+                    </div>
+
+                    <div class="country-info">
+                        <h3>4. Yeni Zelanda</h3>
+                        <ul>
+                            <li>14 hafta ve üzeri İngilizce programlarında çalışma hakkı sunulabilir.</li>
+                            <li>Sertifika/diploma programlarında da çalışma izni vardır.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-section">
+                    <h2>Kimler Başvurabilir?</h2>
+                    <ul class="requirements-list">
+                        <li>En az lise mezunu bireyler</li>
+                        <li>B1-B2 düzeyinde İngilizce bilenler (bazı ülkeler için)</li>
+                        <li>Eğitim alacağı süreye göre bütçesini ayarlayabilen öğrenciler</li>
+                        <li>Yurtdışında yaşama ve çalışma motivasyonu yüksek olanlar</li>
                     </ul>
                 </div>
-            </div>
-        </section>
 
-        <section class="section">
-            <div class="section-header">
-                <h2>Çalışma Alanları</h2>
-            </div>
-            <div class="section-content">
-                <div class="list-box">
-                    <ul>
-                        <li>Restoran ve kafelerde garsonluk, baristalık, mutfak elemanlığı</li>
-                        <li>Otel ve tatil köylerinde temizlik görevlisi, resepsiyonist, kat görevlisi</li>
-                        <li>Eğlence parklarında bilet satışı, oyuncak operatörlüğü, servis personeli</li>
-                        <li>Marketlerde kasa görevlisi veya raf düzenleme</li>
-                        <li>Plaj ve havuzlarda cankurtaranlık (sertifika gerektirir)</li>
+                <div class="program-section">
+                    <h2>Başvuru Süreci ve Belgeler</h2>
+                    <ul class="documents-list">
+                        <li>Pasaport</li>
+                        <li>Mezuniyet belgesi (veya öğrenci belgesi)</li>
+                        <li>Niyet mektubu</li>
+                        <li>CV</li>
+                        <li>Vize başvuru evrakları</li>
+                        <li>Dil seviyesi belgesi (varsa)</li>
                     </ul>
                 </div>
-            </div>
-        </section>
 
-        <section class="section">
-            <div class="section-header">
-                <h2>Başvuru Süreci</h2>
-            </div>
-            <div class="section-content">
-                <div class="list-box">
-                    <ul>
-                        <li>Başvuru: Danışmanlık ofisleri aracılığıyla başvuru yapılır</li>
-                        <li>İngilizce Mülakat: İşe yerleştirme için seviye tespit görüşmeleri</li>
-                        <li>İş Eşleştirmesi: İngilizce seviyesi ve tercih edilen lokasyona göre uygun iş seçimi</li>
-                        <li>DS-2019 Formu: İş teklifi sonrası vize başvurusu için gerekli form</li>
-                        <li>Vize Randevusu: Amerikan Konsolosluğu'ndan J-1 vizesi için görüşme</li>
+                <div class="program-section">
+                    <h2>Çalışılabilecek İşler</h2>
+                    <ul class="jobs-list">
+                        <li>Kafeler, restoranlar (barista, garson)</li>
+                        <li>Market ve mağazalar</li>
+                        <li>Oteller (resepsiyon, kat hizmetleri)</li>
+                        <li>Temizlik ve depo işleri</li>
+                        <li>Bazı sektörlerde ofis içi pozisyonlar (İngilizce seviyesi yüksek olanlar için)</li>
                     </ul>
                 </div>
-            </div>
-        </section>
 
-        <section class="section">
-            <div class="section-header">
-                <h2>Çalışma Detayları</h2>
-            </div>
-            <div class="section-content">
-                <div class="list-box">
-                    <ul>
-                        <li>Ortalama saatlik ücret: $10 – $17</li>
-                        <li>Haftalık çalışma: 32 – 40 saat (ek işlerle 60 saate kadar)</li>
-                        <li>Aylık gelir: $1300 – $2000</li>
-                        <li>Ek iş yapma hakkı: Sponsor bilgilendirmeli olarak mümkün</li>
+                <div class="program-section">
+                    <h2>Çalışma Ücretleri ve Saatler</h2>
+                    <div class="wages-info">
+                        <h3>Ortalama saatlik ücret:</h3>
+                        <ul>
+                            <li>İrlanda: 12–14 Euro</li>
+                            <li>Kanada: 15–18 CAD</li>
+                            <li>Avustralya: 22–26 AUD</li>
+                            <li>Yeni Zelanda: 21–24 NZD</li>
+                        </ul>
+                        <p>Haftalık ortalama çalışma süresi: 20 saat (tatillerde 40 saat)</p>
+                    </div>
+                </div>
+
+                <div class="program-section">
+                    <h2>Konaklama ve Yaşam Giderleri</h2>
+                    <p>Aile yanı konaklama, paylaşımlı ev, öğrenci yurdu seçenekleri bulunur.</p>
+                    <div class="living-costs">
+                        <h3>Aylık yaşam giderleri (ülkeye göre değişken):</h3>
+                        <ul>
+                            <li>İrlanda: 800–1200 Euro</li>
+                            <li>Kanada: 1000–1500 CAD</li>
+                            <li>Avustralya: 1000–1600 AUD</li>
+                            <li>Yeni Zelanda: 1000–1400 NZD</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="program-section">
+                    <h2>Vize Süreci</h2>
+                    <p>Her ülkenin vize şartları farklıdır, ancak genel olarak şunlara dikkat edilir:</p>
+                    <ul class="visa-requirements">
+                        <li>Eğitim süresi</li>
+                        <li>Finansal yeterlilik belgeleri</li>
+                        <li>Okul kabul mektubu</li>
+                        <li>Sağlık sigortası</li>
+                        <li>Konaklama planı</li>
+                        <li>Niyet mektubu</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>Konaklama</h2>
-            </div>
-            <div class="section-content">
-                <div class="list-box">
-                    <ul>
-                        <li>Paylaşımlı apartman daireleri</li>
-                        <li>Motel veya pansiyonlar</li>
-                        <li>Üniversite yurtları (bazen)</li>
-                        <li>Haftalık konaklama ücreti: $80 – $150</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>Vize İşlemleri</h2>
-            </div>
-            <div class="section-content">
-                <p>Work and Travel programı kapsamında J-1 Exchange Visitor vizesi alınır. Vize başvurusu için gerekenler:</p>
-                <div class="list-box">
-                    <ul>
-                        <li>DS-2019 formu</li>
-                        <li>SEVIS ücreti (yaklaşık $35)</li>
-                        <li>Geçerli pasaport</li>
-                        <li>Fotoğraf ve vize başvuru formu (DS-160)</li>
-                        <li>Konsolosluk mülakatı</li>
-                    </ul>
-                </div>
-                <p>Vize mülakatı sırasında adaydan İngilizce konuşması ve programa dönüp dönmeyeceğiyle ilgili niyet beyanı istenir. Belgeleriniz eksiksizse ve mülakat iyi geçerse genellikle vize olumlu sonuçlanır.</p>
             </div>
         </section>
     </main>
@@ -377,9 +203,9 @@
                         <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
                         <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
                         <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
-                        <li><a href="#">WORK AND TRAVEL</a></li>
-                        <li><a href="#">VİZE</a></li>
-                        <li><a href="#">MBA</a></li>
+                        <li><a href="work-and-travel.html">WORK AND TRAVEL</a></li>
+                        <li><a href="vize.html">VİZE</a></li>
+                        <li><a href="master-mba.html">MBA</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -399,6 +225,12 @@
                         <li>
                             <i class="fas fa-mobile-alt"></i>
                             <span>+90 541 430 4808</span>
+                            <div class="social-icons">
+                                <a href="https://wa.me/905414304808" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://t.me/+905414304808" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                                <a href="viber://chat?number=+905414304808" title="Viber"><i class="fab fa-viber"></i></a>
+                                <a href="#" title="WeChat"><i class="fab fa-weixin"></i></a>
+                            </div>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
@@ -412,5 +244,18 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/905414304808" class="floating-whatsapp" target="_blank" title="WhatsApp ile iletişime geçin">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.967 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Mobile menu functionality
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
 </body>
 </html> 
