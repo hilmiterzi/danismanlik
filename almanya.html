@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Almanya'da üniversite eğitimi hakkında detaylı rehber. Başvuru aşamaları, kabul şartları, popüler üniversiteler, yaşam maliyetleri, burs ve çalışma olanakları.">
+    <meta name="keywords" content="Almanya üniversite, Almanya'da eğitim, Almanya başvuru, Almanya burs, Almanya yaşam maliyeti, Almanya çalışma izni, Türk öğrenciler Almanya">
+    <title>Almanya'da Üniversite Eğitimi | University Park</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: rgb(26,64,121);
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { line-height: 1.6; color: var(--text-color); }
+        header {
+            background-color: #f5f7fa;
+            color: #1a4079;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: 1200px;
+            padding-left: 32px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+        }
+        .logo img {
+            height: 64px;
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+        .hero-slider {
+            width: 100%;
+            height: 320px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+        }
+        .hero-slider-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80') center center/cover no-repeat;
+            z-index: 0;
+            filter: brightness(0.7) blur(1px);
+        }
+        .hero-slider-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.78) 40%, rgba(221,0,0,0.6) 65%, rgba(255,205,0,0.7) 100%);
+            z-index: 1;
+        }
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: opacity 0.7s;
+            z-index: 2;
+            text-align: center;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 3;
+        }
+        @media (max-width: 600px) {
+            .hero-slider { height: 160px; }
+            .hero-slide { font-size: 1.1rem; }
+            .logo img { height: 40px; }
+        }
+        .content-section { margin-top: 60px; padding: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        .country-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .country-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .country-section p { margin-bottom: 1.5rem; }
+        .advantages-list { list-style: none; margin-bottom: 1.5rem; }
+        .advantages-list li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+        .advantages-list li::before { content: "✓"; color: var(--secondary-color); position: absolute; left: 0; }
+        .section-title { text-align: center; color: var(--primary-color); margin-bottom: 2rem; font-size: 2.5rem; }
+        .table-section { overflow-x: auto; margin-bottom: 2rem; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+        th, td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+        th { background-color: var(--primary-color); color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        @media (max-width: 768px) {
+            .content-section { padding: 1rem; margin-top: 20px; }
+            .country-section { padding: 1.5rem; }
+            .country-section h2 { font-size: 1.8rem; }
+            table, th, td { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-slider">
+        <div class="hero-slider-bg"></div>
+        <div class="hero-slider-overlay"></div>
+        <div class="hero-slide active">SADECE LİSE DİPLOMASI İLE ALMANYA'DA OKUMAK MÜMKÜN!</div>
+        <div class="hero-slide">Almanya'da Ücretsiz Üniversite Fırsatı</div>
+        <div class="hero-slide">Avrupa'da Geleceğini Şekillendir!</div>
+    </div>
+    <script>
+    // Basit slider scripti
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.hero-slide');
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 2500);
+    });
+    </script>
+    <header style="background: #23467a; padding: 0; width: 100%;">
+        <div style="display: flex; align-items: center; max-width: 100vw; height: 70px;">
+            <div style="flex: 0 0 100px; display: flex; align-items: center; justify-content: center; height: 100%; margin-left: 40px;">
+                <img src="universitypark.webp" alt="Logo" style="height: 60px; width: auto; background: #fff; padding: 8px 16px; border-radius: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.03);">
+            </div>
+            <nav style="flex: 1; display: flex; justify-content: center; align-items: center; height: 100%;">
+                <ul style="display: flex; gap: 40px; list-style: none; margin: 0; padding: 0;">
+                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 1.1rem; letter-spacing: 1px;">ÜNİVERSİTE</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 1.1rem; letter-spacing: 1px;">EĞİTİM PROGRAMLARI &#9662;</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 1.1rem; letter-spacing: 1px;">WORK & TRAVEL</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 1.1rem; letter-spacing: 1px;">VİZE</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 1.1rem; letter-spacing: 1px;">BLOG</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 1.1rem; letter-spacing: 1px;">HAKKIMIZDA</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none; font-size: 1.1rem; letter-spacing: 1px;">İLETİŞİM</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="content-section">
+        <h1 class="section-title">Almanya'da Üniversite Eğitimi: Türk Öğrenciler İçin Rehber</h1>
+        <div class="country-section">
+            <h2><img src="https://flagcdn.com/w40/de.png" alt="Almanya Bayrağı" style="height:36px;width:54px;vertical-align:middle;margin-right:10px;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.08);">1. Neden Almanya'da Üniversite Eğitimi?</h2>
+            <ul class="advantages-list">
+                <li>Devlet üniversitelerinde düşük ya da sıfır eğitim ücreti</li>
+                <li>Almanca ve İngilizce program seçenekleri</li>
+                <li>Dünya çapında tanınan üniversiteler</li>
+                <li>Geniş burs ve çalışma imkânları</li>
+                <li>Yüksek yaşam standartları</li>
+                <li>AB diplomasıyla Avrupa'da kariyer imkânı</li>
+            </ul>
+        </div>
+        <div class="country-section">
+            <h2>2. Almanya Üniversiteleri İçin Başvuru Aşamaları</h2>
+            <ol style="margin-bottom:1.5rem; padding-left:1.5rem;">
+                <li><b>Uygun Üniversite ve Bölüm Seçimi:</b> DAAD veya Hochschulkompass gibi platformlardan İngilizce/Almanca bölümler araştırılabilir. Almanya'da "Studienkolleg" uygulaması lisans eğitimi için önemlidir. (Detay aşağıda)</li>
+                <li><b>Gerekli Belgelerin Hazırlanması:</b>
+                    <ul class="advantages-list">
+                        <li>Lise diploması ve transkript</li>
+                        <li>YÖK tanınırlığı olan bir Türk üniversitesine giriş yapmış olmak veya sınav puanı (YKS)</li>
+                        <li>Almanca (TestDaF / DSH) veya İngilizce (IELTS / TOEFL) dil yeterlilik belgesi</li>
+                        <li>CV, motivasyon mektubu, varsa referans mektubu</li>
+                    </ul>
+                </li>
+                <li><b>Başvuru Platformu: Uni-Assist</b><br>Birçok üniversite Uni-Assist üzerinden başvuru kabul eder. Bu sistemde belgelerinizi yükler, denklik ve başvuru kontrolleri yapılır.</li>
+            </ol>
+        </div>
+        <div class="country-section">
+            <h2>3. Almanya'da Üniversite Kabul Şartları</h2>
+            <ul class="advantages-list">
+                <li>Lise diploması tek başına yeterli değildir.</li>
+                <li>Öğrencinin Türkiye'de üniversite sınavına girip ilgili bölüme yerleşmiş olması gerekir.</li>
+                <li>Lisans öncesi genellikle Studienkolleg (hazırlık eğitimi) şarttır.</li>
+                <li>İngilizce programlar için IELTS genellikle 6.0 – 6.5; Almanca bölümler için TestDaF veya DSH sınavı geçerlidir.</li>
+                <li>Bazı bölümler özel yetenek sınavı veya portfolyo isteyebilir.</li>
+            </ul>
+        </div>
+        <div class="country-section table-section">
+            <h2>4. Almanya'daki Popüler Üniversiteler</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Üniversite Adı</th>
+                        <th>Şehir</th>
+                        <th>Öne Çıkan Alanlar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>LMU Münih</td><td>Münih</td><td>Tıp, Sosyal Bilimler</td></tr>
+                    <tr><td>TU Münih (TUM)</td><td>Münih</td><td>Mühendislik, Bilgisayar</td></tr>
+                    <tr><td>Heidelberg Üniversitesi</td><td>Heidelberg</td><td>Tıp, Biyoloji</td></tr>
+                    <tr><td>RWTH Aachen</td><td>Aachen</td><td>Makine, Elektrik-Elektronik</td></tr>
+                    <tr><td>Humboldt Üniversitesi</td><td>Berlin</td><td>Hukuk, Felsefe</td></tr>
+                    <tr><td>Freie Universität Berlin</td><td>Berlin</td><td>Uluslararası İlişkiler, Dil</td></tr>
+                    <tr><td>Karlsruhe Teknoloji Enstitüsü</td><td>Karlsruhe</td><td>Yazılım, Yapay Zeka</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="country-section">
+            <h2>5. Almanya'da Eğitim Ücretleri ve Yaşam Maliyetleri</h2>
+            <ul class="advantages-list">
+                <li>Devlet üniversitelerinde öğrenim ücreti çoğu eyalette yoktur veya yalnızca dönemlik harç ödenir (yaklaşık 100–400 EUR). Dönemlik ücret genellikle toplu taşıma kartını da kapsar.</li>
+                <li>Yaşam giderleri ortalama: 850–1.200 EUR/ay arasında değişir:</li>
+                <ul class="advantages-list" style="margin-left:1.5rem;">
+                    <li>Konaklama: 300–600 EUR</li>
+                    <li>Gıda: 200–300 EUR</li>
+                    <li>Sağlık sigortası: 100 EUR</li>
+                    <li>Ulaşım: Genellikle dönemlik karta dâhil</li>
+                </ul>
+            </ul>
+        </div>
+        <div class="country-section">
+            <h2>6. Almanya'da Üniversite Eğitiminin Avantajları</h2>
+            <ul class="advantages-list">
+                <li>Ücretsiz eğitim: Devlet üniversitelerinde büyük maliyet avantajı</li>
+                <li>Yüksek eğitim kalitesi: Özellikle teknik ve bilimsel alanlarda öncülük</li>
+                <li>Kariyer fırsatları: Mezuniyet sonrası Almanya'da çalışma ve oturma izni</li>
+                <li>Çift diploma ve değişim imkânları: Erasmus ve diğer uluslararası ağlar</li>
+                <li>Almanca dil becerisi: Global iş dünyasında önemli bir avantaj</li>
+            </ul>
+        </div>
+        <div class="country-section">
+            <h2>7. Burs ve Çalışma Olanakları</h2>
+            <ul class="advantages-list">
+                <li><b>DAAD Bursları:</b> Almanya Akademik Değişim Servisi (DAAD), Türk öğrencilere lisans ve yüksek lisans düzeyinde çeşitli burslar sunar.</li>
+                <li><b>Çalışma Hakkı:</b> Öğrenciler yılda 120 tam gün veya 240 yarım gün yasal olarak çalışabilir. Mezuniyet sonrası 18 aya kadar "iş arama izni" alınabilir.</li>
+            </ul>
+        </div>
+        <div class="country-section">
+            <p>Almanya'da üniversite eğitimi, hem ekonomik hem de akademik açıdan son derece avantajlıdır. Özellikle mühendislik, tıp ve bilim alanlarında kariyer hedefleyen Türk öğrenciler için Almanya, Avrupa'da en güçlü alternatiflerden biridir. Doğru planlama, dil yeterliliği ve zamanında başvurularla Almanya'daki üniversite hayalinizi gerçeğe dönüştürebilirsiniz.</p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>EĞİTİM PROGRAMLARI</h3>
+                    <ul>
+                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
+                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
+                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
+                        <li><a href="#">WORK AND TRAVEL</a></li>
+                        <li><a href="#">VİZE</a></li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>HAKKIMIZDA</h3>
+                    <ul>
+                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>İLETİŞİM</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 324 326 4600</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+90 541 430 4808</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
