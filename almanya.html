@@ -131,15 +131,79 @@
             .country-section h2 { font-size: 1.8rem; }
             table, th, td { font-size: 0.95rem; }
         }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 0.9rem 2.2rem;
+            border-radius: 32px;
+            box-shadow: 0 2px 12px rgba(26,64,121,0.08);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+        }
+        .cta-btn:hover {
+            transform: scale(1.07);
+            background: linear-gradient(90deg, #e63946 40%, #1a4079 100%);
+            box-shadow: 0 4px 24px rgba(26,64,121,0.18);
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #25d366 60%, #128c7e 100%);
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 0.9rem 2.2rem;
+            border-radius: 32px;
+            box-shadow: 0 2px 12px rgba(18,140,126,0.12);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.07);
+            background: linear-gradient(90deg, #128c7e 40%, #25d366 100%);
+            box-shadow: 0 4px 24px rgba(18,140,126,0.18);
+        }
+        .whatsapp-btn-inside {
+            display: block;
+            background: #25d366;
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: bold;
+            padding: 0.7rem 2rem;
+            border-radius: 32px;
+            box-shadow: 0 2px 12px rgba(18,140,126,0.12);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s cubic-bezier(.22,1,.36,1), background 0.18s;
+            max-width: 340px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .whatsapp-btn-inside:hover {
+            transform: scale(1.11);
+            background: #1ed760;
+            box-shadow: 0 8px 32px rgba(18,140,126,0.22);
+        }
     </style>
 </head>
 <body>
     <div class="hero-slider">
         <div class="hero-slider-bg"></div>
         <div class="hero-slider-overlay"></div>
-        <div class="hero-slide active">SADECE LİSE DİPLOMASI İLE ALMANYA'DA OKUMAK MÜMKÜN!</div>
-        <div class="hero-slide">Almanya'da Ücretsiz Üniversite Fırsatı</div>
-        <div class="hero-slide">Avrupa'da Geleceğini Şekillendir!</div>
+        <div class="hero-slide active">
+            SADECE LİSE DİPLOMASI İLE ALMANYA'DA OKUMAK MÜMKÜN!
+        </div>
+        <div class="hero-slide">
+            Almanya'da Ücretsiz Üniversite Fırsatı
+        </div>
+        <div class="hero-slide">
+            Avrupa'da Geleceğini Şekillendir!
+        </div>
     </div>
     <script>
     // Basit slider scripti
@@ -185,7 +249,7 @@
             </ul>
         </div>
         <div class="country-section">
-            <h2>2. Almanya Üniversiteleri İçin Başvuru Aşamaları</h2>
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">📄</span>2. Almanya Üniversiteleri İçin Başvuru Aşamaları</h2>
             <ol style="margin-bottom:1.5rem; padding-left:1.5rem;">
                 <li><b>Uygun Üniversite ve Bölüm Seçimi:</b> DAAD veya Hochschulkompass gibi platformlardan İngilizce/Almanca bölümler araştırılabilir. Almanya'da "Studienkolleg" uygulaması lisans eğitimi için önemlidir. (Detay aşağıda)</li>
                 <li><b>Gerekli Belgelerin Hazırlanması:</b>
@@ -200,7 +264,7 @@
             </ol>
         </div>
         <div class="country-section">
-            <h2>3. Almanya'da Üniversite Kabul Şartları</h2>
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">✔️</span>3. Almanya'da Üniversite Kabul Şartları</h2>
             <ul class="advantages-list">
                 <li>Lise diploması tek başına yeterli değildir.</li>
                 <li>Öğrencinin Türkiye'de üniversite sınavına girip ilgili bölüme yerleşmiş olması gerekir.</li>
@@ -210,7 +274,7 @@
             </ul>
         </div>
         <div class="country-section table-section">
-            <h2>4. Almanya'daki Popüler Üniversiteler</h2>
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">🎓</span>4. Almanya'daki Popüler Üniversiteler</h2>
             <table>
                 <thead>
                     <tr>
@@ -231,7 +295,7 @@
             </table>
         </div>
         <div class="country-section">
-            <h2>5. Almanya'da Eğitim Ücretleri ve Yaşam Maliyetleri</h2>
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">💶</span>5. Almanya'da Eğitim Ücretleri ve Yaşam Maliyetleri</h2>
             <ul class="advantages-list">
                 <li>Devlet üniversitelerinde öğrenim ücreti çoğu eyalette yoktur veya yalnızca dönemlik harç ödenir (yaklaşık 100–400 EUR). Dönemlik ücret genellikle toplu taşıma kartını da kapsar.</li>
                 <li>Yaşam giderleri ortalama: 850–1.200 EUR/ay arasında değişir:</li>
@@ -244,7 +308,7 @@
             </ul>
         </div>
         <div class="country-section">
-            <h2>6. Almanya'da Üniversite Eğitiminin Avantajları</h2>
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">⭐</span>6. Almanya'da Üniversite Eğitiminin Avantajları</h2>
             <ul class="advantages-list">
                 <li>Ücretsiz eğitim: Devlet üniversitelerinde büyük maliyet avantajı</li>
                 <li>Yüksek eğitim kalitesi: Özellikle teknik ve bilimsel alanlarda öncülük</li>
@@ -254,7 +318,7 @@
             </ul>
         </div>
         <div class="country-section">
-            <h2>7. Burs ve Çalışma Olanakları</h2>
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">💼</span>7. Burs ve Çalışma Olanakları</h2>
             <ul class="advantages-list">
                 <li><b>DAAD Bursları:</b> Almanya Akademik Değişim Servisi (DAAD), Türk öğrencilere lisans ve yüksek lisans düzeyinde çeşitli burslar sunar.</li>
                 <li><b>Çalışma Hakkı:</b> Öğrenciler yılda 120 tam gün veya 240 yarım gün yasal olarak çalışabilir. Mezuniyet sonrası 18 aya kadar "iş arama izni" alınabilir.</li>
@@ -262,6 +326,9 @@
         </div>
         <div class="country-section">
             <p>Almanya'da üniversite eğitimi, hem ekonomik hem de akademik açıdan son derece avantajlıdır. Özellikle mühendislik, tıp ve bilim alanlarında kariyer hedefleyen Türk öğrenciler için Almanya, Avrupa'da en güçlü alternatiflerden biridir. Doğru planlama, dil yeterliliği ve zamanında başvurularla Almanya'daki üniversite hayalinizi gerçeğe dönüştürebilirsiniz.</p>
+            <div style="text-align: center; margin: 32px 0 0 0;">
+              <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Ücretsiz Danışmanlık Al</a>
+            </div>
         </div>
     </section>
     <footer class="footer">
@@ -286,7 +353,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>İLETİŞİM</h3>
+                    <h3 style="margin-left: 18px;">İLETİŞİM</h3>
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-phone"></i>

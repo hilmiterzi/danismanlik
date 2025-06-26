@@ -62,6 +62,7 @@ header {
 .nav-menu {
     display: flex;
     gap: 2rem;
+    padding-left: 120px;
 }
 
 .nav-menu a {
@@ -367,7 +368,8 @@ header {
 }
 
 .dropdown-content a:hover {
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: transparent;
 }
 
 .dropdown:hover .dropdown-content {
@@ -471,4 +473,33 @@ header {
     .program-section h3 {
         font-size: 1.2rem;
     }
+}
+
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(26,64,121,0.08);
+    border: 2px solid #f0f4fa;
+    transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.35s, border-color 0.35s;
+    position: relative;
+    overflow: hidden;
+}
+.info-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    pointer-events: none;
+    box-shadow: 0 0 0 0 rgba(230,57,70,0.12), 0 0 0 0 rgba(26,64,121,0.10);
+    transition: box-shadow 0.35s;
+}
+.info-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(26,64,121,0.18), 0 2px 16px rgba(230,57,70,0.10);
+    border-color: var(--secondary-color);
+    z-index: 2;
+}
+.info-card:hover::before {
+    box-shadow: 0 0 24px 4px rgba(230,57,70,0.13), 0 0 32px 8px rgba(26,64,121,0.10);
 } 
