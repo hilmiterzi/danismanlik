@@ -15,6 +15,7 @@
 body {
     line-height: 1.6;
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -34,6 +35,7 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .logo {
@@ -57,6 +59,7 @@ header {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 0.5rem;
 }
 
 .nav-menu {
@@ -69,6 +72,7 @@ header {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
+    white-space: nowrap;
 }
 
 .nav-menu a:hover {
@@ -115,6 +119,7 @@ header {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .intro-text {
@@ -206,28 +211,19 @@ header {
 }
 
 .wages-info,
-.living-costs {
-    background-color: var(--light-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
 .wages-info ul,
-.living-costs ul {
-    list-style: none;
-    padding-left: 1.5rem;
-}
-
-.wages-info li,
-.living-costs li {
+.wages-info li {
     margin-bottom: 0.8rem;
     position: relative;
     padding-left: 1.5rem;
 }
 
-.wages-info li:before,
-.living-costs li:before {
+.wages-info ul,
+.wages-info li {
+    list-style: none;
+}
+
+.wages-info li:before {
     content: "•";
     color: var(--secondary-color);
     position: absolute;
@@ -238,35 +234,33 @@ header {
 .footer {
     background-color: var(--primary-color);
     color: white;
-    padding: 4rem 2rem 2rem;
-    margin-top: 4rem;
+    padding: 3rem 0 1rem;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
 .footer-section h3 {
-    color: white;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
 }
 
 .footer-section ul {
     list-style: none;
-    padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-section ul li a {
@@ -280,25 +274,25 @@ header {
 }
 
 .contact-info li {
+    margin-bottom: 0.8rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 0.5rem;
 }
 
 .contact-info i {
-    color: #4CAF50;
-    font-size: 1.2rem;
+    color: var(--secondary-color);
+    width: 20px;
 }
 
 .social-icons {
     display: flex;
     gap: 1rem;
-    margin-left: auto;
+    margin-top: 1rem;
 }
 
 .social-icons a {
-    color: #4CAF50;
+    color: white;
     font-size: 1.5rem;
     transition: color 0.3s;
 }
@@ -388,7 +382,73 @@ header {
     margin-left: 5px;
 }
 
-/* Responsive Design */
+/* Info Card Styles */
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(26,64,121,0.08);
+    border: 2px solid #f0f4fa;
+    transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.35s, border-color 0.35s;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    pointer-events: none;
+    box-shadow: 0 0 0 0 rgba(230,57,70,0.12), 0 0 0 0 rgba(26,64,121,0.10);
+    transition: box-shadow 0.35s;
+}
+
+.info-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(26,64,121,0.18), 0 2px 16px rgba(230,57,70,0.10);
+    border-color: var(--secondary-color);
+    z-index: 2;
+}
+
+.info-card:hover::before {
+    box-shadow: 0 0 24px 4px rgba(230,57,70,0.13), 0 0 32px 8px rgba(26,64,121,0.10);
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+    
+    .nav-menu {
+        padding-left: 60px;
+        gap: 1.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .content-section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .program-section {
+        padding: 1.5rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Responsive Design - Mobile Large */
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
@@ -403,10 +463,24 @@ header {
         background-color: var(--primary-color);
         flex-direction: column;
         padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .nav-menu.active {
         display: flex;
+    }
+
+    .nav-menu a {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .hero-section {
+        height: 250px;
     }
 
     .hero-content h1 {
@@ -417,8 +491,35 @@ header {
         font-size: 1.5rem;
     }
 
+    .content-section {
+        padding: 2rem 1rem;
+    }
+
+    .program-section {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .program-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .program-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .intro-text {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .footer {
+        padding: 2rem 0 1rem;
     }
 
     .floating-whatsapp {
@@ -438,6 +539,7 @@ header {
         box-shadow: none;
         background-color: rgba(255, 255, 255, 0.1);
         display: none;
+        min-width: auto;
     }
 
     .dropdown.active .dropdown-content {
@@ -447,59 +549,216 @@ header {
     .nav-menu .dropdown-content a {
         padding-left: 2rem;
     }
+
+    .dropdown-trigger::after {
+        transform: rotate(90deg);
+    }
+
+    .dropdown.active .dropdown-trigger::after {
+        transform: rotate(-90deg);
+    }
 }
 
+/* Responsive Design - Mobile Small */
 @media (max-width: 480px) {
+    .header-content {
+        padding: 0 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .mobile-menu-btn {
+        font-size: 1.3rem;
+        padding: 0.3rem;
+    }
+
     .hero-section {
-        height: 250px;
+        height: 200px;
+    }
+
+    .hero-content {
+        padding: 1rem;
     }
 
     .hero-content h1 {
         font-size: 1.8rem;
+        margin-bottom: 0.5rem;
     }
 
     .hero-content h2 {
         font-size: 1.3rem;
     }
 
+    .content-section {
+        padding: 1.5rem 0.5rem;
+    }
+
     .program-section {
-        padding: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .program-section h2 {
         font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .program-section h3 {
         font-size: 1.2rem;
+        margin: 1rem 0 0.5rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .benefits-list,
+    .requirements-list,
+    .documents-list,
+    .jobs-list,
+    .visa-requirements {
+        padding-left: 1rem;
+    }
+
+    .benefits-list li,
+    .requirements-list li,
+    .documents-list li,
+    .jobs-list li,
+    .visa-requirements li {
+        padding-left: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .country-info {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0 1rem;
+    }
+
+    .footer-container {
+        padding: 0 0.5rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-info li {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .floating-whatsapp {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .floating-whatsapp svg {
+        width: 25px;
+        height: 25px;
     }
 }
 
-.info-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(26,64,121,0.08);
-    border: 2px solid #f0f4fa;
-    transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.35s, border-color 0.35s;
-    position: relative;
-    overflow: hidden;
+/* Responsive Design - Extra Small Mobile */
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .program-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .program-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-section ul li {
+        font-size: 0.8rem;
+    }
+
+    .contact-info li {
+        font-size: 0.8rem;
+    }
 }
-.info-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 12px;
-    pointer-events: none;
-    box-shadow: 0 0 0 0 rgba(230,57,70,0.12), 0 0 0 0 rgba(26,64,121,0.10);
-    transition: box-shadow 0.35s;
+
+/* Landscape Mobile Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        height: 150px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .content-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .program-section {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
 }
-.info-card:hover {
-    transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 8px 32px rgba(26,64,121,0.18), 0 2px 16px rgba(230,57,70,0.10);
-    border-color: var(--secondary-color);
-    z-index: 2;
-}
-.info-card:hover::before {
-    box-shadow: 0 0 24px 4px rgba(230,57,70,0.13), 0 0 32px 8px rgba(26,64,121,0.10);
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .info-card:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(26,64,121,0.08);
+    }
+
+    .featured-card:hover {
+        transform: none;
+    }
+
+    .cta-button:hover,
+    .featured-button:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .nav-menu a:hover {
+        color: white;
+    }
+
+    .footer-section ul li a:hover {
+        color: white;
+    }
 } 
