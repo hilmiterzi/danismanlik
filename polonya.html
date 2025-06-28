@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Polonya'da üniversite eğitimi hakkında detaylı rehber. Başvuru aşamaları, kabul şartları, popüler üniversiteler, yaşam maliyetleri, burs ve çalışma olanakları.">
+    <meta name="keywords" content="Polonya üniversite, Polonya'da eğitim, Polonya başvuru, Polonya burs, Polonya yaşam maliyeti, Polonya çalışma izni, Türk öğrenciler Polonya">
+    <title>Polonya'da Üniversite Eğitimi - University Park Yurtdışı Eğitim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #1a4079;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .country-section h2 {
+            color: #1a4079;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-bottom: 2px solid #e63946;
+            padding-bottom: 0.5rem;
+        }
+
+        .country-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .advantages-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .advantages-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .advantages-list li::before {
+            content: "•";
+            color: #000;
+            position: absolute;
+            left: 0;
+        }
+
+        .advantages-list ul,
+        ol ul {
+            margin-top: 0.7em;
+            margin-bottom: 0.7em;
+        }
+        .advantages-list ul li,
+        ol ul li {
+            margin-top: 0.4em;
+            margin-bottom: 0.4em;
+        }
+
+        .table-section {
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1a4079;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .university-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .university-card h3 {
+            color: #1a4079;
+            margin-bottom: 0.5rem;
+        }
+
+        .university-btn {
+            background: linear-gradient(90deg, #1a4079, #e63946);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .university-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp-btn-inside {
+            background: #25d366;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.7rem 2rem;
+            border-radius: 32px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .whatsapp-btn-inside:hover {
+            transform: scale(1.05);
+            background: #1ed760;
+        }
+
+        /* Header */
+        header {
+            background-color: #f5f7fa;
+            color: #1a4079;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: 1200px;
+            padding-left: 32px;
+        }
+
+        .logo img {
+            height: 64px;
+            max-height: 80px;
+            width: auto;
+        }
+
+        /* Hero Section */
+        .hero-slider {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .hero-slider-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('xa-.webp') center calc(50% - 40px)/cover no-repeat;
+            z-index: 0;
+            filter: brightness(0.7) blur(1px);
+        }
+
+        .hero-slider-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 60%, rgba(220,20,60,0.6) 60%, rgba(220,20,60,0.6) 100%);
+            z-index: 1;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: opacity 0.7s;
+            z-index: 2;
+            text-align: center;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 3;
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-top: 60px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .country-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a4079;
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-info i {
+            margin-right: 0.8rem;
+            width: 20px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #4a5568;
+            font-size: 0.9rem;
+            color: #a0aec0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 1rem;
+                margin-top: 20px;
+            }
+
+            .country-section {
+                padding: 1.5rem;
+            }
+
+            .hero-slider {
+                height: 160px;
+            }
+
+            .hero-slide {
+                font-size: 1.1rem;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            table, th, td {
+                font-size: 0.95rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .university-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .university-content {
+            text-align: center;
+        }
+        .university-content h3 {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-slider" style="position:relative; overflow:hidden; height:400px; width:100%;">
+        <img src="xa-.webp" alt="Polonya" style="position:absolute; left:50%; top:0; transform:translateX(-50%); width:100vw; height:100%; min-height:100%; min-width:100%; object-fit:cover; object-position: 50% 40%; filter:brightness(0.7) blur(1px); z-index:0;">
+        <div class="hero-slider-overlay"></div>
+        <div class="hero-slide active">
+            POLONYA'DA KALİTELİ ÜNİVERSİTE EĞİTİMİ FIRSATI!
+        </div>
+        <div class="hero-slide">
+            Avrupa'nın Kalbinde Eğitim
+        </div>
+        <div class="hero-slide">
+            Uygun Maliyetlerle AB Diploması!
+        </div>
+    </div>
+    <script>
+    // Basit slider scripti
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.hero-slide');
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 2500);
+    });
+    </script>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="universitypark.webp" alt="Logo">
+            </div>
+            <nav style="flex: 1; display: flex; justify-content: center; align-items: center;">
+                <ul style="display: flex; gap: 40px; list-style: none; margin: 0; padding: 0;">
+                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">ÜNİVERSİTE</a></li>
+                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">EĞİTİM PROGRAMLARI &#9662;</a></li>
+                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">WORK & TRAVEL</a></li>
+                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">VİZE</a></li>
+                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">BLOG</a></li>
+                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">HAKKIMIZDA</a></li>
+                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">İLETİŞİM</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="content-section">
+        <h1 class="section-title">Polonya'da Üniversite Eğitimi: Türk Öğrenciler İçin Rehber</h1>
+        
+        <div class="country-section">
+            <h2><img src="https://flagcdn.com/w40/pl.png" alt="Polonya Bayrağı" style="height:36px;width:54px;vertical-align:middle;margin-right:10px;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,0.08);">1. Polonya'da Üniversite Eğitimi</h2>
+            <p>Polonya, Avrupa'nın kalbinde yer alan tarihi, kültürel zenginlikleri ve kaliteli üniversiteleriyle öne çıkan bir eğitim destinasyonudur. Hem lisans hem de yüksek lisans seviyesinde İngilizce eğitim imkânı sunan üniversiteleri, uygun yaşam maliyetleri ve AB diploması ile Polonya, Türk öğrenciler için cazip bir tercih haline gelmiştir.</p>
+        </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">📄</span>2. Polonya'da Üniversite Eğitimi için Başvuru Şartları</h2>
+            <p>Polonya'da üniversite eğitimi almak isteyen öğrencilerin karşılaması gereken genel şartlar şunlardır:</p>
+            <ul class="advantages-list">
+                <li>Lise diploması</li>
+                <li>Dil yeterliliği</li>
+                <li>Not ortalaması</li>
+                <li>Motivasyon ve Referans Mektupları (istenmesi halinde)</li>
+                <li>Portfolyo (Sanat bölümleri için)</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">🔄</span>3. Başvuru Süreci Nasıl İşler</h2>
+            <ol style="margin-bottom:1.5rem; padding-left:1.5rem;">
+                <li><b>Program seçimi</b></li>
+                <li><b>Online başvuru</b></li>
+                <li><b>Belgelerin hazırlanması:</b>
+                    <ul class="advantages-list">
+                        <li>Lise diploması ve Transkript</li>
+                        <li>İngilizce yeterlilik Belgesi</li>
+                        <li>Pasaport</li>
+                        <li>CV mektubu</li>
+                    </ul>
+                </li>
+                <li><b>Üniversitenin değerlendirilmesi</b></li>
+                <li><b>Ücret ödemesi ve resmi kabul</b></li>
+                <li><b>Vize başvurusu</b></li>
+            </ol>
+        </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">⭐</span>4. Neden Polonya'da Üniversite Eğitimi?</h2>
+            <ul class="advantages-list">
+                <li>Avrupa Birliği ve Schengen bölgesinde eğitim fırsatı</li>
+                <li>İngilizce lisans ve yüksek lisans programları</li>
+                <li>Uygun eğitim ve yaşam maliyetleri</li>
+                <li>Modern kampüs olanakları, güçlü akademik kadrolar</li>
+                <li>YÖK tanınırlığı olan çok sayıda üniversite</li>
+                <li>Geniş uluslararası öğrenci ağı</li>
+                <li>Kültürel olarak zengin, güvenli ve öğrenci dostu ortam</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">🎓</span>5. Polonya'da İngilizce ve Lehçe (Polonca) Hazırlık Eğitimi</h2>
+            <p>Polonya'da eğitim dili olarak hem İngilizce hem de Lehçe (Polonca) programlar mevcuttur. İngilizce seviyeniz yetersizse ya da Lehçe eğitim almak istiyorsanız bir yıl hazırlık programına katılabilirsiniz.</p>
+            <p><strong>Hazırlık Eğitimi Sunan Üniversiteler ve Fiyatları (Yıllık):</strong></p>
+            <div class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Üniversite</th>
+                            <th>Hazırlık Programı Dili</th>
+                            <th>Fiyat (EUR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>University of Warsaw</td><td>İngilizce / Lehçe</td><td>2.000 – 3.000</td></tr>
+                        <tr><td>Wroclaw University of Science & Tech</td><td>İngilizce</td><td>2.500 – 3.500</td></tr>
+                        <tr><td>Jagiellonian University (Krakow)</td><td>İngilizce / Lehçe</td><td>2.500 – 4.000</td></tr>
+                        <tr><td>Poznan University of Technology</td><td>İngilizce</td><td>2.000 – 3.000</td></tr>
+                        <tr><td>Lodz University of Technology</td><td>Lehçe</td><td>1.500 – 2.500</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><em>> Hazırlık programları genellikle 6–12 ay sürmektedir.</em></p>
+        </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">📋</span>6. Vize Süreci</h2>
+            <p>Polonya'da eğitim alacak Türk öğrenciler D tipi ulusal öğrenci vizesi başvurusu yapmalıdır. Vize süreci genellikle 4–8 hafta arasında sonuçlanmaktadır.</p>
+            <p><strong>Gerekli Belgeler:</strong></p>
+            <ul class="advantages-list">
+                <li>Kabul mektubu</li>
+                <li>Pasaport (geçerli ve boş sayfalı)</li>
+                <li>Biyometrik fotoğraf</li>
+                <li>Eğitim ve konaklama ücretinin ödendiğine dair belge</li>
+                <li>Finansal yeterlilik belgesi (banka dökümü)</li>
+                <li>Seyahat sağlık sigortası</li>
+                <li>Konaklama belgesi</li>
+                <li>Vize başvuru formu</li>
+            </ul>
+            <p><em>> Başvurular, Polonya Konsolosluğu veya VFS Global aracılığıyla yapılır.</em></p>
+        </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">💶</span>7. Konaklama ve Yaşam Maliyetleri</h2>
+            <p>Polonya, Avrupa'daki en uygun maliyetli öğrenci ülkelerinden biridir.</p>
+            <p><strong>Aylık Ortalama Giderler:</strong></p>
+            <div class="table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Gider Kalemi</th>
+                            <th>Maliyet (EUR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Yurt / Ev Kirası</td><td>150 – 350</td></tr>
+                        <tr><td>Yeme-İçme</td><td>100 – 200</td></tr>
+                        <tr><td>Ulaşım</td><td>20 – 30</td></tr>
+                        <tr><td>Diğer giderler</td><td>50 – 100</td></tr>
+                        <tr><td><strong>Toplam</strong></td><td><strong>350 – 700</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">🏙️</span>8. Eğitim Alınacak Şehir Tavsiyeleri</h2>
+            <ul class="advantages-list">
+                <li><strong>Varşova (Warsaw):</strong> Başkent; uluslararası öğrenciler için gelişmiş altyapı, ulaşım kolaylığı, iş imkânları sunar.</li>
+                <li><strong>Krakow:</strong> Tarihi ve kültürel açıdan zengin, çok sayıda üniversite barındıran öğrenci dostu bir şehir.</li>
+                <li><strong>Wroclaw:</strong> Modern yapısı, uygun fiyatlı yaşam ve kaliteli teknik üniversiteleri ile dikkat çeker.</li>
+                <li><strong>Poznan:</strong> Daha sakin bir yaşam isteyen öğrenciler için idealdir, uygun maliyetli konaklama avantajı sunar.</li>
+                <li><strong>Gdansk:</strong> Denizcilik ve mühendislik eğitimleri ile öne çıkan, liman şehri atmosferine sahip bir yer.</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">🏛️</span>9. Popüler Üniversiteler ve Bölümleri</h2>
+            <p>Polonya'da çok sayıda devlet ve özel üniversite bulunmaktadır. Üniversiteler; mühendislik, tıp, işletme, psikoloji ve sosyal bilimler alanlarında öne çıkmaktadır.</p>
+            
+            <div class="universities-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div class="university-image" style="height: 200px; background: url('warsaw.webp') center center; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">
+                        <span style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 5px;">University of Warsaw</span>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">University of Warsaw</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Varşova</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Uluslararası İlişkiler, Ekonomi</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div class="university-image" style="height: 200px; background: url('jagi.webp') center center; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">
+                        <span style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 5px;">Jagiellonian University</span>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Jagiellonian University</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Krakow</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Psikoloji, Tıp, Hukuk</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div class="university-image" style="height: 200px; background: url('wrocklaw.webp') center center; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">
+                        <span style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 5px;">Wroclaw University of Science & Tech</span>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Wroclaw University of Science & Tech</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Wroclaw</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Yazılım, Mimarlık, Otomasyon</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div class="university-image" style="height: 200px; background: url('AGH.webp') center center; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">
+                        <span style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 5px;">AGH University of Science & Tech</span>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">AGH University of Science & Tech</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Krakow</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Maden Müh., Yapay Zeka, Fizik</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div class="university-image" style="height: 200px; background: url('gdansk.webp') center center; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">
+                        <span style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 5px;">Gdansk University of Technology</span>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Gdansk University of Technology</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Gdansk</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Denizcilik, Lojistik, Mühendislik</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div class="university-image" style="height: 200px; background: url('Warsaw University of Technology.webp') center center; background-size: cover; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; font-weight: bold;">
+                        <span style="background: rgba(0,0,0,0.4); padding: 10px; border-radius: 5px;">Warsaw University of Technology</span>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Warsaw University of Technology</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Varşova</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Bilgisayar Müh., Elektrik-Elektronik</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .university-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                }
+                .university-btn:hover {
+                    transform: scale(1.05);
+                }
+                @media (max-width: 768px) {
+                    .universities-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1rem;
+                    }
+                }
+                @media (max-width: 480px) {
+                    .universities-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+        </div>
+
+        <div class="country-section">
+            <p>Polonya'da üniversite eğitimi, hem ekonomik hem de akademik açıdan son derece avantajlıdır. Özellikle Avrupa Birliği diploması almak isteyen ve uygun maliyetlerle kaliteli eğitim arayan Türk öğrenciler için Polonya, Avrupa'da en güçlü alternatiflerden biridir. Doğru planlama, dil yeterliliği ve zamanında başvurularla Polonya'daki üniversite hayalinizi gerçeğe dönüştürebilirsiniz.</p>
+            <div style="text-align: center; margin: 32px 0 0 0;">
+              <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Ücretsiz Danışmanlık Al</a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>EĞİTİM PROGRAMLARI</h3>
+                    <ul>
+                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
+                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
+                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
+                        <li><a href="#">WORK AND TRAVEL</a></li>
+                        <li><a href="#">VİZE</a></li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>HAKKIMIZDA</h3>
+                    <ul>
+                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 style="margin-left: 18px;">İLETİŞİM</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 324 326 4600</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+90 541 430 4808</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
