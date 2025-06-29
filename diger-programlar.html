@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University Park Yurtdışı Eğitim - Diğer Programlar. Work and Study, Yaz Okulu ve Pathway Programları hakkında detaylı bilgi.">
+    <meta name="keywords" content="work and study, yaz okulu, pathway programı, yurtdışı eğitim, dil eğitimi">
+    <title>Diğer Programlar | University Park</title>
+    <style>
+        :root {
+            --primary-color: rgb(26,64,121);
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background: #fff;
+        }
+
+        /* Header Styles - Copied from index.html */
+        .double-header {
+            background: #1a4079;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem 1.1rem 2rem;
+            min-height: 80px;
+            background: #fff;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
+        .header-top-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+        .header-btn {
+            background: #1a4079;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .header-btn:hover {
+            background: #e63946;
+            color: #fff;
+        }
+        .header-bottom {
+            background: #1a4079;
+            border-top: 1px solid #274a7e;
+            padding: 0.05rem 2rem 0.05rem 2rem;
+            min-height: 26px;
+            display: flex;
+            justify-content: center;
+        }
+        .main-nav > a, .main-nav > .dropdown {
+            padding: 0 1.6rem;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-sizing: border-box;
+            border-bottom: none;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            position: relative;
+        }
+
+        .main-nav > a:hover,
+        .main-nav > .dropdown:hover > .dropdown-trigger {
+            color: #e63946;
+        }
+
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            text-decoration: none;
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .main-nav > a:not(:last-child) {
+            border-right: 2px solid #fff;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            background-color: #123c6c;
+            display: none;
+            min-width: 180px;
+            padding: 10px 0;
+            z-index: 1000;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0d2b52;
+            color: #e63946;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+            .main-nav { gap: 1.2rem; }
+            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+        }
+
+        .header-btn.dropdown-trigger {
+            background: #1a4079;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0.45rem 1.1rem;
+            font-weight: 600;
+            border: none;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .page-title {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .program-section {
+            margin-bottom: 4rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .program-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .program-section h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .program-section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .program-section ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-section li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .program-section li:before {
+            content: "✓";
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .program-section ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-section ol li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+        }
+
+        .program-section ol li:before {
+            content: none;
+        }
+
+        .highlight-box {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .country-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .country-card {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .country-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .country-card p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #c1121f;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 1rem;
+            }
+
+            .program-section {
+                padding: 1.5rem;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .program-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .country-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="double-header">
+        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
+            <div class="logo">
+                <a href="index.html">
+                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -100px;">
+                </a>
+              </div>
+            <div class="logo">
+                <a href="index.html">
+                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
+                </a>
+              </div>
+              
+            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
+                <div class="dropdown">
+                    <a href="#" class="header-btn dropdown-trigger">Hakkımızda</a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
+                        <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
+                    </div>
+                </div>
+                <a href="#" class="header-btn">Bilgi İste</a>
+                <a href="iletisim.html" class="header-btn">İletişim</a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="main-nav">
+                <a href="index.html#countries-section">Üniversite</a>
+                <a href="dil-okullari.html">Dil Okulları</a>
+                <a href="master-mba.html">Master/MBA</a>
+                <a href="work-and-study.html">Work and Travel</a>
+                <a href="diger-programlar.html">Diğer Programlar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">Diğer Programlar</h1>
+
+        <!-- Work and Study Section -->
+        <section class="program-section">
+            <h2>Work and Study Programı</h2>
+            <h3>Yurtdışında Eğitim Alırken Çalışma Fırsatı</h3>
+            
+            <p>Yurtdışında eğitim almak isteyen birçok öğrenci için en büyük engellerden biri maliyettir. Ancak hem eğitim alıp hem de yasal olarak çalışarak bu maliyetleri azaltmak mümkün! Work and Study (Çalış ve Eğitim Al) programları, bu ihtiyaca mükemmel bir çözüm sunar. Peki bu program tam olarak nedir, kimler başvurabilir ve hangi ülkelerde uygulanır?</p>
+
+            <h3>Work and Study Nedir?</h3>
+            <p>Work and Study; öğrencilerin yurtdışında dil eğitimi veya sertifika programlarına katılırken yasal çalışma izniyle haftalık belirli saatlerde çalışabildiği programlardır. Özellikle İngilizce dil eğitimi almak isteyen öğrenciler için İrlanda, Kanada, Avustralya ve Yeni Zelanda gibi ülkelerde oldukça popülerdir.</p>
+
+            <h3>Programın Sunduğu Avantajlar</h3>
+            <ul>
+                <li>Maliyetleri düşürme imkânı: Eğitiminizi finanse etmek için çalışabilirsiniz.</li>
+                <li>Dil pratiği: Sınıf dışında gerçek hayatta İngilizce pratiği yaparsınız.</li>
+                <li>İş deneyimi: Uluslararası iş ortamında deneyim kazanırsınız.</li>
+                <li>Sosyal çevre: Farklı milletlerden insanlarla tanışıp ağınızı genişletirsiniz.</li>
+                <li>Kültürel entegrasyon: Gittiğiniz ülkenin kültürüne daha kolay adapte olursunuz.</li>
+            </ul>
+
+            <h3>Hangi Ülkelerde Work and Study Yapılır?</h3>
+            <div class="country-grid">
+                <div class="country-card">
+                    <h4>1. İrlanda</h4>
+                    <p>25 haftalık dil eğitimi alan öğrencilere haftada 20 saat yasal çalışma hakkı verilir. Tatil dönemlerinde haftalık 40 saat çalışılabilir. Popüler şehirler: Dublin, Cork, Galway</p>
+                </div>
+                <div class="country-card">
+                    <h4>2. Kanada</h4>
+                    <p>Kolej ya da sertifika programlarına kayıtlı öğrenciler, eğitim süresince haftada 20 saat, tatillerde 40 saat çalışabilir. Mezuniyet sonrası çalışma izni (PGWP) alma hakkı mümkündür.</p>
+                </div>
+                <div class="country-card">
+                    <h4>3. Avustralya</h4>
+                    <p>Dil okulu, mesleki eğitim veya üniversite programlarına kayıtlı öğrenciler haftada 24 saat çalışabilir (2024 itibarıyla). Minimum ücret saati oldukça yüksektir.</p>
+                </div>
+                <div class="country-card">
+                    <h4>4. Yeni Zelanda</h4>
+                    <p>14 hafta ve üzeri İngilizce programlarında çalışma hakkı sunulabilir. Sertifika/diploma programlarında da çalışma izni vardır.</p>
+                </div>
+            </div>
+
+            <h3>Kimler Başvurabilir?</h3>
+            <ul>
+                <li>En az lise mezunu bireyler</li>
+                <li>B1-B2 düzeyinde İngilizce bilenler (bazı ülkeler için)</li>
+                <li>Eğitim alacağı süreye göre bütçesini ayarlayabilen öğrenciler</li>
+                <li>Yurtdışında yaşama ve çalışma motivasyonu yüksek olanlar</li>
+            </ul>
+
+            <h3>Başvuru Süreci ve Belgeler</h3>
+            <ul>
+                <li>Pasaport</li>
+                <li>Mezuniyet belgesi (veya öğrenci belgesi)</li>
+                <li>Niyet mektubu</li>
+                <li>CV</li>
+                <li>Vize başvuru evrakları</li>
+                <li>Dil seviyesi belgesi (varsa)</li>
+            </ul>
+
+            <h3>Çalışılabilecek İşler</h3>
+            <ul>
+                <li>Kafeler, restoranlar (barista, garson)</li>
+                <li>Market ve mağazalar</li>
+                <li>Oteller (resepsiyon, kat hizmetleri)</li>
+                <li>Temizlik ve depo işleri</li>
+                <li>Bazı sektörlerde ofis içi pozisyonlar (İngilizce seviyesi yüksek olanlar için)</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>Çalışma Ücretleri ve Saatler</h3>
+                <p><strong>Ortalama saatlik ücret:</strong></p>
+                <ul>
+                    <li>İrlanda: 12–14 Euro</li>
+                    <li>Kanada: 15–18 CAD</li>
+                    <li>Avustralya: 22–26 AUD</li>
+                    <li>Yeni Zelanda: 21–24 NZD</li>
+                </ul>
+                <p><strong>Haftalık ortalama çalışma süresi:</strong> 20 saat (tatillerde 40 saat)</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>Konaklama ve Yaşam Giderleri</h3>
+                <p>Aile yanı konaklama, paylaşımlı ev, öğrenci yurdu seçenekleri bulunur.</p>
+                <p><strong>Aylık yaşam giderleri (ülkeye göre değişken):</strong></p>
+                <ul>
+                    <li>İrlanda: 800–1200 Euro</li>
+                    <li>Kanada: 1000–1500 CAD</li>
+                    <li>Avustralya: 1000–1600 AUD</li>
+                    <li>Yeni Zelanda: 1000–1400 NZD</li>
+                </ul>
+            </div>
+
+            <h3>Vize Süreci</h3>
+            <p>Her ülkenin vize şartları farklıdır, ancak genel olarak şunlara dikkat edilir:</p>
+            <ul>
+                <li>Eğitim süresi</li>
+                <li>Finansal yeterlilik belgeleri</li>
+                <li>Okul kabul mektubu</li>
+                <li>Sağlık sigortası</li>
+                <li>Konaklama planı</li>
+                <li>Niyet mektubu</li>
+            </ul>
+        </section>
+
+        <!-- Yaz Okulu Section -->
+        <section class="program-section">
+            <h2>Yaz Okulu</h2>
+            <h3>Yaz Okulu Programlarıyla Dünyayı Keşfet, Dilini Geliştir, Ufuk Aç!</h3>
+            
+            <p>Yaz aylarını verimli geçirmenin en keyifli ve öğretici yollarından biri: yurtdışında yaz okulu programları! Hem dil becerilerinizi geliştirebilir, hem de farklı kültürlerle tanışarak unutulmaz bir deneyim yaşayabilirsiniz.</p>
+
+            <h3>Yaz Okulu Nedir?</h3>
+            <p>Yaz okulu programları, genellikle 2 ila 8 hafta arasında süren, öğrencilerin yaz tatili boyunca yabancı dil öğrenmelerine, kültürel geziler yapmalarına ve sosyal gelişim kazanmalarına imkan tanıyan kısa süreli eğitim programlarıdır.</p>
+
+            <h3>Kimler Katılabilir?</h3>
+            <ul>
+                <li>8 – 18 yaş arası çocuk ve gençler</li>
+                <li>Üniversite öğrencileri ve yeni mezunlar</li>
+                <li>Dilini geliştirmek isteyen yetişkin bireyler</li>
+                <li>Programlar yaş grubuna ve seviyeye özel olarak hazırlanır</li>
+            </ul>
+
+            <h3>Yaz Okulunun Avantajları</h3>
+            <ul>
+                <li>Yoğunlaştırılmış yabancı dil eğitimi</li>
+                <li>Farklı ülkelerden öğrencilerle sosyal etkileşim</li>
+                <li>Kültürel turlar ve etkinliklerle eğlenerek öğrenme</li>
+                <li>Erken yaşta yurtdışı deneyimi kazanma</li>
+                <li>Özgüven, sorumluluk ve bağımsızlık gelişimi</li>
+            </ul>
+
+            <h3>Popüler Yaz Okulu Ülkeleri</h3>
+            <div class="country-grid">
+                <div class="country-card">
+                    <h4>İngiltere</h4>
+                    <p>Güçlü akademik içerik, tarihi şehirler</p>
+                </div>
+                <div class="country-card">
+                    <h4>Amerika</h4>
+                    <p>Kampüs hayatı ve dil pratiği</p>
+                </div>
+                <div class="country-card">
+                    <h4>Kanada</h4>
+                    <p>Doğa, güvenlik ve kaliteli eğitim</p>
+                </div>
+                <div class="country-card">
+                    <h4>İrlanda</h4>
+                    <p>Sıcak bir atmosferde İngilizce eğitimi</p>
+                </div>
+                <div class="country-card">
+                    <h4>Malta</h4>
+                    <p>Akdeniz'in eşsiz güzelliğinde dil öğrenme</p>
+                </div>
+            </div>
+
+            <h3>Program İçeriği</h3>
+            <ul>
+                <li>Haftalık 15–25 saat arasında dil dersi</li>
+                <li>Konaklama (aile yanı veya kampüs yurdu)</li>
+                <li>Günlük sosyal aktiviteler ve hafta sonu gezileri</li>
+                <li>7/24 rehberlik ve gözetmen desteği</li>
+            </ul>
+
+            <h3>Kayıt ve Vize Süreci</h3>
+            <p>Universitypark Yurtdışı Eğitim olarak, başvuru belgelerinden konaklama rezervasyonlarına, vize işlemlerinden uçak biletine kadar her adımda yanınızdayız. Yaz okuluna güvenle ve hazır bir şekilde adım atmanız için size özel danışmanlık sunuyoruz.</p>
+            
+            <p><strong>Yaz tatilini fırsata dönüştür, eğlenerek öğren!</strong></p>
+            <p>Hemen bizimle iletişime geçin, size en uygun yaz okulu programını birlikte belirleyelim!</p>
+        </section>
+
+        <!-- Pathway Programı Section -->
+        <section class="program-section">
+            <h2>Pathway Programı</h2>
+            <h3>Pathway Programı Hakkında</h3>
+            
+            <p>Yurtdışında üniversite eğitimi almak isteyen ancak doğrudan kabul şartlarını karşılamayan öğrenciler için sunulan Pathway (Hazırlık) Programları, dünya çapında birçok üniversitenin sunduğu akademik geçiş yollarından biridir. Bu programlar sayesinde öğrenciler hem dil yeterliliklerini hem de akademik bilgi seviyelerini geliştirerek üniversiteye sorunsuz bir geçiş yapabilirler.</p>
+
+            <h3>Pathway Programı nedir?</h3>
+            <p>Pathway Programları; lisans (Undergraduate) veya yüksek lisans (Postgraduate) seviyelerinde yurtdışında eğitim almak isteyen öğrenciler için tasarlanmış hazırlık programlarıdır. Bu programlar, öğrencilerin akademik bilgi, İngilizce dil yeterliliği ve üniversite hayatına adaptasyon konularında gelişmesini hedefler.</p>
+
+            <h3>Kimler için Uygundur?</h3>
+            <ul>
+                <li>Lise veya lisans mezunu olup yurtdışında eğitim almak isteyen ama direkt kabul alamayan öğrenciler</li>
+                <li>İngilizce seviyesi üniversite için yeterli olmayanlar</li>
+                <li>Uluslararası geçerli bir diploma (IB, A-Level, AP) olmayanlar</li>
+                <li>Farklı bir eğitim sisteminden gelen öğrenciler</li>
+            </ul>
+
+            <h3>Pathway Programı Türleri</h3>
+            <div class="highlight-box">
+                <h4>1. Undergraduate Pathway (Lisans Hazırlık):</h4>
+                <ul>
+                    <li>Lise mezunları içindir.</li>
+                    <li>1 yıllık hazırlık sonrası üniversiteye geçiş sağlanır.</li>
+                    <li>Bazı programlar doğrudan 1. sınıf sayılabilir (Foundation veya International Year One).</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h4>2. Postgraduate Pathway (Yüksek Lisans Hazırlık):</h4>
+                <ul>
+                    <li>Lisans mezunları içindir.</li>
+                    <li>İngilizce seviyesi ya da akademik eksikleri olan adaylar için uygundur.</li>
+                    <li>6–9 aylık programlar sonrası yüksek lisansa geçiş yapılır.</li>
+                </ul>
+            </div>
+
+            <h3>Pathway Programı Avantajları</h3>
+            <ul>
+                <li>Akademik ve dil hazırlık: İngilizce yeterliliğiniz gelişirken akademik derslere de alışırsınız.</li>
+                <li>Üniversite garantisi: Program başarıyla tamamlandığında anlaşmalı üniversiteye geçiş garantisi sunulur.</li>
+                <li>Uyum kolaylığı: Yeni ülkeye ve eğitim sistemine daha kolay adapte olursunuz.</li>
+                <li>Sosyal entegrasyon: Uluslararası öğrencilerle kaynaşarak sosyal çevre edinirsiniz.</li>
+                <li>Başarı oranı yüksek: Doğrudan üniversiteye başlayanlara göre daha yüksek başarı ve mezuniyet oranı.</li>
+            </ul>
+
+            <h3>Pathway Programı Nerelerde Var?</h3>
+            <p>Pathway programları dünya genelinde birçok ülkede sunulmaktadır.</p>
+            <p><strong>En popüler ülkeler:</strong></p>
+            <ul>
+                <li><strong>İngiltere:</strong> INTO, Kaplan, Navitas, Study Group gibi sağlayıcılarla birçok üniversitede</li>
+                <li><strong>Amerika:</strong> Oregon State, George Mason, University of South Florida vb.</li>
+                <li><strong>Hollanda, İrlanda, Avustralya, Kanada:</strong> Artan seçeneklerle uluslararası öğrencilere kapı açıyor</li>
+            </ul>
+
+            <h3>Başvuru Şartları</h3>
+            <ul>
+                <li>Lise diploması (Undergraduate için) / Lisans diploması (Postgraduate için)</li>
+                <li>Transkript</li>
+                <li>Orta düzeyde İngilizce (IELTS 4.5–5.5 arası genellikle kabul edilir)</li>
+                <li>Pasaport</li>
+                <li>Niyet mektubu ve referans mektubu (bazı okullarda)</li>
+            </ul>
+
+            <h3>Eğitim Süresi ve Başlangıç Dönemleri</h3>
+            <ul>
+                <li><strong>Undergraduate Pathway:</strong> Genellikle 9–12 ay</li>
+                <li><strong>Postgraduate Pathway:</strong> 6–9 ay</li>
+                <li><strong>Başlangıç Tarihleri:</strong> Eylül, Ocak, bazen Nisan/Mayıs dönemlerinde de bulunabilir.</li>
+            </ul>
+
+            <h3>Pathway Programı Ücretleri</h3>
+            <p>Eğitim ücretleri ülkeye ve kuruma göre değişiklik gösterir. Genel aralıklar:</p>
+            <ul>
+                <li><strong>İngiltere:</strong> 10.000 – 20.000 GBP</li>
+                <li><strong>ABD:</strong> 15.000 – 25.000 USD</li>
+                <li><strong>Avustralya:</strong> 12.000 – 18.000 AUD</li>
+                <li><strong>Hollanda/Avrupa:</strong> 7.000 – 13.000 Euro</li>
+            </ul>
+
+            <h3>Popüler Pathway Sağlayıcıları ve Üniversiteleri</h3>
+            <div class="country-grid">
+                <div class="country-card">
+                    <h4>INTO University Partnerships</h4>
+                    <p>Exeter, Manchester, Oregon State</p>
+                </div>
+                <div class="country-card">
+                    <h4>Kaplan International</h4>
+                    <p>Nottingham Trent, Arizona State</p>
+                </div>
+                <div class="country-card">
+                    <h4>Navitas</h4>
+                    <p>Brunel University, La Trobe, UMass</p>
+                </div>
+                <div class="country-card">
+                    <h4>Study Group</h4>
+                    <p>Durham, Royal Holloway, Leeds</p>
+                </div>
+                <div class="country-card">
+                    <h4>OnCampus</h4>
+                    <p>University of Amsterdam, Lund University</p>
+                </div>
+            </div>
+
+            <p>Pathway programları, doğrudan yurtdışındaki üniversitelere girişte zorluk yaşayan öğrenciler için mükemmel bir alternatiftir. Hem akademik hem dil açısından sizi üniversiteye hazırlar, kültürel geçiş sürecini kolaylaştırır ve üniversite başarınızı artırır. Eğer siz de yurtdışında eğitim hedefliyorsanız ama hazır hissetmiyorsanız, Pathway programlarıyla doğru bir başlangıç yapabilirsiniz.</p>
+        </section>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="cta-button">Ana Sayfaya Dön</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,23 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll('.info-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          // Eğer bir kez animasyon yapsın istiyorsan:
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1 // Yüzde 10'u görünse bile tetikler
+    });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  });
+</script>
+</body>
+</html> 

@@ -32,68 +32,21 @@
         body {
             line-height: 1.6;
             color: var(--text-color);
+            margin: 0;
+            background: #fff;
+        }
+
+        .hero, .info-section, .countries-section, .featured-section, .faq-section, .map-section, .footer {
+            background: #fff;
         }
 
         /* Header Styles */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-menu a:hover {
-            color: var(--secondary-color);
-        }
+        /* Eski header ve nav ile ilgili tüm CSS'leri kaldırdım */
 
         /* Hero Section */
         .hero {
-            margin-top: 60px;
+            margin-top: 0;
+            padding-top: 0;
             position: relative;
             height: 80vh;
             overflow: hidden;
@@ -219,6 +172,14 @@
             margin-bottom: 1rem;
         }
 
+
+        .info-card h3 {
+            display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+        }
         /* Featured Content Section */
         .featured-section {
             padding: 4rem 2rem;
@@ -668,10 +629,6 @@
 
             .mobile-content {
                 display: block;
-            }
-
-            .logo img {
-                height: 30px;
             }
 
             .hero {
@@ -1310,50 +1267,348 @@
         .faq-box:first-child {
           transform: translateX(-200px);
         }
+
+        /* --- MOBILE FIX FOR STATS SECTION --- */
+        @media (max-width: 600px) {
+          .stats-highlight {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100vw !important;
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+          .stats-highlight > div {
+            width: 100% !important;
+            text-align: center !important;
+            margin-bottom: 10px !important;
+            font-size: 1.1em !important;
+            word-break: break-word !important;
+            box-sizing: border-box !important;
+          }
+          .stats-highlight > div:last-child {
+            margin-bottom: 0 !important;
+          }
+          body, html {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+          }
+        }
+        /* --- END MOBILE FIX --- */
+
+        .double-header {
+            background: #1a4079;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem 1.1rem 2rem;
+            min-height: 80px;
+            background: #fff;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
+        .header-top-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+        .header-btn {
+            background: #1a4079;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .header-btn:hover {
+            background: #e63946;
+            color: #fff;
+        }
+        .header-bottom {
+            background: #1a4079;
+            border-top: 1px solid #274a7e;
+            padding: 0.05rem 2rem 0.05rem 2rem;
+            min-height: 26px;
+            display: flex;
+            justify-content: center;
+        }
+        .main-nav > a, .main-nav > .dropdown {
+  padding: 0 1.6rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative; /* ALT MENÜ İÇİN GEREKLİ */
+}
+
+.main-nav > a:hover,
+.main-nav > .dropdown:hover > .dropdown-trigger {
+  color: #e63946;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav > a:not(:last-child) {
+  border-right: 2px solid #fff;
+}
+
+/* AÇILAN MENÜ (POPUP) */
+.dropdown-content {
+  position: absolute;
+  top: calc(100% + 6px); /* ALTINA AÇILSIN */
+  left: 0;
+  background-color: #123c6c;
+  display: none;
+  min-width: 180px;
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ALT MENÜ LİNKLER */
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #0d2b52;
+  color: #e63946;
+}
+
+/* HOVER OLUNCA GÖRÜNÜR YAP */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+        @media (max-width: 900px) {
+            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+            .main-nav { gap: 1.2rem; }
+            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+        }
+
+        .header-btn.dropdown-trigger {
+            background: #1a4079;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0.45rem 1.1rem;
+            font-weight: 600;
+            border: none;
+        }
+        .info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+  grid-auto-rows: auto; /* satırlar içeriğe göre */
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+}
+
+
+.info-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s ease, transform 0.6s ease;
+  /* EKLENECEKLER: */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px; /* örnek */
+}
+
+.info-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.info-card h3 {
+  color: #002f6c;
+  margin: 0;
+}
+
+.info-card ul {
+  padding-left: 20px;
+
+}
+
+.info-card p {
+  margin-top: 8px;
+  color: #333;
+}
+
+.sss-card {
+  height: 100px; /* veya ihtiyacına göre */
+  align-items: center;
+}
+
+
+.logo-slider {
+  padding: 40px 0;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-slider-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 14); /* veya: width: fit-content; */
+  animation: scroll 20s linear infinite; /* süresini uzun tut, yumuşak olur */
+}
+
+
+.slide {
+  width: 250px;
+  flex-shrink: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  max-height: 90px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-card {
+  animation: fadeUp 0.1s ease forwards;
+  opacity: 0;
+}
+
+/* Kartlar sırayla animasyonlu gelsin */
+.info-card:nth-child(1) { animation-delay: 0.1s; }
+.info-card:nth-child(2) { animation-delay: 0.2s; }
+.info-card:nth-child(3) { animation-delay: 0.3s; }
+.info-card:nth-child(4) { animation-delay: 0.4s; }
+.info-card:nth-child(5) { animation-delay: 0.5s; }
+.info-card:nth-child(6) { animation-delay: 0.6s; }
+.info-card:nth-child(6) { animation-delay: 0.7s; }
+
+
+
+
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <header class="double-header">
+        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
             <div class="logo">
-                <img src="universitypark-small.webp" 
-                     srcset="universitypark-small.webp 120w,
-                             universitypark-medium.webp 240w,
-                             universitypark.webp 480w"
-                     sizes="(max-width: 460px) 120px,
-                            (max-width: 768px) 240px,
-                            480px"
-                     alt="University Park"
-                     width="120"
-                     height="40">
-            </div>
-            <button class="mobile-menu-btn">☰</button>
-            <nav class="nav-menu" style="margin-left: 48px;">
-                <a href="#countries-section">ÜNİVERSİTE</a>
+                <a href="index.html">
+                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -180px;">
+                </a>
+              </div>
+            <div class="logo">
+                <a href="index.html">
+                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
+                </a>
+              </div>
+              
+            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
                 <div class="dropdown">
-                    <a href="eğitim-programları" class="dropdown-trigger">EĞİTİM PROGRAMLARI</a>
+                    <a href="#" class="header-btn dropdown-trigger">Hakkımızda</a>
                     <div class="dropdown-content">
-                        <a href="dil-okullari.html">Dil Okulları</a>
-                        <a href="work-and-study.html">Work & Study</a>
-                        <a href="yaz-okulu.html">Yaz Okulu</a>
-                        <a href="master-mba.html">Master/MBA</a>
-                        <a href="pathway.html">Pathway Programı</a>
+                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
+                        <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
                     </div>
                 </div>
-                <a href="work-and-study.html">WORK & TRAVEL</a>
-                <a href="#">VİZE</a>
-                <a href="#">BLOG</a>
-                <a href="#">HAKKIMIZDA</a>
-                <a href="iletisim.html">İLETİŞİM</a>
+                <a href="#" class="header-btn">Bilgi İste</a>
+                <a href="iletisim.html" class="header-btn">İletişim</a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="main-nav">
+                <a href="#countries-section">Üniversite</a>
+                <a href="dil-okullari.html">Dil Okulları</a>
+                <a href="master-mba.html">Master/MBA</a>
+                <a href="work-and-study.html">Work and Travel</a>
+                <a href="diger-programlar.html">Diğer Programlar</a>
             </nav>
         </div>
     </header>
 
     <section class="hero" style="margin-bottom:2.5rem;">
         <div class="hero-slide active"
-             data-bg-desktop="teststudy.jpg"
-             data-bg-mobile="teststudy.jpg"
-             style="background-image: url('teststudy.jpg'); background-size: cover; background-position: center 70%; background-repeat: no-repeat;">
+             data-bg-desktop="teststudy.webp"
+             data-bg-mobile="teststudy.webp"
+             style="background-image: url('teststudy.webp'); background-size: cover; background-position: center 70%; background-repeat: no-repeat;">
             <div class="slide-content">
                 <h2>Sınavsız Üniversite</h2>
                 <p>Sadece lise DİPLOMASI ile YKS şartı olmadan dilediğin bölümü okumak MÜMKÜN!</p>
@@ -1361,48 +1616,44 @@
             </div>
         </div>
         <div class="hero-slide"
-             data-bg-desktop="ignoringYKS.jpg"
-             data-bg-mobile="ignoringYKS.jpg"
-             style="background-image: url('ignoringYKS.jpg'); background-size: cover; background-position: 30% center; background-repeat: no-repeat;">
+             data-bg-desktop="dileğitimi.webp"
+             data-bg-mobile="dileğitimi.webp"
+             style="background-image: url('dileğitimi.webp'); background-size: cover; background-position: 30% center; background-repeat: no-repeat;">
             <div class="slide-content">
-                <h2>Geleceğine YKS Değil, SEN Karar Ver</h2>
-                <p>Hayallerindeki üniversite ve bölüm için sınav stresi olmadan, kendi yolunu kendin çiz!</p>
+                <h2>Universitypark İle Her Adımda Yanındayız</h2>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
         <div class="hero-slide"
-             data-bg-desktop="çinli-öğrenciler-desktop.webp"
-             data-bg-mobile="çinli-öğrenciler-mobile.webp">
+             data-bg-desktop="rusya_okul.webp"
+             data-bg-mobile="rusya_okul.webp">
             <div class="slide-content">
-                <h2>Hayallerin Sınır Tanımaz!</h2>
-                <p>Dilediğin ülkede, dilediğin bölümde üniversite okuma fırsatı seni bekliyor. Geleceğini özgürce şekillendir!</p>
+                <h2>Rusya'da Üniversite Eğitimi</h2>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
         <div class="hero-slide"
-             data-bg-desktop="Sınavsız-üniversite-2-desktop.webp"
-             data-bg-mobile="Sınavsız-üniversite-2-mobile.webp">
+             data-bg-desktop="polonya_okul.webp"
+             data-bg-mobile="polonya_okul.webp">
             <div class="slide-content">
-                <h2>Sadece Lise Diploması ile Almanya'da Üniversite Eğitimi</h2>
-                <p>Almanya'da sınavsız, prestijli üniversitelerde eğitim fırsatı! Avrupa'da geleceğini güvence altına al.</p>
+                <h2>Polonya'da Üniversite Eğitimi</h2>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
         <div class="hero-slide"
-             data-bg-desktop="dil-eğitimi-desktop.webp"
-             data-bg-mobile="dil-eğitimi-mobile.webp">
+             data-bg-desktop="cin_okul.webp"
+             data-bg-mobile="cin_okul.webp">
             <div class="slide-content">
-                <h2>Yurtdışında Dil Okulları</h2>
-                <p>Dünyanın en iyi dil okullarında İngilizce eğitimi!</p>
+                <h2>Çin'de Burslu Eğitim</h2>
                 <a href="dil-okullari.html" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
+    
         <div class="hero-slide"
-             data-bg-desktop="1-work-and-travel-desktop.webp"
-             data-bg-mobile="1-work-and-travel-mobile.webp">
+             data-bg-desktop="irlanda_okul.webp"
+             data-bg-mobile="irlanda_okul.webp">
             <div class="slide-content">
-                <h2>Avrupa'da Yaşam ve Kariyer Fırsatı</h2>
-                <p>Eğitim sonrası Avrupa'da çalışma ve kalıcı olma şansı! Hayalini Avrupa'da gerçekleştir.</p>
+                <h2>İrlanda'da Dil Eğitimi</h2>
                 <a href="#" class="cta-button">Detaylı Bilgi</a>
             </div>
         </div>
@@ -1411,72 +1662,46 @@
         <button class="hero-arrow hero-arrow-right" aria-label="Sonraki slide"></button>
     </section>
 
-    <div class="stats-center-wrapper" style="display: flex; flex-direction: column; align-items: center;">
-      <img src="universityparkBG.png" alt="University Park" class="stats-logo" style="margin-top: 15px;">
-      <section class="stats-highlight" style="max-width: 900px; margin: 5rem auto 0 auto; padding: 0; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(26,64,121,0.08); border: 3px solid; border-image: linear-gradient(90deg, #1a4079 60%, #e63946 100%) 1; display: flex; flex-direction: row; align-items: stretch; justify-content: center; overflow: hidden;">
-        <div style="flex:1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-            <span style="font-size: 2.1rem; font-weight: 800; color: #1a4079; letter-spacing: 2px; display: block; margin-bottom: 0.3rem;">500+</span>
-            <span style="font-size: 1.1rem; font-weight: 600; color: #222; opacity: 0.92; text-align: center; display: block;">Memnun Öğrenci</span>
-        </div>
-        <div style="flex:1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-            <span style="font-size: 2.1rem; font-weight: 800; color: #e63946; letter-spacing: 2px; display: block; margin-bottom: 0.3rem;">15+</span>
-            <span style="font-size: 1.1rem; font-weight: 600; color: #222; opacity: 0.92; text-align: center; display: block;">Farklı Ülke</span>
-        </div>
-        <div style="flex:1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-            <span style="font-size: 2.1rem; font-weight: 800; color: #1a4079; letter-spacing: 2px; display: block; margin-bottom: 0.3rem;">500+</span>
-            <span style="font-size: 1.1rem; font-weight: 600; color: #222; opacity: 0.92; text-align: center; display: block;">Dünya Çapında İş Ortakları</span>
-        </div>
-        <div style="flex:1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 120px;">
-            <span style="font-size: 2.1rem; font-weight: 800; color: #e63946; letter-spacing: 2px; display: block; margin-bottom: 0.3rem;">%98</span>
-            <span style="font-size: 1.1rem; font-weight: 600; color: #222; opacity: 0.92; text-align: center; display: block;">Veli Memnuniyeti</span>
-        </div>
-    </section>
-    </div>
+    <section class="info-section desktop-content">
+        <div class="info-grid">
+            <!-- Sol Üst -->
+            <div class="info-card">
+              <h3>Yurtdışı Eğitim Rehberi</h3>
+            </div>
+          
+            <!-- Orta Üst -->
+            <div class="info-card sss-card">
+              <h3>S.S.S</h3>
+            </div>
+          
+            <!-- Sağ Üst (boş değil artık) -->
+            <div class="info-card">
+                <h3>Yurtdışından Türkiye'ye Geçiş</h3>
+              </div>
+          
+            <!-- Sol Alt -->
+          
+            <div class="info-card">
+                <h3>Denklik</h3>
+              </div>
 
-    <section class="info-section desktop-content" style="margin-top:2.5rem;">
-        <div class="info-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <!-- Orta Alt -->
             <div class="info-card">
-                <h3>Sınavsız Üniversite</h3>
-                <p>YKS şartı olmadan, sadece lise diploması ile Avrupa'da üniversite okuma fırsatı!</p>
+              <h3>Vize İşlemleri</h3>
             </div>
+          
+            <!-- Sağ Alt -->
             <div class="info-card">
-                <h3>Almanya'da Eğitim</h3>
-                <p>Almanya'nın prestijli üniversitelerinde sınavsız ve uygun maliyetli eğitim imkanı.</p>
+              <h3>Yurtdışında Dil Eğitimi İçin Rehber </h3>
+
             </div>
-            <div class="info-card">
-                <h3>Yurtdışında Dil Okulları</h3>
-                <p>Dünyanın en iyi dil okullarında İngilizce ve diğer dilleri öğrenme şansı.</p>
-            </div>
-            <div class="info-card">
-                <h3>Work & Study</h3>
-                <p>Hem eğitim al, hem yasal olarak çalış. Bütçeni dengele, deneyim kazan!</p>
-            </div>
-            <div class="info-card">
-                <h3>Yaz Okulu Programları</h3>
-                <p>Yaz tatilini yurtdışında verimli geçir, yeni kültürler ve arkadaşlıklar edin.</p>
-            </div>
-            <div class="info-card">
-                <h3>Pathway & Master/MBA</h3>
-                <p>Lisans ve yüksek lisans için hazırlık programları, kariyerine global bir yön ver.</p>
-            </div>
-            <div class="info-card">
-                <h3>Online Danışmanlık</h3>
-                <p>Uzmanlarımızla hemen görüntülü görüş, aklına takılan tüm soruları anında sor!</p>
-            </div>
-            <div class="info-card">
-                <h3>Popüler Bölümler</h3>
-                <p>Tıp, mühendislik, işletme ve daha fazlası! Avrupa'da en çok tercih edilen bölümleri keşfet.</p>
-            </div>
-            <div class="info-card">
-                <h3>Burs ve Destekler</h3>
-                <p>Yurtdışında eğitim için sunulan burs ve finansal destek olanaklarını öğren, fırsatları kaçırma!</p>
-            </div>
-        </div>
+          </div>
+          
     </section>
 
     <section class="countries-section" id="countries-section">
         <div class="container">
-            <h2 class="section-title">Çalıştığımız Ülkeler</h2>
+            <h2 class="section-title">Hizmet Verdiğimiz Ülkeler </h2>
             <div class="countries-grid">
                 <div class="country-card">
                     <div class="country-flag">
@@ -1578,16 +1803,6 @@
         </div>
     </section>
 
-    <!-- Google Reviews Slider Başlangıç -->
-    <section class="google-reviews-section" style="padding: 3rem 0; background: #f8f9fa;">
-      <div style="max-width: 900px; margin: 0 auto;">
-        <h2 class="section-title">Müşterilerimizin Bizler Hakkındaki Görüşleri</h2>
-        <script src="https://static.elfsight.com/platform/platform.js" async></script>
-        <div class="elfsight-app-d37a6466-1dad-4710-accb-0d61d1e1a2a0" data-elfsight-app-lazy></div>
-      </div>
-    </section>
-    <!-- Google Reviews Slider Bitiş -->
-
     <section class="featured-section desktop-content">
         <div class="container">
             <h2 class="section-title">Blog</h2>
@@ -1661,68 +1876,17 @@
         </div>
     </section>
 
-    <section class="mobile-content">
-        <div class="container">
-            <h2 class="section-title">Blog</h2>
-            <div class="mobile-blog-grid">
-                <div class="mobile-blog-card">
-                    <img src="Sınavsız üniversite.webp" loading="lazy" alt="Adım Adım Yurtdışı Eğitim">
-                    <div class="mobile-blog-content">
-                        <h3>Adım Adım Yurtdışı Eğitim</h3>
-                        <p>Yurtdışında eğitim almak için izlemeniz gereken adımlar, gerekli belgeler ve süreç hakkında detaylı bilgi.</p>
-                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
-                    </div>
-                </div>
-
-                <div class="mobile-blog-card">
-                    <img src="danisman.webp" loading="lazy" alt="Yurtdışı Eğitim Rehberi">
-                    <div class="mobile-blog-content">
-                        <h3>Yurtdışı Eğitim Rehberi</h3>
-                        <p>Yurtdışında eğitim almak isteyenler için kapsamlı rehber. Ülke seçimi, konaklama, yaşam maliyetleri ve daha fazlası.</p>
-                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
-                    </div>
-                </div>
-
-                <div class="mobile-blog-card">
-                    <img src="çinli öğrenciler.webp" loading="lazy" alt="Sınavsız Üniversite">
-                    <div class="mobile-blog-content">
-                        <h3>Sınavsız Üniversite</h3>
-                        <p>Sınavsız üniversite eğitimi fırsatları, başvuru koşulları ve avantajları hakkında detaylı bilgi.</p>
-                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
-                    </div>
-                </div>
-
-                <div class="mobile-blog-card">
-                    <img src="1. work and travel.webp" loading="lazy" alt="Work and Travel">
-                    <div class="mobile-blog-content">
-                        <h3>Work and Travel Programı</h3>
-                        <p>Work and Travel programı ile yurtdışında hem çalışın hem de İngilizcenizi geliştirin...</p>
-                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
-                    </div>
-                </div>
-
-                <div class="mobile-blog-card">
-                    <img src="çinli öğrenciler.webp" loading="lazy" alt="Çin'de Eğitim">
-                    <div class="mobile-blog-content">
-                        <h3>Çin'de Eğitim Fırsatları</h3>
-                        <p>Çin'in önde gelen üniversitelerinde eğitim alın. Uygun fiyatlar ve kaliteli eğitim...</p>
-                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
-                    </div>
-                </div>
-
-                <div class="mobile-blog-card">
-                    <img src="pasaport.webp" loading="lazy" alt="Vize">
-                    <div class="mobile-blog-content">
-                        <h3>Vize Başvuru Süreci</h3>
-                        <p>Yurtdışı eğitim için vize başvuru sürecinizi adım adım planlayın...</p>
-                        <a href="#" class="mobile-blog-button">Devamını Oku</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Google Reviews Slider Başlangıç -->
+    <section class="google-reviews-section">
+      <div class="reviews-container">
+        <h2 class="section-title">Danışanlarımızın Bizler Hakkındaki Yorumları</h2>
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-d37a6466-1dad-4710-accb-0d61d1e1a2a0" data-elfsight-app-lazy></div>
+      </div>
     </section>
+    <!-- Google Reviews Slider Bitiş -->
 
-    <section class="faq-section">
+    <section class="faq-section" style="display: none;">
         <div class="faq-wrapper" style="flex-direction: column; align-items: center;">
             <h2 class="faq-title" style="text-align:center; font-size:2.3rem; font-weight:800; margin-bottom:2.2rem; margin-top:-49.5px; letter-spacing:0.5px; color:#1a4079; display: flex; flex-direction: column; align-items: center;">
               <span style="display:block;">Sıkça Sorulan Sorular</span>
@@ -1748,6 +1912,32 @@
             </div>
         </div>
     </section>
+
+    <section class="logo-slider">
+        <h2 class="logo-slider-title">Çalıştığımız Üniversiteler</h2>
+        <div class="slider-container">
+          <div class="slide-track">
+            <div class="slide"><img src="warsaw_logo.webp" alt="Üniversite 1"></div>
+            <div class="slide"><img src="heidelberg_logo.webp" alt="Üniversite 2"></div>
+            <div class="slide"><img src="jagi_logo.webp" alt="Üniversite 3"></div>
+            <div class="slide"><img src="AGH_logo.webp" alt="Üniversite 4"></div>
+            <div class="slide"><img src="humboldt_uni.webp" alt="Üniversite 5"></div>
+            <div class="slide"><img src="rwth_uni.webp" alt="Üniversite 6"></div>
+            <div class="slide"><img src="freie_uni.webp" alt="Üniversite 7"></div>
+            <!-- Aynı logoları tekrar ekliyoruz -->
+            <div class="slide"><img src="warsaw_logo.webp" alt="Üniversite 1"></div>
+            <div class="slide"><img src="heidelberg_logo.webp" alt="Üniversite 2"></div>
+            <div class="slide"><img src="jagi_logo.webp" alt="Üniversite 3"></div>
+            <div class="slide"><img src="AGH_logo.webp" alt="Üniversite 4"></div>
+            <div class="slide"><img src="humboldt_uni.webp" alt="Üniversite 5"></div>
+            <div class="slide"><img src="rwth_uni.webp" alt="Üniversite 6"></div>
+            <div class="slide"><img src="freie_uni.webp" alt="Üniversite 7"></div>
+          </div>
+        </div>
+      </section>
+      
+      
+
     <style>
     @media (max-width: 900px) {
       .faq-boxes { flex-direction: column; gap: 2rem; }
@@ -1756,11 +1946,16 @@
     .faq-box h3 { font-size: 1.08rem; font-weight: 600; color: #1a4079; margin: 0 0 1.1rem 0; letter-spacing: 0.1px; }
     .faq-box .faq-item:last-child h3 { margin-bottom: 0; }
     </style>
+
+
+
     <section class="map-section">
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.016171813108!2d34.54201719999999!3d36.7701795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f5a3fc0cf713%3A0x8fc275e8cfb6980c!2zVW5pdmVyc2l0eXBhcmsgWXVydGTEscWfxLEgRcSfaXRpbQ!5e0!3m2!1snl!2snl!4v1749205286025!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
+
+    
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">

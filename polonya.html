@@ -22,6 +22,142 @@
             background-color: #f5f5f5;
         }
 
+        /* Header Styles - Copied from index.html */
+        .double-header {
+            background: #1a4079;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem 1.1rem 2rem;
+            min-height: 80px;
+            background: #fff;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
+        .header-top-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+        .header-btn {
+            background: #1a4079;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .header-btn:hover {
+            background: #e63946;
+            color: #fff;
+        }
+        .header-bottom {
+            background: #1a4079;
+            border-top: 1px solid #274a7e;
+            padding: 0.05rem 2rem 0.05rem 2rem;
+            min-height: 26px;
+            display: flex;
+            justify-content: center;
+        }
+        .main-nav > a, .main-nav > .dropdown {
+            padding: 0 1.6rem;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-sizing: border-box;
+            border-bottom: none;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            position: relative;
+        }
+
+        .main-nav > a:hover,
+        .main-nav > .dropdown:hover > .dropdown-trigger {
+            color: #e63946;
+        }
+
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            text-decoration: none;
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .main-nav > a:not(:last-child) {
+            border-right: 2px solid #fff;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: calc(100% + 6px);
+            left: 0;
+            background-color: #123c6c;
+            display: none;
+            min-width: 180px;
+            padding: 10px 0;
+            z-index: 1000;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0d2b52;
+            color: #e63946;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+            .main-nav { gap: 1.2rem; }
+            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+        }
+
+        .header-btn.dropdown-trigger {
+            background: #1a4079;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0.45rem 1.1rem;
+            font-weight: 600;
+            border: none;
+        }
+
         h1, h2, h3, h4, h5, h6 {
             color: #1a4079;
             margin-bottom: 1rem;
@@ -159,38 +295,13 @@
             background: #1ed760;
         }
 
-        /* Header */
-        header {
-            background-color: #f5f7fa;
-            color: #1a4079;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            max-width: 1200px;
-            padding-left: 32px;
-        }
-
-        .logo img {
-            height: 64px;
-            max-height: 80px;
-            width: auto;
-        }
-
         /* Hero Section */
         .hero-slider {
             width: 100%;
             height: 400px;
             position: relative;
             overflow: hidden;
-            margin-bottom: 2rem;
+            margin-top: 0;
         }
 
         .hero-slider-bg {
@@ -198,7 +309,6 @@
             top: 0; left: 0; width: 100%; height: 100%;
             background: url('xa-.webp') center calc(50% - 40px)/cover no-repeat;
             z-index: 0;
-            filter: brightness(0.7) blur(1px);
         }
 
         .hero-slider-overlay {
@@ -237,7 +347,6 @@
 
         /* Content Sections */
         .content-section {
-            margin-top: 60px;
             padding: 2rem;
             max-width: 1200px;
             margin-left: auto;
@@ -366,6 +475,42 @@
     </style>
 </head>
 <body>
+    <header class="double-header">
+        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
+            <div class="logo">
+                <a href="index.html">
+                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -100px;">
+                </a>
+              </div>
+            <div class="logo">
+                <a href="index.html">
+                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
+                </a>
+              </div>
+              
+            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
+                <div class="dropdown">
+                    <a href="#" class="header-btn dropdown-trigger">Hakkımızda</a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
+                        <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
+                    </div>
+                </div>
+                <a href="#" class="header-btn">Bilgi İste</a>
+                <a href="iletisim.html" class="header-btn">İletişim</a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="main-nav">
+                <a href="index.html#countries-section">Üniversite</a>
+                <a href="dil-okullari.html">Dil Okulları</a>
+                <a href="master-mba.html">Master/MBA</a>
+                <a href="work-and-study.html">Work and Travel</a>
+                <a href="diger-programlar.html">Diğer Programlar</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="hero-slider" style="position:relative; overflow:hidden; height:400px; width:100%;">
         <img src="xa-.webp" alt="Polonya" style="position:absolute; left:50%; top:0; transform:translateX(-50%); width:100vw; height:100%; min-height:100%; min-width:100%; object-fit:cover; object-position: 50% 40%; filter:brightness(0.7) blur(1px); z-index:0;">
         <div class="hero-slider-overlay"></div>
@@ -391,24 +536,6 @@
         }, 2500);
     });
     </script>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src="universitypark.webp" alt="Logo">
-            </div>
-            <nav style="flex: 1; display: flex; justify-content: center; align-items: center;">
-                <ul style="display: flex; gap: 40px; list-style: none; margin: 0; padding: 0;">
-                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">ÜNİVERSİTE</a></li>
-                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">EĞİTİM PROGRAMLARI &#9662;</a></li>
-                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">WORK & TRAVEL</a></li>
-                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">VİZE</a></li>
-                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">BLOG</a></li>
-                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">HAKKIMIZDA</a></li>
-                    <li><a href="#" style="color: #1a4079; text-decoration: none; font-size: 1.1rem; font-weight: 500;">İLETİŞİM</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     <section class="content-section">
         <h1 class="section-title">Polonya'da Üniversite Eğitimi: Türk Öğrenciler İçin Rehber</h1>
         
