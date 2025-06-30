@@ -9,7 +9,7 @@
     <style>
         :root {
             --primary-color: rgb(26,64,121);
-            --secondary-color: #e63946;
+            --secondary-color: #ff0015;
             --text-color: #333;
             --light-bg: #f5f5f5;
         }
@@ -24,38 +24,154 @@
         body {
             line-height: 1.6;
             color: var(--text-color);
+            margin: 0;
+            background: #fff;
         }
 
-        /* Header Styles */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem;
-            position: fixed;
+        .double-header {
+            background: #1a4079;
             width: 100%;
-            top: 0;
-            z-index: 1000;
+            margin: 0;
+            box-sizing: border-box;
         }
-
-        .header-content {
+        .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 1.1rem 2rem 1.1rem 2rem;
+            min-height: 80px;
+            background: #fff;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
         }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
+        .header-top-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+        .header-btn {
+            background: #1a4079;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 22px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .header-btn:hover {
+            background: #ff0015;
+            color: #fff;
+        }
+        .header-btn2 {
+            background: #20aa13;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 22px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .header-bottom {
+            background: #1a4079;
+            border-top: 1px solid #274a7e;
+            padding: 0.05rem 2rem 0.05rem 2rem;
+            min-height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .main-nav {
             display: flex;
             align-items: center;
+            justify-content: center;
+            width: 100%;
         }
-
-        .logo img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
+        .main-nav > a, .main-nav > .dropdown {
+            padding: 0 1.6rem;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-sizing: border-box;
+            border-bottom: none;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            position: relative;
+        }
+        .main-nav > a:hover,
+        .main-nav > .dropdown:hover > .dropdown-trigger {
+            color: #ff0000;
+        }
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            text-decoration: none;
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .main-nav > a:not(:last-child) {
+            border-right: 2px solid #fff;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #123c6c;
+            display: none;
+            min-width: 180px;
+            padding: 10px 0;
+            z-index: 1000;
+            border-radius: 22px !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #0d2b52;
+            color: #ff0000;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        @media (max-width: 900px) {
+            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+            .main-nav { gap: 1.2rem; }
+            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+        }
+        .header-btn.dropdown-trigger {
+            background: #1a4079;
+            color: #fff;
+            border-radius: 22px;
+            padding: 0.45rem 1.1rem;
+            font-weight: 600;
+            border: none;
         }
 
         /* Content Styles */
@@ -97,10 +213,11 @@
         }
 
         .advantages-list li::before {
-            content: "✓";
+            content: "•";
             color: var(--secondary-color);
             position: absolute;
             left: 0;
+            font-size: 1.3em;
         }
 
         .section-title {
@@ -123,23 +240,107 @@
                 font-size: 1.8rem;
             }
         }
+
+        .dropdown-item {
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dropdown-item:hover {
+            background-color: #0d2b52;
+            color: #ff0000;
+        }
+        @media (max-width: 460px) {
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.1);
+                display: none;
+            }
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+            .main-nav .dropdown-content a {
+                padding-left: 2rem;
+            }
+        }
+        .dropdown-trigger::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-left: 10px;
+        }
+        .ingiltere-kutu {
+            position: relative;
+            left: -300px;
+            width: 150%;
+            height: auto;
+        }
+
+        .kanada-kutu {
+            position: relative;
+            left: -300px;
+            width: 150%;
+            height: auto;
+            min-height: 520px;
+        }
+
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <header class="double-header">
+        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
             <div class="logo">
-                <img src="universitypark-small.webp" alt="University Park">
+                <a href="index.html">
+                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -180px;">
+                </a>
+              </div>
+            <div class="logo">
+                <a href="index.html">
+                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
+                </a>
+              </div>
+              
+            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
+                <div class="dropdown">
+                    <a href="#" class="header-btn dropdown-trigger">Hakkımızda</a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
+                        <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
+                    </div>
+                </div>
+                <a href="#" class="header-btn" style="background:#e63946;">Bilgi İste</a>
+                <a href="iletisim.html" class="header-btn2">İletişim</a>
             </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="main-nav">
+                <a href="#countries-section">Üniversite</a>
+                <a href="dil-okullari.html">Dil Okulları</a>
+                <a href="master-mba.html">Master/MBA</a>
+                <a href="work-and-study.html">Work and Travel</a>
+                <div class="dropdown" style="border-right: 2px solid #fff;">
+                    <a href="#" class="dropdown-trigger">Diğer Programlar</a>
+                    <div class="dropdown-content">
+                        <a href="#">Work And Study</a>
+                        <a href="#">Yaz Okulu</a>
+                        <a href="#">Pathway Programı</a>
+                    </div>
+                </div>
+                <a href="vize-islemleri.html">Vize İşlemleri</a>
+            </nav>
         </div>
     </header>
 
     <section class="content-section">
         <h1 class="section-title">Yurtdışında Dil Okulları</h1>
 
-        <div class="country-section">
+        <div class="country-section ingiltere-kutu">
             <h2>İngiltere'de Dil Eğitimi</h2>
-            <p>İngiltere, İngilizce'nin ana vatanı olması nedeniyle dil eğitimi için en çok tercih edilen ülkelerin başında gelir. Oxford, Cambridge, Londra gibi şehirlerde bulunan prestijli dil okulları, öğrencilere kaliteli bir eğitim sunar.</p>
+            <img src="england.webp" alt="İngiltere" style="float:right; width: 100%; max-width:681px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-100px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
+            <p>İngiltere, İngilizce'nin ana vatanı olması nedeniyle dil eğitimi için en çok tercih edilen ülkelerin başında gelir.<br>Oxford, Cambridge, Londra gibi şehirlerde bulunan prestijli dil okulları, öğrencilere kaliteli bir eğitim sunar.</p>
             <h3>Avantajları:</h3>
             <ul class="advantages-list">
                 <li>Ana dili İngilizce olan eğitmenlerden eğitim</li>
@@ -151,19 +352,24 @@
             </ul>
         </div>
 
-        <div class="country-section">
-            <h2>Kanada'da Dil Eğitimi</h2>
-            <p>Kanada, yüksek yaşam kalitesi ve güvenliğiyle öne çıkan bir dil eğitimi destinasyonudur. Özellikle resmi iki dili olması (İngilizce ve Fransızca) öğrencilere çift dil avantajı sağlar.</p>
-            <h3>Avantajları:</h3>
-            <ul class="advantages-list">
-                <li>Kaliteli eğitim kurumları ve uygun yaşam maliyetleri</li>
-                <li>Göçmenlik için eğitim sonrası avantajlar</li>
-                <li>Doğayla iç içe bir öğrenme ortamı</li>
-                <li>Popüler Şehirler: Toronto, Vancouver, Montreal, Ottawa</li>
-                <li>Eğitim Süresi: 4 hafta – 1 yıl</li>
-                <li>Vize: Study Permit başvurusu yapılır</li>
-            </ul>
-        </div>
+<div class="country-section kanada-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
+    <img src="canada.webp" alt="Kanada" style="width: 100%; max-width: 720px; min-width: 220px; margin-left: 32px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);" />
+    
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+        <h2>Kanada'da Dil Eğitimi</h2>
+        <p>Kanada, yüksek yaşam kalitesi ve güvenliğiyle öne çıkan bir dil eğitimi destinasyonudur.<br>Özellikle resmi iki dili olması (İngilizce ve Fransızca) öğrencilere çift dil avantajı sağlar.</p>
+        <h3>Avantajları:</h3>
+        <ul class="advantages-list">
+            <li>Kaliteli eğitim kurumları ve uygun yaşam maliyetleri</li>
+            <li>Göçmenlik için eğitim sonrası avantajlar</li>
+            <li>Doğayla iç içe bir öğrenme ortamı</li>
+            <li>Popüler Şehirler: Toronto, Vancouver, Montreal, Ottawa</li>
+            <li>Eğitim Süresi: 4 hafta – 1 yıl</li>
+            <li>Vize: Study Permit başvurusu yapılır</li>
+        </ul>
+    </div>
+</div>
+
 
         <div class="country-section">
             <h2>Amerika'da Dil Eğitimi</h2>
