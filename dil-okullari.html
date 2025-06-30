@@ -9,7 +9,7 @@
     <style>
         :root {
             --primary-color: rgb(26,64,121);
-            --secondary-color: #ff0015;
+            --secondary-color: #ff0000;
             --text-color: #333;
             --light-bg: #f5f5f5;
         }
@@ -51,7 +51,7 @@
             gap: 1.2rem;
         }
         .header-btn {
-            background: #1a4079;
+            background: #ff0000;
             color: #fff;
             padding: 0.45rem 1.1rem;
             border-radius: 22px;
@@ -63,7 +63,7 @@
             cursor: pointer;
         }
         .header-btn:hover {
-            background: #ff0015;
+            background: #e63946;
             color: #fff;
         }
         .header-btn2 {
@@ -276,17 +276,137 @@
             position: relative;
             left: -300px;
             width: 150%;
-            height: auto;
+            height: 452px;
         }
 
         .kanada-kutu {
             position: relative;
             left: -300px;
             width: 150%;
-            height: auto;
-            min-height: 520px;
+            height: 452px;
+        }
+        
+        .amerika-kutu {
+            position: relative;
+            left: -300px;
+            width: 150%;
+            height: 452px;
         }
 
+        .avustralya-kutu {
+            position: relative;
+            left: -300px;
+            width: 150%;
+            height: 452px;
+        }
+
+        .malta-kutu {
+            position: relative;
+            left: -300px;
+            width: 150%;
+            height: 432.5px;
+        }
+        .irlanda-kutu {
+            position: relative;
+            left: -300px;
+            width: 150%;
+            height: 457px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info i {
+            margin-top: 3px;
+        }
+
+        .contact-info span {
+            display: block;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        .social-icons a {
+            color: #4CAF50;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #45a049;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -311,7 +431,7 @@
                         <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
                     </div>
                 </div>
-                <a href="#" class="header-btn" style="background:#e63946;">Bilgi İste</a>
+                <a href="#" class="header-btn">Bilgi İste</a>
                 <a href="iletisim.html" class="header-btn2">İletişim</a>
             </div>
         </div>
@@ -353,7 +473,7 @@
         </div>
 
 <div class="country-section kanada-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
-    <img src="canada.webp" alt="Kanada" style="width: 100%; max-width: 720px; min-width: 220px; margin-left: 32px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);" />
+    <img src="canada.webp" alt="Kanada" style="float:right; width: 100%; max-width:676px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-31px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
     
     <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
         <h2>Kanada'da Dil Eğitimi</h2>
@@ -371,60 +491,72 @@
 </div>
 
 
-        <div class="country-section">
-            <h2>Amerika'da Dil Eğitimi</h2>
-            <p>ABD, dünya genelinde tanınan birçok dil okuluna ev sahipliği yapar. Yoğun akademik içerikli programlardan genel İngilizceye kadar birçok seçenek sunar.</p>
-            <h3>Avantajları:</h3>
-            <ul class="advantages-list">
-                <li>Uluslararası tanınırlığa sahip okullar</li>
-                <li>TOEFL/IELTS hazırlık kursları yaygın</li>
-                <li>Üniversiteye geçiş fırsatları</li>
-                <li>Popüler Şehirler: New York, Los Angeles, San Francisco, Boston, Miami</li>
-                <li>Eğitim Süresi: 1 ay – 1 yıl</li>
-                <li>Vize: F-1 Öğrenci Vizesi</li>
-            </ul>
+        <div class="country-section amerika-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
+            <img src="america.webp" alt="Amerika" style="float:right; width: 100%; max-width:678px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-32px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+                <h2>Amerika'da Dil Eğitimi</h2>
+                <p>ABD, dünya genelinde tanınan birçok dil okuluna ev sahipliği yapar. Yoğun akademik içerikli programlardan<br>genel İngilizceye kadar birçok seçenek sunar.</p>
+                <h3>Avantajları:</h3>
+                <ul class="advantages-list">
+                    <li>Uluslararası tanınırlığa sahip okullar</li>
+                    <li>TOEFL/IELTS hazırlık kursları yaygın</li>
+                    <li>Üniversiteye geçiş fırsatları</li>
+                    <li>Popüler Şehirler: New York, Los Angeles, San Francisco, Boston, Miami</li>
+                    <li>Eğitim Süresi: 1 ay – 1 yıl</li>
+                    <li>Vize: F-1 Öğrenci Vizesi</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="country-section">
-            <h2>Avustralya'da Dil Eğitimi</h2>
-            <p>Avustralya, dil eğitimiyle birlikte tatil yapma fırsatı sunar. Work and Study programları sayesinde öğrenciler hem okuyup hem çalışabilirler.</p>
-            <h3>Avantajları:</h3>
-            <ul class="advantages-list">
-                <li>Öğrencilere çalışma izni (haftada 24 saate kadar)</li>
-                <li>Güvenli ve rahat yaşam tarzı</li>
-                <li>Modern ve yenilikçi eğitim sistemi</li>
-                <li>Popüler Şehirler: Sydney, Melbourne, Brisbane, Perth</li>
-                <li>Eğitim Süresi: 2 ay – 1 yıl</li>
-                <li>Vize: Student Visa (Subclass 500)</li>
-            </ul>
+        <div class="country-section avustralya-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
+            <img src="australia.webp" alt="Avustralya" style="float:right; width: 100%; max-width:676px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-32px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+                <h2>Avustralya'da Dil Eğitimi</h2>
+                <p>Avustralya, dil eğitimiyle birlikte tatil yapma fırsatı sunar. Work and Study programları sayesinde<br>öğrenciler hem okuyup hem çalışabilirler.</p>
+                <h3>Avantajları:</h3>
+                <ul class="advantages-list">
+                    <li>Öğrencilere çalışma izni (haftada 24 saate kadar)</li>
+                    <li>Güvenli ve rahat yaşam tarzı</li>
+                    <li>Modern ve yenilikçi eğitim sistemi</li>
+                    <li>Popüler Şehirler: Sydney, Melbourne, Brisbane, Perth</li>
+                    <li>Eğitim Süresi: 2 ay – 1 yıl</li>
+                    <li>Vize: Student Visa (Subclass 500)</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="country-section">
-            <h2>Malta'da Dil Eğitimi</h2>
-            <p>Akdeniz'in ortasında küçük bir ada ülkesi olan Malta, dil eğitimi ve tatili bir araya getiren ekonomik bir seçenektir.</p>
-            <h3>Avantajları:</h3>
-            <ul class="advantages-list">
-                <li>Avrupa'nın en uygun fiyatlı dil eğitimi destinasyonlarından biri</li>
-                <li>Sıcak iklim ve deniz kenarında eğitim</li>
-                <li>Schengen bölgesi avantajı</li>
-                <li>Popüler Şehirler: St. Julian's, Sliema, Valletta</li>
-                <li>Eğitim Süresi: 2 hafta – 6 ay</li>
-                <li>Vize: Schengen vizesi yeterli (90 güne kadar)</li>
-            </ul>
+        <div class="country-section malta-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
+            <img src="malta.webp" alt="Malta" style="float:right; width: 100%; max-width:675px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-32px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+                <h2>Malta'da Dil Eğitimi</h2>
+                <p>Akdeniz'in ortasında küçük bir ada ülkesi olan Malta, dil eğitimi ve tatili bir araya getiren ekonomik bir seçenektir.</p>
+                <h3>Avantajları:</h3>
+                <ul class="advantages-list">
+                    <li>Avrupa'nın en uygun fiyatlı dil eğitimi destinasyonlarından biri</li>
+                    <li>Sıcak iklim ve deniz kenarında eğitim</li>
+                    <li>Schengen bölgesi avantajı</li>
+                    <li>Popüler Şehirler: St. Julian's, Sliema, Valletta</li>
+                    <li>Eğitim Süresi: 2 hafta – 6 ay</li>
+                    <li>Vize: Schengen vizesi yeterli (90 güne kadar)</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="country-section">
-            <h2>İrlanda'da Dil Eğitimi</h2>
-            <p>İrlanda, İngiltere'ye göre daha ekonomik seçenekler sunan, ana dili İngilizce olan bir Avrupa ülkesidir. Öğrenciler burada çalışma iznine de sahip olurlar.</p>
-            <h3>Avantajları:</h3>
-            <ul class="advantages-list">
-                <li>Haftada 20 saat çalışma izni</li>
-                <li>Öğrenci dostu şehirler</li>
-                <li>Avrupa içi seyahat kolaylığı</li>
-                <li>Popüler Şehirler: Dublin, Cork, Galway, Limerick</li>
-                <li>Eğitim Süresi: 3 ay – 1 yıl</li>
-                <li>Vize: 25 hafta ve üzeri programlarda çalışma izni alınabilir</li>
-            </ul>
+        <div class="country-section irlanda-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
+            <img src="ireland.webp" alt="İrlanda" style="float:right; width: 100%; max-width:675px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-32px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
+                <h2>İrlanda'da Dil Eğitimi</h2>
+                <p>İrlanda, İngiltere'ye göre daha ekonomik seçenekler sunan, ana dili İngilizce olan bir Avrupa ülkesidir. Öğrenciler burada çalışma iznine de sahip olurlar.</p>
+                <h3>Avantajları:</h3>
+                <ul class="advantages-list">
+                    <li>Haftada 20 saat çalışma izni</li>
+                    <li>Öğrenci dostu şehirler</li>
+                    <li>Avrupa içi seyahat kolaylığı</li>
+                    <li>Popüler Şehirler: Dublin, Cork, Galway, Limerick</li>
+                    <li>Eğitim Süresi: 3 ay – 1 yıl</li>
+                    <li>Vize: 25 hafta ve üzeri programlarda çalışma izni alınabilir</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -445,12 +577,12 @@
                 <div class="footer-section">
                     <h3>HAKKIMIZDA</h3>
                     <ul>
-                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
-                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                        <li><a href="">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="">DANIŞMANLIK HİZMETLERİMİZ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>İLETİŞİM</h3>
+                    <h3 style="margin-left: 20px;">İLETİŞİM</h3>
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-phone"></i>
@@ -459,6 +591,12 @@
                         <li>
                             <i class="fas fa-mobile-alt"></i>
                             <span>+90 541 430 4808</span>
+                            <div class="social-icons">
+                                <a href="https://wa.me/905414304808" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://t.me/+905414304808" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                                <a href="viber://chat?number=+905414304808" title="Viber"><i class="fab fa-viber"></i></a>
+                                <a href="#" title="WeChat"><i class="fab fa-weixin"></i></a>
+                            </div>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
