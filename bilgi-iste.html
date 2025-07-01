@@ -302,6 +302,102 @@
         .contact-form button:hover {
             background: linear-gradient(90deg, #e63946 40%, #1a4079 100%);
         }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal h2 {
+            color: #1a4079;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .modal p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .modal-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .modal-btn-primary {
+            background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
+            color: white;
+        }
+        
+        .modal-btn-secondary {
+            background: #25d366;
+            color: white;
+        }
+        
+        .modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            right: 1rem;
+            top: 0.5rem;
+        }
+        
+        .close:hover {
+            color: #1a4079;
+        }
     </style>
 </head>
 <body>
@@ -335,7 +431,7 @@
                 <a href="#countries-section">Üniversite</a>
                 <a href="dil-okullari.html">Dil Okulları</a>
                 <a href="master-mba.html">Master/MBA</a>
-                <a href="work-and-study.html">Work and Travel</a>
+                <a href="#" onclick="showContactModal(); return false;">Work and Travel</a>
                 <div class="dropdown" style="border-right: 2px solid #fff;">
                     <a href="#" class="dropdown-trigger">Diğer Programlar <span style="font-size:0.7em; margin-left:10px;">▼</span></a>
                     <div class="dropdown-content">
@@ -466,5 +562,36 @@
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.967 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
+    
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Bizimle İletişime Geçin</h2>
+            <p>Work and Travel programı hakkında detaylı bilgi almak için bizimle iletişime geçin. Uzman danışmanlarımız size en uygun programı önerelim.</p>
+            <div class="modal-buttons">
+                <a href="bilgi-iste.html" class="modal-btn modal-btn-primary">Bilgi Formu Doldur</a>
+                <a href="https://wa.me/905414304808" target="_blank" class="modal-btn modal-btn-secondary">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showContactModal() {
+            document.getElementById('contactModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+        
+        // Modal dışına tıklandığında kapatma
+        window.onclick = function(event) {
+            var modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html> 

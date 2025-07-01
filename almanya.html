@@ -197,6 +197,102 @@
             opacity: 1;
             z-index: 3;
         }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .modal h2 {
+            color: #1a4079;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .modal p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .modal-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .modal-btn-primary {
+            background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
+            color: white;
+        }
+        
+        .modal-btn-secondary {
+            background: #25d366;
+            color: white;
+        }
+        
+        .modal-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            right: 1rem;
+            top: 0.5rem;
+        }
+        
+        .close:hover {
+            color: #1a4079;
+        }
 
         .content-section { padding: 2rem; max-width: 1200px; margin-left: auto; margin-right: auto; }
         .country-section {
@@ -318,7 +414,7 @@
                 <a href="index.html#countries-section">Üniversite</a>
                 <a href="dil-okullari.html">Dil Okulları</a>
                 <a href="master-mba.html">Master/MBA</a>
-                <a href="work-and-study.html">Work and Travel</a>
+                <a href="#" onclick="showContactModal(); return false;">Work and Travel</a>
                 <a href="diger-programlar.html">Diğer Programlar</a>
             </nav>
         </div>
@@ -488,5 +584,35 @@
             </div>
         </div>
     </footer>
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Bizimle İletişime Geçin</h2>
+            <p>Work and Travel programı hakkında detaylı bilgi almak için bizimle iletişime geçin. Uzman danışmanlarımız size en uygun programı önerelim.</p>
+            <div class="modal-buttons">
+                <a href="bilgi-iste.html" class="modal-btn modal-btn-primary">Bilgi Formu Doldur</a>
+                <a href="https://wa.me/905414304808" target="_blank" class="modal-btn modal-btn-secondary">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showContactModal() {
+            document.getElementById('contactModal').style.display = 'block';
+        }
+        
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+        
+        // Modal dışına tıklandığında kapatma
+        window.onclick = function(event) {
+            var modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html> 
