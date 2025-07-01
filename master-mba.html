@@ -6,12 +6,16 @@
     <meta name="description" content="University Park Yurtdışı Eğitim - Yurtdışında Master ve MBA programları. İngiltere, Amerika, Kanada, Almanya ve Hollanda'da yüksek lisans fırsatları.">
     <meta name="keywords" content="yurtdışında master, mba programı, yüksek lisans, işletme yüksek lisansı, yurtdışı eğitim">
     <title>Master ve MBA Programları | University Park</title>
+    <link href="https://fonts.googleapis.com/css2?family=Island&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 300px)" fetchpriority="high">
+    <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)" fetchpriority="high">
     <style>
         :root {
-            --primary-color: rgb(26,64,121);
+            --primary-color: #1a4079;
             --secondary-color: #e63946;
-            --text-color: #333;
-            --light-bg: #f5f5f5;
+            --text-color: #222;
+            --light-bg: #f5f8fa;
+            --accent-bg: #f0f4fa;
         }
 
         * {
@@ -22,259 +26,447 @@
         }
 
         body {
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-
-        /* Header Styles */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 40px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 60px;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('master-mba-hero.webp');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        /* Main Content */
-        .main-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .section {
-            margin-bottom: 4rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .section-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .section-header h2 {
             margin: 0;
-            font-size: 1.8rem;
+            background: linear-gradient(120deg, #f5f8fa 60%, #e6f0fa 100%);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+            /* dots pattern overlay */
+            background-image:
+                radial-gradient(rgba(26,64,121,0.07) 1.5px, transparent 1.5px),
+                linear-gradient(120deg, #f5f8fa 60%, #e6f0fa 100%);
+            background-size: 32px 32px, 100% 100%;
+            background-position: 0 0, 0 0;
         }
 
-        .section-content {
-            padding: 2rem;
+        .main-content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0 0 60px 0;
+            display: block;
+            position: relative;
+            z-index: 1;
         }
 
-        .section-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+        .mba-title-box,
+        .mba-section {
+            padding-left: 3.5rem;
+            padding-right: 3.5rem;
         }
 
-        .section-content h3 {
-            color: var(--secondary-color);
-            margin: 1.5rem 0 1rem;
-            font-size: 1.4rem;
-        }
-
-        .list-box {
-            background-color: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-
-        .list-box ul {
-            list-style: none;
-        }
-
-        .list-box li {
-            margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+        .mba-title-box {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(26,64,121,0.10);
+            padding: 2.2rem 2rem 1.2rem 2rem;
+            margin-bottom: 2.5rem;
+            margin-top: 0;
+            text-align: center;
             position: relative;
         }
 
-        .list-box li:before {
-            content: "•";
-            color: var(--secondary-color);
-            position: absolute;
-            left: 0;
+        .mba-title {
+            font-family: 'Island', cursive;
+            font-size: 2.7rem;
+            color: var(--primary-color);
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1.5px;
+            margin-left: 0;
+            text-align: center;
+            width: 100%;
+            display: block;
+            position: relative;
         }
 
-        .country-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin: 2rem 0;
+        .mba-title-underline {
+            display: block;
+            width: 60%;
+            max-width: 600px;
+            height: 5px;
+            margin: 0.7rem auto 0 auto;
+            background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
+            border-radius: 3px;
         }
 
-        .country-card {
+        .mba-section {
             background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
+            border-radius: 0;
+            margin-bottom: 0;
+            padding: 2.2rem 2rem 1.2rem 2rem;
+            border: none;
         }
 
-        .country-card h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
+        .mba-section.alt {
+            background: #fff;
         }
 
-        .country-card p {
-            margin-bottom: 0.8rem;
+        .mba-section h2 {
+            color: var(--primary-color);
+            font-size: 2.1rem;
+            margin-bottom: 0.7rem;
+            margin-top: 0;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: left;
         }
 
-        /* Footer Styles */
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 4rem 2rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
+        .mba-section ul {
+            margin: 0.5rem 0 1.2rem 1.5rem;
             padding: 0;
         }
 
-        .footer-section ul li {
-            margin-bottom: 0.8rem;
+        .mba-section ul li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.2em;
         }
 
-        .footer-section ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section ul li a:hover {
+        .mba-section ul li:before {
+            content: '✓';
             color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.1em;
+            top: 0.1em;
         }
 
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .mba-highlight {
+            background: #fffbe6;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 10px;
+            padding: 1.1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-weight: 600;
+            color: #1a4079;
+            font-size: 1.08rem;
+            box-shadow: 0 2px 8px rgba(230,57,70,0.06);
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
+        .mba-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0 2rem 0;
+            background: none;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: none;
+        }
 
-            .section-header h2 {
-                font-size: 1.5rem;
-            }
+        .mba-table th, .mba-table td {
+            border: none;
+            padding: 0.7rem 1.1rem;
+            text-align: left;
+            background: none;
+        }
 
-            .country-grid {
-                grid-template-columns: 1fr;
-            }
+        .mba-table th {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #e6eaf3;
+        }
 
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
+        .mba-table tr:nth-child(even) {
+            background: #f8fafd;
+        }
+
+        .mba-badge {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            border-radius: 12px;
+            padding: 0.2em 0.9em;
+            margin-left: 0.5em;
+            letter-spacing: 0.5px;
+        }
+
+        .mba-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 600px) {
+            .main-content { padding: 0 0 40px 0; }
+            .mba-title { font-size: 1.5rem; }
+            .mba-title-underline { width: 90%; }
+            .mba-section, .mba-title-box { padding: 1.1rem 0.7rem; }
+        }
+
+        @media (max-width: 900px) {
+            .main-content { max-width: 98vw; }
+            .mba-title-box, .mba-section { padding-left: 1.1rem; padding-right: 1.1rem; }
+        }
+
+        /* HEADER & FOOTER (index.html ile aynı) */
+        .double-header {
+            background: #1a4079;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem 1.1rem 2rem;
+            min-height: 80px;
+            background: #fff;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
+        .header-top-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+        .header-btn {
+            background: #ff0000;
+            color: #fff;
+            padding: 0.36rem 1.1rem;
+            border-radius: 22px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .header-btn:hover {
+            background: #e63946;
+            color: #fff;
+        }
+
+        .header-btn2 {
+            background: #20aa13;
+            color: #fff;
+            padding: 0.36rem 1.1rem;
+            border-radius: 22px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+    
+        
+        .header-bottom {
+            background: #1a4079;
+            border-top: 1px solid #274a7e;
+            padding: 0.05rem 2rem 0.05rem 2rem;
+            min-height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .main-nav > a, .main-nav > .dropdown {
+  padding: 0 1.6rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative; /* ALT MENÜ İÇİN GEREKLİ */
+}
+
+.main-nav > a:hover,
+.main-nav > .dropdown:hover > .dropdown-trigger {
+  color: #e63946;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav > a:not(:last-child) {
+  border-right: 2px solid #fff;
+}
+
+/* AÇILAN MENÜ (POPUP) */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* ALTINA YAPIŞIK AÇILSIN */
+  left: 0;
+  background-color: #123c6c;
+  display: none;
+  min-width: 180px;
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ALT MENÜ LİNKLER */
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #0d2b52;
+  color: #e63946;
+}
+
+/* HOVER OLUNCA GÖRÜNÜR YAP */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+        @media (max-width: 900px) {
+            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+            .main-nav { gap: 1.2rem; }
+            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+        }
+
+        .header-btn.dropdown-trigger {
+            background: #1a4079;
+            color: #fff;
+            border-radius: 22px;
+            padding: 0.36rem 1.1rem;
+            font-weight: 600;
+            border: none;
+        }
+        .footer { background-color: var(--primary-color); color: white; padding: 4rem 2rem 2rem; margin-top: 4rem; }
+        .footer-container { max-width: 1200px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { color: white; margin-bottom: 1.5rem; font-size: 1.2rem; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section ul li { margin-bottom: 0.8rem; }
+        .footer-section ul li a { color: white; text-decoration: none; transition: color 0.3s; }
+        .footer-section ul li a:hover { color: var(--secondary-color); }
+        .contact-info li { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+        .contact-info i { margin-top: 3px; }
+        .contact-info span { display: block; line-height: 1.5; }
+        .social-icons { display: flex; gap: 1rem; margin-left: auto; }
+        .social-icons a { color: #4CAF50; font-size: 1.5rem; transition: color 0.3s; }
+        .social-icons a:hover { color: #45a049; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        @media (max-width: 768px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+        /* Tüm sayfadaki ul'ler için özel kırmızı nokta */
+        .mba-section ul, .mba-title-box ul, .mba-gallery ul, .main-content ul, ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .mba-section ul li, .mba-title-box ul li, .mba-gallery ul li, .main-content ul li, ul li {
+            position: relative;
+            padding-left: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .mba-section ul li:before, .mba-title-box ul li:before, .mba-gallery ul li:before, .main-content ul li:before, ul li:before {
+            content: '•';
+            color: #e63946;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            top: 0.1em;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-content">
+    <header class="double-header">
+        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
             <div class="logo">
-                <img src="universitypark-small.webp" alt="University Park">
+                <a href="index.html">
+                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -180px;">
+                </a>
+              </div>
+            <div class="logo">
+                <a href="index.html">
+                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
+                </a>
+              </div>
+              
+            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
+                <div class="dropdown">
+                    <a href="#" class="header-btn dropdown-trigger">Hakkımızda <span style="font-size:0.7em; margin-left:10px;">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
+                        <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
+                    </div>
+                </div>
+                <a href="#" class="header-btn">Bilgi İste</a>
+                <a href="iletisim.html" class="header-btn2">İletişim</a>
             </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="main-nav">
+                <a href="#countries-section">Üniversite</a>
+                <a href="dil-okullari.html">Dil Okulları</a>
+                <a href="master-mba.html">Master/MBA</a>
+                <a href="work-and-study.html">Work and Travel</a>
+                <div class="dropdown" style="border-right: 2px solid #fff;">
+                    <a href="#" class="dropdown-trigger">Diğer Programlar <span style="font-size:0.7em; margin-left:10px;">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="#">Work And Study</a>
+                        <a href="#">Yaz Okulu</a>
+                        <a href="#">Pathway Programı</a>
+                    </div>
+                </div>
+                <a href="vize-islemleri.html">Vize İşlemleri</a>
+            </nav>
         </div>
     </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Master ve MBA Programları</h1>
-            <p>Global Kariyeriniz İçin İlk Adım</p>
-        </div>
-    </section>
-
     <main class="main-content">
-        <section class="section">
-            <div class="section-header">
-                <h2>Yurtdışında Master ve MBA Programları</h2>
-            </div>
-            <div class="section-content">
+        <div class="mba-title-box">
+            <h1 class="mba-title">Yurtdışında Master ve MBA Programları Hakkında Bilmeniz Gereken Her Şey</h1>
+            <span class="mba-title-underline"></span>
+            <p style="margin-top:1.2rem; font-size:1.13rem; color:#222; font-weight: 400; line-height:1.7;">Günümüzde globalleşen iş dünyasında rekabetçi bir kariyer hedefleyen öğrenciler için yurtdışında yüksek lisans (Master) ve MBA (Master of Business Administration) programları büyük fırsatlar sunuyor. Farklı ülkelerde eğitim almak, sadece akademik bilgi değil, aynı zamanda uluslararası vizyon, kültürel çeşitlilik ve profesyonel bağlantılar kazanmanızı sağlar.</p>
+        </div>
+        <div class="mba-section">
                 <p>Günümüzde globalleşen iş dünyasında rekabetçi bir kariyer hedefleyen öğrenciler için yurtdışında yüksek lisans (Master) ve MBA (Master of Business Administration) programları büyük fırsatlar sunuyor. Farklı ülkelerde eğitim almak, sadece akademik bilgi değil, aynı zamanda uluslararası vizyon, kültürel çeşitlilik ve profesyonel bağlantılar kazanmanızı sağlar.</p>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>Yurtdışında Master Eğitimi Nedir?</h2>
-            </div>
-            <div class="section-content">
+        <div class="mba-section alt">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="mba-icon" alt="Diploma">Yurtdışında Master Eğitimi Nedir?</h2>
                 <p>Master programları, lisans eğitimini tamamlayan öğrencilerin belirli bir alanda uzmanlaşmasını sağlayan yüksek lisans programlarıdır. Çoğunlukla 1–2 yıl sürer ve öğrenciler seçtikleri alanda akademik derinleşme, araştırma ve pratik bilgi edinir.</p>
-                
-                <h3>Popüler Master Alanları</h3>
-                <div class="list-box">
                     <ul>
                         <li>Mühendislik</li>
                         <li>Bilgisayar Bilimleri</li>
@@ -284,18 +476,10 @@
                         <li>Finans, Ekonomi</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>MBA Programı Nedir?</h2>
-            </div>
-            <div class="section-content">
+        <div class="mba-section">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" class="mba-icon" alt="MBA">MBA Programı Nedir?</h2>
                 <p>MBA (Master of Business Administration), özellikle iş dünyasında kariyerini ilerletmek isteyen adaylar için tasarlanmış prestijli bir yüksek lisans programıdır. Liderlik, yönetim, pazarlama, finans, strateji ve girişimcilik gibi konulara odaklanır.</p>
-
-                <h3>Kimler Tercih Eder?</h3>
-                <div class="list-box">
+            <div class="mba-highlight">Kimler tercih eder?</div>
                     <ul>
                         <li>Yöneticilik hedefleyen profesyoneller</li>
                         <li>Girişimciler</li>
@@ -303,15 +487,8 @@
                         <li>İş değiştirmek ya da global firmalara geçmek isteyenler</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>Neden Yurtdışında Master veya MBA?</h2>
-            </div>
-            <div class="section-content">
-                <div class="list-box">
+        <div class="mba-section alt">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" class="mba-icon" alt="Avantaj">Neden Yurtdışında Master veya MBA?</h2>
                     <ul>
                         <li>Uluslararası geçerli diploma</li>
                         <li>İngilizce dil yeterliliği ve gelişim</li>
@@ -322,16 +499,9 @@
                         <li>Tezli ve tezsiz seçenekler</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>Başvuru Şartları</h2>
-            </div>
-            <div class="section-content">
-                <h3>Genel Gereklilikler</h3>
-                <div class="list-box">
+        <div class="mba-section">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/3135/3135777.png" class="mba-icon" alt="Başvuru">Başvuru Şartları Nelerdir?</h2>
+            <div class="mba-highlight">Genel gereklilikler:</div>
                     <ul>
                         <li>Lisans diploması</li>
                         <li>Transkript (Not dökümü)</li>
@@ -343,66 +513,28 @@
                         <li>GMAT veya GRE puanı (özellikle MBA için önemli)</li>
                     </ul>
                 </div>
+        <div class="mba-section alt">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" class="mba-icon" alt="Ülkeler">Popüler Ülkeler ve Süreler</h2>
+            <table class="mba-table">
+                <tr><th>Ülke</th><th>Master</th><th>MBA</th></tr>
+                <tr><td>ABD</td><td>2 yıl</td><td>1-2 yıl</td></tr>
+                <tr><td>İngiltere</td><td>1 yıl</td><td>1 yıl</td></tr>
+                <tr><td>Almanya</td><td>2 yıl</td><td>1-1.5 yıl</td></tr>
+                <tr><td>Hollanda</td><td>1-2 yıl</td><td>-</td></tr>
+                <tr><td>Kanada</td><td>1-2 yıl</td><td>1-2 yıl</td></tr>
+                <tr><td>Avustralya</td><td>1.5-2 yıl</td><td>-</td></tr>
+            </table>
             </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>Popüler Ülkeler ve Süreler</h2>
-            </div>
-            <div class="section-content">
-                <div class="country-grid">
-                    <div class="country-card">
-                        <h3>ABD</h3>
-                        <p>Master 2 yıl, MBA 1-2 yıl</p>
-                    </div>
-
-                    <div class="country-card">
-                        <h3>İngiltere</h3>
-                        <p>Master 1 yıl, MBA 1 yıl</p>
-                    </div>
-
-                    <div class="country-card">
-                        <h3>Almanya</h3>
-                        <p>Master 2 yıl, MBA 1-1.5 yıl (Almanca ya da İngilizce)</p>
-                    </div>
-
-                    <div class="country-card">
-                        <h3>Hollanda</h3>
-                        <p>Master 1-2 yıl</p>
-                    </div>
-
-                    <div class="country-card">
-                        <h3>Kanada</h3>
-                        <p>Master 1-2 yıl, MBA 1-2 yıl</p>
-                    </div>
-
-                    <div class="country-card">
-                        <h3>Avustralya</h3>
-                        <p>Master 1.5-2 yıl</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>Ücretler ve Burslar</h2>
-            </div>
-            <div class="section-content">
-                <p>Ücretler ülkeye ve programa göre değişir.</p>
-                
-                <div class="list-box">
-                    <ul>
-                        <li>İngiltere: 10.000 – 25.000 GBP</li>
-                        <li>ABD: 15.000 – 50.000 USD</li>
-                        <li>Kanada: 12.000 – 35.000 CAD</li>
-                        <li>Almanya (devlet üniversiteleri): Ücretsiz veya düşük harçlı</li>
-                    </ul>
-                </div>
-
-                <h3>Burs Seçenekleri</h3>
-                <div class="list-box">
+        <div class="mba-section">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/3135/3135731.png" class="mba-icon" alt="Burslar">Ücretler ve Burslar</h2>
+            <div class="mba-highlight">Burs Seçenekleri:</div>
+            <table class="mba-table">
+                <tr><th>Ülke</th><th>Yıllık Ücret</th></tr>
+                <tr><td>İngiltere</td><td>10.000 – 25.000 GBP</td></tr>
+                <tr><td>ABD</td><td>15.000 – 50.000 USD</td></tr>
+                <tr><td>Kanada</td><td>12.000 – 35.000 CAD</td></tr>
+                <tr><td>Almanya (devlet)</td><td>Ücretsiz veya düşük harçlı</td></tr>
+            </table>
                     <ul>
                         <li>Fulbright (ABD)</li>
                         <li>Chevening (İngiltere)</li>
@@ -412,15 +544,8 @@
                         <li>Türkiye'deki özel kurum destekleri (TEV, Sabancı vb.)</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <h2>Yurtdışında Master Yapmanın Kariyere Etkisi</h2>
-            </div>
-            <div class="section-content">
-                <div class="list-box">
+        <div class="mba-section alt">
+            <h2><img src="https://cdn-icons-png.flaticon.com/512/3135/3135747.png" class="mba-icon" alt="Kariyer">Yurtdışında Master Yapmanın Kariyere Etkisi</h2>
                     <ul>
                         <li>CV'nizi uluslararası düzeye taşır</li>
                         <li>Çok uluslu firmalara başvuru avantajı sağlar</li>
@@ -428,12 +553,10 @@
                         <li>MBA mezunları genellikle yönetim pozisyonlarına hızla yükselir</li>
                     </ul>
                 </div>
-
-                <p>Yurtdışında Master veya MBA yapmak, sadece bir diploma almak değil, aynı zamanda sizi akademik, profesyonel ve kişisel olarak dönüştürecek bir deneyimdir. Doğru ülke ve program seçimi ile bu süreç, geleceğinize yapılacak en değerli yatırımlardan biri olabilir.</p>
+        <div class="mba-title-box" style="margin-top:2.5rem;">
+            <div class="mba-highlight">Yurtdışında Master veya MBA yapmak, sadece bir diploma almak değil, aynı zamanda sizi akademik, profesyonel ve kişisel olarak dönüştürecek bir deneyimdir. Doğru ülke ve program seçimi ile bu süreç, geleceğinize yapılacak en değerli yatırımlardan biri olabilir.</div>
             </div>
-        </section>
     </main>
-
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -451,12 +574,12 @@
                 <div class="footer-section">
                     <h3>HAKKIMIZDA</h3>
                     <ul>
-                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
-                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                        <li><a href="">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="">DANIŞMANLIK HİZMETLERİMİZ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>İLETİŞİM</h3>
+                    <h3 style="margin-left: 20px;">İLETİŞİM</h3>
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-phone"></i>
@@ -465,6 +588,12 @@
                         <li>
                             <i class="fas fa-mobile-alt"></i>
                             <span>+90 541 430 4808</span>
+                            <div class="social-icons">
+                                <a href="https://wa.me/905414304808" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://t.me/+905414304808" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                                <a href="viber://chat?number=+905414304808" title="Viber"><i class="fab fa-viber"></i></a>
+                                <a href="#" title="WeChat"><i class="fab fa-weixin"></i></a>
+                            </div>
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
