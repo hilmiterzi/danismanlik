@@ -159,9 +159,7 @@
             transition: box-shadow 0.35s;
         }
         .info-card:hover {
-            transform: translateY(-6px) scale(1.03);
-            box-shadow: 0 8px 32px rgba(26,64,121,0.18), 0 2px 24px var(--secondary-color);
-            z-index: 2;
+            box-shadow: 0 0 32px 0 rgba(230,57,70,0.45), 0 4px 32px 0 rgba(230,57,70,0.25); /* Kırmızı gölge */
         }
         .info-card:hover::before {
             box-shadow: none;
@@ -1474,21 +1472,21 @@ text-align: center;
 
 
 .info-card {
-  background-color: #fff;
+  background-color: #1a4079;
   padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 24px rgba(26,64,121,0.18); /* Sadece mavi gölge, beyaz yok */
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.9s ease, transform 0.6s ease;
-  /* EKLENECEKLER: */
+  transition: opacity 0.9s ease, transform 0.6s ease, box-shadow 0.4s;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100px; /* örnek */
+  height: 100px;
 }
 
+.info-card:hover 
 .info-card.animate {
   opacity: 1;
   transform: translateY(0);
@@ -1496,7 +1494,7 @@ text-align: center;
 
 
 .info-card h3 {
-  color: #002f6c;
+  color: #ffffff;
   margin: 0;
 }
 
@@ -1589,6 +1587,19 @@ text-align: center;
 
 .dropdown-content {
   border-radius: 22px !important;
+}
+
+.info-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.calisma-izni-blog .featured-image img {
+  object-position: center bottom;
+}
+
+.ulke-tercihi-blog .featured-image img {
+  object-position: center 35%;
 }
 
 
@@ -1857,7 +1868,7 @@ text-align: center;
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="danisman.webp" loading="lazy" alt="Yurtdışı Eğitim Rehberi">
+                        <img src="china_blog.webp" loading="lazy" alt="Yurtdışı Eğitim Rehberi">
                     </div>
                     <div class="featured-content">
                         <h3>Çin'de Burslu Üniversite Eğitimi</h3>
@@ -1868,7 +1879,7 @@ text-align: center;
 
                 <div class="featured-card">
                     <div class="featured-image">
-                        <img src="Sınavsız üniversite.webp" loading="lazy" alt="Sınavsız Üniversite">
+                        <img src="europe_university_blog.webp" loading="lazy" alt="Sınavsız Üniversite">
                     </div>
                     <div class="featured-content">
                         <h3>Avrupa'da Üniversite Eğitimi</h3>
@@ -1888,26 +1899,26 @@ text-align: center;
                     </div>
                 </div>
 
-                <div class="featured-card">
-                    <div class="featured-image">
-                        <img src="çinli-öğrenciler-desktop.webp" loading="lazy" alt="Çin'de Eğitim">
-                    </div>
-                    <div class="featured-content">
-                        <h3>Eğitim Alırken Yasal Çalışma İzni Veren Ülkeler</h3>
-                        <p>------</p>
-                        <a href="#" class="featured-button">Devamını Oku</a>
-                    </div>
+                <div class="featured-card calisma-izni-blog">
+                  <div class="featured-image">
+                    <img src="çalışma_izni_blog.webp" loading="lazy" alt="Çin'de Eğitim">
+                  </div>
+                  <div class="featured-content">
+                    <h3>Eğitim Alırken Yasal Çalışma İzni Veren Ülkeler</h3>
+                    <p>------</p>
+                    <a href="#" class="featured-button">Devamını Oku</a>
+                  </div>
                 </div>
 
-                <div class="featured-card">
-                    <div class="featured-image">
-                        <img src="pasaport.webp" loading="lazy" alt="Vize">
-                    </div>
-                    <div class="featured-content">
-                        <h3>Yurtdışında Üniversite Eğitimi İçin Ülke Tercihi</h3>
-                        <p>-----</p>
-                        <a href="#" class="featured-button">Devamını Oku</a>
-                    </div>
+                <div class="featured-card ulke-tercihi-blog">
+                  <div class="featured-image">
+                    <img src="ülke_tercihi_blog.webp" loading="lazy" alt="Vize">
+                  </div>
+                  <div class="featured-content">
+                    <h3>Yurtdışında Üniversite Eğitimi İçin Ülke Tercihi</h3>
+                    <p>-----</p>
+                    <a href="#" class="featured-button">Devamını Oku</a>
+                  </div>
                 </div>
             </div>
         </div>
