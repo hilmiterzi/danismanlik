@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="tr" style="background: #fff; margin: 0; padding: 0; overflow-x: hidden;">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yurtdışında dil eğitimi fırsatları - İngiltere, Kanada, Amerika, Avustralya, Malta ve İrlanda'da dil okulları hakkında detaylı bilgi.">
-    <meta name="keywords" content="yurtdışı dil okulu, ingiltere dil okulu, kanada dil okulu, amerika dil okulu, avustralya dil okulu, malta dil okulu, irlanda dil okulu">
-    <title>Work and Travel Programı Hakkında Her Şey</title>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="University Park Yurtdışı Eğitim - Yurtdışında üniversite, dil okulu, work and travel programları. Çin'de burslu eğitim, sınavsız üniversite fırsatları ve vize danışmanlığı hizmetleri.">
+    <meta name="keywords" content="yurtdışı eğitim, yurtdışında üniversite, dil okulu, work and travel, çin'de eğitim, burslu eğitim, sınavsız üniversite, vize danışmanlığı">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="University Park Yurtdışı Eğitim ve Vize Danışmanlığı">
+    <meta property="og:description" content="Yurtdışında üniversite, dil okulu, work and travel programları. Çin'de burslu eğitim, sınavsız üniversite fırsatları.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://universitypark.com.tr">
+    <title>Yurtdışı Eğitim Ve Vize Danışmanlığı | University Park</title>
+    <!-- Google Fonts: Island -->
     <link href="https://fonts.googleapis.com/css2?family=Island&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
+    <!-- Preload first hero image with proper attributes -->
+    <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 300px)" fetchpriority="high">
+    <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)" fetchpriority="high">
     <style>
         :root {
             --primary-color: rgb(26,64,121);
@@ -17,48 +23,643 @@
             --text-color: #333;
             --light-bg: #f5f5f5;
         }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        body, html {
-            margin: 0 !important;
-            padding: 0 !important;
-            background: #fff !important;
-            width: 100vw !important;
-            overflow-x: hidden;
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            background: #fff;
         }
-        .double-header, .header-top {
-            background: #fff !important;
+
+        .hero, .info-section, .countries-section, .featured-section, .faq-section, .map-section, .footer {
+            background: #fff;
+        }
+
+        /* Header Styles */
+        /* Eski header ve nav ile ilgili tüm CSS'leri kaldırdım */
+
+        /* Hero Section */
+      
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info i {
+            margin-top: 3px;
+        }
+
+        .contact-info span {
+            display: block;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        .social-icons a {
+            color: #4CAF50;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #45a049;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 460px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-slide h2 {
+                font-size: 1.8rem;
+            }
+
+            .featured-item {
+                flex-direction: column;
+            }
+
+            .featured-item.reverse {
+                flex-direction: column;
+            }
+
+            .featured-image {
+                width: 100%;
+            }
+
+            .desktop-content {
+                display: none;
+            }
+
+            .mobile-content {
+                display: block;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .slide-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 461px) and (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hero {
+                height: 80vh;
+            }
+        }
+
+        /* Reviews Section Styles */
+        
+
+        /* Hero Arrow Navigation */
+        .hero-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(26, 64, 121, 0.8);
+            border: 2px solid white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .hero-arrow:hover {
+            background: var(--primary-color);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .hero-arrow-left {
+            left: 20px;
+        }
+
+        .hero-arrow-right {
+            right: 20px;
+        }
+
+        /* CSS Arrow Styles */
+        .hero-arrow-left::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            transform: rotate(-45deg);
+            margin-left: 5px;
+        }
+
+        .hero-arrow-right::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-top: 3px solid white;
+            border-right: 3px solid white;
+            transform: rotate(45deg);
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-arrow {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .hero-arrow-left::before,
+            .hero-arrow-right::before {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--primary-color);
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1001;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            color: var(--secondary-color);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown-trigger::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+
+        .map-section {
+            padding: 4rem 2rem;
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 460px) {
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.1);
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .nav-menu .dropdown-content a {
+                padding-left: 2rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background-color: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        .floating-whatsapp svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        @media (max-width: 768px) {
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .floating-whatsapp svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        /* Coming Soon Banner Styles */
+        .coming-soon-banner {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 2000;
+            max-width: 90%;
+            width: 400px;
+            text-align: center;
+        }
+
+        .coming-soon-banner.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .banner-content {
+            position: relative;
+        }
+
+        .banner-close {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .banner-close:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .coming-soon-banner h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .coming-soon-banner p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .banner-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .banner-whatsapp:hover {
+            background-color: #128C7E;
+        }
+
+        .banner-whatsapp i {
+            margin-right: 8px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .banner-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+        }
+
+        .banner-overlay.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .stats-highlight {
+            max-width: 900px;
+            margin: 5rem auto 0 auto;
+            padding: 0;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(26,64,121,0.08);
+            border: 3px solid;
+            border-image: linear-gradient(90deg, #1a4079 60%, #e63946 100%) 1;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .stats-highlight div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            border-right: 2px solid #e6eaf3;
+        }
+
+        .stats-highlight div:last-child {
+            border-right: none;
+        }
+
+        .stats-highlight span {
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 0.3rem;
+        }
+
+        .stats-highlight span:last-child {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 0.92;
+        }
+
+        .stats-logo {
+            width: 480px;
+            max-width: 99vw;
+            height: auto;
+            display: block;
+            margin-bottom: -1rem;
+            transform: translateX(-20px);
+        }
+        @media (max-width: 600px) {
+            .stats-logo {
+                width: 300px;
+            }
+        }
+
+        .stats-logo-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 4rem;
+            margin-bottom: 1.2rem;
+            margin-left: 2rem;
+        }
+        .stats-logo {
+            width: 280px;
+            max-width: 98vw;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .stats-logo {
+                width: 160px;
+            }
+            .stats-logo-wrapper {
+                margin-top: 1.8rem;
+                margin-bottom: 0.7rem;
+            }
+        }
+
+        .faq-box {
+          max-width: 420px !important;
+          min-width: 260px;
+          width: 100%;
+        }
+        .faq-box:first-child {
+          transform: translateX(-200px);
+        }
+
+        /* --- MOBILE FIX FOR STATS SECTION --- */
+        @media (max-width: 600px) {
+          .stats-highlight {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
             width: 100vw !important;
-            margin: 0 !important;
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+          .stats-highlight > div {
+            width: 100% !important;
+            text-align: center !important;
+            margin-bottom: 10px !important;
+            font-size: 1.1em !important;
+            word-break: break-word !important;
+            box-sizing: border-box !important;
+          }
+          .stats-highlight > div:last-child {
+            margin-bottom: 0 !important;
+          }
+          body, html {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+          }
+        }
+        /* --- END MOBILE FIX --- */
+
+        .double-header {
+            background: #1a4079;
+            width: 100%;
+            margin: 0;
             box-sizing: border-box;
-            padding: 0 !important;
         }
         .header-top {
-            min-height: 101px !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            padding: 0.2rem 2vw 0.2rem 2vw !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem 1.1rem 2rem;
+            min-height: 80px;
             background: #fff;
-            width: 100% !important;
-            margin: 0 !important;
+            width: 100%;
+            margin: 0;
             box-sizing: border-box;
         }
-        .header-top .logo img {
-            height: 90px !important;
-        }
+        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
         .header-top-links {
             display: flex;
             gap: 1.2rem;
-        }
-        .header-top-links .header-btn,
-        .header-top-links .header-btn2 {
-            font-size: 1rem !important;
-            padding: 0.4rem 1rem !important;
         }
         .header-btn {
             background: #ff0000;
@@ -76,18 +677,22 @@
             background: #e63946;
             color: #fff;
         }
+
         .header-btn2 {
             background: #20aa13;
             color: #fff;
             padding: 0.45rem 1.1rem;
-            border-radius: 22px;
+            border-radius: 5px;
             font-weight: 600;
             text-decoration: none;
             font-size: 1rem;
             transition: background 0.2s, color 0.2s;
             border: none;
             cursor: pointer;
+            border-radius: 22px;
         }
+    
+        
         .header-bottom {
             background: #1a4079;
             border-top: 1px solid #274a7e;
@@ -105,160 +710,103 @@
             width: 100%;
         }
         .main-nav > a, .main-nav > .dropdown {
-            padding: 0 1.6rem;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            color: #fff;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-sizing: border-box;
-            border-bottom: none;
-            background: none;
-            border-radius: 0;
-            box-shadow: none;
-            position: relative;
-        }
-        .main-nav > a:hover,
-        .main-nav > .dropdown:hover > .dropdown-trigger {
-            color: #e63946;
-        }
-        .dropdown-trigger {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            color: inherit;
-            font-size: inherit;
-            font-weight: inherit;
-            text-decoration: none;
-            padding: 0;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-        .main-nav > a:not(:last-child) {
-            border-right: 2px solid #fff;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #123c6c;
-            display: none;
-            min-width: 180px;
-            padding: 10px 0;
-            z-index: 1000;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .dropdown-content a {
-            display: block;
-            padding: 10px 20px;
-            color: #fff;
-            font-size: 0.95rem;
-            text-decoration: none;
-        }
-        .dropdown-content a:hover {
-            background-color: #0d2b52;
-            color: #e63946;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+  padding: 0 1.6rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative; /* ALT MENÜ İÇİN GEREKLİ */
+}
+
+.main-nav > a:hover,
+.main-nav > .dropdown:hover > .dropdown-trigger {
+  color: #e63946;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav > a:not(:last-child) {
+  border-right: 2px solid #fff;
+}
+
+/* AÇILAN MENÜ (POPUP) */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* ALTINA YAPIŞIK AÇILSIN */
+  left: 0;
+  background-color: #123c6c;
+  display: none;
+  min-width: 180px;
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ALT MENÜ LİNKLER */
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #0d2b52;
+  color: #e63946;
+}
+
+/* HOVER OLUNCA GÖRÜNÜR YAP */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+
         @media (max-width: 900px) {
             .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
             .main-nav { gap: 1.2rem; }
             .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
         }
+
         .header-btn.dropdown-trigger {
             background: #1a4079;
             color: #fff;
-            border-radius: 22px;
+            border-radius: 5px;
             padding: 0.45rem 1.1rem;
             font-weight: 600;
             border: none;
+            border-radius: 22px;
         }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
-            margin: 0;
-            color: #222;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 40px auto 0 auto;
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-            padding: 40px 32px 32px 32px;
-            margin-top: 250px;
-        }
-        h1 {
-            color: #1a4d8f;
-            font-size: 2.5rem;
-            margin-bottom: 18px;
-        }
-        h2 {
-            color: #1a4d8f;
-            margin-top: 36px;
-            font-size: 1.5rem;
-        }
-        ul, ol {
-            margin-left: 24px;
-        }
-        .section {
-            margin-bottom: 32px;
-        }
-        .highlight {
-            background: #eaf3ff;
-            border-left: 4px solid #1a4d8f;
-            padding: 12px 18px;
-            border-radius: 8px;
-            margin: 18px 0;
-        }
-        @media (max-width: 600px) {
-            .container { padding: 16px; }
-            h1 { font-size: 1.5rem; }
-            h2 { font-size: 1.1rem; }
-        }
-        .whatsapp-btn-inside {
-            display: block;
-            background: #25d366;
-            color: #fff;
-            font-size: 1.15rem;
-            font-weight: bold;
-            padding: 0.7rem 2rem;
-            border-radius: 32px;
-            box-shadow: 0 2px 12px rgba(18,140,126,0.12);
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s cubic-bezier(.22,1,.36,1), background 0.18s;
-            max-width: 340px;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .whatsapp-btn-inside:hover {
-            transform: scale(1.11);
-            background: #1ed760;
-            box-shadow: 0 8px 32px rgba(18,140,126,0.22);
-        }
-        .dropdown-trigger::after {
-            content: '▼';
-            font-size: 0.7em;
-            margin-left: 10px;
-        }
-        .header-top .logo:last-of-type {
-            margin-left: -200px !important;
-        }
+
+
     </style>
 </head>
-<body style="background: #fff; margin: 0; padding: 0x;">
+<body>
     <header class="double-header">
         <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
             <div class="logo">
@@ -302,150 +850,73 @@
             </nav>
         </div>
     </header>
-    <div class="container">
-        <h1 style="text-align: center;">Work and Travel Programı Hakkında Her Şey</h1>
-        <div class="section">
-            <p style="text-align: center;">Work and Travel, Amerika Birleşik Devletleri tarafından düzenlenen ve üniversite öğrencilerine yaz tatilleri boyunca hem çalışıp hem de kültürel deneyim kazanmalarına olanak sağlayan bir değişim programıdır. ABD Dışişleri Bakanlığı'nın gözetiminde yürütülen bu program, öğrencilerin yaz aylarında hem İngilizcelerini geliştirmelerini hem de farklı bir kültürü yakından tanımalarını hedefler.</p>
-        </div>
-        <div class="worktravel-gallery" style="display: flex; justify-content: center; align-items: center; gap: 18px; margin: 32px 0 24px 0; flex-wrap: wrap;">
-            <img src="ws1.webp" alt="Work and Travel 1" style="height: 150px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); object-fit: cover;" />
-            <img src="ws2.webp" alt="Work and Travel 2" style="height: 150px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); object-fit: cover;" />
-            <img src="ws3.webp" alt="Work and Travel 3" style="height: 150px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); object-fit: cover;" />
-            <img src="ws4.webp" alt="Work and Travel 4" style="height: 150px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); object-fit: cover;" />
-        </div>
-        <div class="section">
-            <h2>Work and Travel Nedir?</h2>
-            <p>Work and Travel (WAT), 18-28 yaş arası lisans veya yüksek lisans öğrencilerinin yaz tatili döneminde Amerika'da yasal olarak çalışmasına ve sonrasında bir süre ülkeyi gezmesine olanak tanır. Program genellikle Mayıs ile Ekim ayları arasında gerçekleşir ve ortalama 3-4 ay sürer.</p>
-        </div>
-        <div class="section">
-            <h2>Kimler Katılabilir?</h2>
-            <ul>
-                <li>18-28 yaş arasında olmak</li>
-                <li>Türkiye'de tam zamanlı bir üniversite öğrencisi olmak (ön lisans, lisans ya da yüksek lisans)</li>
-                <li>En az orta seviyede İngilizce bilgisine sahip olmak</li>
-                <li>Akademik olarak başarılı bir öğrenci olmak (transkript önemli)</li>
-                <li>Daha önce programa katılmamış olmak (tekrar katılmak isteyenler için özel kontenjanlar olabilir)</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Programın Sunduğu Avantajlar</h2>
-            <ul>
-                <li>Amerika'da yasal olarak çalışma ve gelir elde etme fırsatı</li>
-                <li>İngilizce pratik yapma ve gelişim</li>
-                <li>Kültürel değişim ve farklı ülkelerden gelen öğrencilerle tanışma</li>
-                <li>Amerika'nın farklı eyaletlerini gezme imkânı</li>
-                <li>Uluslararası deneyim kazanarak özgeçmişe değer katma</li>
-                <li>Sorumluluk, bağımsızlık ve özgüven kazanma</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Hangi İşlerde Çalışılabilir?</h2>
-            <ul>
-                <li>Restoran ve kafelerde garsonluk, baristalık, mutfak elemanlığı</li>
-                <li>Otel ve tatil köylerinde temizlik görevlisi, resepsiyonist, kat görevlisi</li>
-                <li>Eğlence parklarında bilet satışı, oyuncak operatörlüğü, servis personeli</li>
-                <li>Marketlerde kasa görevlisi veya raf düzenleme</li>
-                <li>Plaj ve havuzlarda cankurtaranlık (sertifika gerektirir)</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Başvuru Şartları ve Süreci</h2>
-            <ol>
-                <li><b>Başvuru:</b> Danışmanlık ofisleri aracılığıyla başvuru yapılır. Gerekli evraklar (öğrenci belgesi, pasaport, transkript) hazırlanır.</li>
-                <li><b>İngilizce Mülakat:</b> İşe yerleştirme için adaylarla İngilizce seviye tespit görüşmeleri yapılır.</li>
-                <li><b>İş Eşleştirmesi:</b> İngilizce seviyesi ve tercih edilen lokasyona göre uygun iş seçilir.</li>
-                <li><b>DS-2019 Formu:</b> İş teklifi alındıktan sonra bu resmi form ile vize başvurusu yapılır.</li>
-                <li><b>Vize Randevusu:</b> Amerikan Konsolosluğu'ndan J-1 vizesi için görüşme alınır.</li>
-            </ol>
-        </div>
-        <div class="section">
-            <h2>Çalışma Ücretleri ve Saatleri</h2>
-            <div class="highlight">
-                <b>Ortalama saatlik ücret:</b> $10 – $17<br>
-                <b>Haftalık çalışma süresi:</b> Genellikle 32 – 40 saat, bazı durumlarda ek işlerle 60 saate kadar çıkabilir.<br>
-                <b>Ortalama aylık gelir:</b> $1300 – $2000 arasında olabilir.<br>
-                <b>Ek iş yapma hakkı:</b> Yasal olarak aynı anda birden fazla işte çalışabilirsiniz (sponsor bilgilendirmeli).
-            </div>
-        </div>
-        <div class="section">
-            <h2>Konaklama</h2>
-            <ul>
-                <li>Paylaşımlı apartman daireleri</li>
-                <li>Motel veya pansiyonlar</li>
-                <li>Üniversite yurtları (bazen)</li>
-            </ul>
-            <div class="highlight">
-                <b>Konaklama ücreti haftalık ortalama:</b> $80 – $150 arasında değişebilir.
-            </div>
-        </div>
-        <div class="section">
-            <h2>Vize İşlemleri (J-1 Öğrenci Vizesi)</h2>
-            <ul>
-                <li>DS-2019 formu</li>
-                <li>SEVIS ücretinin ödenmesi (yaklaşık $35)</li>
-                <li>Pasaport (geçerlilik süresi programı kapsamalı)</li>
-                <li>Fotoğraf ve vize başvuru formu (DS-160)</li>
-                <li>Konsolosluk mülakatı</li>
-            </ul>
-            <p>Vize mülakatı sırasında adaydan İngilizce konuşması ve programa dönüp dönmeyeceğiyle ilgili niyet beyanı istenir. Belgeleriniz eksiksizse ve mülakat iyi geçerse genellikle vize olumlu sonuçlanır.</p>
-        </div>
-        <div class="section">
-            <p><b>Work and Travel programı, gençlerin yurt dışında çalışma ve kültürel deneyim elde etmesine imkân tanıyan eşsiz bir fırsattır. Amerika'da yaz aylarını hem çalışarak hem gezerek geçirmek isteyen üniversite öğrencileri için kişisel gelişim, dil eğitimi ve uluslararası ağ oluşturma açısından büyük faydalar sunar.</b></p>
-        </div>
-        <div style="text-align: center; margin: 32px 0 0 0;">
-            <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Ücretsiz Danışmanlık Al</a>
-        </div>
-        
+    <div class="worktravel-gallery" style="display: flex; justify-content: center; align-items: center; gap: 24px; margin: 36px 0 36px 0; flex-wrap: wrap;">
+      <img src="wt1.webp" alt="Work and Travel 1" style="height: 220px; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.10); object-fit: cover; max-width: 100%;" />
+      <img src="wt2.webp" alt="Work and Travel 2" style="height: 220px; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.10); object-fit: cover; max-width: 100%;" />
+      <img src="wt3.webp" alt="Work and Travel 3" style="height: 220px; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.10); object-fit: cover; max-width: 100%;" />
     </div>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>EĞİTİM PROGRAMLARI</h3>
-                    <ul>
-                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
-                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
-                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
-                        <li><a href="#">WORK AND TRAVEL</a></li>
-                        <li><a href="#">VİZE</a></li>
-                        <li><a href="#">MBA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>HAKKIMIZDA</h3>
-                    <ul>
-                        <li><a href="">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
-                        <li><a href="">DANIŞMANLIK HİZMETLERİMİZ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 style="margin-left: 20px;">İLETİŞİM</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+90 324 326 4600</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>+90 541 430 4808</span>
-                            <div class="social-icons">
-                                <a href="https://wa.me/905414304808" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://t.me/+905414304808" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-                                <a href="viber://chat?number=+905414304808" title="Viber"><i class="fab fa-viber"></i></a>
-                                <a href="#" title="WeChat"><i class="fab fa-weixin"></i></a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
-            </div>
-        </div>
-    </footer>
+    <main class="info-section" style="max-width: 1200px; margin: 2rem auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); padding: 2.5rem 2rem;">
+      <h1 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1.2rem; text-align: center;">Work and Travel Programı Hakkında Her Şey</h1>
+      <p style="text-align: center; max-width: 900px; margin: 0 auto 2rem auto;">Work and Travel, Amerika Birleşik Devletleri tarafından düzenlenen ve üniversite öğrencilerine yaz tatilleri boyunca hem çalışıp hem de kültürel deneyim kazanmalarına olanak sağlayan bir değişim programıdır. ABD Dışişleri Bakanlığı'nın gözetiminde yürütülen bu program, öğrencilerin yaz aylarında hem İngilizcelerini geliştirmelerini hem de farklı bir kültürü yakından tanımalarını hedefler.</p>
+      <h3 style="margin-top:2rem; color: var(--primary-color);">Work and Travel Nedir?</h3>
+      <p>Work and Travel (WAT), 18-28 yaş arası lisans veya yüksek lisans öğrencilerinin yaz tatili döneminde Amerika'da yasal olarak çalışmasına ve sonrasında bir süre ülkeyi gezmesine olanak tanır. Program genellikle Mayıs ile Ekim ayları arasında gerçekleşir ve ortalama 3-4 ay sürer.</p>
+      <h3 style="margin-top:2rem; color: var(--primary-color);">Kimler Katılabilir?</h3>
+      <ul style="margin-bottom:1.5rem;">
+        <li>18-28 yaş arasında olmak</li>
+        <li>Türkiye'de tam zamanlı bir üniversite öğrencisi olmak (ön lisans, lisans ya da yüksek lisans)</li>
+        <li>En az orta seviyede İngilizce bilgisine sahip olmak</li>
+        <li>Akademik olarak başarılı bir öğrenci olmak (transkript önemli)</li>
+        <li>Daha önce programa katılmamış olmak (tekrar katılmak isteyenler için özel kontenjanlar olabilir)</li>
+      </ul>
+      <h3 style="margin-top:2rem; color: var(--primary-color);">Programın Sunduğu Avantajlar</h3>
+      <ul style="margin-bottom:1.5rem;">
+        <li>Amerika'da yasal olarak çalışma ve gelir elde etme fırsatı</li>
+        <li>İngilizce pratik yapma ve gelişim</li>
+        <li>Kültürel değişim ve farklı ülkelerden gelen öğrencilerle tanışma</li>
+        <li>Amerika'nın farklı eyaletlerini gezme imkânı</li>
+        <li>Uluslararası deneyim kazanarak özgeçmişe değer katma</li>
+        <li>Sorumluluk, bağımsızlık ve özgüven kazanma</li>
+      </ul>
+      <h3 style="margin-top:2rem; color: var(--primary-color);">Hangi İşlerde Çalışılabilir?</h3>
+      <ul style="margin-bottom:1.5rem;">
+        <li>Restoran ve kafelerde garsonluk, baristalık, mutfak elemanlığı</li>
+        <li>Otel ve tatil köylerinde temizlik görevlisi, resepsiyonist, kat görevlisi</li>
+        <li>Eğlence parklarında bilet satışı, oyuncak operatörlüğü, servis personeli</li>
+        <li>Marketlerde kasa görevlisi veya raf düzenleme</li>
+        <li>Plaj ve havuzlarda cankurtaranlık (sertifika gerektirir)</li>
+      </ul>
+      <h3 style="margin-top:2rem; color: var(--primary-color);">Başvuru Şartları ve Süreci</h3>
+      <ul style="margin-bottom:1.5rem;">
+        <li><b>Başvuru:</b> Danışmanlık ofisleri aracılığıyla başvuru yapılır. Gerekli evraklar (öğrenci belgesi, pasaport, transkript) hazırlanır.</li>
+        <li><b>İngilizce Mülakat:</b> İşe yerleştirme için adaylarla İngilizce seviye tespit görüşmeleri yapılır.</li>
+        <li><b>İş Eşleştirmesi:</b> İngilizce seviyesi ve tercih edilen lokasyona göre uygun iş seçilir.</li>
+        <li><b>DS-2019 Formu:</b> İş teklifi alındıktan sonra bu resmi form ile vize başvurusu yapılır.</li>
+        <li><b>Vize Randevusu:</b> Amerikan Konsolosluğu'ndan J-1 vizesi için görüşme alınır.</li>
+      </ul>
+      <h3 style="margin-top:2rem; color: var(--primary-color);">Çalışma Ücretleri ve Saatleri</h3>
+      <ul style="margin-bottom:1.5rem;">
+        <li><b>Ortalama saatlik ücret:</b> $10 – $17 arasında değişir.</li>
+        <li><b>Haftalık çalışma süresi:</b> Genellikle 32 – 40 saat, bazı durumlarda ek işlerle 60 saate kadar çıkabilir.</li>
+        <li><b>Ortalama aylık gelir:</b> $1300 – $2000 arasında olabilir.</li>
+        <li><b>Ek iş yapma hakkı:</b> Yasal olarak aynı anda birden fazla işte çalışabilirsiniz (sponsor bilgilendirmeli).</li>
+      </ul>
+      <h3 style="margin-top:2rem; color: var(--primary-color);">Konaklama</h3>
+      <ul style="margin-bottom:1.5rem;">
+        <li>Paylaşımlı apartman daireleri</li>
+        <li>Motel veya pansiyonlar</li>
+        <li>Üniversite yurtları (bazen)</li>
+        <li><b>Konaklama ücreti haftalık ortalama:</b> $80 – $150 arasında değişebilir.</li>
+      </ul>
+      <h3 style="margin-top:2rem; color: var(--primary-color);">Vize İşlemleri (J-1 Öğrenci Vizesi)</h3>
+      <ul style="margin-bottom:1.5rem;">
+        <li>DS-2019 formu</li>
+        <li>SEVIS ücretinin ödenmesi (yaklaşık $35)</li>
+        <li>Pasaport (geçerlilik süresi programı kapsamalı)</li>
+        <li>Fotoğraf ve vize başvuru formu (DS-160)</li>
+        <li>Konsolosluk mülakatı</li>
+      </ul>
+      <p>Vize mülakatı sırasında adaydan İngilizce konuşması ve programa dönüp dönmeyeceğiyle ilgili niyet beyanı istenir. Belgeleriniz eksiksizse ve mülakat iyi geçerse genellikle vize olumlu sonuçlanır.</p>
+      <p style="margin-top:2rem;"><b>Work and Travel programı, gençlerin yurt dışında çalışma ve kültürel deneyim elde etmesine imkân tanıyan eşsiz bir fırsattır. Amerika'da yaz aylarını hem çalışarak hem gezerek geçirmek isteyen üniversite öğrencileri için kişisel gelişim, dil eğitimi ve uluslararası ağ oluşturma açısından büyük faydalar sunar.</b></p>
+    </main>
 </body>
-</html> 
+</html>
