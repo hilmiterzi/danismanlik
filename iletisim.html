@@ -370,25 +370,25 @@
             </div>
             <div class="contact-form">
                 <h2>Bize Ulaşın</h2>
-                <form id="contactForm">
+                <form action="https://formsubmit.co/info@universitypark.com.tr" method="POST">
                     <div class="form-group">
-                        <label for="name">Adınız Soyadınız</label>
+                        <label for="name">Adınız Soyadınız <span style="color:red">*</span></label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">E-posta Adresiniz</label>
+                        <label for="email">E-posta Adresiniz <span style="color:red">*</span></label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Telefon Numaranız</label>
+                        <label for="phone">Telefon Numaranız <span style="color:red">*</span></label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Konu</label>
+                        <label for="subject">Konu <span style="color:red">*</span></label>
                         <input type="text" id="subject" name="subject" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Mesajınız</label>
+                        <label for="message">Mesajınız <span style="color:red">*</span></label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Gönder</button>
@@ -402,14 +402,5 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.016171813108!2d34.54201719999999!3d36.7701795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f5a3fc0cf713%3A0x8fc275e8cfb6980c!2zVW5pdmVyc2l0eXBhcmsgWXVydGTEscWfxLEgRcSfaXRpbQ!5e0!3m2!1snl!2snl!4v1749205286025!5m2!1snl!2snl" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Form gönderme işlemi burada yapılacak
-            alert('Mesajınız gönderildi. En kısa sürede size dönüş yapacağız.');
-            this.reset();
-        });
-    </script>
 </body>
 </html> 
