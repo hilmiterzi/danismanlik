@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yurtdışında dil eğitimi fırsatları - İngiltere, Kanada, Amerika, Avustralya, Malta ve İrlanda'da dil okulları hakkında detaylı bilgi.">
+    <meta name="keywords" content="yurtdışı dil okulu, ingiltere dil okulu, kanada dil okulu, amerika dil okulu, avustralya dil okulu, malta dil okulu, irlanda dil okulu">
     <title>Work and Travel Programı Hakkında Her Şey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Island&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
     <style>
-.double-header {
+        :root {
+            --primary-color: rgb(26,64,121);
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            background: #fff;
+        }
+        .double-header {
             background: #1a4079;
             width: 100%;
             margin: 0;
@@ -16,8 +39,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.1rem 2rem 1.1rem 2rem;
-            min-height: 101px;
+            padding: 0.5rem 2vw 0.5rem 2vw;
+            min-height: 80px;
             background: #fff;
             width: 100%;
             margin: 0;
@@ -44,22 +67,18 @@
             background: #e63946;
             color: #fff;
         }
-
         .header-btn2 {
             background: #20aa13;
             color: #fff;
             padding: 0.45rem 1.1rem;
-            border-radius: 5px;
+            border-radius: 22px;
             font-weight: 600;
             text-decoration: none;
             font-size: 1rem;
             transition: background 0.2s, color 0.2s;
             border: none;
             cursor: pointer;
-            border-radius: 22px;
         }
-    
-        
         .header-bottom {
             background: #1a4079;
             border-top: 1px solid #274a7e;
@@ -77,115 +96,84 @@
             width: 100%;
         }
         .main-nav > a, .main-nav > .dropdown {
-  padding: 0 1.6rem;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  box-sizing: border-box;
-  border-bottom: none;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-  position: relative; /* ALT MENÜ İÇİN GEREKLİ */
-}
-
-.main-nav > a:hover,
-.main-nav > .dropdown:hover > .dropdown-trigger {
-  color: #e63946;
-}
-
-.dropdown-trigger {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-  padding: 0;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.main-nav > a:not(:last-child) {
-  border-right: 2px solid #fff;
-}
-
-/* AÇILAN MENÜ (POPUP) */
-.dropdown-content {
-  position: absolute;
-  top: 100%; /* ALTINA YAPIŞIK AÇILSIN */
-  left: 0;
-  background-color: #123c6c;
-  display: none;
-  min-width: 180px;
-  padding: 10px 0;
-  z-index: 1000;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* ALT MENÜ LİNKLER */
-.dropdown-content a {
-  display: block;
-  padding: 10px 20px;
-  color: #fff;
-  font-size: 0.95rem;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background-color: #0d2b52;
-  color: #e63946;
-}
-
-/* HOVER OLUNCA GÖRÜNÜR YAP */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.main-nav {
-  display: flex;
-  align-items: center;
-}
-
-
+            padding: 0 1.6rem;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-sizing: border-box;
+            border-bottom: none;
+            background: none;
+            border-radius: 0;
+            box-shadow: none;
+            position: relative;
+        }
+        .main-nav > a:hover,
+        .main-nav > .dropdown:hover > .dropdown-trigger {
+            color: #e63946;
+        }
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            text-decoration: none;
+            padding: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        .main-nav > a:not(:last-child) {
+            border-right: 2px solid #fff;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #123c6c;
+            display: none;
+            min-width: 180px;
+            padding: 10px 0;
+            z-index: 1000;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #0d2b52;
+            color: #e63946;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
         @media (max-width: 900px) {
             .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
             .main-nav { gap: 1.2rem; }
             .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
         }
-
         .header-btn.dropdown-trigger {
             background: #1a4079;
             color: #fff;
-            border-radius: 5px;
+            border-radius: 22px;
             padding: 0.45rem 1.1rem;
             font-weight: 600;
             border: none;
-            border-radius: 22px;
         }
-
-        @media (max-width: 900px) {
-            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
-            .main-nav { gap: 1.2rem; }
-            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
-        }
-
-        .header-btn.dropdown-trigger {
-            background: #1a4079;
-            color: #fff;
-            border-radius: 5px;
-            padding: 0.45rem 1.1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 22px;
-        }
-
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
@@ -256,13 +244,10 @@
             font-size: 0.7em;
             margin-left: 10px;
         }
-        
     </style>
 </head>
 <body style="background: #fff; margin: 0; padding: 0x;">
-    <!-- Üstteki logo/slogan bloğu -->
-
-    <header class="double-header" style="margin: 0; padding: 0; width: 100%;">
+    <header class="double-header">
         <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
             <div class="logo">
                 <a href="index.html">
@@ -271,7 +256,7 @@
               </div>
             <div class="logo">
                 <a href="index.html">
-                  <img src="ra.webp" alt="University Park Logo" style="height: 80px; width: auto; display: block; position: relative; left: -305px;">
+                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
                 </a>
               </div>
               
@@ -305,7 +290,6 @@
             </nav>
         </div>
     </header>
-
     <div class="container">
         <h1 style="text-align: center;">Work and Travel Programı Hakkında Her Şey</h1>
         <div class="section">
