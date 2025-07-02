@@ -1,165 +1,400 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" style="background: #fff; margin: 0; padding: 0; overflow-x: hidden;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Work and Travel Programı - Amerika'da yaz tatilinde çalışma ve seyahat etme fırsatı. Üniversite öğrencileri için kültürel değişim programı.">
-    <meta name="keywords" content="work and travel, amerika, yaz tatili, kültürel değişim, üniversite öğrencileri, j-1 vizesi">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Work and Travel Programı - Amerika'da Yaz Tatili">
-    <meta property="og:description" content="Amerika'da yaz tatilinde çalışma ve seyahat etme fırsatı. Üniversite öğrencileri için kültürel değişim programı.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://universitypark.com.tr/work-and-travel.html">
-    <title>Work and Travel Programı | Amerika'da Yaz Tatili</title>
+    <title>Work and Travel Programı Hakkında Her Şey</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+.double-header {
+            background: #1a4079;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem 1.1rem 2rem;
+            min-height: 101px;
+            background: #fff;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
+        .header-top-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+        .header-btn {
+            background: #ff0000;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 22px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .header-btn:hover {
+            background: #e63946;
+            color: #fff;
+        }
+
+        .header-btn2 {
+            background: #20aa13;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+            border-radius: 22px;
+        }
+    
+        
+        .header-bottom {
+            background: #1a4079;
+            border-top: 1px solid #274a7e;
+            padding: 0.05rem 2rem 0.05rem 2rem;
+            min-height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .main-nav > a, .main-nav > .dropdown {
+  padding: 0 1.6rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative; /* ALT MENÜ İÇİN GEREKLİ */
+}
+
+.main-nav > a:hover,
+.main-nav > .dropdown:hover > .dropdown-trigger {
+  color: #e63946;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav > a:not(:last-child) {
+  border-right: 2px solid #fff;
+}
+
+/* AÇILAN MENÜ (POPUP) */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* ALTINA YAPIŞIK AÇILSIN */
+  left: 0;
+  background-color: #123c6c;
+  display: none;
+  min-width: 180px;
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ALT MENÜ LİNKLER */
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #0d2b52;
+  color: #e63946;
+}
+
+/* HOVER OLUNCA GÖRÜNÜR YAP */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+        @media (max-width: 900px) {
+            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+            .main-nav { gap: 1.2rem; }
+            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+        }
+
+        .header-btn.dropdown-trigger {
+            background: #1a4079;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0.45rem 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 22px;
+        }
+
+        @media (max-width: 900px) {
+            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+            .main-nav { gap: 1.2rem; }
+            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+        }
+
+        .header-btn.dropdown-trigger {
+            background: #1a4079;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0.45rem 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 22px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
+            margin: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 40px 32px 32px 32px;
+            margin-top: 250px;
+        }
+        h1 {
+            color: #1a4d8f;
+            font-size: 2.5rem;
+            margin-bottom: 18px;
+        }
+        h2 {
+            color: #1a4d8f;
+            margin-top: 36px;
+            font-size: 1.5rem;
+        }
+        ul, ol {
+            margin-left: 24px;
+        }
+        .section {
+            margin-bottom: 32px;
+        }
+        .highlight {
+            background: #eaf3ff;
+            border-left: 4px solid #1a4d8f;
+            padding: 12px 18px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 16px; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.1rem; }
+        }
+        .whatsapp-btn-inside {
+            display: block;
+            background: #25d366;
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: bold;
+            padding: 0.7rem 2rem;
+            border-radius: 32px;
+            box-shadow: 0 2px 12px rgba(18,140,126,0.12);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s cubic-bezier(.22,1,.36,1), background 0.18s;
+            max-width: 340px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .whatsapp-btn-inside:hover {
+            transform: scale(1.11);
+            background: #1ed760;
+            box-shadow: 0 8px 32px rgba(18,140,126,0.22);
+        }
+        .dropdown-trigger::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-left: 10px;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="header-content">
+<body style="background: #fff; margin: 0; padding: 0x;">
+    <!-- Üstteki logo/slogan bloğu -->
+
+    <header class="double-header" style="margin: 0; padding: 0; width: 100%;">
+        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
             <div class="logo">
-                <img src="universitypark-small.webp" 
-                     srcset="universitypark-small.webp 120w,
-                             universitypark-medium.webp 240w,
-                             universitypark.webp 480w"
-                     sizes="(max-width: 460px) 120px,
-                            (max-width: 768px) 240px,
-                            480px"
-                     alt="University Park"
-                     width="120"
-                     height="40">
-            </div>
-            <button class="mobile-menu-btn">☰</button>
-            <nav class="nav-menu">
-                <a href="index.html#countries-section">ÜNİVERSİTE</a>
+                <a href="index.html">
+                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -180px;">
+                </a>
+              </div>
+            <div class="logo">
+                <a href="index.html">
+                  <img src="ra.webp" alt="University Park Logo" style="height: 80px; width: auto; display: block; position: relative; left: -305px;">
+                </a>
+              </div>
+              
+            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
                 <div class="dropdown">
-                    <a href="eğitim-programları" class="dropdown-trigger">EĞİTİM PROGRAMLARI</a>
+                    <a href="#" class="header-btn dropdown-trigger">Hakkımızda</a>
                     <div class="dropdown-content">
-                        <a href="dil-okullari.html">Dil Okulları</a>
-                        <a href="work-and-study.html">Work & Study</a>
-                        <a href="yaz-okulu.html">Yaz Okulu</a>
-                        <a href="master-mba.html">Master/MBA</a>
-                        <a href="pathway.html">Pathway Programı</a>
+                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
+                        <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
                     </div>
                 </div>
-                <a href="work-and-travel.html">WORK & TRAVEL</a>
-                <a href="vize.html">VİZE</a>
-                <a href="index.html#blog">BLOG</a>
-                <a href="index.html#hakkimizda">HAKKIMIZDA</a>
-                <a href="iletisim.html">İLETİŞİM</a>
+                <a href="bilgi-iste.html" class="header-btn">Bilgi İste</a>
+                <a href="iletisim.html" class="header-btn2">İletişim</a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="main-nav">
+                <a href="#countries-section">Üniversite</a>
+                <a href="dil-okullari.html">Dil Okulları</a>
+                <a href="master-mba.html">Master/MBA</a>
+                <a href="work-and-travel.html">Work and Travel</a>
+                <div class="dropdown" style="border-right: 2px solid #fff;">
+                    <a href="#" class="dropdown-trigger">Diğer Programlar</a>
+                    <div class="dropdown-content">
+                        <a href="#">Work And Study</a>
+                        <a href="#">Yaz Okulu</a>
+                        <a href="#">Pathway Programı</a>
+                    </div>
+                </div>
+                <a href="vize-islemleri.html">Vize İşlemleri</a>
             </nav>
-            <a href="bilgi-iste.html" class="header-btn">Bilgi İste</a>
         </div>
     </header>
-
-    <main class="program-content">
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>Work and Travel Programı</h1>
-                <h2>Work and Travel Programı Hakkında Her Şey</h2>
+    <div style="background: #fff; width: 100%; margin: 0; padding: 0; border-bottom: 2px solid #1a4079; text-align: center; display: flex; align-items: center; justify-content: center; height: 130px;">
+        <img src="logo10.png" alt="UNIVERSITYPARK YURTDIŞI EĞİTİM" style="height: 120px; margin: 0 auto; display: block;" />
+    </div>
+    <div class="container">
+        <h1>Work and Travel Programı Hakkında Her Şey</h1>
+        <div class="section">
+            <p>Work and Travel, Amerika Birleşik Devletleri tarafından düzenlenen ve üniversite öğrencilerine yaz tatilleri boyunca hem çalışıp hem de kültürel deneyim kazanmalarına olanak sağlayan bir değişim programıdır. ABD Dışişleri Bakanlığı'nın gözetiminde yürütülen bu program, öğrencilerin yaz aylarında hem İngilizcelerini geliştirmelerini hem de farklı bir kültürü yakından tanımalarını hedefler.</p>
+        </div>
+        <div class="section">
+            <h2>Work and Travel Nedir?</h2>
+            <p>Work and Travel (WAT), 18-28 yaş arası lisans veya yüksek lisans öğrencilerinin yaz tatili döneminde Amerika'da yasal olarak çalışmasına ve sonrasında bir süre ülkeyi gezmesine olanak tanır. Program genellikle Mayıs ile Ekim ayları arasında gerçekleşir ve ortalama 3-4 ay sürer.</p>
+        </div>
+        <div class="section">
+            <h2>Kimler Katılabilir?</h2>
+            <ul>
+                <li>18-28 yaş arasında olmak</li>
+                <li>Türkiye'de tam zamanlı bir üniversite öğrencisi olmak (ön lisans, lisans ya da yüksek lisans)</li>
+                <li>En az orta seviyede İngilizce bilgisine sahip olmak</li>
+                <li>Akademik olarak başarılı bir öğrenci olmak (transkript önemli)</li>
+                <li>Daha önce programa katılmamış olmak (tekrar katılmak isteyenler için özel kontenjanlar olabilir)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Programın Sunduğu Avantajlar</h2>
+            <ul>
+                <li>Amerika'da yasal olarak çalışma ve gelir elde etme fırsatı</li>
+                <li>İngilizce pratik yapma ve gelişim</li>
+                <li>Kültürel değişim ve farklı ülkelerden gelen öğrencilerle tanışma</li>
+                <li>Amerika'nın farklı eyaletlerini gezme imkânı</li>
+                <li>Uluslararası deneyim kazanarak özgeçmişe değer katma</li>
+                <li>Sorumluluk, bağımsızlık ve özgüven kazanma</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Hangi İşlerde Çalışılabilir?</h2>
+            <ul>
+                <li>Restoran ve kafelerde garsonluk, baristalık, mutfak elemanlığı</li>
+                <li>Otel ve tatil köylerinde temizlik görevlisi, resepsiyonist, kat görevlisi</li>
+                <li>Eğlence parklarında bilet satışı, oyuncak operatörlüğü, servis personeli</li>
+                <li>Marketlerde kasa görevlisi veya raf düzenleme</li>
+                <li>Plaj ve havuzlarda cankurtaranlık (sertifika gerektirir)</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Başvuru Şartları ve Süreci</h2>
+            <ol>
+                <li><b>Başvuru:</b> Danışmanlık ofisleri aracılığıyla başvuru yapılır. Gerekli evraklar (öğrenci belgesi, pasaport, transkript) hazırlanır.</li>
+                <li><b>İngilizce Mülakat:</b> İşe yerleştirme için adaylarla İngilizce seviye tespit görüşmeleri yapılır.</li>
+                <li><b>İş Eşleştirmesi:</b> İngilizce seviyesi ve tercih edilen lokasyona göre uygun iş seçilir.</li>
+                <li><b>DS-2019 Formu:</b> İş teklifi alındıktan sonra bu resmi form ile vize başvurusu yapılır.</li>
+                <li><b>Vize Randevusu:</b> Amerikan Konsolosluğu'ndan J-1 vizesi için görüşme alınır.</li>
+            </ol>
+        </div>
+        <div class="section">
+            <h2>Çalışma Ücretleri ve Saatleri</h2>
+            <div class="highlight">
+                <b>Ortalama saatlik ücret:</b> $10 – $17<br>
+                <b>Haftalık çalışma süresi:</b> Genellikle 32 – 40 saat, bazı durumlarda ek işlerle 60 saate kadar çıkabilir.<br>
+                <b>Ortalama aylık gelir:</b> $1300 – $2000 arasında olabilir.<br>
+                <b>Ek iş yapma hakkı:</b> Yasal olarak aynı anda birden fazla işte çalışabilirsiniz (sponsor bilgilendirmeli).
             </div>
-        </section>
-
-        <section class="content-section">
-            <div class="container">
-                <div class="intro-text">
-                    <p>Work and Travel, Amerika Birleşik Devletleri tarafından düzenlenen ve üniversite öğrencilerine yaz tatilleri boyunca hem çalışıp hem de kültürel deneyim kazanmalarına olanak sağlayan bir değişim programıdır. ABD Dışişleri Bakanlığı'nın gözetiminde yürütülen bu program, öğrencilerin yaz aylarında hem İngilizcelerini geliştirmelerini hem de farklı bir kültürü yakından tanımalarını hedefler.</p>
-                </div>
-
-                <div class="program-section">
-                    <h2>Work and Travel Nedir?</h2>
-                    <p>Work and Travel (WAT), 18-28 yaş arası lisans veya yüksek lisans öğrencilerinin yaz tatili döneminde Amerika'da yasal olarak çalışmasına ve sonrasında bir süre ülkeyi gezmesine olanak tanır. Program genellikle Mayıs ile Ekim ayları arasında gerçekleşir ve ortalama 3-4 ay sürer.</p>
-                </div>
-
-                <div class="program-section">
-                    <h2>Kimler Katılabilir?</h2>
-                    <p>Work and Travel programına katılmak için genel şartlar şunlardır:</p>
-                    <ul class="requirements-list">
-                        <li>18-28 yaş arasında olmak</li>
-                        <li>Türkiye'de tam zamanlı bir üniversite öğrencisi olmak (ön lisans, lisans ya da yüksek lisans)</li>
-                        <li>En az orta seviyede İngilizce bilgisine sahip olmak</li>
-                        <li>Akademik olarak başarılı bir öğrenci olmak (transkript önemli)</li>
-                        <li>Daha önce programa katılmamış olmak (tekrar katılmak isteyenler için özel kontenjanlar olabilir)</li>
-                    </ul>
-                </div>
-
-                <div class="program-section">
-                    <h2>Programın Sunduğu Avantajlar</h2>
-                    <ul class="benefits-list">
-                        <li>Amerika'da yasal olarak çalışma ve gelir elde etme fırsatı</li>
-                        <li>İngilizce pratik yapma ve gelişim</li>
-                        <li>Kültürel değişim ve farklı ülkelerden gelen öğrencilerle tanışma</li>
-                        <li>Amerika'nın farklı eyaletlerini gezme imkânı</li>
-                        <li>Uluslararası deneyim kazanarak özgeçmişe değer katma</li>
-                        <li>Sorumluluk, bağımsızlık ve özgüven kazanma</li>
-                    </ul>
-                </div>
-
-                <div class="program-section">
-                    <h2>Hangi İşlerde Çalışılabilir?</h2>
-                    <p>Work and Travel kapsamında sunulan işler genellikle sezonluk ve turizm odaklıdır. En yaygın iş türleri:</p>
-                    <ul class="jobs-list">
-                        <li>Restoran ve kafelerde garsonluk, baristalık, mutfak elemanlığı</li>
-                        <li>Otel ve tatil köylerinde temizlik görevlisi, resepsiyonist, kat görevlisi</li>
-                        <li>Eğlence parklarında bilet satışı, oyuncak operatörlüğü, servis personeli</li>
-                        <li>Marketlerde kasa görevlisi veya raf düzenleme</li>
-                        <li>Plaj ve havuzlarda cankurtaranlık (sertifika gerektirir)</li>
-                    </ul>
-                </div>
-
-                <div class="program-section">
-                    <h2>Başvuru Şartları ve Süreci</h2>
-                    <ul class="documents-list">
-                        <li>Başvuru: Danışmanlık ofisleri aracılığıyla başvuru yapılır. Gerekli evraklar (öğrenci belgesi, pasaport, transkript) hazırlanır.</li>
-                        <li>İngilizce Mülakat: İşe yerleştirme için adaylarla İngilizce seviye tespit görüşmeleri yapılır.</li>
-                        <li>İş Eşleştirmesi: İngilizce seviyesi ve tercih edilen lokasyona göre uygun iş seçilir.</li>
-                        <li>DS-2019 Formu: İş teklifi alındıktan sonra bu resmi form ile vize başvurusu yapılır.</li>
-                        <li>Vize Randevusu: Amerikan Konsolosluğu'ndan J-1 vizesi için görüşme alınır.</li>
-                    </ul>
-                </div>
-
-                <div class="program-section">
-                    <h2>Çalışma Ücretleri ve Saatleri</h2>
-                    <div class="wages-info">
-                        <ul>
-                            <li>Ortalama saatlik ücret: $10 – $17 arasında değişir.</li>
-                            <li>Haftalık çalışma süresi: Genellikle 32 – 40 saat, bazı durumlarda ek işlerle 60 saate kadar çıkabilir.</li>
-                            <li>Ortalama aylık gelir: $1300 – $2000 arasında olabilir.</li>
-                            <li>Ek iş yapma hakkı: Yasal olarak aynı anda birden fazla işte çalışabilirsiniz (sponsor bilgilendirmeli).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="program-section">
-                    <h2>Konaklama</h2>
-                    <p>Konaklama genellikle işveren tarafından sağlanır ya da danışmanlık firmaları destek olur. Konaklama türleri:</p>
-                    <ul class="accommodation-list">
-                        <li>Paylaşımlı apartman daireleri</li>
-                        <li>Motel veya pansiyonlar</li>
-                        <li>Üniversite yurtları (bazen)</li>
-                    </ul>
-                    <p>Konaklama ücreti haftalık ortalama: $80 – $150 arasında değişebilir.</p>
-                </div>
-
-                <div class="program-section">
-                    <h2>Vize İşlemleri (J-1 Öğrenci Vizesi)</h2>
-                    <p>Work and Travel programı kapsamında J-1 Exchange Visitor vizesi alınır. Vize başvurusu için gerekenler:</p>
-                    <ul class="visa-requirements">
-                        <li>DS-2019 formu</li>
-                        <li>SEVIS ücretinin ödenmesi (yaklaşık $35)</li>
-                        <li>Pasaport (geçerlilik süresi programı kapsamalı)</li>
-                        <li>Fotoğraf ve vize başvuru formu (DS-160)</li>
-                        <li>Konsolosluk mülakatı</li>
-                    </ul>
-                    <p>Vize mülakatı sırasında adaydan İngilizce konuşması ve programa dönüp dönmeyeceğiyle ilgili niyet beyanı istenir. Belgeleriniz eksiksizse ve mülakat iyi geçerse genellikle vize olumlu sonuçlanır.</p>
-                </div>
-
-                <div class="program-section">
-                    <p>Work and Travel programı, gençlerin yurt dışında çalışma ve kültürel deneyim elde etmesine imkân tanıyan eşsiz bir fırsattır. Amerika'da yaz aylarını hem çalışarak hem gezerek geçirmek isteyen üniversite öğrencileri için kişisel gelişim, dil eğitimi ve uluslararası ağ oluşturma açısından büyük faydalar sunar.</p>
-                </div>
+        </div>
+        <div class="section">
+            <h2>Konaklama</h2>
+            <ul>
+                <li>Paylaşımlı apartman daireleri</li>
+                <li>Motel veya pansiyonlar</li>
+                <li>Üniversite yurtları (bazen)</li>
+            </ul>
+            <div class="highlight">
+                <b>Konaklama ücreti haftalık ortalama:</b> $80 – $150 arasında değişebilir.
             </div>
-        </section>
-    </main>
-
+        </div>
+        <div class="section">
+            <h2>Vize İşlemleri (J-1 Öğrenci Vizesi)</h2>
+            <ul>
+                <li>DS-2019 formu</li>
+                <li>SEVIS ücretinin ödenmesi (yaklaşık $35)</li>
+                <li>Pasaport (geçerlilik süresi programı kapsamalı)</li>
+                <li>Fotoğraf ve vize başvuru formu (DS-160)</li>
+                <li>Konsolosluk mülakatı</li>
+            </ul>
+            <p>Vize mülakatı sırasında adaydan İngilizce konuşması ve programa dönüp dönmeyeceğiyle ilgili niyet beyanı istenir. Belgeleriniz eksiksizse ve mülakat iyi geçerse genellikle vize olumlu sonuçlanır.</p>
+        </div>
+        <div class="section">
+            <p><b>Work and Travel programı, gençlerin yurt dışında çalışma ve kültürel deneyim elde etmesine imkân tanıyan eşsiz bir fırsattır. Amerika'da yaz aylarını hem çalışarak hem gezerek geçirmek isteyen üniversite öğrencileri için kişisel gelişim, dil eğitimi ve uluslararası ağ oluşturma açısından büyük faydalar sunar.</b></p>
+        </div>
+        <div style="text-align: center; margin: 32px 0 0 0;">
+            <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Ücretsiz Danışmanlık Al</a>
+        </div>
+    </div>
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -169,20 +404,20 @@
                         <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
                         <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
                         <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
-                        <li><a href="work-and-travel.html">WORK AND TRAVEL</a></li>
-                        <li><a href="vize.html">VİZE</a></li>
-                        <li><a href="master-mba.html">MBA</a></li>
+                        <li><a href="#">WORK AND TRAVEL</a></li>
+                        <li><a href="#">VİZE</a></li>
+                        <li><a href="#">MBA</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>HAKKIMIZDA</h3>
                     <ul>
-                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
-                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                        <li><a href="">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="">DANIŞMANLIK HİZMETLERİMİZ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>İLETİŞİM</h3>
+                    <h3 style="margin-left: 20px;">İLETİŞİM</h3>
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-phone"></i>
@@ -210,18 +445,5 @@
             </div>
         </div>
     </footer>
-
-    <a href="https://wa.me/905414304808" class="floating-whatsapp" target="_blank" title="WhatsApp ile iletişime geçin">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.967 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-    </a>
-
-    <script>
-        // Mobile menu functionality
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
 </body>
 </html> 
