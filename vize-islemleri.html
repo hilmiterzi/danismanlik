@@ -803,6 +803,72 @@
             border-radius: 22px;
         }
 
+        .whatsapp-btn-inside {
+            display: block;
+            background: #25d366;
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: bold;
+            padding: 0.7rem 2rem;
+            border-radius: 32px;
+            box-shadow: 0 2px 12px rgba(18,140,126,0.12);
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s cubic-bezier(.22,1,.36,1), background 0.18s;
+            max-width: 340px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .whatsapp-btn-inside:hover {
+            transform: scale(1.11);
+            background: #1ed760;
+            box-shadow: 0 8px 32px rgba(18,140,126,0.22);
+        }
+
+        main {
+            font-size: 1.13rem;
+            line-height: 1.85;
+            color: var(--text-color);
+        }
+        main h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 2.2rem;
+            color: var(--primary-color);
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        main h2 {
+            font-size: 1.62rem;
+            font-weight: 700;
+            margin-bottom: 1.1rem;
+            margin-top: 2.2rem;
+            color: #205080;
+        }
+        main ul, main ol {
+            font-size: 1.08rem;
+            margin-bottom: 1.5rem;
+            margin-left: 1.2rem;
+        }
+        main li {
+            margin-bottom: 0.5rem;
+        }
+        main p {
+            font-size: 1.13rem;
+            margin-bottom: 1.2rem;
+        }
+        @media (max-width: 600px) {
+            main {
+                font-size: 1rem;
+            }
+            main h1 {
+                font-size: 1.3rem;
+            }
+            main h2 {
+                font-size: 1.18rem;
+            }
+        }
 
     </style>
 </head>
@@ -850,5 +916,191 @@
             </nav>
         </div>
     </header>
+    <main style="max-width:1200px;margin:2rem auto;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 16px rgba(26,64,121,0.07);">
+        <h1 style="color:#1a4079;margin-bottom:2rem;">Vize Türleri ve Gerekli Belgeler</h1>
+
+        <section style="margin-bottom:2.5rem;">
+            <h2 style="color:#205080;">1. İşçi Vizesi (Long-Term Work Visa)</h2>
+            <p><strong>🧰 Vize Hakkında:</strong><br>
+            İşçi vizesi, yurtdışında bir işverenin yanında uzun süreli çalışmak isteyen kişilerin başvurduğu bir vize türüdür. Genellikle resmi bir iş sözleşmesine dayanır ve çalışılacak ülkenin iş gücü politikalarına bağlıdır.<br>
+            Bu vizeyle, başvurulan ülkede yasal şekilde çalışabilir, belirli sürelerle oturum izni alabilirsiniz.</p>
+            <p><strong>📄 Gerekli Belgeler:</strong></p>
+            <ul>
+                <li>Pasaport (Seyahatten sonra en az 6 ay geçerli)</li>
+                <li>İş Sözleşmesi / Davet Mektubu (İmzalı, kaşeli, iş pozisyonu ve maaş bilgileri belirtilmiş)</li>
+                <li>İşverenin ticaret sicil kaydı veya firma yetki belgesi</li>
+                <li>CV (Özgeçmiş) – güncel ve iş pozisyonuna uygun</li>
+                <li>Mesleki yeterlilik belgeleri / sertifikalar (Varsa diploma, ustalık belgesi vb.)</li>
+                <li>Adli Sicil Kaydı (E-devlet veya resmi tercümesiyle)</li>
+                <li>Sağlık Raporu (Bazı ülkeler için akciğer grafisi ve bulaşıcı hastalık taraması dahil)</li>
+                <li>Biyometrik Fotoğraf (Son 6 ay içinde çekilmiş, 2 adet)</li>
+                <li>Başvuru Formu (İlgili konsolosluğa ait)</li>
+                <li>Vize Harcı Dekontu</li>
+                <li>Konaklama ve Ulaşım Planı (Varsa işveren tarafından karşılandığına dair belge)</li>
+            </ul>
+        </section>
+
+        <section style="margin-bottom:2.5rem;">
+            <h2 style="color:#205080;">2. Sezonluk İşçi Vizesi (Seasonal Worker Visa)</h2>
+            <p><strong>🌾 Vize Hakkında:</strong><br>
+            Tarım, turizm, lojistik gibi sektörlerde kısa süreli istihdam için alınan bu vize, genellikle 3-9 ay arası bir süreyle geçerlidir. Sezonluk işçi vizesiyle çalışanlar yalnızca belirtilen iş ve süre için ülkede kalabilir. Uzatma ya da iş yeri değiştirme gibi haklar çoğu zaman kısıtlıdır.</p>
+            <p><strong>📄 Gerekli Belgeler:</strong></p>
+            <ul>
+                <li>Geçerli Pasaport</li>
+                <li>Sezonluk iş sözleşmesi (Çalışma süresi, işin niteliği ve maaş bilgisi belirtilmeli)</li>
+                <li>İşveren tarafından verilen davet mektubu</li>
+                <li>İşverenin kayıt belgesi / tarım ruhsatı (İlgili sektöre göre)</li>
+                <li>Kalacak yer bilgileri (Adresiyle birlikte kira sözleşmesi ya da işverenin sağladığı belge)</li>
+                <li>Uçuş rezervasyonu ve ulaşım planı</li>
+                <li>Seyahat sağlık sigortası (Tüm kalış süresini kapsayan)</li>
+                <li>Adli sicil kaydı</li>
+                <li>Biyometrik fotoğraf (2 adet)</li>
+                <li>Başvuru formu ve vize ücreti dekontu</li>
+            </ul>
+            <p style="color:#e63946;font-weight:bold;">⚠ Not: Bazı ülkelerde kota sınırlaması olduğu için erken başvuru önerilir.</p>
+        </section>
+
+        <section style="margin-bottom:2.5rem;">
+            <h2 style="color:#205080;">3. Öğrenci Vizesi (Student Visa)</h2>
+            <p><strong>🎓 Vize Hakkında:</strong><br>
+            Lisans, yüksek lisans, doktora, dil okulu veya kısa süreli eğitim programlarına katılmak isteyen öğrencilerin alması gereken vizedir. Vize süresi, eğitim programının süresine göre belirlenir. Genellikle çalışma izni kısıtlıdır, ancak bazı ülkelerde part-time çalışmak mümkündür.</p>
+            <p><strong>📄 Gerekli Belgeler:</strong></p>
+            <ul>
+                <li>Pasaport (Seyahat bitişinden itibaren en az 6 ay geçerli)</li>
+                <li>Kabul Mektubu (Okuldan resmi antetli kağıtta alınmış, öğrenci numarası ve program detaylarıyla)</li>
+                <li>Dil yeterlilik belgesi (Varsa IELTS / TOEFL / TestDAF / Japonca N5 gibi)</li>
+                <li>Öğrenim ücreti ödeme dekontu (Kısmi veya tam ödeme)</li>
+                <li>Diploma ve Transkript (Noter onaylı ve yeminli tercümeli)</li>
+                <li>Öğrenci belgesi (varsa mevcut okuldan)</li>
+                <li><strong>Maddi yeterlilik belgesi:</strong>
+                    <ul>
+                        <li>Banka hesap dökümü (Son 3 aya ait)</li>
+                        <li>Sponsor yazısı ve kimlik belgeleri (Anne/baba, aile üyeleri sponsor olacaksa)</li>
+                    </ul>
+                </li>
+                <li>Seyahat sağlık sigortası (Vize süresince geçerli)</li>
+                <li><strong>Kalacak yer belgesi:</strong>
+                    <ul>
+                        <li>Yurt rezervasyonu</li>
+                        <li>Kira kontratı</li>
+                        <li>Davet eden aile varsa onların belgeleri</li>
+                    </ul>
+                </li>
+                <li>Biyometrik fotoğraf (2 adet)</li>
+                <li>Vize başvuru formu ve ücret dekontu</li>
+            </ul>
+        </section>
+
+        <section style="margin-bottom:2.5rem;">
+            <h2 style="color:#205080;">4. Turistik Vize (Tourist Visa)</h2>
+            <p><strong>🧳 Vize Hakkında:</strong><br>
+            Turistik vize, gezi, tatil, kültürel veya sanatsal etkinliklere katılmak için alınan kısa süreli bir vizedir. Bu vizeyle çalışmak veya eğitim görmek mümkün değildir. Genellikle 30 ila 90 gün arasında geçerlidir.</p>
+            <p><strong>📄 Gerekli Belgeler:</strong></p>
+            <ul>
+                <li>Pasaport (Seyahat sonrası en az 6 ay geçerli)</li>
+                <li>Uçuş rezervasyonları (Gidiş-dönüş)</li>
+                <li>Otel rezervasyonları (Tüm seyahat süresini kapsamalı)</li>
+                <li>Banka hesap dökümü (Son 3 ay, yeterli bakiye ile)</li>
+                <li>İş yerinden izin yazısı (Varsa çalıştığınız kurumdan antetli kağıtta)</li>
+                <li>SGK hizmet dökümü veya işyeri belgeleri (Vergi levhası, oda kaydı vs.)</li>
+                <li>Varsa taşınmaz tapu/fatura gibi bağlayıcı belgeler</li>
+                <li>Seyahat sağlık sigortası (Vize süresini kapsayan)</li>
+                <li>Biyometrik fotoğraf (2 adet)</li>
+                <li>Başvuru formu</li>
+                <li>Vize harcı dekontu</li>
+            </ul>
+        </section>
+
+        <section style="margin-bottom:2.5rem;">
+            <h2 style="color:#205080;">5. Ziyaret Vizesi (Family or Friend Visit Visa)</h2>
+            <p><strong>🤝 Vize Hakkında:</strong><br>
+            Bu vize, yurtdışındaki aile üyelerini, arkadaşlarını veya tanıdıklarını ziyaret etmek isteyen kişiler için uygundur. Genellikle kısa süreli verilir ve ev sahibi kişi tarafından yazılmış bir davet mektubu ile başvurulur.</p>
+            <p><strong>📄 Gerekli Belgeler:</strong></p>
+            <ul>
+                <li>Pasaport (Geçerlilik süresi en az 6 ay)</li>
+                <li>Davet Mektubu (Ev sahibi tarafından yazılmış, noter veya resmi onaylı)</li>
+                <li>Ev sahibinin adı, adresi, kimlik/oturum bilgileri</li>
+                <li>Ziyaret sebebi ve süresi</li>
+                <li><strong>Davet Edenin Belgeleri:</strong>
+                    <ul>
+                        <li>Oturum izni / Kimlik kartı fotokopisi</li>
+                        <li>Gelir belgeleri (maaş bordrosu veya banka dökümü)</li>
+                        <li>Konaklama durumunu gösteren kira sözleşmesi veya tapu</li>
+                    </ul>
+                </li>
+                <li>Ziyaret edenin banka hesap dökümü</li>
+                <li>Aile bağını gösteren belgeler (Nüfus kayıt örneği, evlilik cüzdanı vb.)</li>
+                <li>Uçuş rezervasyonları</li>
+                <li>Seyahat sağlık sigortası</li>
+                <li>Biyometrik fotoğraf (2 adet)</li>
+                <li>Vize başvuru formu ve ücret dekontu</li>
+            </ul>
+        </section>
+
+        <section style="margin-bottom:2.5rem;">
+            <h2 style="color:#1a4079;">Neden Universitypark?</h2>
+            <ul style="font-size:1.1rem;line-height:1.7;">
+                <li>Size en uygun vize türünü birlikte belirliyoruz</li>
+                <li>Eksiksiz ve profesyonel evrak hazırlığı</li>
+                <li>Başvuru sürecinin her aşamasında birebir danışmanlık</li>
+                <li>Reddedilen vize başvurularında yeniden başvuru desteği</li>
+                <li>Öğrenciler için okul yerleştirme ve kayıt işlemleri</li>
+                <li>Tüm vize türlerinde hızlı, güvenli ve şeffaf hizmet</li>
+            </ul>
+            <p style="margin-top:1.5rem;font-size:1.15rem;"><strong>📞 Universitypark ile vize almak çok kolay!</strong><br>
+            Hayalinizdeki ülkeye bir adım daha yaklaşmak için bize ulaşın.<br>
+            WhatsApp, e-posta veya ofisimize gelerek hemen danışmanlık alın.</p>
+            <div style="text-align:center; margin-top:32px;">
+                <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Ücretsiz Danışmanlık Al</a>
+            </div>
+        </section>
+
+        <section style="margin-bottom:0; text-align:center;">
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>EĞİTİM PROGRAMLARI</h3>
+                    <ul>
+                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
+                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
+                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
+                        <li><a href="#">WORK AND TRAVEL</a></li>
+                        <li><a href="#">VİZE</a></li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>HAKKIMIZDA</h3>
+                    <ul>
+                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 style="margin-left: 18px;">İLETİŞİM</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 324 326 4600</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+90 541 430 4808</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
