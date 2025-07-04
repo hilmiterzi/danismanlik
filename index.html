@@ -2001,7 +2001,7 @@ text-align: center;
                         <img class="hover-image" loading="lazy" src="https://flagcdn.com/w160/kz.webp" alt="Kazakistan Bayrağı Hover">
                     </div>
                     <h3>KAZAKİSTAN</h3>
-                    <a href="cekya.html" class="country-button">Detaylı Bilgi</a>
+                    <a href="#" class="country-button" onclick="showComingSoonModal(event)">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
                     <div class="country-flag">
@@ -2009,7 +2009,7 @@ text-align: center;
                         <img class="hover-image" loading="lazy" src="https://flagcdn.com/w160/az.webp" alt="Azerbaycan Bayrağı Hover">
                     </div>
                     <h3>AZERBAYCAN</h3>
-                    <a href="cekya.html" class="country-button">Detaylı Bilgi</a>
+                    <a href="#" class="country-button" onclick="showComingSoonModal(event)">Detaylı Bilgi</a>
                 </div>
                 <div class="country-card">
                     <div class="country-flag">
@@ -2017,7 +2017,7 @@ text-align: center;
                         <img class="hover-image" loading="lazy" src="https://flagcdn.com/w160/ru.webp" alt="Rusya Bayrağı Hover">
                     </div>
                     <h3>RUSYA</h3>
-                    <a href="cekya.html" class="country-button">Detaylı Bilgi</a>
+                    <a href="rusya.html" class="country-button">Detaylı Bilgi</a>
                 </div>
             </div>
         </div>
@@ -2569,5 +2569,23 @@ text-align: center;
             </div>
         </div>
     </div>
+
+    <!-- Coming Soon Modal -->
+    <div id="comingSoonModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.35); z-index:9999; align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; box-shadow:0 4px 32px rgba(26,64,121,0.18); padding:2.5rem 2.2rem; max-width:90vw; min-width:320px; text-align:center; position:relative;">
+        <span onclick="closeComingSoonModal()" style="position:absolute; top:12px; right:18px; font-size:1.7rem; color:#e63946; cursor:pointer; font-weight:bold;">&times;</span>
+        <h2 style="color:#1a4079; margin-bottom:1.2rem;">Yapım Aşamasında</h2>
+        <p style="font-size:1.1rem; color:#333;">Bu ülke sayfası yapım aşamasındadır.</p>
+      </div>
+    </div>
+    <script>
+    function showComingSoonModal(e) {
+      e.preventDefault();
+      document.getElementById('comingSoonModal').style.display = 'flex';
+    }
+    function closeComingSoonModal() {
+      document.getElementById('comingSoonModal').style.display = 'none';
+    }
+    </script>
 </body>
 </html> 
