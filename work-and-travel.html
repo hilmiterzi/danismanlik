@@ -918,5 +918,18 @@
       </ul>
       <p style="margin-top:2rem;"><b>Work and Travel programı, gençlerin yurt dışında çalışma ve kültürel deneyim elde etmesine imkân tanıyan eşsiz bir fırsattır. Amerika'da yaz aylarını hem çalışarak hem gezerek geçirmek isteyen üniversite öğrencileri için kişisel gelişim, dil eğitimi ve uluslararası ağ oluşturma açısından büyük faydalar sunar.</b></p>
     </main>
+    <script>
+    document.querySelectorAll('a').forEach(link => {
+        const href = link.getAttribute('href');
+        // dropdown-trigger class'ı olanlar hariç!
+        if ((href === '#' || href === '' || !href) && !link.classList.contains('dropdown-trigger')) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                banner.classList.add('active');
+                overlay.classList.add('active');
+            });
+        }
+    });
+    </script>
 </body>
 </html>

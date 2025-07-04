@@ -2495,7 +2495,8 @@ text-align: center;
                 // Handle empty hrefs and # hrefs
                 document.querySelectorAll('a').forEach(link => {
                     const href = link.getAttribute('href');
-                    if (href === '#' || href === '' || !href) {
+                    // dropdown-trigger class'ı olanlar hariç!
+                    if ((href === '#' || href === '' || !href) && !link.classList.contains('dropdown-trigger')) {
                         link.addEventListener('click', (e) => {
                             e.preventDefault();
                             banner.classList.add('active');
