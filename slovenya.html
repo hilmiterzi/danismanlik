@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University Park Yurtdışı Eğitim - Yurtdışında üniversite, dil okulu, work and travel programları. Çin'de burslu eğitim, sınavsız üniversite fırsatları ve vize danışmanlığı hizmetleri.">
+    <meta name="keywords" content="yurtdışı eğitim, yurtdışında üniversite, dil okulu, work and travel, çin'de eğitim, burslu eğitim, sınavsız üniversite, vize danışmanlığı">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="University Park Yurtdışı Eğitim ve Vize Danışmanlığı">
+    <meta property="og:description" content="Yurtdışında üniversite, dil okulu, work and travel programları. Çin'de burslu eğitim, sınavsız üniversite fırsatları.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://universitypark.com.tr">
+    <title>Yurtdışı Eğitim Ve Vize Danışmanlığı | University Park</title>
+    <!-- Google Fonts: Island -->
+    <link href="https://fonts.googleapis.com/css2?family=Island&display=swap" rel="stylesheet">
+    <!-- Preload first hero image with proper attributes -->
+    <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 300px)" fetchpriority="high">
+    <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)" fetchpriority="high">
+    <style>
+        :root {
+            --primary-color: rgb(26,64,121);
+            --secondary-color: #e63946;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            background: #fff;
+        }
+
+        .hero, .info-section, .countries-section, .featured-section, .faq-section, .map-section, .footer {
+            background: #fff;
+        }
+
+        /* Header Styles */
+        /* Eski header ve nav ile ilgili tüm CSS'leri kaldırdım */
+
+        /* Hero Section */
+      
+        /* Footer Styles */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info i {
+            margin-top: 3px;
+        }
+
+        .contact-info span {
+            display: block;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        .social-icons a {
+            color: #4CAF50;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #45a049;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 460px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-slide h2 {
+                font-size: 1.8rem;
+            }
+
+            .featured-item {
+                flex-direction: column;
+            }
+
+            .featured-item.reverse {
+                flex-direction: column;
+            }
+
+            .featured-image {
+                width: 100%;
+            }
+
+            .desktop-content {
+                display: none;
+            }
+
+            .mobile-content {
+                display: block;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .slide-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 461px) and (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hero {
+                height: 80vh;
+            }
+        }
+
+        /* Reviews Section Styles */
+        
+
+        /* Hero Arrow Navigation */
+        .hero-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(26, 64, 121, 0.8);
+            border: 2px solid white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .hero-arrow:hover {
+            background: var(--primary-color);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .hero-arrow-left {
+            left: 20px;
+        }
+
+        .hero-arrow-right {
+            right: 20px;
+        }
+
+        /* CSS Arrow Styles */
+        .hero-arrow-left::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            transform: rotate(-45deg);
+            margin-left: 5px;
+        }
+
+        .hero-arrow-right::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-top: 3px solid white;
+            border-right: 3px solid white;
+            transform: rotate(45deg);
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-arrow {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .hero-arrow-left::before,
+            .hero-arrow-right::before {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--primary-color);
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1001;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-content a:hover {
+            color: var(--secondary-color);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-trigger {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dropdown-trigger::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-left: 5px;
+        }
+
+        .map-section {
+            padding: 4rem 2rem;
+        }
+
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 460px) {
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.1);
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .nav-menu .dropdown-content a {
+                padding-left: 2rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background-color: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        .floating-whatsapp svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        @media (max-width: 768px) {
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .floating-whatsapp svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        /* Coming Soon Banner Styles */
+        .coming-soon-banner {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 2000;
+            max-width: 90%;
+            width: 400px;
+            text-align: center;
+        }
+
+        .coming-soon-banner.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .banner-content {
+            position: relative;
+        }
+
+        .banner-close {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            height: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .banner-close:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .coming-soon-banner h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .coming-soon-banner p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .banner-whatsapp {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .banner-whatsapp:hover {
+            background-color: #128C7E;
+        }
+
+        .banner-whatsapp i {
+            margin-right: 8px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -60%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .banner-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1999;
+        }
+
+        .banner-overlay.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .stats-highlight {
+            max-width: 900px;
+            margin: 5rem auto 0 auto;
+            padding: 0;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(26,64,121,0.08);
+            border: 3px solid;
+            border-image: linear-gradient(90deg, #1a4079 60%, #e63946 100%) 1;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .stats-highlight div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            border-right: 2px solid #e6eaf3;
+        }
+
+        .stats-highlight div:last-child {
+            border-right: none;
+        }
+
+        .stats-highlight span {
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 0.3rem;
+        }
+
+        .stats-highlight span:last-child {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 0.92;
+        }
+
+        .stats-logo {
+            width: 480px;
+            max-width: 99vw;
+            height: auto;
+            display: block;
+            margin-bottom: -1rem;
+            transform: translateX(-20px);
+        }
+        @media (max-width: 600px) {
+            .stats-logo {
+                width: 300px;
+            }
+        }
+
+        .stats-logo-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 4rem;
+            margin-bottom: 1.2rem;
+            margin-left: 2rem;
+        }
+        .stats-logo {
+            width: 280px;
+            max-width: 98vw;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .stats-logo {
+                width: 160px;
+            }
+            .stats-logo-wrapper {
+                margin-top: 1.8rem;
+                margin-bottom: 0.7rem;
+            }
+        }
+
+        .faq-box {
+          max-width: 420px !important;
+          min-width: 260px;
+          width: 100%;
+        }
+        .faq-box:first-child {
+          transform: translateX(-200px);
+        }
+
+        /* --- MOBILE FIX FOR STATS SECTION --- */
+        @media (max-width: 600px) {
+          .stats-highlight {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            width: 100vw !important;
+            max-width: 100vw !important;
+            overflow-x: hidden !important;
+            margin: 0 auto !important;
+            box-sizing: border-box !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+          }
+          .stats-highlight > div {
+            width: 100% !important;
+            text-align: center !important;
+            margin-bottom: 10px !important;
+            font-size: 1.1em !important;
+            word-break: break-word !important;
+            box-sizing: border-box !important;
+          }
+          .stats-highlight > div:last-child {
+            margin-bottom: 0 !important;
+          }
+          body, html {
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+          }
+        }
+        /* --- END MOBILE FIX --- */
+
+        .double-header {
+            background: #1a4079;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.1rem 2rem 1.1rem 2rem;
+            min-height: 80px;
+            background: #fff;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
+        .header-top-links {
+            display: flex;
+            gap: 1.2rem;
+        }
+        .header-btn {
+            background: #ff0000;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 22px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .header-btn:hover {
+            background: #e63946;
+            color: #fff;
+        }
+
+        .header-btn2 {
+            background: #20aa13;
+            color: #fff;
+            padding: 0.45rem 1.1rem;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s, color 0.2s;
+            border: none;
+            cursor: pointer;
+            border-radius: 22px;
+        }
+    
+        
+        .header-bottom {
+            background: #1a4079;
+            border-top: 1px solid #274a7e;
+            padding: 0.05rem 2rem 0.05rem 2rem;
+            min-height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .main-nav > a, .main-nav > .dropdown {
+  padding: 0 1.6rem;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-bottom: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative; /* ALT MENÜ İÇİN GEREKLİ */
+}
+
+.main-nav > a:hover,
+.main-nav > .dropdown:hover > .dropdown-trigger {
+  color: #e63946;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav > a:not(:last-child) {
+  border-right: 2px solid #fff;
+}
+
+/* AÇILAN MENÜ (POPUP) */
+.dropdown-content {
+  position: absolute;
+  top: 100%; /* ALTINA YAPIŞIK AÇILSIN */
+  left: 0;
+  background-color: #123c6c;
+  display: none;
+  min-width: 180px;
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ALT MENÜ LİNKLER */
+.dropdown-content a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #0d2b52;
+  color: #e63946;
+}
+
+/* HOVER OLUNCA GÖRÜNÜR YAP */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+        @media (max-width: 900px) {
+            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+            .main-nav { gap: 1.2rem; }
+            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+        }
+
+        .header-btn.dropdown-trigger {
+            background: #1a4079;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0.45rem 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 22px;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .hero-slider {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+        .hero-slider-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('xa-.webp') center calc(50% - 40px)/cover no-repeat;
+            z-index: 0;
+        }
+        .hero-slider-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.6) 60%, rgba(0, 102, 0, 0.6) 60%, rgba(220,20,60,0.6) 100%);
+            z-index: 1;
+        }
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: opacity 0.7s;
+            z-index: 2;
+            text-align: center;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+        }
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 3;
+        }
+        .content-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .country-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .country-section h2 {
+            color: #1a4079;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-bottom: 2px solid #e63946;
+            padding-bottom: 0.5rem;
+        }
+        .country-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        .advantages-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+            padding-left: 0;
+        }
+        .advantages-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-weight: 500;
+        }
+        .advantages-list li::before {
+            content: "•";
+            color: #000;
+            position: absolute;
+            left: 0;
+        }
+        .table-section {
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #1a4079;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .whatsapp-btn-inside {
+            background: #25d366;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 0.7rem 2rem;
+            border-radius: 32px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        .whatsapp-btn-inside:hover {
+            transform: scale(1.05);
+            background: #1ed760;
+        }
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 1rem;
+                margin-top: 20px;
+            }
+            .country-section {
+                padding: 1.5rem;
+            }
+            .hero-slider {
+                height: 160px;
+            }
+            .hero-slide {
+                font-size: 1.1rem;
+            }
+            table, th, td {
+                font-size: 0.95rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="double-header">
+        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
+            <div class="logo">
+                <a href="index.html">
+                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -180px;">
+                </a>
+              </div>
+            <div class="logo">
+                <a href="index.html">
+                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
+                </a>
+              </div>
+              
+            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="header-btn dropdown-trigger">Hakkımızda</a>
+                    <div class="dropdown-content">
+                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
+                        <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
+                    </div>
+                </div>
+                <a href="bilgi-iste.html" class="header-btn">Bilgi İste</a>
+                <a href="iletisim.html" class="header-btn2">İletişim</a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="main-nav">
+                <a href="#countries-section">Üniversite</a>
+                <a href="dil-okullari.html">Dil Okulları</a>
+                <a href="master-mba.html">Master/MBA</a>
+                <a href="work-and-travel.html">Work and Travel</a>
+                <div class="dropdown" style="border-right: 2px solid #fff;">
+                 <a href="javascript:void(0)" class="dropdown-trigger">Diğer Programlar</a>
+                    <div class="dropdown-content">
+                        <a href="work-and-study.html">Work And Study</a>
+                        <a href="yaz-okulu.html">Yaz Okulu</a>
+                        <a href="pathway.html">Pathway Programı</a>
+                    </div>
+                </div>
+                <a href="vize-islemleri.html">Vize İşlemleri</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-slider" style="position:relative; overflow:hidden; height:400px; width:100%; margin-bottom: 0;">
+        <img src="xa-.webp" alt="Slovenya" style="position:absolute; left:50%; top:0; transform:translateX(-50%); width:100vw; height:100%; min-height:100%; min-width:100%; object-fit:cover; object-position: 50% 40%; filter:brightness(0.7) blur(1px); z-index:0;">
+        <div class="hero-slider-overlay"></div>
+        <div class="hero-slide active">
+            SLOVENYA'DA KALİTELİ ÜNİVERSİTE EĞİTİMİ FIRSATI!
+        </div>
+        <div class="hero-slide">
+            Avrupa'nın Yükselen Eğitim Merkezi
+        </div>
+        <div class="hero-slide">
+            Uygun Maliyetlerle AB Diploması!
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.hero-slide');
+        let current = 0;
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 2500);
+    });
+    </script>
+    <section class="content-section">
+        <h1 class="section-title">🇸🇮 Slovenya'da Üniversite Eğitimi</h1>
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">🇸🇮</span>Slovenya'da Üniversite Eğitimi</h2>
+            <p>Avrupa'nın yükselen eğitim destinasyonlarından biri olan Slovenya, özellikle son yıllarda Türk öğrencilerin dikkatini çeken, kaliteli ve uygun maliyetli bir üniversite eğitimi imkânı sunuyor. İngilizce programlar, modern kampüsler, Avrupa Birliği diploması ve huzurlu yaşam şartları Slovenya'yı cazip kılıyor.</p>
+        </div>
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">⭐</span>Neden Slovenya'da Üniversite Eğitimi?</h2>
+            <ul class="advantages-list">
+                <li>Avrupa'da uygun maliyetli eğitim imkânı</li>
+                <li>İngilizce lisans ve yüksek lisans programları</li>
+                <li>Yüksek eğitim kalitesi ve modern altyapı</li>
+                <li>Avrupa Birliği üyesi bir ülkede diploma ve oturum hakkı</li>
+                <li>Doğal güzellikler, güvenli yaşam ve sosyal ortam</li>
+                <li>Avrupa'da seyahat ve kariyer avantajı</li>
+            </ul>
+        </div>
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">🔄</span>Slovenya Üniversiteleri İçin Başvuru ve Kabul Şartları</h2>
+            <ol style="margin-bottom:1.5rem; padding-left:1.5rem;">
+                <li><b>Üniversite ve Program Seçimi:</b> İngilizce programlar için Slovenya üniversitelerinin web siteleri veya Study in Slovenia platformu kullanılabilir.</li>
+                <li><b>Online Başvuru:</b> Başvurular genellikle eVŠ (Slovenya Ulusal Başvuru Sistemi) üzerinden yapılır. Başvuru tarihleri: Genellikle Şubat – Mayıs arasıdır.</li>
+                <li><b>Gerekli Belgeler:</b>
+                    <ul class="advantages-list">
+                        <li>Lise diploması ve transkript (Türkçe ve İngilizce çevirisiyle)</li>
+                        <li>İngilizce yeterlilik belgesi (IELTS/TOEFL, genellikle min. IELTS 6.0)</li>
+                        <li>Pasaport</li>
+                        <li>CV ve motivasyon mektubu</li>
+                        <li>Bazı programlar için referans mektubu veya mülakat gerekebilir</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">📋</span>Kabul Şartları</h2>
+            <ul class="advantages-list">
+                <li>Türkiye'den lise mezunu olmak genellikle başvuru için yeterlidir.</li>
+                <li>YÖK denkliği olan bir lise diploması gereklidir.</li>
+                <li>İngilizce programlar için dil belgesi zorunludur.</li>
+                <li>Tıp, mühendislik, sanat gibi bazı bölümlerde ek sınav veya portfolyo istenebilir.</li>
+            </ul>
+        </div>
+            <style>
+                .university-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                }
+                .university-btn:hover {
+                    transform: scale(1.05);
+                }
+                @media (max-width: 900px) {
+                    .universities-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1rem;
+                    }
+                }
+                @media (max-width: 600px) {
+                    .universities-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+        </div>
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">💶</span>Eğitim Ücretleri</h2>
+            <ul class="advantages-list">
+                <li>Lisans programları: Yıllık ortalama 2.000 – 4.000 EUR</li>
+                <li>Yüksek lisans programları: 2.500 – 6.000 EUR</li>
+                <li>Tıp, diş hekimliği gibi alanlarda ücretler daha yüksek olabilir: (5.000 – 12.000 EUR)</li>
+                <li><b>Not:</b> Slovenya vatandaşı olmayan öğrenciler için devlet üniversitelerinde eğitim genellikle ücretlidir.</li>
+            </ul>
+        </div>
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">💸</span>Yaşam Maliyetleri</h2>
+            <ul class="advantages-list">
+                <li>Konaklama: 200 – 400 EUR</li>
+                <li>Yeme-İçme: 150 – 250 EUR</li>
+                <li>Ulaşım: 20 – 30 EUR</li>
+                <li>Kişisel Giderler: 100 – 150 EUR</li>
+                <li><b>Toplam:</b> 500 – 800 EUR</li>
+            </ul>
+        </div>
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">⭐</span>Slovenya'da Eğitimin Avantajları</h2>
+            <ul class="advantages-list">
+                <li>AB diploması ile Avrupa'da iş ve eğitim geçerliliği</li>
+                <li>Sessiz, güvenli ve öğrenci dostu yaşam</li>
+                <li>İngilizce program seçeneği</li>
+                <li>Üniversitelerde akademik başarıya dayalı burs imkânları</li>
+                <li>Mezuniyetten sonra AB'de kariyer imkânı</li>
+                <li>Kolay vize ve oturum süreci</li>
+            </ul>
+        </div>
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">💼</span>Çalışma ve Mezuniyet Sonrası İmkânlar</h2>
+            <ul class="advantages-list">
+                <li>Öğrenciler haftada 20 saate kadar çalışma hakkına sahiptir.</li>
+                <li>Mezuniyet sonrası Slovenya'da oturum uzatılarak iş aranabilir.</li>
+                <li>Slovenya'da çalışmak, Avrupa ülkelerinde kariyerin ilk adımı olabilir.</li>
+            </ul>
+        </div>
+
+        <div class="country-section">
+            <h2><span style="font-size: 2rem; margin-right: 10px;">🏛️</span>Slovenya'daki En İyi Üniversiteler</h2>
+            <p>Slovenya'da uluslararası tanınırlığa sahip, modern ve kaliteli üniversiteler bulunmaktadır. Aşağıda öne çıkan üniversiteler ve başlıca alanları bulabilirsiniz.</p>
+            <div class="universities-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">University of Ljubljana</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">University of Ljubljana</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Ljubljana</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Mühendislik, Hukuk, Sosyal Bilimler</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">University of Maribor</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">University of Maribor</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Maribor</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Bilgisayar, Elektrik-Elektronik</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">University of Nova Gorica</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">University of Nova Gorica</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Nova Gorica</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Fizik, Çevre Bilimleri</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa; grid-column: 2 / span 1;">
+                    <div style="background: #888; color: #fff; font-weight: bold; display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem 0; font-size: 1.1rem;">University of Primorska</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">University of Primorska</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Koper</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Ekonomi, Yönetim</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>EĞİTİM PROGRAMLARI</h3>
+                    <ul>
+                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
+                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
+                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
+                        <li><a href="#">WORK AND TRAVEL</a></li>
+                        <li><a href="#">VİZE</a></li>
+                        <li><a href="#">MBA</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>HAKKIMIZDA</h3>
+                    <ul>
+                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 style="margin-left: 18px;">İLETİŞİM</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 324 326 4600</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>+90 541 430 4808</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    .footer {
+        background: #1a4079;
+        color: white;
+        padding: 3rem 0 1rem;
+        margin-top: 4rem;
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    .footer-section h3 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    .footer-section ul {
+        list-style: none;
+    }
+    .footer-section ul li {
+        margin-bottom: 0.5rem;
+    }
+    .footer-section ul li a {
+        color: #cbd5e0;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .footer-section ul li a:hover {
+        color: white;
+    }
+    .contact-info li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+    .contact-info i {
+        margin-right: 0.8rem;
+        width: 20px;
+    }
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #4a5568;
+        font-size: 0.9rem;
+        color: #a0aec0;
+    }
+    @media (max-width: 768px) {
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+    </style>
+</body>
+</html>
