@@ -973,7 +973,7 @@
               
             <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
                 <div class="dropdown">
-                    <a href="javascript:void(0)" class="header-btn dropdown-trigger">Hakkımızda</a>
+                    <a class="header-btn dropdown-trigger" role="button" tabindex="0">Hakkımızda</a>
                     <div class="dropdown-content">
                         <a href="#" class="dropdown-item">Biz Kimiz?</a>
                         <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
@@ -990,7 +990,7 @@
                 <a href="master-mba.html">Master/MBA</a>
                 <a href="work-and-travel.html">Work and Travel</a>
                 <div class="dropdown" style="border-right: 2px solid #fff;">
-                    <a href="javascript:void(0)" class="dropdown-trigger">Diğer Programlar</a>
+                    <a class="dropdown-trigger" role="button" tabindex="0">Diğer Programlar</a>
                     <div class="dropdown-content">
                         <a href="work-and-study.html">Work And Study</a>
                         <a href="yaz-okulu.html">Yaz Okulu</a>
@@ -1071,25 +1071,83 @@
         </div>
         <div class="country-section">
             <h2><span style="font-size: 2rem; margin-right: 10px;">🏛️</span>Macaristan'da Popüler Üniversiteler</h2>
-            <div class="table-section">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Üniversite Adı</th>
-                            <th>Şehir</th>
-                            <th>Öne Çıkan Alanlar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Semmelweis University</td><td>Budapeşte</td><td>Tıp, Eczacılık, Diş Hekimliği</td></tr>
-                        <tr><td>Eötvös Loránd University (ELTE)</td><td>Budapeşte</td><td>Psikoloji, Hukuk, Sosyal Bil.</td></tr>
-                        <tr><td>Budapest University of Technology</td><td>Budapeşte</td><td>Mühendislik, Bilgisayar</td></tr>
-                        <tr><td>University of Debrecen</td><td>Debrecen</td><td>Tıp, Sağlık, Mühendislik</td></tr>
-                        <tr><td>University of Szeged</td><td>Szeged</td><td>Fen Bilimleri, Dil, Müzik</td></tr>
-                        <tr><td>Corvinus University of Budapest</td><td>Budapeşte</td><td>Ekonomi, İşletme</td></tr>
-                    </tbody>
-                </table>
+            <p>Macaristan'da çok sayıda köklü ve uluslararası tanınırlığa sahip üniversite bulunmaktadır. Aşağıda öne çıkan üniversiteler ve başlıca alanları bulabilirsiniz.</p>
+            <div class="universities-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">Semmelweis University</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Semmelweis University</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Budapeşte</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Tıp, Eczacılık, Diş Hekimliği</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">Eötvös Loránd University (ELTE)</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Eötvös Loránd University (ELTE)</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Budapeşte</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Psikoloji, Hukuk, Sosyal Bilimler</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">Budapest University of Technology</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Budapest University of Technology</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Budapeşte</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Mühendislik, Bilgisayar, Mimarlık</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">University of Debrecen</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">University of Debrecen</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Debrecen</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Tıp, Sağlık, Mühendislik</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">University of Szeged</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">University of Szeged</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Szeged</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Fen Bilimleri, Dil, Müzik</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="background: #888; color: #fff; font-weight: bold; text-align: center; padding: 1rem 0; font-size: 1.1rem;">Corvinus University of Budapest</div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Corvinus University of Budapest</h3>
+                        <p style="color: #666; font-size: 0.95rem; margin-bottom: 1rem;">Budapeşte</p>
+                        <p style="color: #333; font-size: 0.95rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Ekonomi, İşletme</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
             </div>
+            <style>
+                .university-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                }
+                .university-btn:hover {
+                    transform: scale(1.05);
+                }
+                @media (max-width: 900px) {
+                    .universities-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 1rem;
+                    }
+                }
+                @media (max-width: 600px) {
+                    .universities-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
         </div>
         <div class="country-section">
             <h2><span style="font-size: 2rem; margin-right: 10px;">💶</span>Eğitim Ücretleri ve Yaşam Giderleri</h2>
