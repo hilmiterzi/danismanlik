@@ -863,6 +863,216 @@
             color: #fff;
         }
     </style>
+    <!-- Polonya gövde CSS'leri eklendi -->
+    <style>
+    .content-section {
+        padding: 2rem;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .country-section {
+        margin-bottom: 3rem;
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .country-section h2 {
+        color: #1a4079;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        border-bottom: 2px solid #e63946;
+        padding-bottom: 0.5rem;
+    }
+    .country-section p {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #444;
+    }
+    .advantages-list {
+        list-style: none;
+        margin-bottom: 1.5rem;
+    }
+    .advantages-list li {
+        margin-bottom: 0.8rem;
+        padding-left: 1.5rem;
+        position: relative;
+        font-weight: 500;
+    }
+    .advantages-list li::before {
+        content: "•";
+        color: #000;
+        position: absolute;
+        left: 0;
+    }
+    .advantages-list ul,
+    ol ul {
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+    }
+    .advantages-list ul li,
+    ol ul li {
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+    }
+    .table-section {
+        overflow-x: auto;
+        margin-bottom: 2rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 0.75rem;
+        text-align: left;
+    }
+    th {
+        background-color: #1a4079;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    .university-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    .university-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .university-card h3 {
+        color: #1a4079;
+        margin-bottom: 0.5rem;
+    }
+    .university-btn {
+        background: linear-gradient(90deg, #1a4079, #e63946);
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.2s ease;
+    }
+    .university-btn:hover {
+        transform: scale(1.05);
+    }
+    .whatsapp-btn-inside {
+        background: #25d366;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding: 0.7rem 2rem;
+        border-radius: 32px;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+    .whatsapp-btn-inside:hover {
+        transform: scale(1.05);
+        background: #1ed760;
+    }
+    .footer {
+        background: #1a4079;
+        color: white;
+        padding: 3rem 0 1rem;
+        margin-top: 4rem;
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    .footer-section h3 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+    .footer-section ul {
+        list-style: none;
+    }
+    .footer-section ul li {
+        margin-bottom: 0.5rem;
+    }
+    .footer-section ul li a {
+        color: #cbd5e0;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .footer-section ul li a:hover {
+        color: white;
+    }
+    .contact-info li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.8rem;
+    }
+    .contact-info i {
+        margin-right: 0.8rem;
+        width: 20px;
+    }
+    .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid #4a5568;
+        font-size: 0.9rem;
+        color: #a0aec0;
+    }
+    @media (max-width: 768px) {
+        .content-section {
+            padding: 1rem;
+            margin-top: 20px;
+        }
+        .country-section {
+            padding: 1.5rem;
+        }
+        .hero-slider {
+            height: 160px;
+        }
+        .hero-slide {
+            font-size: 1.1rem;
+        }
+        .logo img {
+            height: 40px;
+        }
+        table, th, td {
+            font-size: 0.95rem;
+        }
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+    .university-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .university-content {
+        text-align: center;
+    }
+    .university-content h3 {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
 </head>
 <body>
     <header class="double-header">
@@ -928,4 +1138,183 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 2500);
 });
 </script>
+
+<!-- === BAŞLANGIÇ: Polonya dizaynına uygun Rusya içeriği === -->
+<section class="content-section">
+    <div class="country-section">
+        <h2>Rusya'da Üniversite Eğitimi Rehberi</h2>
+        <p>Rusya, yüz ölçümü bakımından dünyanın en büyük ülkesi olup hem Avrupa hem de Asya kıtasında topraklara sahiptir. Zengin tarihi, güçlü akademik altyapısı ve teknik alanlardaki yüksek eğitim kalitesiyle dikkat çeker. Başkenti Moskova, aynı zamanda bilim, sanat ve kültürün merkezlerinden biridir. Rusya, özellikle mühendislik, tıp ve doğa bilimleri alanlarında dünya çapında tanınmış üniversitelere sahiptir.</p>
+    </div>
+    <div class="country-section">
+        <h2>Rusya'da Üniversite Kabul Şartları</h2>
+        <p>Rusya'daki üniversitelere başvurmak genellikle diğer Avrupa ülkelerine kıyasla daha erişilebilirdir. Türkiye'den başvuran öğrenciler için lise diploması yeterlidir ve üniversitelerin çoğu doğrudan sınav yapmaz. Ancak bazı teknik ya da tıp fakülteleri için ek sınavlar ve hazırlık yılı (özellikle Rusça hazırlık) gerekebilir.</p>
+        <p><strong>Genel Kabul Şartları:</strong></p>
+        <ul class="advantages-list">
+            <li>Lise diploması (transkript ile birlikte)</li>
+            <li>Pasaport fotokopisi</li>
+            <li>Rusça ya da İngilizce dil yeterliliği (varsa)</li>
+            <li>Başvuru formu ve motivasyon mektubu</li>
+            <li>Bazı programlar için hazırlık yılına katılım</li>
+        </ul>
+    </div>
+    <div class="country-section">
+        <h2>Kimler Başvurabilir?</h2>
+        <ul class="advantages-list">
+            <li>Lise eğitimini tamamlayan tüm öğrenciler</li>
+            <li>Üniversiteye yeniden başlamak isteyenler</li>
+            <li>Yüksek lisans veya doktora yapmak isteyen lisans mezunları</li>
+            <li>Tıp, mühendislik, mimarlık, bilgisayar bilimi gibi alanlarda eğitim almak isteyenler</li>
+        </ul>
+    </div>
+    <div class="country-section">
+        <h2>Rusya'da Üniversite Eğitiminin Avantajları</h2>
+        <ul class="advantages-list">
+            <li>Uygun Eğitim Ücretleri: Yıllık üniversite ücretleri 1000 – 5000 USD arasında değişmektedir.</li>
+            <li>Kaliteli Eğitim: Teknik ve bilimsel alanlarda Rus üniversiteleri dünyaca tanınmaktadır.</li>
+            <li>Rusça ve İngilizce Eğitim Seçenekleri: Özellikle uluslararası öğrenciler için İngilizce programlar yaygındır.</li>
+            <li>Kültürel Zenginlik: Farklı coğrafyalardan gelen öğrencilerle çok kültürlü bir ortamda eğitim imkânı.</li>
+            <li>Türkiye'de Tanınırlık: Rus üniversitelerinin çoğu YÖK tarafından tanınmakta ve denklik alınabilmektedir.</li>
+        </ul>
+    </div>
+    <div class="country-section">
+        <h2>Konaklama ve Yaşam Maliyetleri</h2>
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gider Kalemi</th>
+                        <th>Maliyet (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Yurt Konaklaması</td><td>50 – 150</td></tr>
+                    <tr><td>Özel Konaklama</td><td>200 – 400</td></tr>
+                    <tr><td>Aylık Yaşam Giderleri</td><td>300 – 500</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <ul class="advantages-list">
+            <li>Toplu Ulaşım: Öğrenciler için indirimli ulaşım kartları mevcuttur.</li>
+        </ul>
+    </div>
+
+    <div class="country-section">
+        <h2>Diploma Geçerliliği (YÖK Denklik)</h2>
+        <p>Rusya'da alınan diplomanın Türkiye'de ve birçok ülkede geçerliliği vardır. Türkiye'de tanınan üniversitelerin listesine YÖK web sitesinden ulaşılabilir. Denklik için mezun olunan üniversitenin YÖK tarafından tanınıyor olması ve eğitim süresinin yeterli olması gerekir.</p>
+    </div>
+    <div class="country-section">
+        <h2>Vize İşlemleri</h2>
+        <p>Rusya'da üniversite eğitimi alacak öğrenciler, öğrenci vizesi (Type D) başvurusunda bulunmalıdır. Süreç genellikle şu şekilde işler:</p>
+        <ol style="margin-bottom:1.5rem; padding-left:1.5rem;">
+            <li>Üniversiteden davet mektubu alınır.</li>
+            <li>Vize başvuru formu doldurulur.</li>
+            <li>Pasaport, fotoğraf ve sağlık sigortası belgeleri hazırlanır.</li>
+            <li>Rusya Konsolosluğu'na vize başvurusu yapılır.</li>
+            <li>Ortalama 7-15 iş günü içinde vize çıkar.</li>
+        </ol>
+    </div>
+
+    <div class="country-section">
+        <h2>Popüler ve Dünya Sıralamasındaki Üniversiteler</h2>
+        <div class="universities-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Lomonosov Moscow State University (MSU)</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Moskova</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>QS World Ranking:</strong> İlk 100</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Saint Petersburg State University</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">St. Petersburg</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Alanlar:</strong><br>Mühendislik, Doğa Bilimleri, Ekonomi</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Tomsk State University</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Tomsk</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Alanlar:</strong><br>Doğa Bilimleri, Mühendislik</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Novosibirsk State University</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Novosibirsk</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Alanlar:</strong><br>Doğa Bilimleri, Uluslararası İlişkiler</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Bauman Moscow State Technical University</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Moskova</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Alanlar:</strong><br>Mühendislik, Bilgisayar Bilimi</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">HSE (Higher School of Economics)</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Moskova</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Alanlar:</strong><br>Ekonomi, Uluslararası İlişkiler</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 32px 0 0 0;">
+        <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Ücretsiz Danışmanlık Al</a>
+    </div>
+</section>
+<!-- === SON: Polonya dizaynına uygun Rusya içeriği === -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>EĞİTİM PROGRAMLARI</h3>
+                <ul>
+                    <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
+                    <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
+                    <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
+                    <li><a href="#">WORK AND TRAVEL</a></li>
+                    <li><a href="#">VİZE</a></li>
+                    <li><a href="#">MBA</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>HAKKIMIZDA</h3>
+                <ul>
+                    <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
+                    <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="margin-left: 18px;">İLETİŞİM</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+90 324 326 4600</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>+90 541 430 4808</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
+        </div>
+    </div>
+</footer>
 </html>
