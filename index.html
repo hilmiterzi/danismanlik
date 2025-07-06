@@ -1538,29 +1538,25 @@ text-align: center;
 
 .slide-track {
   display: flex;
-  width: calc(250px * 14); /* veya: width: fit-content; */
-  animation: scroll 20s linear infinite; /* süresini uzun tut, yumuşak olur */
+  width: calc(250px * 28);
+  animation: scroll 32s linear infinite;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 
 .slide {
-  width: 250px;
-  flex-shrink: 0;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 32px;
 }
 
 .slide img {
+  max-width: 170px;
   max-height: 90px;
-  max-width: 100%;
   object-fit: contain;
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  display: block;
+  margin: 0 auto;
 }
 
 @keyframes fadeUp {
@@ -2324,6 +2320,14 @@ text-align: center;
             <div class="slide"><img src="humboldt_uni.webp" alt="Üniversite 5"></div>
             <div class="slide"><img src="rwth_uni.webp" alt="Üniversite 6"></div>
             <div class="slide"><img src="freie_uni.webp" alt="Üniversite 7"></div>
+            <div class="slide"><img src="uni-of-primorska-logo.webp" alt="Üniversite 7"></div>
+            <div class="slide"><img src="uni-of-maribor-logo.webp" alt="Üniversite 8"></div>
+            <div class="slide"><img src="uni-of-gorica-logo.webp" alt="Üniversite 9"></div>
+            <div class="slide"><img src="ljubljana-logo.webp" alt="Üniversite 10"></div>
+            <div class="slide"><img src="elte-logo-en-v2.webp" alt="Üniversite 11"></div>
+            <div class="slide"><img src="uni-of-corvinus-logo.webp" alt="Üniversite 12"></div>
+            <div class="slide"><img src="uni-of-debrecen-logo.webp" alt="Üniversite 13"></div>
+            <div class="slide"><img src="uni-of-szeged-logo.webp" alt="Üniversite 14"></div>
             <!-- Aynı logoları tekrar ekliyoruz -->
             <div class="slide"><img src="warsaw_logo.webp" alt="Üniversite 1"></div>
             <div class="slide"><img src="heidelberg_logo2.webp" alt="Üniversite 2"></div>
@@ -2332,15 +2336,14 @@ text-align: center;
             <div class="slide"><img src="humboldt_uni.webp" alt="Üniversite 5"></div>
             <div class="slide"><img src="rwth_uni.webp" alt="Üniversite 6"></div>
             <div class="slide"><img src="freie_uni.webp" alt="Üniversite 7"></div>
-            <style>
-              .slide img {
-                max-width: 170px;
-                max-height: 90px;
-                object-fit: contain;
-                display: block;
-                margin: 0 auto;
-              }
-            </style>
+            <div class="slide"><img src="uni-of-primorska-logo.webp" alt="Üniversite 7"></div>
+            <div class="slide"><img src="uni-of-maribor-logo.webp" alt="Üniversite 8"></div>
+            <div class="slide"><img src="uni-of-gorica-logo.webp" alt="Üniversite 9"></div>
+            <div class="slide"><img src="ljubljana-logo.webp" alt="Üniversite 10"></div>
+            <div class="slide"><img src="elte-logo-en-v2.webp" alt="Üniversite 11"></div>
+            <div class="slide"><img src="uni-of-corvinus-logo.webp" alt="Üniversite 12"></div>
+            <div class="slide"><img src="uni-of-debrecen-logo.webp" alt="Üniversite 13"></div>
+            <div class="slide"><img src="uni-of-szeged-logo.webp" alt="Üniversite 14"></div>
           </div>
         </div>
       </section>
@@ -2768,5 +2771,17 @@ document.querySelectorAll('.hero-slide .cta-button').forEach((btn, i) => {
       document.getElementById('comingSoonModal').style.display = 'none';
     }
     </script>
+
+    <div style="margin: 40px 0; text-align: center;">
+      <h3>Slovenya Üniversite Logoları Test Alanı</h3>
+      <img src="uni-of-primorska-logo.webp" alt="University of Primorska" style="max-width: 200px; max-height: 100px; margin: 10px;">
+      <div>uni-of-primorska-logo.webp</div>
+      <img src="uni-of-maribor-logo.webp" alt="University of Maribor" style="max-width: 200px; max-height: 100px; margin: 10px;">
+      <div>uni-of-maribor-logo.webp</div>
+      <img src="uni-of-gorica-logo.webp" alt="University of Nova Gorica" style="max-width: 200px; max-height: 100px; margin: 10px;">
+      <div>uni-of-gorica-logo.webp</div>
+      <img src="ljubljana-logo.webp" alt="University of Ljubljana" style="max-width: 200px; max-height: 100px; margin: 10px;">
+      <div>ljubljana-logo.webp</div>
+    </div>
 </body>
 </html> 
