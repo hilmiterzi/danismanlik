@@ -7,11 +7,80 @@
      });
 
      fetch('hero.html')
-     .then(response => response.text())
-     .then(data => {
-        const el = document.getElementById('hero');
-        if (el) el.innerHTML = data;
-     });
+  .then(response => response.text())
+  .then(data => {
+    const el = document.getElementById('hero');
+    if (el) el.innerHTML = data;
+
+    // --- Hero slider JS START ---
+    const slides = document.querySelectorAll('.hero-slide');
+    const dotsContainer = document.querySelector('.hero-dots');
+    const prevButton = document.querySelector('.hero-arrow-left');
+    const nextButton = document.querySelector('.hero-arrow-right');
+    let currentSlide = 0;
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = index;
+      slides[currentSlide].classList.add('active');
+    }
+
+    if (dotsContainer) {
+      slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('hero-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    const dots = document.querySelectorAll('.hero-dot');
+
+    function updateDots() {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+      });
+    }
+
+    if (prevButton && nextButton) {
+      prevButton.addEventListener('click', () => {
+        goToSlide((currentSlide - 1 + slides.length) % slides.length);
+        updateDots();
+      });
+      nextButton.addEventListener('click', () => {
+        goToSlide((currentSlide + 1) % slides.length);
+        updateDots();
+      });
+    }
+
+    // Optional: auto-slide
+    setInterval(() => {
+      goToSlide((currentSlide + 1) % slides.length);
+      updateDots();
+    }, 5000);
+    // --- Hero slider JS END ---
+    function setSlideBackground(slide) {
+      const isMobile = window.innerWidth <= 460;
+      const bgImage = isMobile ? 
+        slide.getAttribute('data-bg-mobile') : 
+        slide.getAttribute('data-bg-desktop');
+      if (bgImage) {
+        slide.style.backgroundImage = `url('${bgImage}')`;
+      }
+    }
+    
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = index;
+      setSlideBackground(slides[currentSlide]);
+      slides[currentSlide].classList.add('active');
+      updateDots();
+    }
+    
+    // Set initial background for all slides
+    slides.forEach(slide => setSlideBackground(slide));
+  });
 
 
      fetch('countries.html')
