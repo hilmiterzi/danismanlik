@@ -1438,4 +1438,47 @@ header {
   .university-logo-track {
     gap: 1.2rem;
   }
+}
+
+/* LOGO SLIDER (index.html) */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.slide-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
+  animation: slide-scroll 40s linear infinite;
+}
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  height: 64px;
+  padding: 0 10px;
+}
+.slide img {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(0.2) brightness(0.95);
+  transition: filter 0.3s;
+}
+.slide img:hover {
+  filter: none;
+}
+@keyframes slide-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (max-width: 600px) {
+  .slide-track { gap: 1.2rem; }
+  .slide { min-width: 80px; height: 40px; }
+  .slide img { max-height: 36px; }
 } 
