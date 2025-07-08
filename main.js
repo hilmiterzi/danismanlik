@@ -19,11 +19,7 @@
     const nextButton = document.querySelector('.hero-arrow-right');
     let currentSlide = 0;
 
-    function goToSlide(index) {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = index;
-      slides[currentSlide].classList.add('active');
-    }
+    
 
     if (dotsContainer) {
       slides.forEach((_, index) => {
