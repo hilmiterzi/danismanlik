@@ -156,6 +156,17 @@ body {
     margin-bottom: 1rem;
 }
 
+.info-card h3 a {
+    color: #fff !important;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.info-card h3 a:hover {
+    text-decoration: underline;
+    color: #e6eaf3 !important;
+}
+
 
 .info-card h3 {
     display: flex;
