@@ -16,6 +16,7 @@
     <!-- Preload first hero image with proper attributes -->
     <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 300px)" fetchpriority="high">
     <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)" fetchpriority="high">
+    <link rel="stylesheet" href="style.css">
     <style>
         :root {
             --primary-color: rgb(26,64,121);
@@ -866,49 +867,9 @@
     </style>
 </head>
 <body>
-    <header class="double-header">
-        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
-            <div class="logo">
-                <a href="index.html">
-                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -180px;">
-                </a>
-              </div>
-            <div class="logo">
-                <a href="index.html">
-                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
-                </a>
-              </div>
-              
-            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
-                <div class="dropdown">
-                    <a href="javascript:void(0)" class="header-btn dropdown-trigger">Hakkımızda</a>
-                    <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
-                        <a href="danismanlik-hizmetlerimiz.html" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
-                    </div>
-                </div>
-                <a href="bilgi-iste.html" class="header-btn">Bilgi İste</a>
-                <a href="iletisim.html" class="header-btn2">İletişim</a>
-            </div>
-        </div>
-        <div class="header-bottom">
-            <nav class="main-nav">
-                <a href="index.html#countries-section">Üniversite</a>
-                <a href="dil-okullari.html">Dil Okulları</a>
-                <a href="master-mba.html">Master/MBA</a>
-                <a href="work-and-travel.html">Work and Travel</a>
-                <div class="dropdown" style="border-right: 2px solid #fff;">
-                    <a href="javascript:void(0)" class="dropdown-trigger">Diğer Programlar</a>
-                    <div class="dropdown-content">
-                        <a href="work-and-study.html">Work And Study</a>
-                        <a href="yaz-okulu.html">Yaz Okulu</a>
-                        <a href="pathway.html">Pathway Programı</a>
-                    </div>
-                </div>
-                <a href="vize-islemleri.html">Vize İşlemleri</a>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
+    <script src="main.js"></script>
+
     <main class="about-main">
         <h1 class="about-title">Biz Kimiz?</h1>
         <div class="about-section">
@@ -916,62 +877,13 @@
                 UniversityPark Yurtdışı Eğitim ve Danışmanlık, 2015 yılında Ali Karakaya tarafından Mersin, Ankara ve İstanbul'da kurulmuştur. Kurucumuz Ali Karakaya, yurtdışında aldığı hukuk eğitimi süresince Türk öğrencilerin temsilciliğini üstlenmiş, bu süreçte birçok öğrenciye gönüllü olarak rehberlik etmiş ve alandaki bilgi birikimini sahada deneyimleyerek geliştirmiştir.<br><br>
                 UniversityPark, yurtdışında üniversite eğitimi alanındaki tecrübeleri kurumsal bir zemine taşımak ve daha fazla öğrenciye doğru, şeffaf ve etkili bir danışmanlık sunmak amacıyla hayata geçirilmiştir. Kuruluşundan bu yana yüzlerce öğrencinin hem yurtdışındaki üniversite süreçlerine hem de Türkiye'ye yatay geçiş ve denklik işlemlerine sorunsuz bir şekilde adapte olmasına katkı sağlamıştır.<br><br>
                 Firmamızın en önemli ilkelerinden biri, danışanlarımızdan yalnızca bilgi alma karşılığında herhangi bir ücret talep etmememizdir. Her öğrencinin koşul ve ihtiyaçlarını dikkatle analiz ederek, kişiye özel danışmanlık sunuyoruz. Hedefimiz, öğrencilerimize yalnızca bir eğitim programı sunmak değil, onların akademik ve kişisel başarılarını da uzun vadede desteklemektir.<br><br>
-                Biz, "Hastalığa değil, hastaya ilaç" anlayışıyla hareket ediyor, her öğrencimizi benzersiz bir gelecek planlamasının odağına koyuyoruz. UniversityPark olarak amacımız; öğrencilerimizin sadece yurtdışına gitmesini değil, gittikleri yerde başarılı, bilinçli ve özgüvenli bireyler olarak yollarına devam etmelerini sağlamaktır.
+                <strong>Biz, "Hastalığa değil, hastaya ilaç" anlayışıyla hareket ediyor, her öğrencimizi benzersiz bir gelecek planlamasının odağına koyuyoruz.</strong> UniversityPark olarak amacımız; öğrencilerimizin sadece yurtdışına gitmesini değil, gittikleri yerde başarılı, bilinçli ve özgüvenli bireyler olarak yollarına devam etmelerini sağlamaktır.
             </p>
         </div>
         <div style="text-align: center; margin: 32px 0 0 0;">
             <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Ücretsiz Danışmanlık Al</a>
         </div>
     </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>EĞİTİM PROGRAMLARI</h3>
-                    <ul>
-                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
-                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
-                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
-                        <li><a href="#">WORK AND TRAVEL</a></li>
-                        <li><a href="#">VİZE</a></li>
-                        <li><a href="#">MBA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>HAKKIMIZDA</h3>
-                    <ul>
-                        <li><a href="biz-kimiz.html">BİZ KİMİZ?</a></li>
-                        <li><a href="danismanlik-hizmetlerimiz.html">DANIŞMANLIK HİZMETLERİMİZ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 style="margin-left: 20px;">İLETİŞİM</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+90 324 326 4600</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>+90 541 430 4808</span>
-                            <div class="social-icons">
-                                <a href="https://wa.me/905414304808" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://t.me/+905414304808" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-                                <a href="viber://chat?number=+905414304808" title="Viber"><i class="fab fa-viber"></i></a>
-                                <a href="#" title="WeChat"><i class="fab fa-weixin"></i></a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 </body>
 </html>
