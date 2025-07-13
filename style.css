@@ -509,10 +509,9 @@ text-align: center;
     font-size: 1.2rem;
 }
 
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
+
+/* Remove custom bullets for footer-section lists */
+
 
 .footer-section ul li {
     margin-bottom: 0.8rem;
@@ -1766,4 +1765,16 @@ border-radius: 3px;
     font-size: 2.5rem;
     margin-top: 5rem;
     font-weight: bold;
+}
+
+/* FORCE REMOVE all bullets/dots from footer-section lists */
+.footer-section ul, .footer-section ul li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    background: none !important;
+}
+.footer-section ul li::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
 }
