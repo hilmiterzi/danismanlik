@@ -124,7 +124,7 @@
            setInterval(() => {
              reviewIndex = (reviewIndex + 1) % slider.children.length;
              showReview(reviewIndex);
-           }, 5000);
+           }, 8000);
          }
        }
      });
