@@ -675,6 +675,7 @@ text-align: center;
     background-color: var(--light-bg);
     position: relative;
     overflow: hidden;
+    background: #fff !important;
 }
 
 .faq-wrapper {
