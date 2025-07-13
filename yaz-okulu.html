@@ -16,6 +16,7 @@
     <!-- Preload first hero image with proper attributes -->
     <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 300px)" fetchpriority="high">
     <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)" fetchpriority="high">
+    <link rel="stylesheet" href="style.css">
     <style>
         :root {
             --primary-color: rgb(26,64,121);
@@ -842,49 +843,8 @@
     </style>
 </head>
 <body>
-    <header class="double-header">
-        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
-            <div class="logo">
-                <a href="index.html">
-                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -180px;">
-                </a>
-              </div>
-            <div class="logo">
-                <a href="index.html">
-                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
-                </a>
-              </div>
-              
-            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
-                <div class="dropdown">
-                    <a href="javascript:void(0)" class="header-btn dropdown-trigger">Hakkımızda</a>
-                    <div class="dropdown-content">
-                        <a href="biz-kimiz.html" class="dropdown-item">Biz Kimiz?</a>
-                        <a href="danismanlik-hizmetlerimiz.html" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
-                    </div>
-                </div>
-                <a href="bilgi-iste.html" class="header-btn">Bilgi İste</a>
-                <a href="iletisim.html" class="header-btn2">İletişim</a>
-            </div>
-        </div>
-        <div class="header-bottom">
-            <nav class="main-nav">
-                <a href="index.html#countries-section">Üniversite</a>
-                <a href="dil-okullari.html">Dil Okulları</a>
-                <a href="master-mba.html">Master/MBA</a>
-                <a href="work-and-travel.html">Work and Travel</a>
-                <div class="dropdown" style="border-right: 2px solid #fff;">
-                    <a href="javascript:void(0)" class="dropdown-trigger">Diğer Programlar</a>
-                    <div class="dropdown-content">
-                        <a href="work-and-study.html">Work And Study</a>
-                        <a href="yaz-okulu.html">Yaz Okulu</a>
-                        <a href="pathway.html">Pathway Programı</a>
-                    </div>
-                </div>
-                <a href="vize-islemleri.html">Vize İşlemleri</a>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
+    <script src="main.js"></script>
     <main class="info-section" style="max-width: 1200px; margin: 2rem auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); padding: 2.5rem 2rem;">
       <h1 style="color: var(--primary-color); font-size: 2.3rem; margin-bottom: 0.7rem; text-align: center; font-weight: 900; letter-spacing: 1px;">Yaz Okulu Programlarıyla Dünyayı Keşfet, Dilini Geliştir, Ufuk Aç!</h1>
       <div style="display: grid; grid-template-columns: repeat(3, 300px); gap: 8px; justify-content: center; align-items: stretch; margin: 0 auto 24px auto; max-width: 1000px;">
@@ -897,14 +857,14 @@
       <h3 style="margin-top:2.2rem; color: var(--primary-color); font-size: 1.35rem; font-weight: 800; display: flex; align-items: center;"><span style='font-size:1.4rem; margin-right:10px;'>📚</span>Yaz Okulu Nedir?</h3>
       <p>Yaz okulu programları, genellikle 2 ila 8 hafta arasında süren, öğrencilerin yaz tatili boyunca yabancı dil öğrenmelerine, kültürel geziler yapmalarına ve sosyal gelişim kazanmalarına imkan tanıyan kısa süreli eğitim programlarıdır.</p>
       <h3 style="margin-top:2.2rem; color: var(--primary-color); font-size: 1.35rem; font-weight: 800; display: flex; align-items: center;"><span style='font-size:1.4rem; margin-right:10px;'>🎯</span>Kimler Katılabilir?</h3>
-      <ul style="margin-bottom:1.5rem; font-size:1.08rem;">
+      <ul style="list-style: none; padding-left: 0; margin-bottom:1.5rem; font-size:1.08rem;">
         <li><span style="color:#e63946; font-size:1.2em; margin-right:7px;">•</span>8 – 18 yaş arası çocuk ve gençler</li>
         <li><span style="color:#e63946; font-size:1.2em; margin-right:7px;">•</span>Üniversite öğrencileri ve yeni mezunlar</li>
         <li><span style="color:#e63946; font-size:1.2em; margin-right:7px;">•</span>Dilini geliştirmek isteyen yetişkin bireyler</li>
         <li><span style="color:#e63946; font-size:1.2em; margin-right:7px;">•</span>Programlar yaş grubuna ve seviyeye özel olarak hazırlanır.</li>
       </ul>
       <h3 style="margin-top:2.2rem; color: var(--primary-color); font-size: 1.35rem; font-weight: 800; display: flex; align-items: center;"><span style='font-size:1.4rem; margin-right:10px;'>🌟</span>Yaz Okulunun Avantajları</h3>
-      <ul style="margin-bottom:1.5rem; font-size:1.08rem;">
+      <ul style="list-style: none; padding-left: 0; margin-bottom:1.5rem; font-size:1.08rem;">
         <li><span style="color:#1a4079; font-size:1.2em; margin-right:7px;">•</span>Yoğunlaştırılmış yabancı dil eğitimi</li>
         <li><span style="color:#1a4079; font-size:1.2em; margin-right:7px;">•</span>Farklı ülkelerden öğrencilerle sosyal etkileşim</li>
         <li><span style="color:#1a4079; font-size:1.2em; margin-right:7px;">•</span>Kültürel turlar ve etkinliklerle eğlenerek öğrenme</li>
@@ -912,7 +872,7 @@
         <li><span style="color:#1a4079; font-size:1.2em; margin-right:7px;">•</span>Özgüven, sorumluluk ve bağımsızlık gelişimi</li>
       </ul>
       <h3 style="margin-top:2.2rem; color: var(--primary-color); font-size: 1.35rem; font-weight: 800; display: flex; align-items: center;"><span style='font-size:1.4rem; margin-right:10px;'>🌍</span>Popüler Yaz Okulu Ülkeleri</h3>
-      <ul style="margin-bottom:1.5rem; font-size:1.08rem;">
+      <ul style="list-style: none; padding-left: 0; margin-bottom:1.5rem; font-size:1.08rem;">
         <li><span style="color:#e63946; font-size:1.2em; margin-right:7px;">•</span><b>İngiltere</b> – Güçlü akademik içerik, tarihi şehirler</li>
         <li><span style="color:#e63946; font-size:1.2em; margin-right:7px;">•</span><b>Amerika</b> – Kampüs hayatı ve dil pratiği</li>
         <li><span style="color:#e63946; font-size:1.2em; margin-right:7px;">•</span><b>Kanada</b> – Doğa, güvenlik ve kaliteli eğitim</li>
@@ -920,7 +880,7 @@
         <li><span style="color:#e63946; font-size:1.2em; margin-right:7px;">•</span><b>Malta</b> – Akdeniz'in eşsiz güzelliğinde dil öğrenme</li>
       </ul>
       <h3 style="margin-top:2.2rem; color: var(--primary-color); font-size: 1.35rem; font-weight: 800; display: flex; align-items: center;"><span style='font-size:1.4rem; margin-right:10px;'>📄</span>Program İçeriği</h3>
-      <ul style="margin-bottom:1.5rem; font-size:1.08rem;">
+      <ul style="list-style: none; padding-left: 0; margin-bottom:1.5rem; font-size:1.08rem;">
         <li><span style="color:#1a4079; font-size:1.2em; margin-right:7px;">•</span>Haftalık 15–25 saat arasında dil dersi</li>
         <li><span style="color:#1a4079; font-size:1.2em; margin-right:7px;">•</span>Konaklama (aile yanı veya kampüs yurdu)</li>
         <li><span style="color:#1a4079; font-size:1.2em; margin-right:7px;">•</span>Günlük sosyal aktiviteler ve hafta sonu gezileri</li>
