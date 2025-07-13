@@ -1482,3 +1482,15 @@ header {
   .slide { min-width: 80px; height: 40px; }
   .slide img { max-height: 36px; }
 } 
+
+.info-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.info-card-link:focus .info-card,
+.info-card-link:hover .info-card {
+  box-shadow: 0 8px 25px rgba(26,64,121,0.15);
+  transform: translateY(-5px);
+} 

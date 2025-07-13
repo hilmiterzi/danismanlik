@@ -1737,7 +1737,7 @@ border-radius: 3px;
 @media (max-width: 900px) {
   .faq-boxes { flex-direction: column; gap: 2rem; }
 }
-.faq-boxes { flex-direction: row; }
+.faq-boxes { flex-direction: row; align-items: flex-start; }
 .faq-box h3 { font-size: 1.08rem; font-weight: 600; color: #1a4079; margin: 0 0 1.1rem 0; letter-spacing: 0.1px; }
 .faq-box .faq-item:last-child h3 { margin-bottom: 0; }
 

@@ -174,3 +174,35 @@ function showComingSoonModal(e) {
 function closeComingSoonModal() {
     document.getElementById('comingSoonModal').style.display = 'none';
 }
+
+// FAQ toggle functionality for sikca-sorulan-sorular.html
+
+document.addEventListener('DOMContentLoaded', function() {
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(function(question) {
+    question.addEventListener('click', function() {
+      const answer = this.nextElementSibling;
+      const toggle = this.querySelector('.faq-toggle');
+      if (answer && answer.classList.contains('faq-answer')) {
+        const isOpen = answer.style.display === 'block';
+        // Close all answers in the same box
+        const box = this.closest('.faq-box');
+        if (box) {
+          box.querySelectorAll('.faq-answer').forEach(function(a) {
+            a.style.display = 'none';
+          });
+          box.querySelectorAll('.faq-toggle').forEach(function(t) {
+            t.textContent = '+';
+          });
+        }
+        if (!isOpen) {
+          answer.style.display = 'block';
+          if (toggle) toggle.textContent = '-';
+        } else {
+          answer.style.display = 'none';
+          if (toggle) toggle.textContent = '+';
+        }
+      }
+    });
+  });
+});
