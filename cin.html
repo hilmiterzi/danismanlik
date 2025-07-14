@@ -1142,49 +1142,24 @@
     </style>
 </head>
 <body>
-    <header class="double-header">
-        <div class="header-top" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 0.5rem 2vw 0.5rem 2vw;">
-            <div class="logo">
-                <a href="index.html">
-                  <img src="er.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; right: -180px;">
-                </a>
-              </div>
-            <div class="logo">
-                <a href="index.html">
-                  <img src="ra.webp" alt="University Park Logo" style="height: 85px; width: auto; display: block; position: relative; left: -305px;">
-                </a>
-              </div>
-              
-            <div class="header-top-links" style="display: flex; align-items: center; gap: 1.2rem;">
-                <div class="dropdown">
-                    <a href="javascript:void(0)" class="header-btn dropdown-trigger">Hakkımızda</a>
-                    <div class="dropdown-content">
-                        <a href="#" class="dropdown-item">Biz Kimiz?</a>
-                        <a href="#" class="dropdown-item">Danışmanlık Hizmetlerimiz</a>
-                    </div>
-                </div>
-                <a href="bilgi-iste.html" class="header-btn">Bilgi İste</a>
-                <a href="iletisim.html" class="header-btn2">İletişim</a>
-            </div>
-        </div>
-        <div class="header-bottom">
-            <nav class="main-nav">
-                <a href="#countries-section">Üniversite</a>
-                <a href="dil-okullari.html">Dil Okulları</a>
-                <a href="master-mba.html">Master/MBA</a>
-                <a href="work-and-travel.html">Work and Travel</a>
-                <div class="dropdown" style="border-right: 2px solid #fff;">
-                 <a href="javascript:void(0)" class="dropdown-trigger">Diğer Programlar</a>
-                    <div class="dropdown-content">
-                        <a href="work-and-study.html">Work And Study</a>
-                        <a href="yaz-okulu.html">Yaz Okulu</a>
-                        <a href="pathway.html">Pathway Programı</a>
-                    </div>
-                </div>
-                <a href="vize-islemleri.html">Vize İşlemleri</a>
-            </nav>
-        </div>
-    </header>
+    <div id="header"></div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                // Remove <body> if present in header.html
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data;
+                let headerContent = tempDiv.querySelector('header');
+                if (headerContent) {
+                    document.getElementById('header').appendChild(headerContent);
+                } else {
+                    document.getElementById('header').innerHTML = data;
+                }
+            });
+    });
+    </script>
 </body>
 
 <div class="hero-slider">
