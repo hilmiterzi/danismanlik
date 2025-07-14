@@ -5,228 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avrupa'da Üniversite Eğitimi</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .burs-box {
+            max-width: 900px;
+            margin: 40px auto 40px auto;
+            background: #fff;
+            border: 2px solid #e63946;
+            border-radius: 20px;
+            padding: 2.5rem 2.5rem 2rem 2.5rem;
+            box-shadow: 0 4px 18px rgba(26,64,121,0.08);
+        }
+        .burs-title {
+            color: #1a4079;
+            font-size: 2.6rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .burs-subtitle {
+            color: #e63946;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        .burs-section-title {
+            color: #e63946;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 2.2rem;
+            margin-bottom: 0.7rem;
+        }
+        .burs-list {
+            margin-left: 0;
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+        }
+        .burs-list li {
+            margin-bottom: 0.7rem;
+            font-size: 1.08rem;
+            color: #222;
+            line-height: 1.7;
+            list-style: none;
+            position: relative;
+            padding-left: 0.2rem;
+        }
+        .burs-list li strong {
+            color: #e63946;
+        }
+        .burs-list li::before {
+            content: '';
+        }
+        .burs-section {
+            margin-bottom: 1.5rem;
+        }
+        .burs-divider {
+            border: none;
+            border-top: 1.5px solid #bbb;
+            margin: 2.2rem 0 2.2rem 0;
+        }
+        @media (max-width: 600px) {
+            .burs-box {
+                padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+            }
+            .burs-title {
+                font-size: 1.5rem;
+            }
+            .burs-subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
-
-<style>
-    .aueh-main-title {
-        color: #FF0000;
-        text-align: center;
-        margin-top: 4rem;
-    }
-
-    .aueh-middle-titles-box {
-        text-align: center;
-        width: 100%;
-        max-width: 1300px;
-        height: 100%;
-        box-shadow: 0 4px 18px rgba(26,64,121,0.10);
-        margin-top: 5rem;
-        border-radius: 18px;
-        margin-left: 16rem;
-        padding-bottom: 3rem;
-    }
-    
-
-    .aueh-middle-title1 {
-        color: #1a4079;
-        text-align: left;
-        padding-left: 4rem;
-        padding-top: 2.5rem;
-    }
-
-    .tick-list {
-        list-style:none;
-        padding-right: 22rem;
-        padding-top: 1.5rem;
-    }
-
-    .tick-list li::before {
-        content: "✓";
-        color: green;
-        font-weight: bold;
-        margin-right: 8px;
-
-    }
-
-    .tick-list li {
-        display: flex;
-        align-items: left;
-        margin-bottom: 0.7rem;
-        font-size: 1.08rem;
-        color: #222;
-        padding-left: 5rem;
-
-    }
-
-
-
-    .aueh-middle-title2 {
-        color: #1a4079;
-        text-align: left;
-        padding-left: 4rem;
-        padding-top: 2.5rem;
-    }
-
-
-    .aueh-middle-title3 {
-        color: #1a4079;
-        text-align: left;
-        padding-left: 4rem;
-        padding-top: 2.5rem;
-    }
-
-
-
-
-
-    .arrow-list {
-        list-style: none;
-        padding-right: 22rem;
-        color: #222;
-    }
-
-    
-    .arrow-list li {
-        display: flex;
-        align-items: left;
-        margin-bottom: 0.7rem;
-        font-size: 1.08rem;
-        color: #222;
-        padding-left: 5rem;
-
-    }
-    .arrow-list li::before {
-        content: "→";
-        color: #1a4079;
-        font-weight: bold;
-        margin-right: 8px;
-    }
-
-
-    .red-word {
-        color: red;
-        font-weight: bold;
-
-    }
-
-
-
-
-    .aueh-middle-title4 {
-        color: #1a4079;
-        text-align: left;
-        padding-left: 4rem;
-        padding-top: 2.5rem;
-    }
-
-    .dart-list {
-        list-style: none;
-        padding-right: 22rem;
-        color: #222;
-    }
-
-    .dart-list li {
-        display: flex;
-        align-items: left;
-        margin-bottom: 0.7rem;
-        font-size: 1.08rem;
-        color: #222;
-        padding-left: 5rem;
-
-    }
-    .dart-list li::before {
-        content: "🎯";
-        color: #1a4079;
-        font-weight: bold;
-        margin-right: 8px;
-    }
-
-
-
-
-    .whatsapp-btn-inside {
-    display: inline-block;
-    background-color: #25D366;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 0.9rem 2.2rem;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.12);
-    margin-top: 1rem;
-}
-.whatsapp-btn-inside:hover {
-    background-color: #128C7E;
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.18);
-}
-
-
-</style>
-
-
-
-
 <body>
     <div id="header"></div>
-    <script src="main.js"></script>
-</body>
-    <main class="main-content">
-        <h1 class="aueh-main-title">Avrupa’da Üniversite Eğitimi</h1>
-        <div class="aueh-middle-titles-box">
-            <h2 class="aueh-middle-title1">Avrupa’da Kaliteli ve Ekonomik Eğitim Mümkün!</h2>
-            <span class="aueh-middle-title1_underline"></span>
-            <p style="padding-top: 1.3rem; padding-left: 4rem; text-align: left; font-size: 1.13rem; color: #222; font-weight: 400;line-height:1.7;">Avrupa, hem akademik kalitesi hem de sunduğu yaşam koşullarıyla öğrenciler için cazip bir bölgedir. Özellikle Almanya, Polonya, Macaristan, İtalya gibi ülkeler, düşük maliyetli veya ücretsiz üniversite eğitimi imkânı sunmaktadır.</p>
-        
-
-
-            <h2 class="aueh-middle-title2">Avrupa’da Eğitim Sistemi Nasıldır?</h2>
-                <ul class="tick-list">
-                    <li>Avrupa Birliği ülkeleri arasında EHEA (European Higher Education Area) kapsamında diploma denkliği sağlanır.</li>
-                    <li>Eğitim genellikle Bologna Süreci standartlarına uygundur.</li>
-                    <li>Birçok üniversitede İngilizce eğitim veren bölümler mevcuttur.</li>
-                    <li>Öğrenciler için çalışma izni, Erasmus+ değişim programları gibi avantajlar vardır.</li>
-                </ul>
-
-
-
-                <h2 class="aueh-middle-title3">Öne Çıkan Ülkeler:</h2>
-                <ul class="arrow-list">
-                    <li><span class="red-word">Almanya:  </span>Ücretsiz devlet üniversiteleri, güçlü mühendislik eğitimi.</li>
-                    <li><span class="red-word">Polonya:  </span>İngilizce bölümler, düşük yaşam maliyetleri.</li>
-                    <li><span class="red-word">Macaristan:  </span>Tıp ve sağlık bilimleri alanında popüler.</li>
-                    <li><span class="red-word">İtalya:  </span>Mimarlık, moda, sanat ve tasarım bölümleriyle öne çıkar.</li>
-
-                </ul>
-
-
-                <h2 class="aueh-middle-title4">Avantajlar:</h2>
-                <ul class="dart-list">
-                    <li>Avrupa içinde serbest seyahat hakkı (Schengen)</li>
-                    <li>Yüksek yaşam kalitesi</li>
-                    <li>Mezuniyet sonrası iş bulma ve oturum izni avantajları</li>
-                    <li>Akademik tanınırlık ve prestij</li>
-                </ul>
-
-
-                <p style="color:#222; text-align: center; padding-top: 2rem; font-size: 1.4rem; font-weight: 400; line-height: 1.7;"><em>Universitypark olarak, Avrupa’da en uygun ülke, bölüm ve üniversite seçimini birlikte yapıyor, tüm evrak süreçlerinde sizinle ilgileniyoruz.</em></p>
-        
-        
-        
-                <div style="text-align: center; margin: 32px 0 0 0">
-                    <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">🏤 Avrupa'da üniversite eğitimi hakkında bilgi almak için hemen tıklayın</a>
-                </div>
-
-
+    <main>
+        <div class="burs-box">
+            <div class="burs-title">Avrupa’da Üniversite Eğitimi</div>
+            <div class="burs-subtitle">Avrupa’da Kaliteli ve Ekonomik Eğitim Mümkün!</div>
+            <div class="burs-section">
+                <p style="font-size: 1.13rem; color: #222; font-weight: 400;line-height:1.7;">Avrupa, hem akademik kalitesi hem de sunduğu yaşam koşullarıyla öğrenciler için cazip bir bölgedir. Özellikle Almanya, Polonya, Macaristan, İtalya gibi ülkeler, düşük maliyetli veya ücretsiz üniversite eğitimi imkânı sunmaktadır.</p>
             </div>
-
+            <hr class="burs-divider">
+            <div class="burs-section-title">Avrupa’da Eğitim Sistemi Nasıldır?</div>
+            <ul class="burs-list">
+                <li>Avrupa Birliği ülkeleri arasında EHEA (European Higher Education Area) kapsamında diploma denkliği sağlanır.</li>
+                <li>Eğitim genellikle Bologna Süreci standartlarına uygundur.</li>
+                <li>Birçok üniversitede İngilizce eğitim veren bölümler mevcuttur.</li>
+                <li>Öğrenciler için çalışma izni, Erasmus+ değişim programları gibi avantajlar vardır.</li>
+            </ul>
+            <div class="burs-section-title">Öne Çıkan Ülkeler:</div>
+            <ul class="burs-list">
+                <li><strong>Almanya:</strong> Ücretsiz devlet üniversiteleri, güçlü mühendislik eğitimi.</li>
+                <li><strong>Polonya:</strong> İngilizce bölümler, düşük yaşam maliyetleri.</li>
+                <li><strong>Macaristan:</strong> Tıp ve sağlık bilimleri alanında popüler.</li>
+                <li><strong>İtalya:</strong> Mimarlık, moda, sanat ve tasarım bölümleriyle öne çıkar.</li>
+            </ul>
+            <div class="burs-section-title">Avantajlar:</div>
+            <ul class="burs-list">
+                <li>Avrupa içinde serbest seyahat hakkı (Schengen)</li>
+                <li>Yüksek yaşam kalitesi</li>
+                <li>Mezuniyet sonrası iş bulma ve oturum izni avantajları</li>
+                <li>Akademik tanınırlık ve prestij</li>
+            </ul>
+            <div class="burs-section" style="text-align: center; padding-top: 1.5rem;">
+                <em style="font-size: 1.2rem; color: #222; font-weight: 400; line-height: 1.7;">Universitypark olarak, Avrupa’da en uygun ülke, bölüm ve üniversite seçimini birlikte yapıyor, tüm evrak süreçlerinde sizinle ilgileniyoruz.</em>
+            </div>
+            <div style="text-align: center; margin: 32px 0 0 0">
+                <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">🏤 Avrupa'da üniversite eğitimi hakkında bilgi almak için hemen tıklayın</a>
+            </div>
         </div>
-
-
-
     </main>
     <div id="footer"></div>
+    <script src="main.js"></script>
 </body>
 </html> 
