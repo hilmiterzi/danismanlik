@@ -296,27 +296,9 @@
                 <li>Bazı bölümler özel yetenek sınavı veya portfolyo isteyebilir.</li>
             </ul>
         </div>
-        <div class="country-section table-section">
-            <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">🎓</span>4. Almanya'daki Popüler Üniversiteler</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Üniversite Adı</th>
-                        <th>Şehir</th>
-                        <th>Öne Çıkan Alanlar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>LMU Münih</td><td>Münih</td><td>Tıp, Sosyal Bilimler</td></tr>
-                    <tr><td>TU Münih (TUM)</td><td>Münih</td><td>Mühendislik, Bilgisayar</td></tr>
-                    <tr><td>Heidelberg Üniversitesi</td><td>Heidelberg</td><td>Tıp, Biyoloji</td></tr>
-                    <tr><td>RWTH Aachen</td><td>Aachen</td><td>Makine, Elektrik-Elektronik</td></tr>
-                    <tr><td>Humboldt Üniversitesi</td><td>Berlin</td><td>Hukuk, Felsefe</td></tr>
-                    <tr><td>Freie Universität Berlin</td><td>Berlin</td><td>Uluslararası İlişkiler, Dil</td></tr>
-                    <tr><td>Karlsruhe Teknoloji Enstitüsü</td><td>Karlsruhe</td><td>Yazılım, Yapay Zeka</td></tr>
-                </tbody>
-            </table>
-        </div>
+        <!-- Remove the old universities table section -->
+        <!-- Insert the new card-based universities section at the end, before the 'Ücretsiz Danışmanlık Al' section -->
+       
         <div class="country-section">
             <h2 style="display: flex; align-items: center;"><span style="font-size: 2rem; margin-right: 10px;">💶</span>5. Almanya'da Eğitim Ücretleri ve Yaşam Maliyetleri</h2>
             <ul class="advantages-list">
@@ -347,6 +329,86 @@
                 <li><b>Çalışma Hakkı:</b> Öğrenciler yılda 120 tam gün veya 240 yarım gün yasal olarak çalışabilir. Mezuniyet sonrası 18 aya kadar "iş arama izni" alınabilir.</li>
             </ul>
         </div>
+
+        <div class="country-section">
+            <h2 style="display: flex; align-items: center; color: #1a4079; font-size: 2rem; margin-bottom: 0.5rem;"><span style="font-size: 2rem; margin-right: 10px;">🎓</span>4. Almanya'daki En İyi Üniversiteler</h2>
+            <p>Almanya'da uluslararası tanınırlığa sahip, modern ve kaliteli üniversiteler bulunmaktadır. Aşağıda öne çıkan üniversiteler ve başlıca alanları bulabilirsiniz.</p>
+            <div class="universities-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="height: 130px; position: relative; background: url('almanya_okul1.png') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">LMU Münih</div>
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">LMU Münih</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Münih</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Tıp, Sosyal Bilimler</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="height: 130px; position: relative; background: url('rwth_uni.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">RWTH Aachen</div>
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">RWTH Aachen</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Aachen</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Makine, Elektrik-Elektronik</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="height: 130px; position: relative; background: url('heidelberg_logo2.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Heidelberg Üniversitesi</div>
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Heidelberg Üniversitesi</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Heidelberg</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Tıp, Biyoloji</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="height: 130px; position: relative; background: url('humboldt_uni.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Humboldt Üniversitesi</div>
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Humboldt Üniversitesi</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Berlin</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Hukuk, Felsefe</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="height: 130px; position: relative; background: url('freie_uni.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Freie Universität Berlin</div>
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">Freie Universität Berlin</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Berlin</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Uluslararası İlişkiler, Dil</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+                <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                    <div style="height: 130px; position: relative; background: url('almanya_okul1.png') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">TU Münih (TUM)</div>
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                    </div>
+                    <div class="university-content" style="padding: 1.5rem; text-align: center;">
+                        <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem;">TU Münih (TUM)</h3>
+                        <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Münih</p>
+                        <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Mühendislik, Bilgisayar</p>
+                        <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="country-section">
             <p>Almanya'da üniversite eğitimi, hem ekonomik hem de akademik açıdan son derece avantajlıdır. Özellikle mühendislik, tıp ve bilim alanlarında kariyer hedefleyen Türk öğrenciler için Almanya, Avrupa'da en güçlü alternatiflerden biridir. Doğru planlama, dil yeterliliği ve zamanında başvurularla Almanya'daki üniversite hayalinizi gerçeğe dönüştürebilirsiniz.</p>
             <div style="text-align: center; margin: 32px 0 0 0;">
