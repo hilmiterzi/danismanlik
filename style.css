@@ -1779,3 +1779,29 @@ border-radius: 3px;
     display: none !important;
     background: none !important;
 }
+
+.content-box {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(26,64,121,0.10), 0 1.5px 8px rgba(26,64,121,0.08);
+    padding: 2.5rem 2rem;
+    border: 1.5px solid #e6eaf3;
+}
+
+@media (max-width: 600px) {
+    .content-box {
+        padding: 1.2rem 0.5rem;
+    }
+}
+
+.section-list {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.2em;
+}
+
+.section-list li {
+    margin-bottom: 0.3em;
+}
