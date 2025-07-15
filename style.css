@@ -1514,7 +1514,7 @@ align-items: center;
 
 .logo-slider {
 padding: 40px 0;
-background-color: #fff;
+background-color: #ffffff;
 overflow: hidden;
 position: relative;
 }
@@ -1532,27 +1532,33 @@ overflow: hidden;
 }
 
 .slide-track {
-display: flex;
-width: calc(250px * 28);
-animation: scroll 32s linear infinite;
+  display: flex;
+  width: calc(250px * 66); /* 33 logos * 2 (since duplicated for seamless loop) */
+  animation: scroll 60s linear infinite;
 }
 @keyframes scroll {
-0% { transform: translateX(0); }
-100% { transform: translateX(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 
 .slide {
-margin: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 32px;
+  height: 120px; /* Ensures all logos are vertically centered */
 }
 
 .slide img {
-max-width: 170px;
-max-height: 90px;
-object-fit: contain;
-display: block;
-margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+  max-width: 170px;
+  max-height: 90px;
+  object-fit: contain;
+  vertical-align: middle;
 }
+
 
 @keyframes fadeUp {
 0% {
