@@ -194,23 +194,7 @@ body {
     }
 }
 
-/* Reviews Section Styles */
-.reviews-section {
-    padding: 4rem 2rem;
-    background-color: var(--light-bg);
-}
 
-.reviews-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.reviews-section .section-title {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-}
 
 /* FAQ Section Styles */
 .faq-section {
