@@ -349,3 +349,8 @@
     background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
     border-radius: 3px;
     }
+
+
+    .featured-section {
+        background: #fff;
+    }
