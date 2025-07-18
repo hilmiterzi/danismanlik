@@ -1,0 +1,109 @@
+.footer {
+    background: #fff;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 2rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* Remove custom bullets for footer-section lists */
+
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info i {
+    margin-top: 3px;
+}
+
+.contact-info span {
+    display: block;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+}
+
+.social-icons a {
+    color: #4CAF50;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #45a049;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FORCE REMOVE all bullets/dots from footer-section lists */
+.footer-section ul, .footer-section ul li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    background: none !important;
+}
+.footer-section ul li::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+}
