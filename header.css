@@ -177,3 +177,10 @@ align-items: center;
     font-size: 0.7em;
     margin-left: 5px;
 }
+
+
+
+.header-top-links .dropdown:hover > .header-btn.dropdown-trigger,
+.header-top-links .dropdown:hover > .header-btn.dropdown-trigger::after {
+    color: #e63946;
+}
