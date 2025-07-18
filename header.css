@@ -1,0 +1,179 @@
+.double-header {
+    background: #1a4079;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 2rem 1.1rem 2rem;
+    min-height: 80px;
+    background: #fff;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
+.header-top-links {
+    display: flex;
+    gap: 1.2rem;
+}
+.header-btn {
+    background: #ff0000;
+    color: #fff;
+    padding: 0.45rem 1.1rem;
+    border-radius: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    cursor: pointer;
+}
+.header-btn:hover {
+    background: #e63946;
+    color: #fff;
+}
+
+.header-btn2 {
+    background: #20aa13;
+    color: #fff;
+    padding: 0.45rem 1.1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s;
+    border: none;
+    cursor: pointer;
+    border-radius: 22px;
+}
+
+
+.header-bottom {
+    background: #1a4079;
+    border-top: 1px solid #274a7e;
+    padding: 0.05rem 2rem 0.05rem 2rem;
+    min-height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.main-nav > a, .main-nav > .dropdown {
+padding: 0 1.6rem;
+height: 48px;
+display: flex;
+align-items: center;
+color: #fff;
+font-size: 1.1rem;
+font-weight: 600;
+text-decoration: none;
+box-sizing: border-box;
+border-bottom: none;
+background: none;
+border-radius: 0;
+box-shadow: none;
+position: relative; /* ALT MENÜ İÇİN GEREKLİ */
+}
+
+.main-nav > a:hover,
+.main-nav > .dropdown:hover > .dropdown-trigger {
+color: #e63946;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+display: flex;
+align-items: center;
+height: 100%;
+color: inherit;
+font-size: inherit;
+font-weight: inherit;
+text-decoration: none;
+padding: 0;
+background: none;
+border: none;
+cursor: pointer;
+gap: 5px;
+}
+
+.main-nav > a:not(:last-child) {
+border-right: 2px solid #fff;
+}
+
+/* AÇILAN MENÜ (POPUP) */
+.dropdown-content {
+position: absolute;
+top: 100%; /* ALTINA YAPIŞIK AÇILSIN */
+left: 0;
+background-color: #123c6c;
+display: none;
+min-width: 180px;
+padding: 10px 0;
+z-index: 1000;
+border-radius: 6px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+}
+
+/* ALT MENÜ LİNKLER */
+.dropdown-content a {
+display: block;
+padding: 10px 20px;
+color: #fff;
+font-size: 0.95rem;
+text-decoration: none;
+transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+background-color: #0d2b52;
+color: #e63946;
+color: var(--secondary-color);
+}
+
+/* HOVER OLUNCA GÖRÜNÜR YAP */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+.main-nav {
+display: flex;
+align-items: center;
+}
+
+
+@media (max-width: 900px) {
+    .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
+    .main-nav { gap: 1.2rem; }
+    .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
+}
+
+.header-btn.dropdown-trigger {
+    background: #1a4079;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.45rem 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 22px;
+}
+
+.dropdown-trigger::after {
+    content: '▼';
+    font-size: 0.7em;
+    margin-left: 5px;
+}
