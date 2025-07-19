@@ -420,3 +420,45 @@ text-align: center;
         .work-and-study-slide {
             background-position: center 15% !important;
             }
+
+
+    
+
+    @media (max-width: 460px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-slide h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+@media (min-width: 461px) and (max-width: 768px) {
+    .hero {
+        height: 70vh;
+    }
+}
+
+@media (min-width: 769px) {
+    .hero {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 460px) {
+    .hero {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 460px) {
+    .slide-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+}
