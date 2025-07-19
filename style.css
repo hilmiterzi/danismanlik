@@ -1,19 +1,6 @@
 
 /* Responsive Design */
 @media (max-width: 460px) {
-
-    .featured-item {
-        flex-direction: column;
-    }
-
-    .featured-item.reverse {
-        flex-direction: column;
-    }
-
-    .featured-image {
-        width: 100%;
-    }
-
     .desktop-content {
         display: none;
     }
@@ -25,18 +12,6 @@
 
 
 }
-
-
-
-
-
-
-
-
-html {
-    scroll-behavior: smooth;
-}
-
 
 
 
@@ -142,9 +117,6 @@ html {
 
 
 
-
-
-
 .content-box {
     max-width: 900px;
     margin: 2rem auto;
@@ -161,14 +133,5 @@ html {
     }
 }
 
-.section-list {
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
-    padding-left: 1.2em;
-}
-
-.section-list li {
-    margin-bottom: 0.3em;
-}
   
   
