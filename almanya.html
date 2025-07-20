@@ -112,46 +112,7 @@
             background: linear-gradient(90deg, #e63946 40%, #1a4079 100%);
             box-shadow: 0 4px 24px rgba(26,64,121,0.18);
         }
-        .whatsapp-btn {
-            display: inline-block;
-            background: linear-gradient(90deg, #25d366 60%, #128c7e 100%);
-            color: #fff;
-            font-size: 1.3rem;
-            font-weight: bold;
-            padding: 0.9rem 2.2rem;
-            border-radius: 32px;
-            box-shadow: 0 2px 12px rgba(18,140,126,0.12);
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
-        }
-        .whatsapp-btn:hover {
-            transform: scale(1.07);
-            background: linear-gradient(90deg, #128c7e 40%, #25d366 100%);
-            box-shadow: 0 4px 24px rgba(18,140,126,0.18);
-        }
-        .whatsapp-btn-inside {
-            display: block;
-            background: #25d366;
-            color: #fff;
-            font-size: 1.15rem;
-            font-weight: bold;
-            padding: 0.7rem 2rem;
-            border-radius: 32px;
-            box-shadow: 0 2px 12px rgba(18,140,126,0.12);
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s cubic-bezier(.22,1,.36,1), background 0.18s;
-            max-width: 340px;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .whatsapp-btn-inside:hover {
-            transform: scale(1.11);
-            background: #1ed760;
-            box-shadow: 0 8px 32px rgba(18,140,126,0.22);
-        }
+
     </style>
 </head>
 <body>
@@ -243,24 +204,7 @@
         .custom-hero-text { font-size: 1.1rem; }
     }
     </style>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Custom slider logic
-        const slides = document.querySelectorAll('.custom-hero-slide');
-        let current = 0;
-        let interval = setInterval(nextSlide, 2500);
-        function showSlide(idx) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === idx);
-            });
-            current = idx;
-        }
-        function nextSlide() {
-            let next = (current + 1) % slides.length;
-            showSlide(next);
-        }
-    });
-    </script>
+
     <!-- NEW HERO SLIDER END -->
     <section class="content-section">
         <h1 class="section-title">Almanya'da Üniversite Eğitimi: Türk Öğrenciler İçin Rehber</h1>
@@ -420,50 +364,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>EĞİTİM PROGRAMLARI</h3>
-                    <ul>
-                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
-                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
-                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
-                        <li><a href="#">WORK AND TRAVEL</a></li>
-                        <li><a href="#">VİZE</a></li>
-                        <li><a href="#">MBA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>HAKKIMIZDA</h3>
-                    <ul>
-                        <li><a href="#">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
-                        <li><a href="#">DANIŞMANLIK HİZMETLERİMİZ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 style="margin-left: 18px;">İLETİŞİM</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+90 324 326 4600</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>+90 541 430 4808</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
     <!-- Contact Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">

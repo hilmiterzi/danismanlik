@@ -239,6 +239,25 @@ function closeComingSoonModal() {
     document.getElementById('comingSoonModal').style.display = 'none';
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Custom slider logic
+  const slides = document.querySelectorAll('.custom-hero-slide');
+  let current = 0;
+  let interval = setInterval(nextSlide, 2500);
+  function showSlide(idx) {
+      slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === idx);
+      });
+      current = idx;
+  }
+  function nextSlide() {
+      let next = (current + 1) % slides.length;
+      showSlide(next);
+  }
+});
+
+
 // FAQ toggle functionality for sikca-sorulan-sorular.html
 
 document.addEventListener('DOMContentLoaded', function() {
