@@ -4,6 +4,70 @@
      .then(data => {
        const el = document.getElementById('header');
        if (el) el.innerHTML = data;
+       // Hamburger/mobile menu logic (runs after header is loaded)
+       const hamburger = document.querySelector('.hamburger-menu');
+       const mobileMenu = document.getElementById('mobileMenu');
+       const mobileMenuClose = document.getElementById('mobileMenuClose');
+       const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+       if (hamburger && mobileMenu && mobileMenuClose && mobileMenuOverlay) {
+         // Hamburger open
+         hamburger.addEventListener('click', function(e) {
+           e.stopPropagation();
+           mobileMenu.classList.add('open');
+           document.body.classList.add('mobile-menu-active');
+           mobileMenuOverlay.classList.add('open');
+         });
+         // Close button
+         mobileMenuClose.addEventListener('click', function(e) {
+           e.stopPropagation();
+           mobileMenu.classList.remove('open');
+           document.body.classList.remove('mobile-menu-active');
+           mobileMenuOverlay.classList.remove('open');
+         });
+         // Overlay click closes menu
+         mobileMenuOverlay.addEventListener('click', function(e) {
+           mobileMenu.classList.remove('open');
+           document.body.classList.remove('mobile-menu-active');
+           mobileMenuOverlay.classList.remove('open');
+         });
+         // Click outside closes menu
+         document.addEventListener('click', function(e) {
+           if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !hamburger.contains(e.target) && !mobileMenuOverlay.contains(e.target)) {
+             mobileMenu.classList.remove('open');
+             document.body.classList.remove('mobile-menu-active');
+             mobileMenuOverlay.classList.remove('open');
+           }
+         });
+         // Close menu when any link inside mobile menu is clicked, except dropdown triggers
+         mobileMenu.querySelectorAll('a').forEach(function(link) {
+           link.addEventListener('click', function(e) {
+             if (link.classList.contains('dropdown-trigger')) {
+               e.preventDefault();
+               e.stopPropagation();
+               return;
+             }
+             mobileMenu.classList.remove('open');
+             document.body.classList.remove('mobile-menu-active');
+             mobileMenuOverlay.classList.remove('open');
+           });
+         });
+         // Mobile menu dropdowns
+         mobileMenu.querySelectorAll('.dropdown-trigger').forEach(function(trigger) {
+           trigger.addEventListener('click', function(e) {
+             e.preventDefault();
+             e.stopPropagation();
+             const parentDropdown = this.closest('.dropdown');
+             // Always close all other dropdowns first
+             mobileMenu.querySelectorAll('.dropdown.open').forEach(function(openDropdown) {
+               if (openDropdown !== parentDropdown) {
+                 openDropdown.classList.remove('open');
+               }
+             });
+             // Then toggle this one
+             parentDropdown.classList.toggle('open');
+           });
+         });
+       }
      });
 
      fetch('hero.html')
