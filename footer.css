@@ -1,8 +1,4 @@
-.footer {
-    background: #fff;
-}
-
-/* Footer Styles */
+/* Modern Footer Styles */
 .footer {
     background-color: var(--primary-color);
     color: white;
@@ -11,13 +7,13 @@
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -25,21 +21,26 @@
 .footer-section h3 {
     color: white;
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    font-weight: 700;
 }
 
-
-/* Remove custom bullets for footer-section lists */
-
+.footer-section ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0;
+}
 
 .footer-section ul li {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.7rem;
 }
 
 .footer-section ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
+    font-size: 1rem;
 }
 
 .footer-section ul li a:hover {
@@ -49,12 +50,9 @@
 .contact-info li {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.contact-info i {
-    margin-top: 3px;
+    gap: 0.7rem;
+    margin-bottom: 1.1rem;
+    font-size: 0.98rem;
 }
 
 .contact-info span {
@@ -64,46 +62,57 @@
 
 .social-icons {
     display: flex;
-    gap: 1rem;
-    margin-left: auto;
+    gap: 1.1rem;
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .social-icons a {
-    color: #4CAF50;
-    font-size: 1.5rem;
+    color: #25d366;
     transition: color 0.3s;
 }
-
+.social-icons a[title="Instagram"] {
+    color: #e1306c;
+}
+.social-icons a[title="E-posta"] {
+    color: #fff;
+}
 .social-icons a:hover {
-    color: #45a049;
+    color: var(--secondary-color);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .footer {
+        padding: 2rem 0.5rem 1.5rem;
+    }
     .footer-grid {
         grid-template-columns: 1fr;
+        gap: 1.2rem;
     }
-}
-
-/* FORCE REMOVE all bullets/dots from footer-section lists */
-.footer-section ul, .footer-section ul li {
-    list-style: none !important;
-    padding-left: 0 !important;
-    background: none !important;
-}
-.footer-section ul li::before {
-    content: none !important;
-    display: none !important;
-    background: none !important;
+    .footer-section {
+        margin-bottom: 1.5rem;
+    }
+    .social-icons {
+        justify-content: flex-start;
+    }
 }
