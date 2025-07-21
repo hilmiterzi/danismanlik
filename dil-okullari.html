@@ -151,7 +151,7 @@
         }
 
         .country-section h2 {
-            color: var(--primary-color);
+            color: red;
             margin-bottom: 1rem;
             font-size: 2rem;
         }
@@ -182,23 +182,11 @@
         .section-title {
             text-align: center;
             color: var(--primary-color);
-            margin-bottom: 2rem;
+            margin-bottom: 6rem;
             font-size: 2.5rem;
         }
 
-        @media (max-width: 768px) {
-            .content-section {
-                padding: 1rem;
-            }
 
-            .country-section {
-                padding: 1.5rem;
-            }
-
-            .country-section h2 {
-                font-size: 1.8rem;
-            }
-        }
 
         
         .ingiltere-kutu {
@@ -244,8 +232,49 @@
 
 
         
+        @media (max-width: 768px) {
+  .ingiltere-kutu,
+  .kanada-kutu,
+  .amerika-kutu,
+  .avustralya-kutu,
+  .malta-kutu,
+  .irlanda-kutu {
+    width: 100% !important;
+    left: 0 !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0  !important;
+    padding: 0 !important;
+  }
+  .country-section {
+    flex-direction: column !important;
+    display: block !important;
+  }
+  .country-section img {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 0 16px 0 !important;
+    float: none !important;
+  }
 
-
+  .country-section h2 {
+    color: red;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    }
+  .kanada-kutu {
+    display: block !important;
+    flex-direction: unset !important;
+    align-items: unset !important;
+  }
+  .kanada-kutu h2 {
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+  }
+}
 
 
 
@@ -274,7 +303,6 @@
 
 <div class="country-section kanada-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
     <img src="canada.webp" alt="Kanada" style="float:right; width: 100%; max-width:676px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-31px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
-    
     <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
         <h2>Kanada'da Dil Eğitimi</h2>
         <p>Kanada, yüksek yaşam kalitesi ve güvenliğiyle öne çıkan bir dil eğitimi destinasyonudur.<br>Özellikle resmi iki dili olması (İngilizce ve Fransızca) öğrencilere çift dil avantajı sağlar.</p>
