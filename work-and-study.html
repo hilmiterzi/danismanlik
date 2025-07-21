@@ -43,7 +43,30 @@
             background: #fff;
         }
 
-
+        .big-numbers {
+            list-style: decimal inside;
+        }
+        .big-numbers > li {
+            position: relative;
+            margin-top: 0.5em;
+        }
+        .big-numbers > li:first-child {
+            margin-top: 0;
+        }
+        .big-numbers > li::marker {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #383838;
+            font-family: inherit;
+        }
+        .country-details {
+            margin-left: 1.5rem;
+        }
+        .country-dot::before {
+            content: "• ";
+            color: #383838;
+            font-weight: bold;
+        }
 
 
     </style>
@@ -60,34 +83,55 @@
         <img src="was2.webp" alt="Work and Study Fotoğraf 2" style="width: 350px; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); display: block; margin-left: auto; margin-right: auto; padding: 0;">
         <img src="was3.webp" alt="Work and Study Fotoğraf 3" style="width: 350px; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); display: block; margin-left: auto; margin-right: auto; padding: 0;">
       </div>
-      <h2 style="color: var(--secondary-color); font-size: 1.3rem; margin-bottom: 1.2rem;">Yurtdışında Eğitim Alırken Çalışma Fırsatı</h2>
+      <h2 style="color: var(--secondary-color); font-size: 2rem; margin-bottom: 1.2rem;">Yurtdışında Eğitim Alırken Çalışma Fırsatı</h2>
       <p>Yurtdışında eğitim almak isteyen birçok öğrenci için en büyük engellerden biri maliyettir. Ancak hem eğitim alıp hem de yasal olarak çalışarak bu maliyetleri azaltmak mümkün! Work and Study (Çalış ve Eğitim Al) programları, bu ihtiyaca mükemmel bir çözüm sunar. Peki bu program tam olarak nedir, kimler başvurabilir ve hangi ülkelerde uygulanır?</p>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Work and Study Nedir?</h3>
+      <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Work and Study Nedir?</h3>
       <p>Work and Study; öğrencilerin yurtdışında dil eğitimi veya sertifika programlarına katılırken yasal çalışma izniyle haftalık belirli saatlerde çalışabildiği programlardır. Özellikle İngilizce dil eğitimi almak isteyen öğrenciler için İrlanda, Kanada, Avustralya ve Yeni Zelanda gibi ülkelerde oldukça popülerdir.</p>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Programın Sunduğu Avantajlar</h3>
-      <ul style="margin-bottom:1.5rem;">
+      <h3 style="margin-top:2rem; color: red;">Programın Sunduğu Avantajlar</h3>
+      <ul style="margin-bottom:1.5rem; padding-left:2rem; padding-top:0.5rem;">
         <li>Maliyetleri düşürme imkânı: Eğitiminizi finanse etmek için çalışabilirsiniz.</li>
         <li>Dil pratiği: Sınıf dışında gerçek hayatta İngilizce pratiği yaparsınız.</li>
         <li>İş deneyimi: Uluslararası iş ortamında deneyim kazanırsınız.</li>
         <li>Sosyal çevre: Farklı milletlerden insanlarla tanışıp ağınızı genişletirsiniz.</li>
         <li>Kültürel entegrasyon: Gittiğiniz ülkenin kültürüne daha kolay adapte olursunuz.</li>
       </ul>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Hangi Ülkelerde Work and Study Yapılır?</h3>
-      <ol style="margin-bottom:1.5rem;">
-        <li><b>İrlanda</b><br>25 haftalık dil eğitimi alan öğrencilere haftada 20 saat yasal çalışma hakkı verilir.<br>Tatil dönemlerinde haftalık 40 saat çalışılabilir.<br><i>Popüler şehirler:</i> Dublin, Cork, Galway</li>
-        <li><b>Kanada</b><br>Kolej ya da sertifika programlarına kayıtlı öğrenciler, eğitim süresince haftada 20 saat, tatillerde 40 saat çalışabilir.<br>Mezuniyet sonrası çalışma izni (PGWP) alma hakkı mümkündür.</li>
-        <li><b>Avustralya</b><br>Dil okulu, mesleki eğitim veya üniversite programlarına kayıtlı öğrenciler haftada 24 saat çalışabilir (2024 itibarıyla).<br>Minimum ücret saati oldukça yüksektir.</li>
-        <li><b>Yeni Zelanda</b><br>14 hafta ve üzeri İngilizce programlarında çalışma hakkı sunulabilir.<br>Sertifika/diploma programlarında da çalışma izni vardır.</li>
+      <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Hangi Ülkelerde Work and Study Yapılır?</h3>
+      <ol class="big-numbers" style="margin-bottom:1.5rem; padding-left:1rem; padding-top: 0.5rem;">
+        <li><b><span style="color: red; font-size: 1.2rem;">İrlanda</span></b>
+          <div class="country-details">
+            <span class="country-dot">25 haftalık dil eğitimi alan öğrencilere haftada 20 saat yasal çalışma hakkı verilir.</span><br>
+            <span class="country-dot">Tatil dönemlerinde haftalık 40 saat çalışılabilir.</span><br>
+            <i>Popüler şehirler:</i> Dublin, Cork, Galway
+          </div>
+        </li>
+        <li><b><span style="color: red; font-size: 1.2rem;">Kanada</span></b>
+          <div class="country-details">
+            <span class="country-dot">Kolej ya da sertifika programlarına kayıtlı öğrenciler, eğitim süresince haftada 20 saat, tatillerde 40 saat çalışabilir.</span><br>
+            <span class="country-dot">Mezuniyet sonrası çalışma izni (PGWP) alma hakkı mümkündür.</span>
+          </div>
+        </li>
+        <li><b><span style="color: red; font-size: 1.2rem;">Avustralya</span></b>
+          <div class="country-details">
+            <span class="country-dot">Dil okulu, mesleki eğitim veya üniversite programlarına kayıtlı öğrenciler haftada 24 saat çalışabilir (2024 itibarıyla).</span><br>
+            <span class="country-dot">Minimum ücret saati oldukça yüksektir.</span>
+          </div>
+        </li>
+        <li><b><span style="color: red; font-size: 1.2rem;">Yeni Zelanda</span></b>
+          <div class="country-details">
+            <span class="country-dot">14 hafta ve üzeri İngilizce programlarında çalışma hakkı sunulabilir.</span><br>
+            <span class="country-dot">Sertifika/diploma programlarında da çalışma izni vardır.</span>
+          </div>
+        </li>
       </ol>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Kimler Başvurabilir?</h3>
-      <ul style="margin-bottom:1.5rem;">
+      <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Kimler Başvurabilir?</h3>
+      <ul style="margin-bottom:1.5rem; padding-left: 2rem; padding-top:0.5rem;">
         <li>En az lise mezunu bireyler</li>
         <li>B1-B2 düzeyinde İngilizce bilenler (bazı ülkeler için)</li>
         <li>Eğitim alacağı süreye göre bütçesini ayarlayabilen öğrenciler</li>
         <li>Yurtdışında yaşama ve çalışma motivasyonu yüksek olanlar</li>
       </ul>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Başvuru Süreci ve Belgeler</h3>
-      <ul style="margin-bottom:1.5rem;">
+      <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Başvuru Süreci ve Belgeler</h3>
+      <ul style="margin-bottom:1.5rem; padding-left: 2rem; padding-top:0.5rem;">
         <li>Pasaport</li>
         <li>Mezuniyet belgesi (veya öğrenci belgesi)</li>
         <li>Niyet mektubu</li>
@@ -95,36 +139,36 @@
         <li>Vize başvuru evrakları</li>
         <li>Dil seviyesi belgesi (varsa)</li>
       </ul>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Çalışılabilecek İşler</h3>
-      <ul style="margin-bottom:1.5rem;">
+      <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Çalışılabilecek İşler</h3>
+      <ul style="margin-bottom:1.5rem; padding-left: 2rem; padding-top:0.5rem;">
         <li>Kafeler, restoranlar (barista, garson)</li>
         <li>Market ve mağazalar</li>
         <li>Oteller (resepsiyon, kat hizmetleri)</li>
         <li>Temizlik ve depo işleri</li>
         <li>Bazı sektörlerde ofis içi pozisyonlar (İngilizce seviyesi yüksek olanlar için)</li>
       </ul>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Çalışma Ücretleri ve Saatler</h3>
-      <ul style="margin-bottom:1.5rem;">
+      <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Çalışma Ücretleri ve Saatler</h3>
+      <ul style="margin-bottom:1.5rem; padding-left: 2rem; padding-top:0.5rem;">
         <li><b>İrlanda:</b> 12–14 Euro</li>
         <li><b>Kanada:</b> 15–18 CAD</li>
         <li><b>Avustralya:</b> 22–26 AUD</li>
         <li><b>Yeni Zelanda:</b> 21–24 NZD</li>
         <li>Haftalık ortalama çalışma süresi: 20 saat (tatillerde 40 saat)</li>
       </ul>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Konaklama ve Yaşam Giderleri</h3>
-      <ul style="margin-bottom:1.5rem;">
+      <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Konaklama ve Yaşam Giderleri</h3>
+      <ul style="margin-bottom:1.5rem; padding-left: 2rem; padding-top:0.5rem;">
         <li>Aile yanı konaklama, paylaşımlı ev, öğrenci yurdu seçenekleri bulunur.</li>
         <li>Aylık yaşam giderleri (ülkeye göre değişken):</li>
         <ul>
-          <li><b>İrlanda:</b> 800–1200 Euro</li>
+          <li></style><b>İrlanda:</b> 800–1200 Euro</li>
           <li><b>Kanada:</b> 1000–1500 CAD</li>
           <li><b>Avustralya:</b> 1000–1600 AUD</li>
           <li><b>Yeni Zelanda:</b> 1000–1400 NZD</li>
         </ul>
       </ul>
-      <h3 style="margin-top:2rem; color: var(--primary-color);">Vize Süreci</h3>
+      <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Vize Süreci</h3>
       <p>Her ülkenin vize şartları farklıdır, ancak genel olarak şunlara dikkat edilir:</p>
-      <ul style="margin-bottom:1.5rem;">
+      <ul style="margin-bottom:1.5rem; padding-left: 2rem; padding-top:0.5rem;">
         <li>Eğitim süresi</li>
         <li>Finansal yeterlilik belgeleri</li>
         <li>Okul kabul mektubu</li>
