@@ -6,6 +6,12 @@
     <meta name="description" content="Yurtdışında dil eğitimi fırsatları - İngiltere, Kanada, Amerika, Avustralya, Malta ve İrlanda'da dil okulları hakkında detaylı bilgi.">
     <meta name="keywords" content="yurtdışı dil okulu, ingiltere dil okulu, kanada dil okulu, amerika dil okulu, avustralya dil okulu, malta dil okulu, irlanda dil okulu">
     <title>Yurtdışında Dil Okulları | University Park</title>
+    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="whatsapp-btn-inside.css">
+
 
     <style>
         :root {
@@ -30,151 +36,6 @@
             overflow-x: hidden;
         }
 
-        .double-header {
-            background: #1a4079;
-            width: 100%;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.1rem 2rem 1.1rem 2rem;
-            min-height: 80px;
-            background: #fff;
-            width: 100%;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .header-top .logo img { background: #fff; border-radius: 2px; padding: 0.2rem; }
-        .header-top-links {
-            display: flex;
-            gap: 1.2rem;
-        }
-        .header-btn {
-            background: #ff0000;
-            color: #fff;
-            padding: 0.45rem 1.1rem;
-            border-radius: 22px;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: background 0.2s, color 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .header-btn:hover {
-            background: #e63946;
-            color: #fff;
-        }
-        .header-btn2 {
-            background: #20aa13;
-            color: #fff;
-            padding: 0.45rem 1.1rem;
-            border-radius: 22px;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: background 0.2s, color 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .header-bottom {
-            background: #1a4079;
-            border-top: 1px solid #274a7e;
-            padding: 0.05rem 2rem 0.05rem 2rem;
-            min-height: 26px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
-        .main-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-        }
-        .main-nav > a, .main-nav > .dropdown {
-            padding: 0 1.6rem;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            color: #fff;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-sizing: border-box;
-            border-bottom: none;
-            background: none;
-            border-radius: 0;
-            box-shadow: none;
-            position: relative;
-        }
-        .main-nav > a:hover,
-        .main-nav > .dropdown:hover > .dropdown-trigger {
-            color: #ff0000;
-        }
-        .dropdown-trigger {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            color: inherit;
-            font-size: inherit;
-            font-weight: inherit;
-            text-decoration: none;
-            padding: 0;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-        .main-nav > a:not(:last-child) {
-            border-right: 2px solid #fff;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #123c6c;
-            display: none;
-            min-width: 180px;
-            padding: 10px 0;
-            z-index: 1000;
-            border-radius: 22px !important;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .dropdown-content a {
-            display: block;
-            padding: 10px 20px;
-            color: #fff;
-            font-size: 0.95rem;
-            text-decoration: none;
-        }
-        .dropdown-content a:hover {
-            background-color: #0d2b52;
-            color: #ff0000;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        @media (max-width: 900px) {
-            .header-top, .header-bottom { flex-direction: column; align-items: flex-start; padding: 0.7rem 1rem; }
-            .main-nav { gap: 1.2rem; }
-            .header-top-links { gap: 0.7rem; margin-top: 0.5rem; }
-        }
-        .header-btn.dropdown-trigger {
-            background: #1a4079;
-            color: #fff;
-            border-radius: 22px;
-            padding: 0.45rem 1.1rem;
-            font-weight: 600;
-            border: none;
-        }
         
         /* Modal Styles */
         .modal {
@@ -411,122 +272,11 @@
             height: 457px;
         }
 
-        /* Footer Styles */
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 4rem 2rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-section ul li a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section ul li a:hover {
-            color: var(--secondary-color);
-        }
-
-        .contact-info li {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info i {
-            margin-top: 3px;
-        }
-
-        .contact-info span {
-            display: block;
-            line-height: 1.5;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-left: auto;
-        }
-
-        .social-icons a {
-            color: #4CAF50;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #45a049;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        @media (max-width: 768px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
 
         
 
 
-        .whatsapp-btn-inside {
-    display: inline-block;
-    background-color: #25D366;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 0.9rem 2.2rem;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(37, 211, 102, 0.12);
-    margin-top: 1rem;
-}
-.whatsapp-btn-inside:hover {
-    background-color: #128C7E;
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.18);
-}
+
 
 
     </style>
@@ -646,57 +396,7 @@
 </div>
     
 
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>EĞİTİM PROGRAMLARI</h3>
-                    <ul>
-                        <li><a href="#">ÇİN'DE %100 BURSLU ÜNİVERSİTE EĞİTİMİ</a></li>
-                        <li><a href="#">SINAVSIZ ÜNİVERSİTE</a></li>
-                        <li><a href="#">NEDEN YURTDIŞINDA ÜNİVERSİTE?</a></li>
-                        <li><a href="#">WORK AND TRAVEL</a></li>
-                        <li><a href="#">VİZE</a></li>
-                        <li><a href="#">MBA</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>HAKKIMIZDA</h3>
-                    <ul>
-                        <li><a href="">NEDEN UNIVERSITY PARK YURTDIŞI EĞİTİM?</a></li>
-                        <li><a href="">DANIŞMANLIK HİZMETLERİMİZ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 style="margin-left: 20px;">İLETİŞİM</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+90 324 326 4600</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>+90 541 430 4808</span>
-                            <div class="social-icons">
-                                <a href="https://wa.me/905414304808" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://t.me/+905414304808" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-                                <a href="viber://chat?number=+905414304808" title="Viber"><i class="fab fa-viber"></i></a>
-                                <a href="#" title="WeChat"><i class="fab fa-weixin"></i></a>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>ÜNİVERSİTE CADDESİ ÇİFTİKKÖY SOKAK 3125 NO: 1 KAT 3 DAİRE 6 YENİŞEHİR / MERSİN</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 UNIVERSITY PARK YURTDIŞI EĞİTİM. TÜM HAKLARI SAKLIDIR.</p>
-            </div>
-        </div>
-        
-    </footer>
+<div id="footer"></div>
     
     <!-- Contact Modal -->
     <div id="contactModal" class="modal" style="display:none;">
