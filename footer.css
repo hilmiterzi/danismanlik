@@ -8,7 +8,8 @@
 
 .footer-container {
     max-width: 1300px;
-    margin: 0 auto;
+    margin-left: 25rem; /* Auto margins center the element */
+
 }
 
 .footer-grid {
