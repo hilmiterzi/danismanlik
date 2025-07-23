@@ -108,3 +108,18 @@
         margin-bottom: 0.3em;
     }
   }
+
+  .question-mark {
+    position: absolute;
+    top: -400px;
+    margin-left: 9rem;
+    color: red;
+    font-size: 90rem;
+    z-index: 1000;
+    user-select: none;
+}
+
+/* Adjust main section to account for the question mark */
+.main-section {
+    margin-left: 30px; /* Give space for the question mark */
+}
