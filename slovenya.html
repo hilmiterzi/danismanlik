@@ -256,7 +256,7 @@
 </head>
 <body>
     <div id="header"></div>
-
+    <script src="main.js?v=1"></script>
 
     <div class="hero-slider" style="position:relative; overflow:hidden; height:400px; width:100%; margin-bottom: 0;">
         <img src="slovenia-thumbnail.webp" alt="Slovenya" style="position:absolute; left:50%; top:0; transform:translateX(-50%); width:100vw; height:100%; min-height:100%; min-width:100%; object-fit:cover; object-position: 50% 30%; filter:brightness(0.7) blur(1px); z-index:0;">
@@ -271,17 +271,8 @@
             Uygun Maliyetlerle AB Diploması!
         </div>
     </div>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const slides = document.querySelectorAll('.hero-slide');
-        let current = 0;
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 2500);
-    });
-    </script>
+
+
     <section class="content-section">
         <h1 class="section-title">🇸🇮 Slovenya'da Üniversite Eğitimi</h1>
         <div class="country-section">
@@ -440,7 +431,6 @@
 
     </section>
 <div id="footer"></div>
-<script src="main.js?v=1"></script>
     
 </body>
 </html>
