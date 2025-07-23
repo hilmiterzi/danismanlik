@@ -455,18 +455,6 @@
                 modal.style.display = 'none';
             }
         }
-
-        document.querySelectorAll('a').forEach(link => {
-            const href = link.getAttribute('href');
-            // dropdown-trigger class'ı olanlar hariç!
-            if ((href === '#' || href === '' || !href) && !link.classList.contains('dropdown-trigger')) {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    banner.classList.add('active');
-                    overlay.classList.add('active');
-                });
-            }
-        });
     </script>
 </body>
 </html> 
