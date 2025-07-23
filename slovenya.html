@@ -271,16 +271,25 @@
             Uygun Maliyetlerle AB Diploması!
         </div>
     </div>
+    
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // Custom slider logic
         const slides = document.querySelectorAll('.hero-slider');
         let current = 0;
-        setInterval(() => {
-            slides[current].classList.remove('active');
-            current = (current + 1) % slides.length;
-            slides[current].classList.add('active');
-        }, 2500);
+        let interval = setInterval(nextSlide, 2500);
+        function showSlide(idx) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === idx);
+            });
+            current = idx;
+        }
+        function nextSlide() {
+            let next = (current + 1) % slides.length;
+            showSlide(next);
+        }
     });
+
     </script>
     <section class="content-section">
         <h1 class="section-title">🇸🇮 Slovenya'da Üniversite Eğitimi</h1>
