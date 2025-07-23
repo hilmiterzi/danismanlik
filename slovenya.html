@@ -260,8 +260,8 @@
 
     <div class="hero-slider" style="position:relative; overflow:hidden; height:400px; width:100%; margin-bottom: 0;">
         <img src="slovenia-thumbnail.webp" alt="Slovenya" style="position:absolute; left:50%; top:0; transform:translateX(-50%); width:100vw; height:100%; min-height:100%; min-width:100%; object-fit:cover; object-position: 50% 30%; filter:brightness(0.7) blur(1px); z-index:0;">
+        <div class="hero-slide active"></div>
         <div class="hero-slider-overlay"></div>
-        <div class="hero-slide active">
             SLOVENYA'DA KALİTELİ ÜNİVERSİTE EĞİTİMİ FIRSATI!
         </div>
         <div class="hero-slide">
@@ -271,25 +271,16 @@
             Uygun Maliyetlerle AB Diploması!
         </div>
     </div>
-    
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Custom slider logic
         const slides = document.querySelectorAll('.hero-slider');
         let current = 0;
-        let interval = setInterval(nextSlide, 2500);
-        function showSlide(idx) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === idx);
-            });
-            current = idx;
-        }
-        function nextSlide() {
-            let next = (current + 1) % slides.length;
-            showSlide(next);
-        }
+        setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+        }, 2500);
     });
-
     </script>
     <section class="content-section">
         <h1 class="section-title">🇸🇮 Slovenya'da Üniversite Eğitimi</h1>
