@@ -14,12 +14,20 @@
     <link rel="stylesheet" href="whatsapp-btn-inside.css">
     <style>
 
+.infor-container {
+    max-width: 400px; 
+    height: 100%; 
+    box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1); 
+    border-radius: 18px;
+}
+
         .contact-container {
-            max-width: 480px;
-            margin: 48px auto;
+            max-width: 900px;
+            margin-top:3rem;
+            margin-left:10rem;
             background: #fff;
             border-radius: 18px;
-            box-shadow: 0 4px 24px rgba(26,64,121,0.10);
+            box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
             padding: 2.5rem 2rem 2rem 2rem;
         }
         .contact-container h1 {
@@ -94,15 +102,14 @@
     <script src="main.js?v=1"></script>
 
 
-    <div class="contact-container">
-        <div style="text-align: center; margin-bottom: 2rem;">
-            <img src="logonh.webp" alt="University Park Logo" style="max-width: 200px; height: auto; margin-bottom: 1rem;">
-        </div>
-        <h1>Bilgi İste</h1>
-        <p style="text-align: center; color: #666; margin-bottom: 2rem; line-height: 1.6;">
+
+    <h1 style="font-size:2.5rem; color:red; text-align:center; margin-top:3rem;">Bilgi İste</h1>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem; line-height: 1.6; margin-top:0.5rem;">
             Yurtdışı eğitim programları hakkında detaylı bilgi almak için formu doldurun. 
             Uzman danışmanlarımız en kısa sürede sizinle iletişime geçecek.
         </p>
+
+    <div class="contact-container">
         <form class="contact-form" action="https://formsubmit.co/info@universitypark.com.tr" method="POST">
             <label for="adsoyad">Ad Soyad <span style='color:red'>*</span></label>
             <input type="text" id="adsoyad" name="adsoyad" required>
@@ -167,4 +174,5 @@
     <div id="footer"></div>
 
 </body>
+</main>
 </html> 
