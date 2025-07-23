@@ -264,24 +264,7 @@
 </head>
 <body>
     <div id="header"></div>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                // Remove <body> if present in header.html
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = data;
-                let headerContent = tempDiv.querySelector('header');
-                if (headerContent) {
-                    document.getElementById('header').appendChild(headerContent);
-                } else {
-                    document.getElementById('header').innerHTML = data;
-                }
-            });
-    });
-    </script>
-
+    <script src="main.js?v=1"></script>
 
     <!-- NEW HERO SLIDER START -->
     <div class="custom-hero-slider">
@@ -618,6 +601,5 @@
         </div>
     </section>
    <div id="footer"></div>
-   <script src="main.js?v=1"></script>
 </body>
 </html> 
