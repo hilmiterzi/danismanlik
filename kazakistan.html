@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University Park Yurtdışı Eğitim - Yurtdışında üniversite, dil okulu, work and travel programları. Çin'de burslu eğitim, sınavsız üniversite fırsatları ve vize danışmanlığı hizmetleri.">
+    <meta name="keywords" content="yurtdışı eğitim, yurtdışında üniversite, dil okulu, work and travel, çin'de eğitim, burslu eğitim, sınavsız üniversite, vize danışmanlığı">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="University Park Yurtdışı Eğitim ve Vize Danışmanlığı">
+    <meta property="og:description" content="Yurtdışında üniversite, dil okulu, work and travel programları. Çin'de burslu eğitim, sınavsız üniversite fırsatları.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://universitypark.com.tr">
+    <title>Yurtdışı Eğitim Ve Vize Danışmanlığı | University Park</title>
+    <!-- Google Fonts: Island -->
+    <link href="https://fonts.googleapis.com/css2?family=Island&display=swap" rel="stylesheet">
+    <!-- Preload first hero image with proper attributes -->
+    <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 300px)" fetchpriority="high">
+    <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)" fetchpriority="high">
+    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="stylesheet" href="header.css?v=1">
+    <link rel="stylesheet" href="footer.css?v=2">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="whatsapp-btn-inside.css">
+    <style>
+        
+
+
+        /* Responsive Design */
+        @media (max-width: 460px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-slide h2 {
+                font-size: 1.8rem;
+            }
+
+            .featured-item {
+                flex-direction: column;
+            }
+
+            .featured-item.reverse {
+                flex-direction: column;
+            }
+
+            .featured-image {
+                width: 100%;
+            }
+
+            .desktop-content {
+                display: none;
+            }
+
+            .mobile-content {
+                display: block;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            .slide-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .slide-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 461px) and (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .hero {
+                height: 80vh;
+            }
+        }
+
+        
+
+       
+        .hero-slider {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+        .hero-slider img {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            object-position: 50% 40%;
+            filter: brightness(0.7) blur(1px);
+            z-index: 0;
+        }
+        .hero-slider-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(180deg,rgba(255,255,255,0.4) 0%,rgba(217,43,62,0.4) 50%,rgba(255,215,0,0.3) 100%);
+            z-index: 1;
+        }
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            opacity: 0;
+            transition: opacity 0.7s;
+            z-index: 2;
+            text-align: center;
+            padding: 0 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+        }
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 3;
+        }
+        @media (max-width: 768px) {
+            .hero-slider { height: 160px; }
+            .hero-slide { font-size: 1.1rem; }
+        }
+
+        /* Letonya bayrağı overlay CSS */
+        .lv-flag-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .lv-flag-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                rgb(140,30,50) 0%,
+                rgb(140,30,50) 40%,
+                #fff 40%,
+                #fff 60%,
+                rgb(140,30,50) 60%,
+                rgb(140,30,50) 100%
+            );
+            opacity: 0.7;
+        }
+
+        /* Çin bayrağı overlay ve yıldızlar */
+        .cn-flag-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .cn-flag-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(217,43,62,0.45); /* Çin kırmızısı, daha şeffaf */
+            z-index: 2;
+        }
+        .cn-flag-overlay svg {
+            position: absolute;
+            top: 32px;
+            left: 32px;
+            width: 90px;
+            height: 60px;
+            z-index: 3;
+        }
+
+        /* Content Sections CSS - Polonya sayfasından alınan stiller */
+        .content-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .country-section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .country-section h2 {
+            color: #1a4079;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            border-bottom: 2px solid #e63946;
+            padding-bottom: 0.5rem;
+        }
+
+        .country-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .advantages-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .advantages-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .advantages-list li::before {
+            content: "•";
+            color: #000;
+            position: absolute;
+            left: 0;
+        }
+
+        .advantages-list ul,
+        ol ul {
+            margin-top: 0.7em;
+            margin-bottom: 0.7em;
+        }
+        .advantages-list ul li,
+        ol ul li {
+            margin-top: 0.4em;
+            margin-bottom: 0.4em;
+            list-style-type: none;
+        }
+
+        .table-section {
+            overflow-x: auto;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1rem;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1a4079;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .university-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .university-card h3 {
+            color: #1a4079;
+            margin-bottom: 0.5rem;
+        }
+
+        .university-btn {
+            background: linear-gradient(90deg, #1a4079, #e63946);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .university-btn:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 1rem;
+                margin-top: 20px;
+            }
+
+            .country-section {
+                padding: 1.5rem;
+            }
+
+            .hero-slider {
+                height: 160px;
+            }
+
+            .hero-slide {
+                font-size: 1.1rem;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            table, th, td {
+                font-size: 0.95rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <script src="main.js?v=1"></script>
+</body>
+
+<div class="hero-slider">
+    <img src="china-thumbnail.webp" alt="Çin" style="object-position: 50% 70%;">
+    <div class="cn-flag-overlay"></div>
+    <div class="cz-flag-overlay"></div>
+    <div class="hero-slide active">Kazakistan: Avrasya'nın Yükselen Eğitim Üssü</div>
+    <div class="hero-slide">Türk Öğrenciler İçin Uygun Maliyetli ve Kaliteli Yurtdışı Eğitim</div>
+    <div class="hero-slide">Bologna Süreci'ne Uyumlu Diplomalar ile Avrupa'da Geçerlilik</div>
+</div>
+<script>
+
+
+// Çin bayrağı yıldızlarını overlay'e ekle
+document.addEventListener('DOMContentLoaded', function() {
+  var flagOverlay = document.querySelector('.cn-flag-overlay');
+  if(flagOverlay) {
+    flagOverlay.innerHTML = `
+      <svg viewBox="0 0 90 60" width="90" height="60" fill="none">
+        <polygon points="15,8 18,20 7,13 23,13 12,20" fill="#FFD700"/>
+        <polygon points="30,10 31,13 28,12 32,12 29,14" fill="#FFD700" transform="rotate(20 30 10)"/>
+        <polygon points="35,18 36,21 33,20 37,20 34,22" fill="#FFD700" transform="rotate(40 35 18)"/>
+        <polygon points="32,28 33,31 30,30 34,30 31,32" fill="#FFD700" transform="rotate(60 32 28)"/>
+        <polygon points="24,32 25,35 22,34 26,34 23,36" fill="#FFD700" transform="rotate(80 24 32)"/>
+      </svg>
+    `;
+  }
+});
+</script>
+
+<!-- === BAŞLANGIÇ: Polonya dizaynına uygun Çin içeriği === -->
+<section class="content-section">
+    <h1>Kazakistan'da Üniversite Eğitimi</h1>
+    <div class="country-section">
+        <h2>1. Kazakistan’da Üniversite Eğitimi Neden Tercih Ediliyor?</h2>
+        <p>
+            Kazakistan, son yıllarda yükseköğretimde yaptığı yatırımlar ve Bologna Süreci'ne dahil olması sayesinde uluslararası öğrenciler 
+            için cazip bir eğitim merkezi haline gelmiştir. Gelişmiş altyapıya sahip üniversiteleri, uygun maliyetli yaşam ve eğitim imkanları, 
+            çok kültürlü yapısı ve Türk öğrenciler için sunduğu dil ve kültürel yakınlık, Kazakistan’ı özellikle sağlık ve mühendislik alanlarında 
+            popüler hale getirmiştir.
+        </p>
+    </div>
+    <div class="country-section">
+        <h2>2. Kazakistan’da Eğitim Sistemi</h2>
+        <p>
+            Kazakistan eğitim sistemi Avrupa standartlarına uyumludur. 2010 yılında Bologna Süreci’ne katılan ülke, 
+            diploma denkliği ve öğrenci hareketliliği açısından Avrupa ile uyumlu bir sistem sunar.
+        </p>
+
+        <ul style="padding-left:2rem;">
+            <li style="padding-bottom:0.3rem;"><span style="font-weight:650;">Lisans Eğitimi Süresi: </span>4 yıl (Tıp ve Diş Hekimliği gibi bölümler hariç)</li>
+            <li style="padding-bottom:0.3rem;"><span style="font-weight:650;">Yüksek Lisans: </span>2 yıl</li>
+            <li style="padding-bottom:0.3rem;"><span style="font-weight:650;">Doktora: </span>3 yıl</li>
+            <li style="padding-bottom:0.3rem;"><span style="font-weight:650;">Tıp Fakültesi Süresi: </span>6 yıl</li>
+            <li style="padding-bottom:0.3rem;"><span style="font-weight:650;">Diş Hekimliği: </span>5 yıl</li>
+            <li>Eğitim dili genellikle Rusça, Kazakça ve bazı üniversitelerde İngilizce’dir.</li>
+            <li>Türkiye’den gelen öğrenciler için YÖK denkliği mümkündür (tanınan üniversiteler kapsamında).</li>
+        </ul>
+
+
+
+
+    </div>
+    <div class="country-section">
+        <h2>3. Popüler Bölümler</h2>
+
+
+
+    <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+          <tr>
+            <th>Kategori</th>
+            <th>Bölümler</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="7">Sağlık Alanları</td>
+            <td>Tıp (6 yıl)</td>
+          </tr>
+          <tr><td>Diş Hekimliği (5 yıl)</td></tr>
+          <tr><td>Eczacılık (5 yıl)</td></tr>
+          <tr><td>Hemşirelik (4 yıl)</td></tr>
+          <tr><td>Fizyoterapi ve Rehabilitasyon</td></tr>
+          <tr><td>Sağlık Yönetimi</td></tr>
+          <tr>
+            <td><em><strong>Not:</strong> Mezunlar STS sınavı ile TR’de çalışabilir.</em></td>
+          </tr>
+      
+          <tr>
+            <td rowspan="5">Mühendislik & Teknik Bölümler</td>
+            <td>Bilgisayar Mühendisliği</td>
+          </tr>
+          <tr><td>Elektrik-Elektronik Mühendisliği</td></tr>
+          <tr><td>Makine Mühendisliği</td></tr>
+          <tr><td>İnşaat Mühendisliği</td></tr>
+          <tr><td>Yazılım Mühendisliği</td></tr>
+      
+          <tr>
+            <td rowspan="6">Sosyal & İdari Bilimler</td>
+            <td>Uluslararası İlişkiler</td>
+          </tr>
+          <tr><td>İşletme</td></tr>
+          <tr><td>Ekonomi</td></tr>
+          <tr><td>Hukuk</td></tr>
+          <tr><td>Psikoloji</td></tr>
+          <tr><td>Medya ve İletişim</td></tr>
+      
+          <tr>
+            <td rowspan="3">Sanat & Tasarım</td>
+            <td>Grafik Tasarım</td>
+          </tr>
+          <tr><td>İç Mimarlık</td></tr>
+          <tr><td>Müzik ve Sahne Sanatları</td></tr>
+        </tbody>
+      </table>
+      
+
+
+    <div class="country-section">
+        <h2>4. Çin'de Üniversite Eğitimi Bursları</h2>
+        <p>Çin hükümeti ve çeşitli kurumlar, uluslararası öğrenciler için geniş burs olanakları sunmaktadır:</p>
+        <ul class="advantages-list">
+            <li><strong>CSC – Çin Hükümeti Bursu:</strong> Çin Halk Cumhuriyeti tarafından verilen bu burs, tam burs kapsamındadır.<br>
+                <em>Neleri kapsar:</em>
+                <ul>
+                    <li>Üniversite harcı</li>
+                    <li>Yurt konaklaması</li>
+                    <li>Aylık cep harçlığı (genellikle 250-350 USD)</li>
+                    <li>Sağlık sigortası</li>
+                </ul>
+            </li>
+            <li><strong>Konfüçyüs Enstitüsü Bursu:</strong> Çince dil eğitimi almak isteyen öğrenciler için özel burs programıdır. Kısa süreli ve lisansüstü programları kapsar.</li>
+            <li><strong>Üniversiteye Özgü Burslar:</strong> Tsinghua, Peking, Zhejiang gibi üniversiteler, akademik başarıya göre kendi burslarını sunar.</li>
+        </ul>
+    </div>
+    <div class="country-section">
+        <h2>5. Çin'de Eğitim Almanın Avantajları</h2>
+        <ul class="advantages-list">
+            <li>Düşük yaşam ve eğitim maliyetleri</li>
+            <li>Uluslararası geçerliliği artan üniversite diplomaları</li>
+            <li>Geniş burs imkanları</li>
+            <li>Teknoloji ve yenilik merkezlerine yakınlık (Huawei, Alibaba, Tencent gibi)</li>
+            <li>Kültürel çeşitlilik ve yeni bir bakış açısı kazanımı</li>
+        </ul>
+    </div>
+
+        <style>
+            .university-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+            .university-btn:hover {
+                transform: scale(1.05);
+            }
+            @media (max-width: 768px) {
+                .universities-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                }
+            }
+            @media (max-width: 480px) {
+                .universities-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </div>
+    <div class="country-section">
+        <h2>6. Çin'de Yaşam Giderleri (Ortalama Aylık)</h2>
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gider Kalemi</th>
+                        <th>Maliyet (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Konaklama</td><td>100–250</td></tr>
+                    <tr><td>Yeme-İçme</td><td>150–200</td></tr>
+                    <tr><td>Ulaşım</td><td>20–30</td></tr>
+                    <tr><td>Diğer harcamalar</td><td>50–100</td></tr>
+                    <tr><td><strong>Toplam</strong></td><td><strong>350–600</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="country-section">
+        <h2>7. Başvuru Dönemleri ve Takvim</h2>
+        <ul class="advantages-list">
+            <li>Başvurular: Genellikle her yıl Mart–Haziran arasında alınır</li>
+            <li>Eğitim başlangıcı: Eylül</li>
+            <li>CSC burs başvurusu: Ocak–Nisan arasında yapılır</li>
+        </ul>
+    </div>
+    <div class="country-section">
+        <h2>8. Çin'de Üniversite Eğitimi Mantıklı mı?</h2>
+        <p>Evet, özellikle kaliteli ve ekonomik bir yurtdışı eğitimi arayan öğrenciler için Çin harika bir fırsat. Hem dünya sıralamasında yükselen üniversiteler hem de burslu okuma imkanlarıyla Çin, geleceği hedefleyen öğrenciler için güçlü bir alternatif haline gelmiştir.</p>
+    </div>
+
+
+    <div class="country-section">
+        <h2>9. Çin'deki En İyi Üniversiteler (2025 itibarıyla)</h2>
+        <p>Aşağıdaki üniversiteler, dünya sıralamalarında üst sıralarda yer alıyor ve İngilizce programlar sunuyor:</p>
+        <div class="universities-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem;">
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div style="height: 130px; position: relative; background: url('tsinghua_uni.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Tsinghua University</div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                </div>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Tsinghua University</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Pekin</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Mühendislik, Bilgisayar Bilimi</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div style="height: 130px; position: relative; background: url('peking_uni.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Peking University</div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                </div>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Peking University</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Pekin</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Hukuk, Tıp, Sosyal Bilimler</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div style="height: 130px; position: relative; background: url('fudan_uni.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Fudan University</div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                </div>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Fudan University</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Şanghay</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>İşletme, Tıp, Ekonomi</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div style="height: 130px; position: relative; background: url('zhejiang_uni.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Zhejiang University</div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                </div>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Zhejiang University</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Hangzhou</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Mühendislik, Yapay Zeka</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+            <div class="university-card" style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 2px solid #f0f4fa;">
+                <div style="height: 130px; position: relative; background: url('shanghai_jiao_tong_uni.webp') center center/cover no-repeat; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Shanghai Jiao Tong Univ.</div>
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
+                </div>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
+                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Shanghai Jiao Tong Univ.</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Şanghay</p>
+                    <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Elektrik-Elektronik, Tıp</p>
+                    <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div style="text-align: center; margin: 32px 0 0 0;">
+    <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Ücretsiz Danışmanlık Al</a>
+</div>
+
+
+<div id="footer"></div>
+
+</html>
