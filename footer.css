@@ -15,7 +15,7 @@
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
+    gap: 4rem;
     margin-bottom: 2rem;
 }
 
