@@ -360,6 +360,26 @@
             }
         }
 
+
+        .university-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+            .university-btn:hover {
+                transform: scale(1.05);
+            }
+            @media (max-width: 768px) {
+                .universities-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                }
+            }
+            @media (max-width: 480px) {
+                .universities-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+
     </style>
 </head>
 <body>
@@ -510,26 +530,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </ul>
     </div>
 
-        <style>
-            .university-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            }
-            .university-btn:hover {
-                transform: scale(1.05);
-            }
-            @media (max-width: 768px) {
-                .universities-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 1rem;
-                }
-            }
-            @media (max-width: 480px) {
-                .universities-grid {
-                    grid-template-columns: 1fr;
-                }
-            }
-        </style>
     </div>
     
 
@@ -542,8 +542,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Nazarbayev University (Nur-Sultan)</div>
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
                 </div>
-                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
-                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Tsinghua University</h3>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 250px;">
+                    <h3 style="color: #1a4079; font-size: 1.1rem; text-align: center;">Nazarbayev University (Nur-Sultan)</h3>
                     <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Pekin</p>
                     <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Mühendislik, Bilgisayar Bilimi</p>
                     <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
@@ -554,8 +554,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Al-Farabi Kazakh National University (Almatı)</div>
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
                 </div>
-                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
-                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Peking University</h3>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 250px;">
+                    <h3 style="color: #1a4079; font-size: 1.1rem; text-align: center;">Al-Farabi Kazakh National University (Almatı)</h3>
                     <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Pekin</p>
                     <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Hukuk, Tıp, Sosyal Bilimler</p>
                     <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
@@ -566,8 +566,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Kazakh National Medical University (Almatı)</div>
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
                 </div>
-                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
-                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Fudan University</h3>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 250px;">
+                    <h3 style="color: #1a4079; font-size: 1.1rem; text-align: center;">Kazakh National Medical University (Almatı)</h3>
                     <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Şanghay</p>
                     <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>İşletme, Tıp, Ekonomi</p>
                     <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
@@ -578,8 +578,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">Astana Medical University (Nur-Sultan)</div>
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
                 </div>
-                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
-                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Zhejiang University</h3>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 250px;">
+                    <h3 style="color: #1a4079; font-size: 1.1rem; text-align: center;">Astana Medical University (Nur-Sultan)</h3>
                     <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Hangzhou</p>
                     <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Mühendislik, Yapay Zeka</p>
                     <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
@@ -590,8 +590,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div style="background: rgba(0,0,0,0.45); color: #fff; font-weight: bold; text-align: center; padding: 10px 22px; font-size: 1.1rem; border-radius: 8px; display: inline-block; position: relative; z-index: 2;">KIMEP University (Almatı)</div>
                     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.04);"></div>
                 </div>
-                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 200px;">
-                    <h3 style="color: #1a4079; margin-bottom: 0.5rem; font-size: 1.1rem; text-align: center;">Shanghai Jiao Tong Univ.</h3>
+                <div class="university-content" style="padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 250px;">
+                    <h3 style="color: #1a4079; font-size: 1.1rem; text-align: center;">KIMEP University (Almatı).</h3>
                     <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Şanghay</p>
                     <p style="color: #333; font-size: 0.9rem; margin-bottom: 1rem;"><strong>Öne Çıkan Bölümler:</strong><br>Elektrik-Elektronik, Tıp</p>
                     <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
