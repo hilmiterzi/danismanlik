@@ -182,20 +182,21 @@
         }
 
         /* Çin bayrağı overlay ve yıldızlar */
-        .cn-flag-overlay {
+        .kz-flag-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: 2;
             pointer-events: none;
         }
-        .cn-flag-overlay::before {
+        .kz-flag-overlay::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(217,43,62,0.45); /* Çin kırmızısı, daha şeffaf */
-            z-index: 2;
-        }
-        .cn-flag-overlay svg {
+            background: linear-gradient(to bottom, #00BFFF 0 100%);
+            opacity: 0.7;
+            z-index: 1;
+}
+        .kz-flag-overlay svg {
             position: absolute;
             top: 32px;
             left: 32px;
@@ -388,32 +389,20 @@
 </body>
 
 <div class="hero-slider">
-    <img src="china-thumbnail.webp" alt="Çin" style="object-position: 50% 70%;">
-    <div class="cn-flag-overlay"></div>
+    <img src="kazakhstan.webp" alt="Kazakistan" style="object-position: 0% 50%;">
+    <div class="kz-flag-overlay"></div>
     <div class="cz-flag-overlay"></div>
     <div class="hero-slide active">Kazakistan: Avrasya'nın Yükselen Eğitim Üssü</div>
     <div class="hero-slide">Türk Öğrenciler İçin Uygun Maliyetli ve Kaliteli Yurtdışı Eğitim</div>
     <div class="hero-slide">Bologna Süreci'ne Uyumlu Diplomalar ile Avrupa'da Geçerlilik</div>
+
+    <div class="kz-flag">
+        <div class="kz-symbol"></div>
+      </div>
+      
 </div>
-<script>
 
 
-// Çin bayrağı yıldızlarını overlay'e ekle
-document.addEventListener('DOMContentLoaded', function() {
-  var flagOverlay = document.querySelector('.cn-flag-overlay');
-  if(flagOverlay) {
-    flagOverlay.innerHTML = `
-      <svg viewBox="0 0 90 60" width="90" height="60" fill="none">
-        <polygon points="15,8 18,20 7,13 23,13 12,20" fill="#FFD700"/>
-        <polygon points="30,10 31,13 28,12 32,12 29,14" fill="#FFD700" transform="rotate(20 30 10)"/>
-        <polygon points="35,18 36,21 33,20 37,20 34,22" fill="#FFD700" transform="rotate(40 35 18)"/>
-        <polygon points="32,28 33,31 30,30 34,30 31,32" fill="#FFD700" transform="rotate(60 32 28)"/>
-        <polygon points="24,32 25,35 22,34 26,34 23,36" fill="#FFD700" transform="rotate(80 24 32)"/>
-      </svg>
-    `;
-  }
-});
-</script>
 
 <!-- === BAŞLANGIÇ: Polonya dizaynına uygun Çin içeriği === -->
 <section class="content-section">
