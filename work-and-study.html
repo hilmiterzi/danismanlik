@@ -50,6 +50,51 @@
         }
 
 
+
+        .image-gallery-vertical {
+    display: flex; /* Flexbox kullan */
+    flex-direction: column; /* Öğeleri alt alta sırala */
+    align-items: center; /* Yatayda ortala */
+    gap: 1.5rem; /* Fotoğraflar arası boşluk */
+    margin: 1.5rem auto 2.5rem auto; /* Başlığın hemen altından ve diğer içerikten boşluk */
+    max-width: 700px; /* Fotoğraf galerisinin maksimum genişliği */
+    padding: 0 1rem; /* Yanlardan hafif boşluk */
+}
+
+.image-gallery-vertical img {
+    width: 100%; /* Konteynerin genişliğini tamamen doldur */
+    max-width: 600px; /* Her bir fotoğrafın maksimum genişliği (daha büyük ekranlar için) */
+    height: 250px; /* Sabit yükseklik, object-fit ile ayarla */
+    object-fit: cover; /* Görselin oranını koruyarak kutuyu doldur */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(26,64,121,0.1); /* Daha belirgin gölge */
+    display: block; /* Her görselin ayrı bir blok elementi olmasını sağla */
+    margin: 0; /* Inline marginleri sıfırla */
+    padding: 0; /* Inline paddingleri sıfırla */
+}
+
+/* Küçük ekranlar için düzenlemeler */
+@media (max-width: 768px) {
+    .image-gallery-vertical {
+        gap: 1rem; /* Mobil ekranlarda boşluğu azalt */
+        margin: 1rem auto 2rem auto; /* Mobil ekranlarda boşluğu azalt */
+    }
+
+    .image-gallery-vertical img {
+        height: 250px; /* Mobil ekranlarda yüksekliği azalt */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery-vertical {
+        padding: 0 0.5rem; /* Yan boşlukları daha da azalt */
+    }
+    .image-gallery-vertical img {
+        height: 200px; /* Çok küçük ekranlarda yüksekliği daha da azalt */
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -59,11 +104,14 @@
 
     <main class="info-section" style="max-width: 1200px; margin: 2rem auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); padding: 2.5rem 2rem;">
       <h1 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1.2rem; text-align: center;">Work and Study Programı</h1>
-      <div style="display: grid; grid-template-columns: repeat(3, 350px); gap: 8px; justify-content: center; align-items: stretch; margin: 0 auto 28px auto; max-width: 1200px;">
-        <img src="was1.webp" alt="Work and Study Fotoğraf 1" style="width: 350px; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); display: block; margin-left: auto; margin-right: auto; padding: 0;">
-        <img src="was2.webp" alt="Work and Study Fotoğraf 2" style="width: 350px; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); display: block; margin-left: auto; margin-right: auto; padding: 0;">
-        <img src="was3.webp" alt="Work and Study Fotoğraf 3" style="width: 350px; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); display: block; margin-left: auto; margin-right: auto; padding: 0;">
-      </div>
+
+      
+      <div class="image-gallery-vertical">
+        <img src="was1.webp" alt="Work and Study Fotoğraf 1">
+        <img src="was2.webp" alt="Work and Study Fotoğraf 2">
+        <img src="was3.webp" alt="Work and Study Fotoğraf 3">
+    </div>
+
       <h2 style="color: var(--secondary-color); font-size: 2rem; margin-bottom: 1.2rem;">Yurtdışında Eğitim Alırken Çalışma Fırsatı</h2>
       <p style="font-size:1.1rem;">Yurtdışında eğitim almak isteyen birçok öğrenci için en büyük engellerden biri maliyettir. Ancak hem eğitim alıp hem de yasal olarak çalışarak bu maliyetleri azaltmak mümkün! Work and Study (Çalış ve Eğitim Al) programları, bu ihtiyaca mükemmel bir çözüm sunar. Peki bu program tam olarak nedir, kimler başvurabilir ve hangi ülkelerde uygulanır?</p>
       <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Work and Study Nedir?</h3>
