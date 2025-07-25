@@ -50,131 +50,20 @@
         }
 
 
-        /* Genel stil, masaüstü için grid görünümünü korur */
-.info-section .image-slider-container {
-    display: grid;
-    grid-template-columns: repeat(3, 350px);
-    gap: 8px;
-    justify-content: center;
-    align-items: stretch;
-    margin: 0 auto 28px auto;
-    max-width: 1200px;
-}
-
-/* Mobil cihazlar için (max-width: 768px gibi bir değer belirleyebilirsiniz) */
-@media (max-width: 768px) {
-    .info-section .image-slider-container {
-        display: flex; /* Flexbox ile yatay sıralama */
-        flex-direction: row;
-        overflow-x: auto; /* Yatay kaydırmayı aktif et */
-        scroll-snap-type: x mandatory; /* Kaydırmayı belirli noktalara hizala */
-        -webkit-overflow-scrolling: touch; /* iOS için akıcı kaydırma */
-        padding: 0 1rem; /* Kenarlardan biraz boşluk */
-    }
-
-    .info-section .image-slider-container > img {
-        flex: 0 0 auto; /* Kutuların genişliğini otomatik ayarla ve esnekliği kapat */
-        width: 90%; /* Mobil ekranda daha iyi görünmesi için genişliği ayarla */
-        max-width: 500px; /* Maksimum genişlik */
-        height: auto; /* Yüksekliği orantılı ayarla */
-        margin-right: 10px; /* Sağdan boşluk */
-        scroll-snap-align: center; /* Kaydırma sonunda ortala */
-    }
-
-    /* Son resmin sağ boşluğunu kaldır (isteğe bağlı) */
-    .info-section .image-slider-container > img:last-child {
-        margin-right: 0;
-    }
-}
-
-/* Slider Dots Styling */
-.slider-dots {
-    display: flex; /* Noktaları yan yana sırala */
-    justify-content: center; /* Yatayda ortala */
-    margin-top: 1.5rem; /* Resimlerin altından boşluk */
-    margin-bottom: 2rem; /* Aşağıdaki içerikten boşluk */
-    display: none; /* Varsayılan olarak gizli, mobil için göstereceğiz */
-}
-
-.dot {
-    height: 8px; /* Noktanın yüksekliği */
-    width: 25px; /* Noktanın genişliği (çizgi gibi görünmesi için) */
-    background-color: #ccc; /* Pasif noktanın rengi */
-    border-radius: 4px; /* Köşeleri yuvarla */
-    margin: 0 5px; /* Noktalar arası boşluk */
-    cursor: pointer; /* Fare üzerine gelince el işareti */
-    transition: background-color 0.3s ease; /* Renk geçişi animasyonu */
-}
-
-.dot.active {
-    background-color: var(--primary-color); /* Aktif noktanın rengi */
-    width: 35px; /* Aktif noktanın genişliğini artır (daha belirgin olsun) */
-}
-
-/* Mobil cihazlar için (max-width: 768px) */
-@media (max-width: 768px) {
-    /* Daha önce belirlediğimiz image-slider-container stilleri burada kalsın */
-    .info-section .image-slider-container {
-        display: flex; /* Flexbox ile yatay sıralama */
-        flex-direction: row;
-        overflow-x: auto; /* Yatay kaydırmayı aktif et */
-        scroll-snap-type: x mandatory; /* Kaydırmayı belirli noktalara hizala */
-        -webkit-overflow-scrolling: touch; /* iOS için akıcı kaydırma */
-        padding: 0 1rem; /* Kenarlardan biraz boşluk */
-    }
-
-    .info-section .image-slider-container > img {
-        flex: 0 0 auto; /* Kutuların genişliğini otomatik ayarla ve esnekliği kapat */
-        width: 90%; /* Mobil ekranda daha iyi görünmesi için genişliği ayarla */
-        max-width: 500px; /* Maksimum genişlik */
-        height: auto; /* Yüksekliği orantılı ayarla */
-        margin-right: 10px; /* Sağdan boşluk */
-        scroll-snap-align: center; /* Kaydırma sonunda ortala */
-    }
-
-    /* Son resmin sağ boşluğunu kaldır (isteğe bağlı) */
-    .info-section .image-slider-container > img:last-child {
-        margin-right: 0;
-    }
-
-    /* Mobil için slider noktalarını göster */
-    .slider-dots {
-        display: flex; /* Mobil görünümde göster */
-    }
-}
-
-/* Eğer farklı bir mobil kırılma noktası kullanıyorsanız (örn: 600px), onu da burada kullanabilirsiniz. */
-/* @media (max-width: 600px) {
-    .dot {
-        height: 7px;
-        width: 20px;
-        margin: 0 4px;
-    }
-    .dot.active {
-        width: 30px;
-    }
-} */
-
-
-
     </style>
 </head>
 <body>
     <div id="header"></div>
-  
+    <script src="main.js?v=1"></script>
+
 
     <main class="info-section" style="max-width: 1200px; margin: 2rem auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); padding: 2.5rem 2rem;">
       <h1 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1.2rem; text-align: center;">Work and Study Programı</h1>
-      <div class="image-slider-container">
+      <div style="display: grid; grid-template-columns: repeat(3, 350px); gap: 8px; justify-content: center; align-items: stretch; margin: 0 auto 28px auto; max-width: 1200px;">
         <img src="was1.webp" alt="Work and Study Fotoğraf 1" style="width: 350px; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); display: block; margin-left: auto; margin-right: auto; padding: 0;">
         <img src="was2.webp" alt="Work and Study Fotoğraf 2" style="width: 350px; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); display: block; margin-left: auto; margin-right: auto; padding: 0;">
         <img src="was3.webp" alt="Work and Study Fotoğraf 3" style="width: 350px; height: 230px; object-fit: cover; border-radius: 10px; box-shadow: 0 2px 8px rgba(26,64,121,0.08); display: block; margin-left: auto; margin-right: auto; padding: 0;">
       </div>
-      <div class="slider-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-    </div>
       <h2 style="color: var(--secondary-color); font-size: 2rem; margin-bottom: 1.2rem;">Yurtdışında Eğitim Alırken Çalışma Fırsatı</h2>
       <p style="font-size:1.1rem;">Yurtdışında eğitim almak isteyen birçok öğrenci için en büyük engellerden biri maliyettir. Ancak hem eğitim alıp hem de yasal olarak çalışarak bu maliyetleri azaltmak mümkün! Work and Study (Çalış ve Eğitim Al) programları, bu ihtiyaca mükemmel bir çözüm sunar. Peki bu program tam olarak nedir, kimler başvurabilir ve hangi ülkelerde uygulanır?</p>
       <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Work and Study Nedir?</h3>
@@ -275,6 +164,5 @@
     
     <div id="footer"></div>
 
-    <script src="main.js?v=1"></script>
 </body>
 </html> 
