@@ -33,5 +33,7 @@
     .whatsapp-btn-inside {
         font-size: 0.95rem; /* Daha da küçült (isteğe bağlı) */
         padding: 0.7rem 1.5rem; /* Padding'i biraz daha azalt */
+        min-width: unset;
+        width: 25rem;
     }
 }
