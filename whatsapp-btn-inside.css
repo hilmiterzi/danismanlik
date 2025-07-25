@@ -17,23 +17,34 @@
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.18);
 }
 
+
+
+
+
+
+
 @media (max-width: 768px) { /* Tablet ve küçük ekranlar için */
     .whatsapp-btn-inside {
-        font-size: 1rem; /* Font boyutunu biraz küçült */
-        padding: 0.8rem 1.8rem; /* Padding'i azalt */
-        min-width: unset; /* Mobil'de min-width'i sıfırla, esnek kalsın */
-        width: 25rem; /* Genişliği içeriğe göre otomatik ayarla */
-        /* Eğer butonun ekranın tamamını kaplamasını isterseniz: */
-        /* width: 90%; */
-        /* max-width: 300px; */ /* Çok geniş olmasını önlemek için */
+        font-size: 1rem;
+        padding: 0.8rem 1.8rem;
+        min-width: unset;
+        width: calc(100% - 2rem); /* Ekran genişliğinden 2rem (1rem sol + 1rem sağ) çıkar */
+        max-width: 25rem; /* Butonun maksimum genişliğini koru */
+        margin-left: auto; /* Sol marjı otomatik yap */
+        margin-right: auto; /* Sağ marjı otomatik yap */
+        box-sizing: border-box; /* Padding ve border'ın genişliğe dahil olmasını sağla */
     }
 }
 
 @media (max-width: 480px) { /* Çok küçük telefon ekranları için */
     .whatsapp-btn-inside {
-        font-size: 0.95rem; /* Daha da küçült (isteğe bağlı) */
-        padding: 0.7rem 1.5rem; /* Padding'i biraz daha azalt */
+        font-size: 0.95rem;
+        padding: 0.7rem 1.5rem;
         min-width: unset;
-        width: 25rem;
+        width: calc(100% - 2rem); /* Yine 1rem sol ve 1rem sağ boşluk */
+        max-width: 25rem; /* Maksimum genişliği koru */
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
     }
 }
