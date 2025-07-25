@@ -133,3 +133,128 @@
     height: 100%;
     border: 0;
 }
+
+
+
+/* Responsive Düzenlemeler */
+
+/* Büyük tabletler ve küçük masaüstleri için (1200px ve altı) */
+@media (max-width: 1200px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 sütun */
+        gap: 3rem;
+    }
+    /* Haritanın hala 2 sütun kaplaması için */
+    .map-container {
+        grid-column: span 2;
+    }
+}
+
+/* Küçük tabletler ve büyük telefonlar için (1024px ve altı) */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+        gap: 2.5rem;
+    }
+    /* Haritanın hala 2 sütun kaplaması veya 3 sütun düzeninde daha iyi görünmesi için */
+    .map-container {
+        grid-column: span 3; /* Tüm satırı kaplasın */
+    }
+}
+
+
+/* Tabletler için (800px ve altı) */
+@media (max-width: 800px) {
+    .footer {
+        padding: 3rem 1.5rem; /* Padding'i azalt */
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+        gap: 2rem;
+    }
+    /* Haritanın 2 sütun düzeninde tüm satırı kaplaması için */
+    .map-container {
+        grid-column: span 2;
+        min-height: 200px; /* Harita minimum yüksekliğini düşür */
+    }
+    .footer-section h3 {
+        font-size: 1.1rem; /* Başlık font boyutunu küçült */
+        margin-bottom: 1rem;
+    }
+    .footer-section ul li a,
+    .contact-info li {
+        font-size: 0.9rem; /* Liste ve iletişim bilgisi font boyutunu küçült */
+    }
+    .social-icons {
+        font-size: 1.3rem; /* Sosyal ikon boyutunu küçült */
+    }
+}
+
+/* Telefonlar için (600px ve altı) */
+@media (max-width: 600px) {
+    .footer {
+        padding: 2rem 1rem; /* Padding'i daha da azalt */
+    }
+    .footer-grid {
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 1.5rem; /* Boşluğu azalt */
+    }
+    .footer-section {
+        text-align: center; /* Bölümleri ortaya hizala */
+    }
+    .footer-section h3 {
+        font-size: 1.05rem; /* Başlık font boyutunu daha da küçült */
+    }
+    .footer-section ul {
+        text-align: center; /* Listeleri ortaya hizala */
+    }
+    .footer-section ul li {
+        margin-bottom: 0.5rem;
+    }
+    .contact-info li {
+        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
+        text-align: center;
+        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
+        align-items: center;
+    }
+    .social-icons {
+        justify-content: center; /* Sosyal ikonları ortaya hizala */
+        font-size: 1.2rem;
+    }
+    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
+    .map-container {
+        grid-column: span 1;
+        padding-bottom: 75%; /* 4:3 Aspect Ratio veya daha yüksek */
+        min-height: 180px; /* Telefonlar için minimum yükseklik */
+    }
+    .footer-bottom {
+        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
+        padding-top: 1.5rem;
+    }
+}
+
+/* Çok küçük telefonlar için (375px ve altı, isteğe bağlı) */
+@media (max-width: 375px) {
+    .footer {
+        padding: 1.5rem 0.5rem;
+    }
+    .footer-grid {
+        gap: 1rem;
+    }
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+    .footer-section ul li a,
+    .contact-info li {
+        font-size: 0.85rem;
+    }
+    .social-icons {
+        font-size: 1.1rem;
+    }
+    .map-container {
+        min-height: 150px;
+    }
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+}
