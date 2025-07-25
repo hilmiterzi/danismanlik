@@ -204,6 +204,7 @@
     }
     .footer-section h3 {
         font-size: 1.05rem; /* Başlık font boyutunu daha da küçült */
+        text-align: center;
     }
     .footer-section ul {
         text-align: center; /* Listeleri ortaya hizala */
