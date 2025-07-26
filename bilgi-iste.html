@@ -147,6 +147,8 @@
 
 
 <style>
+    
+
     .wrapper-of-form-and-linfobox {
         position: relative; /* Allows absolute positioning of info box */
         max-width: 1800px; /* Large enough to contain both elements */
@@ -186,67 +188,75 @@
             display:none;
         }
         
+/* 1. Make contact-container mobile-first */
+.contact-container {
+    max-width: 900px;
+    width: 90%; /* Full width on mobile */
+    margin: 3rem auto; /* Center + top margin */
+    padding: 1.5rem; /* Smaller padding on mobile */
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
+}
 
-        .contact-container {
-            max-width: 450px;
-            margin-top:3rem;
-           
-            background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
-            padding: 2.5rem 2rem 2rem 2rem;
-            margin: 3rem 1rem auto 1rem;
-        }
-        .contact-container h1 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #e63946;
-            padding-top: 1.2rem;
-            padding-bottom: 1.2rem;
-        }
-        .contact-form label {
-            display: block;
-            margin-bottom: 0.4rem;
-            font-weight: 600;
-            color: #1a4079;
-        }
-        .contact-form input, .contact-form select, .contact-form textarea {
-            width: 100%;
-            padding: 0.7rem 1rem;
-            margin-bottom: 1.2rem;
-            border: 1.5px solid #e6eaf3;
-            border-radius: 8px;
-            font-size: 1rem;
-            background: #f8fafd;
-            color: #222;
-            transition: border 0.2s;
-        }
-        .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
-            border: 1.5px solid #1a4079;
-            outline: none;
-        }
-        .contact-form textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-        .contact-form button {
-            width: 100%;
-            background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
-            color: #fff;
-            font-size: 1.15rem;
-            font-weight: 700;
-            padding: 0.9rem 0;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-            margin-top: 0.5rem;
-        }
-        .contact-form button:hover {
-            background: linear-gradient(90deg, #e63946 40%, #1a4079 100%);
-        }
+/* 2. Stack wrapper contents vertically on mobile */
+.wrapper-of-form-and-linfobox {
+    display: flex;
+    flex-direction: column; /* Stack form + info box */
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Prevent edge touching */
+}
+
+.little-info-box {
+    width: 100%; /* Full width on mobile */
+    max-width: 500px; /* Limit expansion */
+    margin-top: 2rem; /* Space between form and box */
+    height: auto; /* Flexible height */
+}
+
+
+/* 5. Prevent iOS input zoom */
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    font-size: 16px;
+}
+
+
+
+
+
+}
+
+
+/* 3. Desktop-only adjustments (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .wrapper-of-form-and-linfobox {
+        flex-direction: row; /* Side-by-side on desktop */
+        justify-content: center;
+        position: relative;
     }
+    .little-info-box {
+        position: absolute;
+        left: calc(900px + 2rem); /* Original desktop position */
+        top: 0;
+        width: 500px;
+    }
+}
+
+/* 4. Mobile-specific tweaks */
+@media (max-width: 768px) {
+    .contact-container h1 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+    /* Force quick-contact buttons to stack */
+    section > div > div {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+}
 
 </style>
 
