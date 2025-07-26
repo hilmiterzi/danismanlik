@@ -14,12 +14,6 @@
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
     <style>
 
-.infor-container {
-    max-width: 400px; 
-    height: 100%; 
-    box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1); 
-    border-radius: 18px;
-}
 
         .contact-container {
             max-width: 900px;
@@ -95,6 +89,9 @@
         .close:hover {
             color: #1a4079;
         }
+
+
+
     </style>
 </head>
 <body>
@@ -109,6 +106,8 @@
             Uzman danışmanlarımız en kısa sürede sizinle iletişime geçecek.
         </p>
 
+
+<div class="wrapper-of-form-and-linfobox">
     <div class="contact-container">
         <form class="contact-form" action="https://formsubmit.co/info@universitypark.com.tr" method="POST">
             <label for="adsoyad">Ad Soyad <span style='color:red'>*</span></label>
@@ -135,6 +134,57 @@
             <button type="submit">Gönder</button>
         </form>
     </div>
+
+    <div class="little-info-box">
+        <h1>Universitypark Hakkında</h1>
+        <p>
+            UniversityPark Yurtdışı Eğitim ve Danışmanlık, 2015 yılında Ali Karakaya tarafından Mersin, Ankara ve İstanbul'da kurulmuştur.<br>
+            Kurucumuz Ali Karakaya, yurtdışında aldığı hukuk eğitimi süresince Türk öğrencilerin temsilciliğini üstlenmiş, bu süreçte birçok<br>
+            öğrenciye gönüllü olarak rehberlik etmiş ve alandaki bilgi birikimini sahada deneyimleyerek geliştirmiştir.<br><br>
+            <a href="biz-kimiz.html">Devamını Oku</a>
+        </p>
+    </div>
+
+
+<style>
+    .wrapper-of-form-and-linfobox {
+        position: relative; /* Allows absolute positioning of info box */
+        max-width: 1800px; /* Large enough to contain both elements */
+        margin: 0 auto;
+    }
+
+    /* Position the info box ABSOLUTELY to the right of the form */
+    .little-info-box {
+        position: absolute;
+        left: calc(900px + 12rem); /* Form width + form's left margin + extra space */
+        top: 0;
+        width: 500px;
+        box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
+        border-radius: 18px;
+        height: 350px;
+        background: #fff;
+        padding: 1.5rem;
+    }
+    
+
+    .little-info-box h1 {
+        color:#1a4079;
+        font-size:1.5rem;
+        text-align: center;
+        padding-top:0.7rem;
+    }
+
+    .little-info-box p {
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    }
+
+</style>
+
+</div>
+
+
+
 
     <!-- Hızlı İletişim -->
     <section style="background: #f8fafd; padding: 3rem 2rem; margin: 3rem 0;">
