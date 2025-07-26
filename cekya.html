@@ -156,21 +156,7 @@
             background-color: #f9f9f9;
         }
 
-        .whatsapp-btn-inside {
-            background: #25d366;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: bold;
-            padding: 0.7rem 2rem;
-            border-radius: 32px;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-            display: inline-block;
-        }
-        .whatsapp-btn-inside:hover {
-            transform: scale(1.05);
-            background: #1ed760;
-        }
+
 
         /* HERO SLIDER POLONYA STİLİ */
         .hero-slider {
@@ -255,6 +241,12 @@
             opacity: 0.7;
         }
 
+
+        .university-content {
+            text-align: center;
+
+        }
+
     </style>
 </head>
 <body>
@@ -331,17 +323,7 @@
                 .university-btn:hover {
                     transform: scale(1.05);
                 }
-                @media (max-width: 768px) {
-                    .universities-grid {
-                        grid-template-columns: repeat(2, 1fr);
-                        gap: 1rem;
-                    }
-                }
-                @media (max-width: 480px) {
-                    .universities-grid {
-                        grid-template-columns: 1fr;
-                    }
-                }
+
             </style>
         </div>
         <div class="country-section">
@@ -470,6 +452,64 @@
                         <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
                     </div>
                 </div>
+
+                <style>
+                    @media (max-width: 768px) {
+                .universities-grid {
+                    grid-template-columns: repeat(2, 1fr) !important; /* İki sütuna düşür */
+                    gap: 1.5rem !important; /* Boşluğu ayarla */
+                }
+                .university-card .university-content {
+                    padding: 1rem !important; /* İç boşluğu azalt */
+                }
+                .university-card h3 {
+                    font-size: 1rem !important; /* Başlık font boyutunu küçült */
+                }
+                .university-card p {
+                    font-size: 0.85rem !important; /* Paragraf font boyutunu küçült */
+                }
+                .university-card .university-btn {
+                    padding: 0.6rem 1.2rem !important; /* Buton boşluğunu azalt */
+                    font-size: 0.8rem !important; /* Buton font boyutunu küçült */
+                }
+                .university-card > div:first-child > div:first-child { /* Image overlay text */
+                    font-size: 1rem !important;
+                    padding: 8px 18px !important;
+                }
+            }
+            
+            /* Telefonlar için (örneğin 480px ve altı) */
+            @media (max-width: 480px) {
+                .universities-grid {
+                    grid-template-columns: 1fr !important; /* Tek sütuna düşür */
+                    gap: 1rem !important; /* Boşluğu daha da azalt */
+                }
+                .country-section h2 {
+                    font-size: 1.5rem !important; /* Başlık font boyutunu küçült */
+                    margin-bottom: 0.3rem !important;
+                }
+                .country-section h2 span {
+                    font-size: 1.5rem !important; /* İkon font boyutunu küçült */
+                    margin-right: 5px !important;
+                }
+                .country-section p {
+                    font-size: 1rem !important; /* Paragraf font boyutunu küçült */
+                }
+                .university-card .university-content {
+                    padding: 0.8rem !important; /* İç boşluğu daha da azalt */
+                }
+                .university-card h3 {
+                    font-size: 0.95rem !important;
+                }
+                .university-card p {
+                    font-size: 0.8rem !important;
+                }
+                .university-card .university-btn {
+                    padding: 0.5rem 1rem !important;
+                    font-size: 0.75rem !important;
+                }
+            }
+                </style>
             </div>
         
     </section>
