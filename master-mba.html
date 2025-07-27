@@ -147,7 +147,7 @@
             margin: 1.5rem 0;
             font-weight: 600;
             color: #1a4079;
-            font-size: 1.08rem;
+            font-size: 1.2rem;
             box-shadow: 0 2px 8px rgba(230,57,70,0.06);
         }
 
@@ -171,7 +171,7 @@
         .mba-table th {
             color: var(--primary-color);
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             border-bottom: 2px solid #e6eaf3;
         }
 
@@ -294,17 +294,35 @@
             color: #1a4079;
         }
 
-        @media (max-width: 600px) {
-            .main-content { padding: 0 0 40px 0; }
-            .mba-title { font-size: 1.5rem; }
-            .mba-title-underline { width: 90%; }
-            .mba-section, .mba-title-box { padding: 1.1rem 0.7rem; }
+
+
+
+        @media (max-width: 1200px) {
+            .main-content { max-width: 98vw; }
+            .mba-title-box, .mba-section { padding-left: 1.1rem; padding-right: 1.1rem; }
+            .main-content h2 { font-size:2.6rem; }
+            .main-content p { font-size:1.6rem;}
+            .main-content ul li {font-size:1.6rem;}
+            .main-content h1 { font-size:3rem; }
+            .mba-highlight { font-size: 1.6rem;}
         }
 
         @media (max-width: 900px) {
             .main-content { max-width: 98vw; }
             .mba-title-box, .mba-section { padding-left: 1.1rem; padding-right: 1.1rem; }
+            .main-content h2 { font-size:2rem; }
+            .main-content p { font-size:1.2rem;}
+            .main-content ul li {font-size:1.2rem;}
         }
+
+        @media (max-width: 600px) {
+            .main-content { padding: 0 0 40px 0; }
+            .mba-title { font-size: 1.5rem; }
+            .mba-title-underline { width: 90%; }
+            .mba-section, .mba-title-box { padding: 1.1rem 0.7rem; }
+            .main-content h2 { font-size:1.5rem; }
+        }
+
 
         
 
@@ -425,38 +443,6 @@
     </main>
 
   <div id="footer"></div>
-    
-    <!-- Contact Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Bizimle İletişime Geçin</h2>
-            <p>Work and Travel programı hakkında detaylı bilgi almak için bizimle iletişime geçin. Uzman danışmanlarımız size en uygun programı önerelim.</p>
-            <div class="modal-buttons">
-                <a href="bilgi-iste.html" class="modal-btn modal-btn-primary">Bilgi Formu Doldur</a>
-                <a href="https://wa.me/905414304808" target="_blank" class="modal-btn modal-btn-secondary">WhatsApp</a>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        function showContactModal() {
-            document.getElementById('contactModal').style.display = 'block';
-        }
-        
-        function closeModal() {
-            document.getElementById('contactModal').style.display = 'none';
-        }
-        
-        // Modal dışına tıklandığında kapatma
-        window.onclick = function(event) {
-            var modal = document.getElementById('contactModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-    </script>
-
 
 </body>
 </html> 
