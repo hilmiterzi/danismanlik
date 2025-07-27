@@ -1,32 +1,31 @@
 
-@media (max-width: 1200px) {
-    .main-content { max-width: 98vw; }
-    .mba-title-box, .mba-section { padding-left: 1.1rem; padding-right: 1.1rem; }
-    .main-content h2 { font-size:2.6rem; }
-    .main-content p { font-size:1.6rem;}
-    .main-content ul li {font-size:1.6rem;}
-    .main-content h1 { font-size:3rem; }
-    .mba-highlight { font-size: 1.6rem;}
-    .mba-table { font-size:1.6rem; }
+@media (max-width: 1110px) {
+    .main-content { max-width: 98vw !important; }
+    .mba-title-box, .mba-section { padding-left: 1.1rem; padding-right: 1.1rem !important; }
+    .main-content h2 { font-size:2.6rem !important; }
+    .main-content p { font-size:1.6rem !important;}
+    .main-content ul li {font-size:1.6rem !important;}
+    .main-content h1 { font-size:3rem !important; }
+    .mba-highlight { font-size: 1.6rem !important;}
+    .mba-table { font-size:1.6rem !important; }
 }
 
 @media (max-width: 900px) {
-    .main-content { max-width: 98vw; }
-    .mba-title-box, .mba-section { padding-left: 1.1rem; padding-right: 1.1rem; }
-    .main-content h2 { font-size:2rem; }
-    .main-content p { font-size:1.2rem;}
-    .main-content ul li {font-size:1.2rem;}
-    .mba-table { font-size:1.2rem; }
-    .mba-highlight { font-size: 1.3rem;}
+    .main-content { max-width: 98vw !important; }
+    .mba-title-box, .mba-section { padding-left: 1.1rem; padding-right: 1.1rem !important; }
+    .main-content h2 { font-size:2rem !important; }
+    .main-content p { font-size:1.2rem !important;}
+    .main-content ul li {font-size:1.2rem !important;}
+    .mba-table { font-size:1.2rem !important; }
+    .mba-highlight { font-size: 1.3rem !important;}
 }
 
 @media (max-width: 600px) {
-    .main-content { padding: 0 0 40px 0; }
-    .mba-title { font-size: 1.5rem; }
-    .mba-title-underline { width: 90%; }
-    .mba-section, .mba-title-box { padding: 1.1rem 0.7rem; }
-    .main-content h2 { font-size:1.5rem; }
-    .mba-table { font-size:1.1rem; }
-    .mba-highlight { font-size: 1.1rem;}
-    .main-content h1 { font-size:2rem; }
+    .main-content { padding: 0 0 40px 0 !important; }
+    .mba-title-underline { width: 90% !important; }
+    .mba-section, .mba-title-box { padding: 1.1rem 0.7rem !important; }
+    .main-content h2 { font-size:1.5rem !important; }
+    .mba-table { font-size:1.1rem !important; }
+    .mba-highlight { font-size: 1.1rem !important;}
+    .main-content h1 { font-size:2rem !important; }
 }
