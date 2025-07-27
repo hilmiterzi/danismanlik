@@ -166,14 +166,16 @@
     }
     .map-container {
         grid-column: span 2;
-        min-height: 200px;
+        min-height: 300px;
         /* Add these for Flexbox centering */
         display: flex; /* Make it a flex container */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
+        padding-top: 0;
     }
     /* Ensure the iframe scales within its container */
     .map-container iframe {
+        position: static;
         width: 100%; /* Make iframe responsive within its container */
         height: 100%; /* Or set a max-height */
         max-height: 500px; /* Adjust as needed for smaller screens */
@@ -206,14 +208,16 @@
     }
     .map-container {
         grid-column: span 2;
-        min-height: 200px;
+        min-height: 250px;
         /* Add these for Flexbox centering */
         display: flex; /* Make it a flex container */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
+        padding-top: 0;
     }
     /* Ensure the iframe scales within its container */
     .map-container iframe {
+        position: static;
         width: 100%; /* Make iframe responsive within its container */
         height: 100%; /* Or set a max-height */
         max-height: 400px; /* Adjust as needed for smaller screens */
@@ -251,9 +255,11 @@
         display: flex; /* Make it a flex container */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
+        padding-top: 0;
     }
     /* Ensure the iframe scales within its container */
     .map-container iframe {
+        position: static;
         width: 100%; /* Make iframe responsive within its container */
         height: 100%; /* Or set a max-height */
         max-height: 300px; /* Adjust as needed for smaller screens */
@@ -307,7 +313,6 @@
     }
     /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
 
-
     .map-container {
         grid-column: span 1;
         min-height: 200px;
@@ -315,9 +320,11 @@
         display: flex; /* Make it a flex container */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
+        padding-top:0;
     }
     /* Ensure the iframe scales within its container */
     .map-container iframe {
+        position:static;
         width: 100%; /* Make iframe responsive within its container */
         height: 100%; /* Or set a max-height */
         max-height: 300px; /* Adjust as needed for smaller screens */
@@ -362,9 +369,11 @@
         display: flex; /* Make it a flex container */
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
+        padding-top:0;
     }
     /* Ensure the iframe scales within its container */
     .map-container iframe {
+        position:static;
         width: 100%; /* Make iframe responsive within its container */
         height: 100%; /* Or set a max-height */
         max-height: 300px; /* Adjust as needed for smaller screens */
