@@ -153,13 +153,24 @@
 /* Küçük tabletler ve büyük telefonlar için (1024px ve altı) */
 @media (max-width: 1024px) {
     .footer-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+        grid-template-columns: repeat(4, 1fr); /* 3 sütun */
         gap: 2.5rem;
     }
     /* Haritanın hala 2 sütun kaplaması veya 3 sütun düzeninde daha iyi görünmesi için */
     .map-container {
         grid-column: span 3; /* Tüm satırı kaplasın */
     }
+
+    .footer-section h3 {
+        font-size: 1.2rem; /* Başlık font boyutunu küçült */
+    }
+
+    .footer-section ul li a{
+        font-size:1.1rem;
+    }
+
+
+
 }
 
 
