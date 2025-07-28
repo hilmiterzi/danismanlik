@@ -11,417 +11,97 @@
     <link rel="stylesheet" href="header.css?v=1">
     <link rel="stylesheet" href="footer.css?v=9">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
-
-
-    <style>
-
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            backdrop-filter: blur(5px);
-        }
-        
-        .modal-content {
-            background-color: white;
-            margin: 15% auto;
-            padding: 2rem;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            animation: modalSlideIn 0.3s ease-out;
-        }
-        
-        @keyframes modalSlideIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .modal h2 {
-            color: #1a4079;
-            margin-bottom: 1rem;
-            font-size: 1.8rem;
-        }
-        
-        .modal p {
-            color: #666;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-        
-        .modal-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .modal-btn {
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .modal-btn-primary {
-            background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
-            color: white;
-        }
-        
-        .modal-btn-secondary {
-            background: #25d366;
-            color: white;
-        }
-        
-        .modal-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            position: absolute;
-            right: 1rem;
-            top: 0.5rem;
-        }
-        
-        .close:hover {
-            color: #1a4079;
-        }
-
-        /* Content Styles */
-        .content-section {
-            margin-top: 3rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .country-section {
-            margin-bottom: 3rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .country-section h2 {
-            color: red;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-
-        .country-section p {
-            margin-bottom: 1.5rem;
-        }
-
-        .advantages-list {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .advantages-list li {
-            margin-bottom: 0.5rem;
-            padding-left: 2.2rem;
-            position: relative;
-            line-height: 1.6;
-        }
-
-        .advantages-list li::before {
-            content: "•";
-            color: var(--secondary-color);
-            position: absolute;
-            left: 0.7rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.3em;
-            line-height: 1;
-        }
-
-        .section-title {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 4rem;
-            font-size: 2.5rem;
-        }
-
-        .country-section h3 {
-            margin-bottom: 0.5rem;
-        }
-
-
-        
-        .ingiltere-kutu {
-            position: relative;
-            width: 80rem;
-            height: 505px;
-        }
-
-        .kanada-kutu {
-            position: relative;
-            left: -300px;
-            width: 100%;
-            height: 452px;
-        }
-        
-        .amerika-kutu {
-            position: relative;
-            left: -300px;
-            width: 100%;
-            height: 452px;
-        }
-
-        .avustralya-kutu {
-            position: relative;
-            left: -300px;
-            width: 100%;
-            height: 452px;
-        }
-
-        .malta-kutu {
-            position: relative;
-            left: -300px;
-            width: 100%;
-            height: 432.5px;
-        }
-        .irlanda-kutu {
-            position: relative;
-            left: -300px;
-            width: 100%;
-            height: 457px;
-        }
-
-
-        
-        @media (max-width: 768px) {
-  .ingiltere-kutu,
-  .kanada-kutu,
-  .amerika-kutu,
-  .avustralya-kutu,
-  .malta-kutu,
-  .irlanda-kutu {
-    width: 100%;
-    left: 0 !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0  !important;
-    padding: 0 !important;
-  }
-  .country-section {
-    flex-direction: column !important;
-    display: block !important;
-  }
-  .country-section img {
-    min-width: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 0 16px 0 !important;
-    float: none !important;
-  }
-
-  .country-section h2 {
-    color: red;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    text-align: center;
-    }
-  .kanada-kutu {
-    display: block !important;
-    flex-direction: unset !important;
-    align-items: unset !important;
-  }
-  .kanada-kutu h2 {
-    text-align: center !important;
-    width: 100% !important;
-    display: block !important;
-  }
-}
-
-
-
-    </style>
 </head>
+<style>
+
+
+    .main-title-section h1 {
+        color:red;
+        text-align:center;
+        font-size: 2rem;
+        margin-top:2rem;
+    }
+
+    .england-box {
+        display:flex;
+        box-shadow: 0 2px 16px rgba(26,64,121,0.06);
+        width:80rem;
+        height:26rem;
+        margin: 1.4rem auto 1.2rem auto;
+        border-radius: 18px;
+        position: relative;
+    }
+
+    .england-box img {
+        width: 35rem;
+        height:26rem;
+        border-radius: 18px;
+        margin-left: auto;
+    }
+
+    .england-box h2 {
+        color:red;
+        padding-left:2rem;
+        padding-top:1.15rem;
+    }
+    .england-box p {
+        color: #222;
+        padding-left:2rem;
+    }
+
+    .titlep-wrapper p {
+        margin-top:0.5rem;
+    }
+
+
+
+
+</style>
+
+
 <body>
    <div id="header"></div>
    <script src="main.js?v=1"></script>
-    <section class="content-section">
-        <h1 class="section-title">Yurtdışında Dil Okulları</h1>
 
-        <div class="country-section ingiltere-kutu">
+   <div class="main-title-section">
+    <h1>Yurtdışında Dil Okulları</h1>
+   </div>
+
+
+<main class="main-section">
+    <div class="england-box">
+        <div class="titlep-wrapper">
             <h2>İngiltere'de Dil Eğitimi</h2>
-            <img src="england.webp" alt="İngiltere" style="float:right; width: 100%; max-width:681px; min-width:400px;  border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
-            <p>İngiltere, İngilizce'nin ana vatanı olması nedeniyle dil eğitimi için en çok tercih edilen ülkelerin başında gelir.<br>Oxford, Cambridge, Londra gibi şehirlerde bulunan prestijli dil okulları, öğrencilere kaliteli bir eğitim sunar.</p>
-            <h3>Avantajları:</h3>
-            <ul class="advantages-list">
-                <li>Ana dili İngilizce olan eğitmenlerden eğitim</li>
-                <li>Zengin tarihî ve kültürel ortam</li>
-                <li>Sertifika ve diploma programları geniş yelpazeye sahiptir</li>
-                <li>Popüler Şehirler: Londra, Brighton, Manchester, Oxford, Cambridge</li>
-                <li>Eğitim Süresi: 2 haftadan 1 yıla kadar</li>
-                <li>Vize: Kısa ve uzun dönem öğrenci vizeleri uygulanır</li>
+            <p>İngiltere, İngilizce’nin ana vatanı olması nedeniyle dil eğitimi için en çok tercih edilen ülkelerin<br> başında gelir.
+                Oxford, Cambridge, Londra gibi şehirlerde bulunan prestijli dil okulları, öğrencilere<br> kaliteli bir eğitim sunar
+            </p>
+            <p><strong>Avantajları:</strong></p>
+
+            <ul style="list-style: none; padding-left:2.5rem; padding-top:0.5rem;">
+                <li>➡ Ana dili İngilizce olan eğitmenlerden eğitim</li>
+                <li>➡ Zengin tarihî ve kültürel ortamm</li>
+                <li>➡ Sertifika ve diploma programları geniş yelpazeye sahiptir</li>
+                <li>➡ Popüler Şehirler: Londra, Brighton, Manchester, Oxford, Cambridge</li>
+                <li>➡ Eğitim Süresi: 2 haftadan 1 yıla kadar</li>
             </ul>
+            <p style="padding-left:2.5rem; padding-top:0.5rem;"><strong>Vize: </strong>Kısa ve uzun dönem öğrenci vizeleri uygulanır</p>
         </div>
+            <img src="england.webp" alt="England">
 
-<div class="country-section kanada-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
-    <img src="canada.webp" alt="Kanada" style="float:right; width: 100%; max-width:676px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-31px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
-    <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-        <h2>Kanada'da Dil Eğitimi</h2>
-        <p>Kanada, yüksek yaşam kalitesi ve güvenliğiyle öne çıkan bir dil eğitimi destinasyonudur.<br>Özellikle resmi iki dili olması (İngilizce ve Fransızca) öğrencilere çift dil avantajı sağlar.</p>
-        <h3>Avantajları:</h3>
-        <ul class="advantages-list">
-            <li>Kaliteli eğitim kurumları ve uygun yaşam maliyetleri</li>
-            <li>Göçmenlik için eğitim sonrası avantajlar</li>
-            <li>Doğayla iç içe bir öğrenme ortamı</li>
-            <li>Popüler Şehirler: Toronto, Vancouver, Montreal, Ottawa</li>
-            <li>Eğitim Süresi: 4 hafta – 1 yıl</li>
-            <li>Vize: Study Permit başvurusu yapılır</li>
-        </ul>
+
+
     </div>
-</div>
 
 
-        <div class="country-section amerika-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
-            <img src="america.webp" alt="Amerika" style="float:right; width: 100%; max-width:678px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-32px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
-            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                <h2>Amerika'da Dil Eğitimi</h2>
-                <p>ABD, dünya genelinde tanınan birçok dil okuluna ev sahipliği yapar. Yoğun akademik içerikli programlardan<br>genel İngilizceye kadar birçok seçenek sunar.</p>
-                <h3>Avantajları:</h3>
-                <ul class="advantages-list">
-                    <li>Uluslararası tanınırlığa sahip okullar</li>
-                    <li>TOEFL/IELTS hazırlık kursları yaygın</li>
-                    <li>Üniversiteye geçiş fırsatları</li>
-                    <li>Popüler Şehirler: New York, Los Angeles, San Francisco, Boston, Miami</li>
-                    <li>Eğitim Süresi: 1 ay – 1 yıl</li>
-                    <li>Vize: F-1 Öğrenci Vizesi</li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="country-section avustralya-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
-            <img src="australia.webp" alt="Avustralya" style="float:right; width: 100%; max-width:676px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-32px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
-            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                <h2>Avustralya'da Dil Eğitimi</h2>
-                <p>Avustralya, dil eğitimiyle birlikte tatil yapma fırsatı sunar. Work and Study programları sayesinde<br>öğrenciler hem okuyup hem çalışabilirler.</p>
-                <h3>Avantajları:</h3>
-                <ul class="advantages-list">
-                    <li>Öğrencilere çalışma izni (haftada 24 saate kadar)</li>
-                    <li>Güvenli ve rahat yaşam tarzı</li>
-                    <li>Modern ve yenilikçi eğitim sistemi</li>
-                    <li>Popüler Şehirler: Sydney, Melbourne, Brisbane, Perth</li>
-                    <li>Eğitim Süresi: 2 ay – 1 yıl</li>
-                    <li>Vize: Student Visa (Subclass 500)</li>
-                </ul>
-            </div>
-        </div>
+</main>
 
-        <div class="country-section malta-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
-            <img src="malta.webp" alt="Malta" style="float:right; width: 100%; max-width:675px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-32px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
-            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                <h2>Malta'da Dil Eğitimi</h2>
-                <p>Akdeniz'in ortasında küçük bir ada ülkesi olan Malta, dil eğitimi ve tatili bir araya getiren ekonomik bir seçenektir.</p>
-                <h3>Avantajları:</h3>
-                <ul class="advantages-list">
-                    <li>Avrupa'nın en uygun fiyatlı dil eğitimi destinasyonlarından biri</li>
-                    <li>Sıcak iklim ve deniz kenarında eğitim</li>
-                    <li>Schengen bölgesi avantajı</li>
-                    <li>Popüler Şehirler: St. Julian's, Sliema, Valletta</li>
-                    <li>Eğitim Süresi: 2 hafta – 6 ay</li>
-                    <li>Vize: Schengen vizesi yeterli (90 güne kadar)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="country-section irlanda-kutu" style="display: flex; align-items: flex-start; flex-direction: row-reverse;">
-            <img src="ireland.webp" alt="İrlanda" style="float:right; width: 100%; max-width:675px; min-width:400px; margin-right: -32px; margin-bottom:12px; margin-top:-32px; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.08);" />
-            <div style="flex: 1; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                <h2>İrlanda'da Dil Eğitimi</h2>
-                <p>İrlanda, İngiltere'ye göre daha ekonomik seçenekler sunan, ana dili İngilizce olan bir Avrupa ülkesidir. Öğrenciler burada çalışma iznine de sahip olurlar.</p>
-                <h3>Avantajları:</h3>
-                <ul class="advantages-list">
-                    <li>Haftada 20 saat çalışma izni</li>
-                    <li>Öğrenci dostu şehirler</li>
-                    <li>Avrupa içi seyahat kolaylığı</li>
-                    <li>Popüler Şehirler: Dublin, Cork, Galway, Limerick</li>
-                    <li>Eğitim Süresi: 3 ay – 1 yıl</li>
-                    <li>Vize: 25 hafta ve üzeri programlarda çalışma izni alınabilir</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    
-<div style="text-align: center; margin: 32px 0 0 0">
-    <a href="https://wa.me/905414304808" target="_blank" class="whatsapp-btn-inside">Dil Okulları Hakkında Daha Fazla Bilgi Almak için Tıklayın!</a>
-</div>
+   
     
 
 <div id="footer"></div>
+<script src="main.js?v=1"></script>
     
-    <!-- Contact Modal -->
-    <div id="contactModal" class="modal" style="display:none;">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Bizimle İletişime Geçin</h2>
-            <p>Work and Travel programı hakkında detaylı bilgi almak için bizimle iletişime geçin. Uzman danışmanlarımız size en uygun programı önerelim.</p>
-            <div class="modal-buttons">
-                <a href="bilgi-iste.html" class="modal-btn modal-btn-primary">Bilgi Formu Doldur</a>
-                <a href="https://wa.me/905414304808" target="_blank" class="modal-btn modal-btn-secondary">WhatsApp</a>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        function showContactModal() {
-            document.getElementById('contactModal').style.display = 'block';
-        }
-        
-        function closeModal() {
-            document.getElementById('contactModal').style.display = 'none';
-        }
-        
-        // Modal dışına tıklandığında kapatma
-        window.onclick = function(event) {
-            var modal = document.getElementById('contactModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
 
-        document.querySelectorAll('a').forEach(link => {
-            const href = link.getAttribute('href');
-            // dropdown-trigger class'ı olanlar hariç!
-            if ((href === '#' || href === '' || !href) && !link.classList.contains('dropdown-trigger')) {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    banner.classList.add('active');
-                    overlay.classList.add('active');
-                });
-            }
-        });
-    </script>
 </body>
 </html> 
