@@ -266,12 +266,12 @@
         object-fit: cover; /* Ensures the iframe content covers the area */
     }
     .footer-section h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         margin-bottom: 1rem;
     }
     .footer-section ul li a,
     .contact-info li {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     .social-icons {
         font-size: 1.3rem;
