@@ -189,9 +189,9 @@ align-items: center;
 }
 
 
-@media (max-width:1024px) {
+@media (max-width:1045px) {
   .main-nav > a, .main-nav > .dropdown {
-    padding: 0 1.6rem;
+    padding: 0 1.2rem;
     height: 48px;
     display: flex;
     align-items: center;
@@ -206,18 +206,35 @@ align-items: center;
     box-shadow: none;
     position: relative; /* ALT MENÜ İÇİN GEREKLİ */
     }
+    
+  
+  .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1.06rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    }
+
+    .header-btn {
+      font-size:1.06rem;
+    }
+    .header-btn2 {
+      font-size:1.06rem;
+    }
 }
 
 
 
 @media (max-width:968px) {
   .main-nav > a, .main-nav > .dropdown {
-    padding: 0 1rem;
+    padding: 0 0.8rem;
     height: 48px;
     display: flex;
     align-items: center;
     color: #fff;
-    font-size: 1.08rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     box-sizing: border-box;
@@ -243,20 +260,66 @@ align-items: center;
     display: block;
     padding: 10px 20px;
     color: #fff;
-    font-size: 1.08rem;
+    font-size: 1rem;
     text-decoration: none;
     transition: background-color 0.3s;
     }
 
     .header-btn {
-      font-size:1.08rem;
+      font-size:1rem;
     }
     .header-btn2 {
-      font-size:1.08rem;
+      font-size:1rem;
     }
 }
 
 
+
+@media (max-width:831px) {
+  .main-nav > a, .main-nav > .dropdown {
+    padding: 0 0.59rem;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 0.99rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-bottom: none;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative; /* ALT MENÜ İÇİN GEREKLİ */
+    }
+
+    .header-btn.dropdown-trigger {
+      background: #1a4079;
+      color: #fff;
+      border-radius: 5px;
+      padding: 0.45rem 1.1rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 22px;
+  }
+  
+
+  .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 0.99rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    }
+
+    .header-btn {
+      font-size:0.99rem;
+    }
+    .header-btn2 {
+      font-size:0.99rem;
+    }
+}
 
 
 
