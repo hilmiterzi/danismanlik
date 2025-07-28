@@ -160,65 +160,7 @@
 
 
 
-@media (min-width: 600px) {
-    .footer {
-        padding: 2rem 1rem; /* Padding'i daha da azalt */
-    }
-    .footer-grid {
-        grid-template-columns: 1fr; /* Tek sütun */
-        gap: 1.5rem; /* Boşluğu azalt */
-    }
-    .footer-section {
-        text-align: center; /* Bölümleri ortaya hizala */
-    }
-    .footer-section h3 {
-        font-size: 1.05rem; /* Başlık font boyutunu daha da küçült */
-        text-align: center;
-    }
-    .footer-section ul {
-        text-align: center; /* Listeleri ortaya hizala */
-    }
-    .footer-section ul li {
-        margin-bottom: 0.5rem;
-    }
-    .contact-info li {
-        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
-        text-align: center;
-        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
-        align-items: center;
-    }
-    .social-icons {
-        justify-content: center; /* Sosyal ikonları ortaya hizala */
-        font-size: 1.2rem;
-    }
-    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
-
-    .map-container {
-        grid-column: span 1;
-        min-height: 200px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top:0;
-    }
-    /* Ensure the iframe scales within its container */
-    .map-container iframe {
-        position:static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 300px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
-    }
-
-    .footer-bottom {
-        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
-        padding-top: 1.5rem;
-    }
-}
-
-
-@media (min-width: 480px) {
+@media (max-width: 600px) {
     .footer {
         padding: 2rem 1rem; /* Padding'i daha da azalt */
     }
@@ -277,9 +219,7 @@
 }
 
 
-
-
-@media (min-width: 375px) {
+@media (max-width: 480px) {
     .footer {
         padding: 2rem 1rem; /* Padding'i daha da azalt */
     }
@@ -339,7 +279,8 @@
 
 
 
-@media (min-width: 320px) {
+
+@media (max-width: 375px) {
     .footer {
         padding: 2rem 1rem; /* Padding'i daha da azalt */
     }
@@ -397,3 +338,4 @@
     }
 
 }
+
