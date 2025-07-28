@@ -156,48 +156,6 @@
 
 
 
-@media (max-width: 1200px) {
-    .footer {
-        padding: 3rem 1.5rem;
-    }
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .map-container {
-        grid-column: span 2;
-        min-height: 300px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top: 0;
-    }
-    /* Ensure the iframe scales within its container */
-    .map-container iframe {
-        position: static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 500px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
-    }
-    .footer-section h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-    .footer-section ul li a,
-    .contact-info li {
-        font-size: 1.1rem;
-    }
-    .social-icons {
-        font-size: 1.8rem;
-    }
-}
-
-
-
-
-
 @media (max-width: 968px) {
     .footer {
         padding: 3rem 1.5rem;
@@ -239,44 +197,7 @@
 
 
 
-/* Tabletler için (800px ve altı) */  
-@media (max-width: 800px) {
-    .footer {
-        padding: 3rem 1.5rem;
-    }
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .map-container {
-        grid-column: span 2;
-        min-height: 200px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top: 0;
-    }
-    /* Ensure the iframe scales within its container */
-    .map-container iframe {
-        position: static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 300px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
-    }
-    .footer-section h3 {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-    .footer-section ul li a,
-    .contact-info li {
-        font-size: 1rem;
-    }
-    .social-icons {
-        font-size: 1.3rem;
-    }
-}
+
 
 
 /* Telefonlar için (600px ve altı) */
