@@ -68,28 +68,10 @@
 }
 
 */
-@media (min-width:320px) {
-    .info-section h1 {
-        font-size:1.5rem !important;
-    }
-
-    .info-section h2 {
-        font-size:1.08rem !important;
-    }
-    .info-section p {
-        font-size:0.75rem !important;
-    }
-
-    .info-section ul li {
-        font-size:0.75rem !important;
-    }
-    .whatsapp-btn-inside {
-        font-size:0.75rem !important;
-    }
-}
 
 
-@media (min-width:480px) {
+
+@media (max-width:480px) {
     .info-section h1 {
         font-size:3rem !important;
     }
