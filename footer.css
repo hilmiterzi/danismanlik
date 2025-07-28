@@ -110,7 +110,7 @@
 
 
 
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
     .footer {
         padding: 3rem 1.5rem 1rem;
     }
@@ -156,51 +156,10 @@
 
 
 
-@media (max-width: 968px) {
-    .footer {
-        padding: 3rem 1.5rem;
-    }
-    .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .map-container {
-        grid-column: span 2;
-        min-height: 250px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top: 0;
-    }
-    /* Ensure the iframe scales within its container */
-    .map-container iframe {
-        position: static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 400px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
-    }
-    .footer-section h3 {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-    }
-    .footer-section ul li a,
-    .contact-info li {
-        font-size: 0.9rem;
-    }
-    .social-icons {
-        font-size: 1.5rem;
-    }
-}
 
 
 
 
-
-
-
-/* Telefonlar için (600px ve altı) */
 @media (min-width: 600px) {
     .footer {
         padding: 2rem 1rem; /* Padding'i daha da azalt */
@@ -259,33 +218,39 @@
 }
 
 
-
-
-
-/* Çok küçük telefonlar için (375px ve altı, isteğe bağlı) */
-@media (min-width: 320px) {
+@media (min-width: 480px) {
     .footer {
-        padding: 1.5rem 0.5rem;
+        padding: 2rem 1rem; /* Padding'i daha da azalt */
     }
     .footer-grid {
-        gap: 1rem;
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 1.5rem; /* Boşluğu azalt */
+    }
+    .footer-section {
+        text-align: center; /* Bölümleri ortaya hizala */
     }
     .footer-section h3 {
-        font-size: 1rem;
+        font-size: 1.15rem; /* Başlık font boyutunu daha da küçült */
+        text-align: center;
     }
-    .footer-section ul li a,
+    .footer-section ul {
+        text-align: center; /* Listeleri ortaya hizala */
+    }
+    .footer-section ul li {
+        margin-bottom: 0.5rem;
+        font-size:1.1rem;
+    }
     .contact-info li {
-        font-size: 0.85rem;
+        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
+        text-align: center;
+        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
+        align-items: center;
     }
     .social-icons {
-        font-size: 1.1rem;
+        justify-content: center; /* Sosyal ikonları ortaya hizala */
+        font-size: 1.2rem;
     }
-    .map-container {
-        min-height: 150px;
-    }
-    .footer-bottom {
-        font-size: 0.8rem;
-    }
+    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
 
     .map-container {
         grid-column: span 1;
@@ -303,6 +268,132 @@
         height: 100%; /* Or set a max-height */
         max-height: 300px; /* Adjust as needed for smaller screens */
         object-fit: cover; /* Ensures the iframe content covers the area */
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
+        padding-top: 1.5rem;
+    }
+}
+
+
+
+
+@media (min-width: 375px) {
+    .footer {
+        padding: 2rem 1rem; /* Padding'i daha da azalt */
+    }
+    .footer-grid {
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 1.5rem; /* Boşluğu azalt */
+    }
+    .footer-section {
+        text-align: center; /* Bölümleri ortaya hizala */
+    }
+    .footer-section h3 {
+        font-size: 1.05rem; /* Başlık font boyutunu daha da küçült */
+        text-align: center;
+    }
+    .footer-section ul {
+        text-align: center; /* Listeleri ortaya hizala */
+    }
+    .footer-section ul li {
+        margin-bottom: 0.5rem;
+        font-size:1rem;
+    }
+    .contact-info li {
+        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
+        text-align: center;
+        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
+        align-items: center;
+    }
+    .social-icons {
+        justify-content: center; /* Sosyal ikonları ortaya hizala */
+        font-size: 1.2rem;
+    }
+    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
+
+    .map-container {
+        grid-column: span 1;
+        min-height: 200px;
+        /* Add these for Flexbox centering */
+        display: flex; /* Make it a flex container */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        padding-top:0;
+    }
+    /* Ensure the iframe scales within its container */
+    .map-container iframe {
+        position:static;
+        width: 100%; /* Make iframe responsive within its container */
+        height: 100%; /* Or set a max-height */
+        max-height: 300px; /* Adjust as needed for smaller screens */
+        object-fit: cover; /* Ensures the iframe content covers the area */
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
+        padding-top: 1.5rem;
+    }
+}
+
+
+
+@media (min-width: 320px) {
+    .footer {
+        padding: 2rem 1rem; /* Padding'i daha da azalt */
+    }
+    .footer-grid {
+        grid-template-columns: 1fr; /* Tek sütun */
+        gap: 1.5rem; /* Boşluğu azalt */
+    }
+    .footer-section {
+        text-align: center; /* Bölümleri ortaya hizala */
+    }
+    .footer-section h3 {
+        font-size: 1rem; /* Başlık font boyutunu daha da küçült */
+        text-align: center;
+    }
+    .footer-section ul {
+        text-align: center; /* Listeleri ortaya hizala */
+    }
+    .footer-section ul li {
+        margin-bottom: 0.5rem;
+        font-size:0.98rem;
+    }
+    .contact-info li {
+        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
+        text-align: center;
+        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
+        align-items: center;
+    }
+    .social-icons {
+        justify-content: center; /* Sosyal ikonları ortaya hizala */
+        font-size: 1.1rem;
+    }
+    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
+
+    .map-container {
+        grid-column: span 1;
+        min-height: 200px;
+        /* Add these for Flexbox centering */
+        display: flex; /* Make it a flex container */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        padding-top:0;
+    }
+    /* Ensure the iframe scales within its container */
+    .map-container iframe {
+        position:static;
+        width: 100%; /* Make iframe responsive within its container */
+        height: 100%; /* Or set a max-height */
+        max-height: 300px; /* Adjust as needed for smaller screens */
+        object-fit: cover; /* Ensures the iframe content covers the area */
+    }
+
+    .footer-bottom {
+        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
+        padding-top: 1.5rem;
     }
 
 }

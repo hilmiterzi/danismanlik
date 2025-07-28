@@ -1,5 +1,72 @@
+@media (max-width: 1024px) {
+    .info-section h1 {
+        font-size:2.4rem !important;
+    }
 
-@media (min-width:375px) {
+    .info-section h2 {
+        font-size:1.72rem !important;
+    }
+    .info-section p {
+        font-size:1.21rem !important;
+    }
+
+    .info-section ul li {
+        font-size:1.21rem !important;
+    }
+    .whatsapp-btn-inside {
+        font-size:1.21rem !important;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .info-section h1 {
+        font-size:2.35rem !important;
+    }
+
+    .info-section h2 {
+        font-size:1.7rem !important;
+    }
+    .info-section p {
+        font-size:1.1rem !important;
+    }
+
+    .info-section ul li {
+        font-size:1.1rem !important;
+    }
+    .whatsapp-btn-inside {
+        font-size:1.1rem !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .info-section h1 {
+        font-size:2.3rem !important;
+    }
+
+    .info-section h2 {
+        font-size:1.65rem !important;
+    }
+    .info-section p {
+        font-size:1.15rem !important;
+    }
+
+    .info-section ul li {
+        font-size:1.15rem !important;
+    }
+    .whatsapp-btn-inside {
+        font-size:1.15rem !important;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
     .info-section h1 {
         font-size:2rem !important;
     }
@@ -21,8 +88,7 @@
 
 
 
-
-@media (min-width:320px) {
+@media (max-width: 375px) {
     .info-section h1 {
         font-size:1.95rem !important;
     }
@@ -40,4 +106,6 @@
     .whatsapp-btn-inside {
         font-size:0.98rem !important;
     }
+
 }
+
