@@ -201,7 +201,7 @@
 
 
 /* Telefonlar için (600px ve altı) */
-@media (max-width: 600px) {
+@media (min-width: 600px) {
     .footer {
         padding: 2rem 1rem; /* Padding'i daha da azalt */
     }
@@ -258,8 +258,12 @@
     }
 }
 
+
+
+
+
 /* Çok küçük telefonlar için (375px ve altı, isteğe bağlı) */
-@media (max-width: 375px) {
+@media (min-width: 320px) {
     .footer {
         padding: 1.5rem 0.5rem;
     }
