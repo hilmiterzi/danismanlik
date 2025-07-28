@@ -1,0 +1,15 @@
+@media (max-width:768px) {
+    .info-section h2 {
+        font-size:1.6rem !important;
+    }
+    .info-section p {
+        font-size:1.15rem;
+    }
+
+    .info-section ul li {
+        font-size:1.15rem;
+    }
+    .whatsapp-btn-inside {
+        font-size:1.15rem;
+    }
+}
