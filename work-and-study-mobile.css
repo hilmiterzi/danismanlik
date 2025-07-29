@@ -1,21 +1,107 @@
+
+                                                                                    /* MAX 1440 */
+@media (max-width: 1440px) {
+    .image-gallery img {
+      max-width: 45% !important; /* Two images per row on tablets */
+    }
+  }
+
+
+
+
+
+                                                                                      /* MAX 1200 */
+@media (max-width: 1200px) {
+    .image-gallery img {
+      max-width: 45% !important; /* Two images per row on tablets */
+    }
+  }
+
+
+
+
+                                                                                    /* MAX 1024*/
+@media (max-width: 1024px) {
+    .image-gallery img {
+      max-width: 45% !important; /* Two images per row on tablets */
+    }
+  }
+
+
+
+                                                                                    /* MAX 768 */
 @media (max-width: 768px) {
     .image-gallery img {
-      max-width: 45%; /* Two images per row on tablets */
+      max-width: 45% !important; /* Two images per row on tablets */
     }
   }
 
+
+
+
+                                                                                      /* MAX 600 */
   @media (max-width: 600px) {
     .image-gallery img {
-      max-width: 60%; /* Two images per row on tablets */
+      max-width: 60% !important; /* Two images per row on tablets */
     }
   }
 
+
+
+
+                                                                                      /* MAX 480 */
   @media (max-width: 480px) {
     .image-gallery img {
-      max-width: 90%; /* One image per row on mobile phones */
+      max-width: 90% !important; /* One image per row on mobile phones */
     }
+    .image-gallery {
+        display:flex !important;
+        flex-direction: column!important;
+        align-items: center!important;
+        gap:1rem!important;
+    }
+
+    .info-section h1 {
+        font-size:1.85rem !important;
+    }
+
+    .info-section h2 {
+        font-size:1.3rem !important;
+    }
+
+    .info-section h3 {
+        font-size:1.2rem !important;
+    }
+
+    .info-section p,
+    .info-section ul,
+    .info-section li {
+        font-size:0.9rem !important;
+    }
+
+
+    .custom-country-list,
+    .custom-country-list li,
+    .custom-country-list li b,
+    .custom-country-list li span,
+    .custom-country-list .country-details,
+    .custom-country-list .country-dot,
+    .custom-country-list i {
+      font-size: 0.9rem !important; /* Force all text to 0.84rem */
+    }
+    
+    .custom-country-list li b span {
+      color: red !important; /* Keep red color for country names */
+    }
+
+    .whatsapp-btn-inside {
+        font-size:0.9rem !important;
+    }
+    
   }
 
+
+                                                                                    /* MAX 375 */
   @media (max-width: 375px) {
     .image-gallery img {
       max-width: 95% !important; /* One image per row on mobile phones */
@@ -65,6 +151,5 @@
         font-size:0.84rem !important;
     }
     
-
-      
+    
   }
