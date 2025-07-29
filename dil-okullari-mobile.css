@@ -40,7 +40,7 @@
     .ireland-box h2 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.54rem;
+        font-size:1.54rem !important;
     }
 
     .england-box p,
@@ -51,7 +51,7 @@
     .ireland-box p {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.07rem;
+        font-size:1.07rem !important;
     }
     
     .main-title-section h1 {
@@ -71,7 +71,7 @@
     .australia-box ul li,
     .malta-box ul li,
     .ireland-box ul li {
-        font-size:1.07rem;
+        font-size:1.07rem !important;
     }
 
 }
@@ -120,7 +120,7 @@
     .ireland-box h2 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.5rem;
+        font-size:1.5rem !important;
     }
 
     .england-box p,
@@ -131,7 +131,7 @@
     .ireland-box p {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.05rem;
+        font-size:1.05rem !important;
     }
     
     .main-title-section h1 {
@@ -151,7 +151,7 @@
     .australia-box ul li,
     .malta-box ul li,
     .ireland-box ul li {
-        font-size:1.05rem;
+        font-size:1.05rem !important;
     }
 
 }
@@ -201,7 +201,7 @@
     .ireland-box h2 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.44rem;
+        font-size:1.44rem !important;
     }
 
     .england-box p,
@@ -212,7 +212,7 @@
     .ireland-box p {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1rem;
+        font-size:1rem !important;
     }
     
     .main-title-section h1 {
@@ -232,7 +232,7 @@
     .australia-box ul li,
     .malta-box ul li,
     .ireland-box ul li {
-        font-size:1rem;
+        font-size:1rem !important;
     }
 
 }
@@ -280,7 +280,7 @@
     .ireland-box h2 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.4rem;
+        font-size:1.4rem !important;
     }
 
     .england-box p,
@@ -291,7 +291,7 @@
     .ireland-box p {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:0.98rem;
+        font-size:0.98rem !important;
     }
     
     .main-title-section h1 {
@@ -311,7 +311,7 @@
     .australia-box ul li,
     .malta-box ul li,
     .ireland-box ul li {
-        font-size:0.98rem;
+        font-size:0.98rem !important;
     }
 
 }
@@ -359,7 +359,7 @@
     .ireland-box h2 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.35rem;
+        font-size:1.35rem !important;
     }
 
     .england-box p,
@@ -370,7 +370,7 @@
     .ireland-box p {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:0.95rem;
+        font-size:0.95rem !important;
     }
     
     .main-title-section h1 {
@@ -390,7 +390,7 @@
     .australia-box ul li,
     .malta-box ul li,
     .ireland-box ul li {
-        font-size:0.95rem;
+        font-size:0.95rem !important;
     }
 
 }
@@ -439,7 +439,7 @@
     .ireland-box h2 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.3rem;
+        font-size:1.3rem !important;
     }
 
     .england-box p,
@@ -450,7 +450,7 @@
     .ireland-box p {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:0.9rem;
+        font-size:0.9rem !important;
     }
     
     .main-title-section h1 {
@@ -470,7 +470,7 @@
     .australia-box ul li,
     .malta-box ul li,
     .ireland-box ul li {
-        font-size:0.9rem;
+        font-size:0.9rem !important;
     }
 
 }
@@ -518,7 +518,7 @@
     .ireland-box h2 {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:1.2rem;
+        font-size:1.2rem !important;
     }
 
     .england-box p,
@@ -529,7 +529,7 @@
     .ireland-box p {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
-        font-size:0.84rem;
+        font-size:0.84rem !important;
     }
     
     .main-title-section h1 {
@@ -549,7 +549,7 @@
     .australia-box ul li,
     .malta-box ul li,
     .ireland-box ul li {
-        font-size:0.84rem;
+        font-size:0.84rem !important;
     }
 
 
