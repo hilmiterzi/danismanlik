@@ -60,6 +60,10 @@
     .custom-country-list li b span {
       color: red !important; /* Keep red color for country names */
     }
+
+    .whatsapp-btn-inside {
+        font-size:0.84rem !important;
+    }
     
 
       
