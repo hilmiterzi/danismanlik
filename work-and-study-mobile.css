@@ -197,8 +197,8 @@
     .image-gallery {
         display:flex !important;
         flex-direction: column;
-        align-items: center!important;
-        gap:1rem!important;
+        align-items: center !important;
+        gap:1rem !important;
     }
 
     .info-section h1 {
@@ -252,7 +252,7 @@
         display:flex !important;
         flex-direction: column!important;
         align-items: center!important;
-        gap:1rem!important;
+        gap:1rem !important;
     }
 
     .info-section h1 {

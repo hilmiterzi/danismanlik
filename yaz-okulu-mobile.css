@@ -1,0 +1,32 @@
+@media (max-width:375px) {
+    .image-section {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap:1rem !important;
+    }
+
+    .image-section img {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .info-section h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .info-section h2 {
+        font-size: 1.2rem !important;
+    }
+
+
+    .info-section p,
+    .info-section ul,
+    .info-section li {
+        font-size: 0.84rem !important;
+    }
+
+    .whatsapp-btn-inside {
+        font-size:0.84rem !important;
+    }
+
+}
