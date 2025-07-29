@@ -21,24 +21,9 @@
     <link rel="stylesheet" href="footer.css?v=9">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
+    <link rel="stylesheet" href="work-and-study-mobile.css">
     <style>
 
-        .big-numbers {
-            list-style: decimal inside;
-        }
-        .big-numbers > li {
-            position: relative;
-            margin-top: 0.5em;
-        }
-        .big-numbers > li:first-child {
-            margin-top: 0;
-        }
-        .big-numbers > li::marker {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #383838;
-            font-family: inherit;
-        }
         .country-details {
             margin-left: 1.5rem;
             font-size: 1.1rem;
@@ -64,19 +49,6 @@
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Apply border-radius for rounded corners as in the example */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  }
-
-  /* Optional: Adjust for smaller screens */
-  @media (max-width: 768px) {
-    .image-gallery img {
-      max-width: 45%; /* Two images per row on tablets */
-    }
-  }
-
-  @media (max-width: 480px) {
-    .image-gallery img {
-      max-width: 90%; /* One image per row on mobile phones */
-    }
   }
 
 
@@ -111,33 +83,33 @@
         <li>Kültürel entegrasyon: Gittiğiniz ülkenin kültürüne daha kolay adapte olursunuz.</li>
       </ul>
       <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Hangi Ülkelerde Work and Study Yapılır?</h3>
-      <ol class="big-numbers" style="margin-bottom:1.5rem; padding-left:1rem; padding-top: 0.5rem;">
-        <li><b><span style="color: red; font-size: 1.2rem;">İrlanda</span></b>
+      <ul class="custom-country-list" style="margin-bottom:1.5rem; padding-left:1rem; padding-top: 0.5rem; list-style:none;">
+        <li><b><span style="color: red; font-size: 1.2rem;">1. İrlanda</span></b>
           <div class="country-details">
             <span class="country-dot">25 haftalık dil eğitimi alan öğrencilere haftada 20 saat yasal çalışma hakkı verilir.</span><br>
             <span class="country-dot">Tatil dönemlerinde haftalık 40 saat çalışılabilir.</span><br>
             <i>Popüler şehirler:</i> Dublin, Cork, Galway
           </div>
         </li>
-        <li><b><span style="color: red; font-size: 1.2rem;">Kanada</span></b>
+        <li><b><span style="color: red; font-size: 1.2rem;">2. Kanada</span></b>
           <div class="country-details">
             <span class="country-dot">Kolej ya da sertifika programlarına kayıtlı öğrenciler, eğitim süresince haftada 20 saat, tatillerde 40 saat çalışabilir.</span><br>
             <span class="country-dot">Mezuniyet sonrası çalışma izni (PGWP) alma hakkı mümkündür.</span>
           </div>
         </li>
-        <li><b><span style="color: red; font-size: 1.2rem;">Avustralya</span></b>
+        <li><b><span style="color: red; font-size: 1.2rem;">3. Avustralya</span></b>
           <div class="country-details">
             <span class="country-dot">Dil okulu, mesleki eğitim veya üniversite programlarına kayıtlı öğrenciler haftada 24 saat çalışabilir (2024 itibarıyla).</span><br>
             <span class="country-dot">Minimum ücret saati oldukça yüksektir.</span>
           </div>
         </li>
-        <li><b><span style="color: red; font-size: 1.2rem;">Yeni Zelanda</span></b>
+        <li><b><span style="color: red; font-size: 1.2rem;">4. Yeni Zelanda</span></b>
           <div class="country-details">
             <span class="country-dot">14 hafta ve üzeri İngilizce programlarında çalışma hakkı sunulabilir.</span><br>
             <span class="country-dot">Sertifika/diploma programlarında da çalışma izni vardır.</span>
           </div>
         </li>
-      </ol>
+      </ul>
       <h3 style="margin-top:2rem; color: var(--primary-color); font-size: 1.5rem;">Kimler Başvurabilir?</h3>
       <ul style="margin-bottom:1.5rem; padding-left: 2rem; padding-top:0.5rem; font-size: 1.1rem;">
         <li>En az lise mezunu bireyler</li>
