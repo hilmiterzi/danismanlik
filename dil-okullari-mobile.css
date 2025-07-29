@@ -1,15 +1,15 @@
 /* MOBILE RESPONSIVE STYLES */
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     /* Make all country boxes responsive */
     .england-box,
-    .canada-box,
     .america-box,
+    .canada-box,
     .australia-box,
     .malta-box,
     .ireland-box {
         flex-direction: column !important;
         width: 90% !important;
-        height: 650px !important;
+        height: auto !important;
         max-width: 500px !important; /*fffff*/
         margin: 1rem auto !important; /*fffff*/
         box-shadow: 0 2px 16px #1a4079 !important;
@@ -44,7 +44,12 @@
     .america-box h2,
     .australia-box h2,
     .malta-box h2,
-    .ireland-box h2,
+    .ireland-box h2 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.2rem;
+    }
+
     .england-box p,
     .canada-box p,
     .america-box p,
@@ -53,18 +58,32 @@
     .ireland-box p {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
+        font-size:0.84rem;
     }
     
     /* Adjust main title for mobile */
     .main-title-section h1 {
         font-size: 1.5rem !important;
         margin-top: 1rem !important;
+        font-size:1.8rem;
     }
     
     /* Adjust list styling for mobile */
     ul {
         padding-left: 1.5rem !important;
     }
+
+
+    .england-box ul li,
+    .canada-box ul li,
+    .america-box ul li,
+    .australia-box ul li,
+    .malta-box ul li,
+    .ireland-box ul li {
+        font-size:0.84rem;
+    }
+
+
 }
 
   
