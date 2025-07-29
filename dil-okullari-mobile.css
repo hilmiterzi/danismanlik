@@ -13,7 +13,10 @@
         box-shadow: 0 2px 16px #1a4079 !important;
         margin-top:2.5rem !important;
     }
-    
+    .country-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
     .england-box img,
     .canada-box img,
     .america-box img,
@@ -53,8 +56,8 @@
     
     .main-title-section h1 {
         font-size: 1.5rem !important;
-        margin-top: 1rem !important;
-        font-size:2.15rem;
+        margin-top: 2.5rem !important;
+        font-size:2.15rem !important;
     }
     
     ul {
@@ -90,7 +93,10 @@
         box-shadow: 0 2px 16px #1a4079 !important;
         margin-top:2.5rem !important;
     }
-    
+    .country-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
     .england-box img,
     .canada-box img,
     .america-box img,
@@ -130,8 +136,8 @@
     
     .main-title-section h1 {
         font-size: 1.5rem !important;
-        margin-top: 1rem !important;
-        font-size:2.1rem;
+        margin-top: 2.5rem !important;
+        font-size:2.1rem !important;
     }
     
     ul {
@@ -157,7 +163,6 @@
     .australia-box,
     .malta-box,
     .ireland-box {
-        flex-direction: column !important;
         width: 90% !important;
         height: auto !important;
         max-width: 500px !important;
@@ -166,6 +171,13 @@
         margin-top:2.5rem !important;
     }
     
+
+    .country-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+
     .england-box img,
     .canada-box img,
     .america-box img,
@@ -205,8 +217,8 @@
     
     .main-title-section h1 {
         font-size: 1.5rem !important;
-        margin-top: 1rem !important;
-        font-size:2rem;
+        margin-top: 2.5rem !important;
+        font-size:2rem !important;
     }
     
     ul {
@@ -241,7 +253,10 @@
         box-shadow: 0 2px 16px #1a4079 !important;
         margin-top:2.5rem !important;
     }
-    
+    .country-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
     .england-box img,
     .canada-box img,
     .america-box img,
@@ -281,8 +296,8 @@
     
     .main-title-section h1 {
         font-size: 1.5rem !important;
-        margin-top: 1rem !important;
-        font-size:1.95rem;
+        margin-top: 2.5rem !important;
+        font-size:1.95rem !important;
     }
     
     ul {
@@ -317,7 +332,10 @@
         box-shadow: 0 2px 16px #1a4079 !important;
         margin-top:2.5rem !important;
     }
-    
+    .country-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
     .england-box img,
     .canada-box img,
     .america-box img,
@@ -357,8 +375,8 @@
     
     .main-title-section h1 {
         font-size: 1.5rem !important;
-        margin-top: 1rem !important;
-        font-size:1.9rem;
+        margin-top: 2.5rem !important;
+        font-size:1.9rem !important;
     }
     
     ul {
@@ -394,7 +412,10 @@
         box-shadow: 0 2px 16px #1a4079 !important;
         margin-top:2.5rem !important;
     }
-    
+    .country-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
     .england-box img,
     .canada-box img,
     .america-box img,
@@ -434,8 +455,8 @@
     
     .main-title-section h1 {
         font-size: 1.5rem !important;
-        margin-top: 1rem !important;
-        font-size:1.85rem;
+        margin-top: 2.5rem !important;
+        font-size:1.85rem !important;
     }
     
     ul {
@@ -470,7 +491,10 @@
         box-shadow: 0 2px 16px #1a4079 !important;
         margin-top:2.5rem !important;
     }
-    
+    .country-wrapper {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
     .england-box img,
     .canada-box img,
     .america-box img,
@@ -510,8 +534,8 @@
     
     .main-title-section h1 {
         font-size: 1.5rem !important;
-        margin-top: 1rem !important;
-        font-size:1.8rem;
+        margin-top: 2.5rem !important;
+        font-size:1.8rem !important;
     }
     
     ul {
