@@ -1,3 +1,46 @@
+
+
+
+
+
+                                                                                    /* MAX 480 */
+@media (max-width:480px) {
+    .image-section {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap:1rem !important;
+    }
+
+    .image-section img {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .info-section h1 {
+        font-size: 1.85rem !important;
+    }
+
+    .info-section h2 {
+        font-size: 1.3rem !important;
+    }
+
+
+    .info-section p,
+    .info-section ul,
+    .info-section li {
+        font-size: 0.9rem !important;
+    }
+
+    .whatsapp-btn-inside {
+        font-size:0.9rem !important;
+    }
+
+}
+
+
+
+
+                                                                                    /* MAX 375 */
 @media (max-width:375px) {
     .image-section {
         display: grid !important;
