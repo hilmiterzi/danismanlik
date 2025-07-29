@@ -1,6 +1,4 @@
-/* MOBILE RESPONSIVE STYLES */
-@media (max-width: 375px) {
-    /* Make all country boxes responsive */
+@media (max-width: 1440px) {
     .england-box,
     .america-box,
     .canada-box,
@@ -10,17 +8,12 @@
         flex-direction: column !important;
         width: 90% !important;
         height: auto !important;
-        max-width: 500px !important; /*fffff*/
-        margin: 1rem auto !important; /*fffff*/
+        max-width: 500px !important;
+        margin: 1rem auto !important;
         box-shadow: 0 2px 16px #1a4079 !important;
         margin-top:2.5rem !important;
     }
     
-
-    
-
-
-    /* Make all images responsive */
     .england-box img,
     .canada-box img,
     .america-box img,
@@ -35,10 +28,464 @@
         order: -1 !important;
     }
     
-    /* Adjust text wrapper for mobile */
 
+    .england-box h2,
+    .canada-box h2,
+    .america-box h2,
+    .australia-box h2,
+    .malta-box h2,
+    .ireland-box h2 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.54rem;
+    }
+
+    .england-box p,
+    .canada-box p,
+    .america-box p,
+    .australia-box p,
+    .malta-box p,
+    .ireland-box p {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.07rem;
+    }
     
-    /* Reduce padding on mobile */
+    .main-title-section h1 {
+        font-size: 1.5rem !important;
+        margin-top: 1rem !important;
+        font-size:2.15rem;
+    }
+    
+    ul {
+        padding-left: 1.5rem !important;
+    }
+
+
+    .england-box ul li,
+    .canada-box ul li,
+    .america-box ul li,
+    .australia-box ul li,
+    .malta-box ul li,
+    .ireland-box ul li {
+        font-size:1.07rem;
+    }
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .england-box,
+    .america-box,
+    .canada-box,
+    .australia-box,
+    .malta-box,
+    .ireland-box {
+        flex-direction: column !important;
+        width: 90% !important;
+        height: auto !important;
+        max-width: 500px !important;
+        margin: 1rem auto !important;
+        box-shadow: 0 2px 16px #1a4079 !important;
+        margin-top:2.5rem !important;
+    }
+    
+    .england-box img,
+    .canada-box img,
+    .america-box img,
+    .australia-box img,
+    .malta-box img,
+    .ireland-box img {
+        width: 100% !important;
+        height: 200px !important;
+        margin-left: 0 !important;
+    
+        object-fit: cover !important;
+        order: -1 !important;
+    }
+    
+
+    .england-box h2,
+    .canada-box h2,
+    .america-box h2,
+    .australia-box h2,
+    .malta-box h2,
+    .ireland-box h2 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.5rem;
+    }
+
+    .england-box p,
+    .canada-box p,
+    .america-box p,
+    .australia-box p,
+    .malta-box p,
+    .ireland-box p {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.05rem;
+    }
+    
+    .main-title-section h1 {
+        font-size: 1.5rem !important;
+        margin-top: 1rem !important;
+        font-size:2.1rem;
+    }
+    
+    ul {
+        padding-left: 1.5rem !important;
+    }
+
+
+    .england-box ul li,
+    .canada-box ul li,
+    .america-box ul li,
+    .australia-box ul li,
+    .malta-box ul li,
+    .ireland-box ul li {
+        font-size:1.05rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .england-box,
+    .america-box,
+    .canada-box,
+    .australia-box,
+    .malta-box,
+    .ireland-box {
+        flex-direction: column !important;
+        width: 90% !important;
+        height: auto !important;
+        max-width: 500px !important;
+        margin: 1rem auto !important;
+        box-shadow: 0 2px 16px #1a4079 !important;
+        margin-top:2.5rem !important;
+    }
+    
+    .england-box img,
+    .canada-box img,
+    .america-box img,
+    .australia-box img,
+    .malta-box img,
+    .ireland-box img {
+        width: 100% !important;
+        height: 200px !important;
+        margin-left: 0 !important;
+    
+        object-fit: cover !important;
+        order: -1 !important;
+    }
+    
+
+    .england-box h2,
+    .canada-box h2,
+    .america-box h2,
+    .australia-box h2,
+    .malta-box h2,
+    .ireland-box h2 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.44rem;
+    }
+
+    .england-box p,
+    .canada-box p,
+    .america-box p,
+    .australia-box p,
+    .malta-box p,
+    .ireland-box p {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1rem;
+    }
+    
+    .main-title-section h1 {
+        font-size: 1.5rem !important;
+        margin-top: 1rem !important;
+        font-size:2rem;
+    }
+    
+    ul {
+        padding-left: 1.5rem !important;
+    }
+
+
+    .england-box ul li,
+    .canada-box ul li,
+    .america-box ul li,
+    .australia-box ul li,
+    .malta-box ul li,
+    .ireland-box ul li {
+        font-size:1rem;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .england-box,
+    .america-box,
+    .canada-box,
+    .australia-box,
+    .malta-box,
+    .ireland-box {
+        flex-direction: column !important;
+        width: 90% !important;
+        height: auto !important;
+        max-width: 500px !important;
+        margin: 1rem auto !important;
+        box-shadow: 0 2px 16px #1a4079 !important;
+        margin-top:2.5rem !important;
+    }
+    
+    .england-box img,
+    .canada-box img,
+    .america-box img,
+    .australia-box img,
+    .malta-box img,
+    .ireland-box img {
+        width: 100% !important;
+        height: 200px !important;
+        margin-left: 0 !important;
+    
+        object-fit: cover !important;
+        order: -1 !important;
+    }
+    
+
+    .england-box h2,
+    .canada-box h2,
+    .america-box h2,
+    .australia-box h2,
+    .malta-box h2,
+    .ireland-box h2 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.4rem;
+    }
+
+    .england-box p,
+    .canada-box p,
+    .america-box p,
+    .australia-box p,
+    .malta-box p,
+    .ireland-box p {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:0.98rem;
+    }
+    
+    .main-title-section h1 {
+        font-size: 1.5rem !important;
+        margin-top: 1rem !important;
+        font-size:1.95rem;
+    }
+    
+    ul {
+        padding-left: 1.5rem !important;
+    }
+
+
+    .england-box ul li,
+    .canada-box ul li,
+    .america-box ul li,
+    .australia-box ul li,
+    .malta-box ul li,
+    .ireland-box ul li {
+        font-size:0.98rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .england-box,
+    .america-box,
+    .canada-box,
+    .australia-box,
+    .malta-box,
+    .ireland-box {
+        flex-direction: column !important;
+        width: 90% !important;
+        height: auto !important;
+        max-width: 500px !important;
+        margin: 1rem auto !important;
+        box-shadow: 0 2px 16px #1a4079 !important;
+        margin-top:2.5rem !important;
+    }
+    
+    .england-box img,
+    .canada-box img,
+    .america-box img,
+    .australia-box img,
+    .malta-box img,
+    .ireland-box img {
+        width: 100% !important;
+        height: 200px !important;
+        margin-left: 0 !important;
+    
+        object-fit: cover !important;
+        order: -1 !important;
+    }
+    
+
+    .england-box h2,
+    .canada-box h2,
+    .america-box h2,
+    .australia-box h2,
+    .malta-box h2,
+    .ireland-box h2 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.35rem;
+    }
+
+    .england-box p,
+    .canada-box p,
+    .america-box p,
+    .australia-box p,
+    .malta-box p,
+    .ireland-box p {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:0.95rem;
+    }
+    
+    .main-title-section h1 {
+        font-size: 1.5rem !important;
+        margin-top: 1rem !important;
+        font-size:1.9rem;
+    }
+    
+    ul {
+        padding-left: 1.5rem !important;
+    }
+
+
+    .england-box ul li,
+    .canada-box ul li,
+    .america-box ul li,
+    .australia-box ul li,
+    .malta-box ul li,
+    .ireland-box ul li {
+        font-size:0.95rem;
+    }
+
+}
+
+
+
+@media (max-width: 480px) {
+    .england-box,
+    .america-box,
+    .canada-box,
+    .australia-box,
+    .malta-box,
+    .ireland-box {
+        flex-direction: column !important;
+        width: 90% !important;
+        height: auto !important;
+        max-width: 500px !important;
+        margin: 1rem auto !important;
+        box-shadow: 0 2px 16px #1a4079 !important;
+        margin-top:2.5rem !important;
+    }
+    
+    .england-box img,
+    .canada-box img,
+    .america-box img,
+    .australia-box img,
+    .malta-box img,
+    .ireland-box img {
+        width: 100% !important;
+        height: 200px !important;
+        margin-left: 0 !important;
+    
+        object-fit: cover !important;
+        order: -1 !important;
+    }
+    
+
+    .england-box h2,
+    .canada-box h2,
+    .america-box h2,
+    .australia-box h2,
+    .malta-box h2,
+    .ireland-box h2 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:1.3rem;
+    }
+
+    .england-box p,
+    .canada-box p,
+    .america-box p,
+    .australia-box p,
+    .malta-box p,
+    .ireland-box p {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size:0.9rem;
+    }
+    
+    .main-title-section h1 {
+        font-size: 1.5rem !important;
+        margin-top: 1rem !important;
+        font-size:1.85rem;
+    }
+    
+    ul {
+        padding-left: 1.5rem !important;
+    }
+
+
+    .england-box ul li,
+    .canada-box ul li,
+    .america-box ul li,
+    .australia-box ul li,
+    .malta-box ul li,
+    .ireland-box ul li {
+        font-size:0.9rem;
+    }
+
+}
+
+  
+@media (max-width: 375px) {
+    .england-box,
+    .america-box,
+    .canada-box,
+    .australia-box,
+    .malta-box,
+    .ireland-box {
+        flex-direction: column !important;
+        width: 90% !important;
+        height: auto !important;
+        max-width: 500px !important;
+        margin: 1rem auto !important;
+        box-shadow: 0 2px 16px #1a4079 !important;
+        margin-top:2.5rem !important;
+    }
+    
+    .england-box img,
+    .canada-box img,
+    .america-box img,
+    .australia-box img,
+    .malta-box img,
+    .ireland-box img {
+        width: 100% !important;
+        height: 200px !important;
+        margin-left: 0 !important;
+    
+        object-fit: cover !important;
+        order: -1 !important;
+    }
+    
+
     .england-box h2,
     .canada-box h2,
     .america-box h2,
@@ -61,14 +508,12 @@
         font-size:0.84rem;
     }
     
-    /* Adjust main title for mobile */
     .main-title-section h1 {
         font-size: 1.5rem !important;
         margin-top: 1rem !important;
         font-size:1.8rem;
     }
     
-    /* Adjust list styling for mobile */
     ul {
         padding-left: 1.5rem !important;
     }
