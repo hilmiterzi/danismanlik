@@ -3,12 +3,20 @@
 @media (max-width:1024px) {
     .image-section {
         display: grid !important;
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 400px) !important;
+        justify-content: center;
         gap:1rem !important;
     }
 
+
+    .image-section img:nth-child(3) {
+        grid-column: span 2 !important; /* Full width */
+        width: 400px !important;
+        height: auto !important;
+      }
+
     .image-section img {
-        width: 90% !important;
+        width: 100% !important;
         height:auto !important;
         margin: 0 auto !important;
     }
