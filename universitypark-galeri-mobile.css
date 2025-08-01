@@ -1,0 +1,12 @@
+@media (max-width:375px) {
+    .main-section h1 {
+        font-size: 1.8rem !important;
+        text-align: center  !important;
+    }
+
+    .images-section {
+        display: grid!important;
+        grid-template-columns: repeat((1, 1fr)) !important;
+        padding: 0 !important;
+    }
+}
