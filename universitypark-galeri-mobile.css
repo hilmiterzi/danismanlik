@@ -1,4 +1,13 @@
+
+
+
+
 @media (max-width: 375px) {
+    .main-section h1 {
+        font-size:1.8rem !important;
+        text-align: center !important;
+    }
+
     .main-section {
         max-width: 100% !important;
         margin: 0 auto !important;
