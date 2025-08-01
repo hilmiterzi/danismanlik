@@ -1,3 +1,251 @@
+
+@media (max-width: 1200px) {
+    .main-section h1 {
+        font-size:2.1rem !important;
+        text-align: center !important;
+    }
+
+    .main-section {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 10px !important;
+    }
+
+    .gallery-box {
+        width: 100% !important;
+        box-shadow: 0 2px 8px rgba(26,64,121,0.08) !important;
+        padding: 10px !important;
+    }
+
+    .images-section {
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr) !important; /* two column for mobile */
+        gap: 15px !important;
+        padding: 7px !important;
+    }
+
+    .images-section img {
+        width: 100% !important;
+        height: 400px !important; /* Smaller height for mobile */
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    .images-section img:hover {
+        transform: scale(1.02) !important; /* Smaller scale for mobile */
+    }
+
+    .images-section img:active {
+        transform: scale(0.98) !important; /* Touch feedback */
+    }
+
+    /* Lightbox mobile optimizations */
+    .lightbox {
+        background-color: rgba(0,0,0,0.95) !important;
+    }
+
+
+    .lightbox-content-wrapper {
+        margin: auto !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 650px !important;
+        max-height: 90% !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .lightbox-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 650px !important;
+        max-height: 90vh !important;
+        border-radius: 8px !important;
+    }
+
+    .lightbox img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px !important;
+    }
+
+    .close {
+        position: absolute !important;
+        top: -10px !important;
+        right: -10px !important;
+        color: #f1f1f1 !important;
+        font-size: 24px !important;
+        font-weight: bold !important;
+        cursor: pointer !important;
+        background-color: #1a4079 !important;
+        border-radius: 50% !important;
+        width: 45px !important;
+        height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: 2px solid #fff !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .close:hover {
+        background-color: rgba(255,0,0,0.8) !important;
+        transform: scale(1.1) !important;
+    }
+
+    .arrow {
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        color: #f1f1f1 !important;
+        font-size: 24px !important;
+        font-weight: bold !important;
+        cursor: pointer !important;
+        padding: 12px !important;
+        background-color: #1a4079 !important;
+        border-radius: 50% !important;
+        transition: background-color 0.3s !important;
+    }
+
+    .prev {
+        left: 10px !important;
+    }
+
+    .next {
+        right: 10px !important;
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+    .main-section h1 {
+        font-size:2rem !important;
+        text-align: center !important;
+    }
+
+    .main-section {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 10px !important;
+    }
+
+    .gallery-box {
+        width: 100% !important;
+        box-shadow: 0 2px 8px rgba(26,64,121,0.08) !important;
+        padding: 10px !important;
+    }
+
+    .images-section {
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr) !important; /* two column for mobile */
+        gap: 15px !important;
+        padding: 7px !important;
+    }
+
+    .images-section img {
+        width: 100% !important;
+        height: 325px !important; /* Smaller height for mobile */
+        object-fit: cover !important;
+        object-position: center !important;
+        border-radius: 8px !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    .images-section img:hover {
+        transform: scale(1.02) !important; /* Smaller scale for mobile */
+    }
+
+    .images-section img:active {
+        transform: scale(0.98) !important; /* Touch feedback */
+    }
+
+    /* Lightbox mobile optimizations */
+    .lightbox {
+        background-color: rgba(0,0,0,0.95) !important;
+    }
+
+
+    .lightbox-content-wrapper {
+        margin: auto !important;
+        display: block !important;
+        width: 100% !important;
+        max-width: 500px !important;
+        max-height: 90% !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .lightbox-content {
+        display: block !important;
+        width: 100% !important;
+        max-width: 500px !important;
+        max-height: 90vh !important;
+        border-radius: 8px !important;
+    }
+
+    .lightbox img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px !important;
+    }
+
+    .close {
+        position: absolute !important;
+        top: -10px !important;
+        right: -10px !important;
+        color: #f1f1f1 !important;
+        font-size: 24px !important;
+        font-weight: bold !important;
+        cursor: pointer !important;
+        background-color: #1a4079 !important;
+        border-radius: 50% !important;
+        width: 45px !important;
+        height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: 2px solid #fff !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .close:hover {
+        background-color: rgba(255,0,0,0.8) !important;
+        transform: scale(1.1) !important;
+    }
+
+    .arrow {
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        color: #f1f1f1 !important;
+        font-size: 24px !important;
+        font-weight: bold !important;
+        cursor: pointer !important;
+        padding: 12px !important;
+        background-color: #1a4079 !important;
+        border-radius: 50% !important;
+        transition: background-color 0.3s !important;
+    }
+
+    .prev {
+        left: 10px !important;
+    }
+
+    .next {
+        right: 10px !important;
+    }
+}
+
+
 @media (max-width: 768px) {
     .main-section h1 {
         font-size:1.95rem !important;
