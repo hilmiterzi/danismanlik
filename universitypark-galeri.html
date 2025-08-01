@@ -67,7 +67,8 @@
             background-color: rgba(0,0,0,0.9);
         }
 
-        .lightbox-content {
+        .lightbox-content-wrapper {
+            position: relative;
             margin: auto;
             display: block;
             width: auto;
@@ -79,6 +80,14 @@
             transform: translate(-50%, -50%);
         }
 
+        .lightbox-content {
+            display: block;
+            width: auto;
+            max-width: 800px;
+            max-height: 90vh;
+            border-radius: 8px;
+        }
+
         .lightbox img {
             width: auto;
             height: auto;
@@ -87,16 +96,26 @@
 
         .close {
             position: absolute;
-            top: 15px;
-            right: 35px;
+            top: -15px;
+            right: -15px;
             color: #f1f1f1;
-            font-size: 40px;
+            font-size: 30px;
             font-weight: bold;
             cursor: pointer;
+            background-color: rgba(0,0,0,0.8);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
         }
 
         .close:hover {
-            color: #bbb;
+            background-color: rgba(255,0,0,0.8);
+            transform: scale(1.1);
         }
 
         /* Arrow buttons */
@@ -124,6 +143,12 @@
 
         .next {
             right: 20px;
+        }
+
+        .images-section img:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
         }
     </style>
 </head>
@@ -161,10 +186,12 @@
 
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
         <a class="arrow prev" onclick="event.stopPropagation(); changeImage(-1)">&#10094;</a>
         <a class="arrow next" onclick="event.stopPropagation(); changeImage(1)">&#10095;</a>
-        <img class="lightbox-content" id="lightbox-img">
     </div>
 
     <script src="main.js?v=1"></script>
@@ -210,5 +237,6 @@
             }
         });
     </script>
+    <div id="footer"></div>
 </body>
 </html>
