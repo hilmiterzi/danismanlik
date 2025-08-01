@@ -295,7 +295,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// WOKR AND STUDY IMAGE SLIDER
+let currentImageIndex = 0;
+let images = [];
+
+function openLightbox(img) {
+    // Get all gallery images
+    images = Array.from(document.querySelectorAll('.images-section img'));
+    currentImageIndex = images.indexOf(img);
+    
+    document.getElementById('lightbox').style.display = 'block';
+    document.getElementById('lightbox-img').src = img.src;
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+
+function changeImage(direction) {
+    currentImageIndex += direction;
+    
+    // Loop around
+    if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+    }
+    if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1;
+    }
+    
+    document.getElementById('lightbox-img').src = images[currentImageIndex].src;
+}
+
+// Close lightbox when pressing Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeLightbox();
+    }
+    // Arrow key navigation
+    if (event.key === 'ArrowLeft') {
+        changeImage(-1);
+    }
+    if (event.key === 'ArrowRight') {
+        changeImage(1);
+    }
+});
 
 
 
