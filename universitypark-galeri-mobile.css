@@ -548,7 +548,7 @@
         margin: auto !important;
         display: block !important;
         width: 95% !important;
-        max-width: 300px !important;
+        max-width: 250px !important;
         max-height: 80vh !important;
         position: absolute !important;
         top: 50% !important;
@@ -556,14 +556,12 @@
         transform: translate(-50%, -50%) !important;
     }
 
-    .images-section > img:nth-child(4) {
-        height: 20px !important;
-    }
+
 
     .lightbox-content {
         display: block !important;
         width: 100% !important;
-        max-width: 300px !important;
+        max-width: 250px !important;
         max-height: 80vh !important;
         border-radius: 8px !important;
     }
