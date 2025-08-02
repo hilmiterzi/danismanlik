@@ -267,10 +267,24 @@
             color: #1a4079;
         }
 
+        .images-section {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 10px; 
+            margin: 32px 0 24px 0; 
+            flex-wrap: wrap;
+        }
 
 
-
- 
+        .images-section img {
+            width: 300px !important; 
+            height: 200px !important; 
+            max-width: 100% !important;
+            border-radius: 12px !important; 
+            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+            object-fit: cover !important;
+        }
 
         
 
@@ -287,10 +301,10 @@
             <span class="mba-title-underline"></span>
             <p style="margin-top:1.2rem; font-size:1.13rem; color:#222; font-weight: 400; line-height:1.7;">Günümüzde globalleşen iş dünyasında rekabetçi bir kariyer hedefleyen öğrenciler için yurtdışında yüksek lisans (Master) ve MBA (Master of Business Administration) programları büyük fırsatlar sunuyor. Farklı ülkelerde eğitim almak, sadece akademik bilgi değil, aynı zamanda uluslararası vizyon, kültürel çeşitlilik ve profesyonel bağlantılar kazanmanızı sağlar.</p>
         </div>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 32px 0 24px 0; flex-wrap: wrap;">
-            <img src="master_mba1.webp" alt="Master MBA 1" style="max-width: 300px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(26,64,121,0.10); object-fit: cover;">
-            <img src="master_mba2.webp" alt="Master MBA 2" style="max-width: 300px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(26,64,121,0.10); object-fit: cover;">
-            <img src="master_mba3.webp" alt="Master MBA 3" style="max-width: 300px; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 2px 8px rgba(26,64,121,0.10); object-fit: cover;">
+        <div class="images-section">
+            <img src="master_mba1.webp" alt="Master MBA 1">
+            <img src="master_mba2.webp" alt="Master MBA 2">
+            <img src="master_mba3.webp" alt="Master MBA 3">
         </div>
         <div class="mba-section alt">
             <h2><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="mba-icon" alt="Diploma">Yurtdışında Master Eğitimi Nedir?</h2>
