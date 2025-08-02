@@ -678,7 +678,7 @@
         display: block !important;
         width: 95% !important;
         max-width: 350px !important;
-        max-height: 80vh !important;
+        max-height: 78vh !important;
         position: absolute !important;
         top: 50% !important;
         left: 50% !important;
@@ -689,7 +689,7 @@
         display: block !important;
         width: 100% !important;
         max-width: 350px !important;
-        max-height: 80vh !important;
+        max-height: 78vh !important;
         border-radius: 8px !important;
     }
 
