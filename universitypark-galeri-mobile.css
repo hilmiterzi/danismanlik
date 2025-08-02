@@ -19,14 +19,14 @@
 
     .images-section {
         display: grid !important;
-        grid-template-columns: repeat(2,1fr) !important; /* two column for mobile */
+        grid-template-columns: repeat(3,1fr) !important; /* two column for mobile */
         gap: 15px !important;
         padding: 7px !important;
     }
 
     .images-section img {
         width: 100% !important;
-        height: 400px !important; /* Smaller height for mobile */
+        height: 200px !important; /* Smaller height for mobile */
         object-fit: cover !important;
         object-position: center !important;
         border-radius: 8px !important;
