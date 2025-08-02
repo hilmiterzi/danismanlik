@@ -1,0 +1,90 @@
+@media (max-width:1440px) {
+    .main-content h1 {
+        font-size:2.15rem !important;
+    }
+
+    .main-content strong,
+    .main-content p,
+    .main-content span,
+    .whatsapp-btn-inside {
+        font-size:1.07rem !important;
+    }
+}
+
+@media (max-width:1200px) {
+    .main-content h1 {
+        font-size:2.1rem !important;
+    }
+
+    .main-content strong,
+    .main-content p,
+    .main-content span,
+    .whatsapp-btn-inside {
+        font-size:1.05rem !important;
+    }
+}
+
+@media (max-width:1024px) {
+    .main-content h1 {
+        font-size:2rem !important;
+    }
+
+    .main-content strong,
+    .main-content p,
+    .main-content span,
+    .whatsapp-btn-inside {
+        font-size:1rem !important;
+    }
+}
+
+@media (max-width:768px) {
+    .main-content h1 {
+        font-size:1.95rem !important;
+    }
+
+    .main-content strong,
+    .main-content p,
+    .main-content span,
+    .whatsapp-btn-inside {
+        font-size:0.98rem !important;
+    }
+}
+
+@media (max-width:600px) {
+    .main-content h1 {
+        font-size:1.9rem !important;
+    }
+
+    .main-content strong,
+    .main-content p,
+    .main-content span,
+    .whatsapp-btn-inside {
+        font-size:0.95rem !important;
+    }
+}
+
+@media (max-width:480px) {
+    .main-content h1 {
+        font-size:1.85rem !important;
+    }
+
+    .main-content strong,
+    .main-content p,
+    .main-content span,
+    .whatsapp-btn-inside {
+        font-size:0.9rem !important;
+    }
+}
+
+@media (max-width:375px) {
+    .main-content h1 {
+        font-size:1.8rem !important;
+    }
+
+    .main-content strong,
+    .main-content p,
+    .main-content span,
+    .whatsapp-btn-inside {
+        font-size:0.84rem !important;
+    }
+}
