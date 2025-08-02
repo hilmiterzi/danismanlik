@@ -1,3 +1,175 @@
+@media (max-width:1440px) {
+    .modern-section.pathway-section h1 {
+        font-size:2.15rem !important;
+       
+    }
+    .modern-section.pathway-section h2,
+    .modern-section.pathway-section h3 {
+        font-size:1.54rem !important;
+    }
+    .whatsapp-btn-inside,
+    .upper-btn,
+    .modern-section.pathway-section p,
+    .modern-section.pathway-section ul,
+    .modern-section.pathway-section ol,
+    .modern-section.pathway-section li {
+        font-size:1.07rem !important;
+    }
+
+    .images-section {
+        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        justify-content: center !important; /* Center the items */
+      }
+    .images-section img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width:1200px) {
+    .modern-section.pathway-section h1 {
+        font-size:2.1rem !important;
+       
+    }
+    .modern-section.pathway-section h2,
+    .modern-section.pathway-section h3 {
+        font-size:1.5rem !important;
+    }
+    .whatsapp-btn-inside,
+    .upper-btn,
+    .modern-section.pathway-section p,
+    .modern-section.pathway-section ul,
+    .modern-section.pathway-section ol,
+    .modern-section.pathway-section li {
+        font-size:1.05rem !important;
+    }
+
+    .images-section {
+        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        justify-content: center !important; /* Center the items */
+      }
+    .images-section img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width:1024px) {
+    .modern-section.pathway-section h1 {
+        font-size:2rem !important;
+       
+    }
+    .modern-section.pathway-section h2,
+    .modern-section.pathway-section h3 {
+        font-size:1.44rem !important;
+    }
+    .whatsapp-btn-inside,
+    .upper-btn,
+    .modern-section.pathway-section p,
+    .modern-section.pathway-section ul,
+    .modern-section.pathway-section ol,
+    .modern-section.pathway-section li {
+        font-size:1rem !important;
+    }
+
+    .images-section {
+        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        justify-content: center !important; /* Center the items */
+      }
+    .images-section img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width:768px) {
+    .modern-section.pathway-section h1 {
+        font-size:1.95rem !important;
+       
+    }
+    .modern-section.pathway-section h2,
+    .modern-section.pathway-section h3 {
+        font-size:1.4rem !important;
+    }
+    .whatsapp-btn-inside,
+    .upper-btn,
+    .modern-section.pathway-section p,
+    .modern-section.pathway-section ul,
+    .modern-section.pathway-section ol,
+    .modern-section.pathway-section li {
+        font-size:0.98rem !important;
+    }
+
+    .images-section {
+        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        justify-content: center !important; /* Center the items */
+      }
+    .images-section img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
+@media (max-width:600px) {
+    .modern-section.pathway-section h1 {
+        font-size:1.9rem !important;
+       
+    }
+    .modern-section.pathway-section h2,
+    .modern-section.pathway-section h3 {
+        font-size:1.35rem !important;
+    }
+
+    .whatsapp-btn-inside,
+    .upper-btn,
+    .modern-section.pathway-section p,
+    .modern-section.pathway-section ul,
+    .modern-section.pathway-section ol,
+    .modern-section.pathway-section li {
+        font-size:0.95rem !important;
+    }
+
+    .images-section {
+        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        justify-content: center !important; /* Center the items */
+      }
+    .images-section img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width:480px) {
+    .modern-section.pathway-section h1 {
+        font-size:1.85rem !important;
+       
+    }
+    .modern-section.pathway-section h2,
+    .modern-section.pathway-section h3 {
+        font-size:1.3rem !important;
+    }
+
+    .whatsapp-btn-inside,
+    .upper-btn,
+    .modern-section.pathway-section p,
+    .modern-section.pathway-section ul,
+    .modern-section.pathway-section ol,
+    .modern-section.pathway-section li {
+        font-size:0.9rem !important;
+    }
+
+    .images-section {
+        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        justify-content: center !important; /* Center the items */
+      }
+    .images-section img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
 @media (max-width:375px) {
     .modern-section.pathway-section h1 {
         font-size:1.8rem !important;
@@ -8,6 +180,8 @@
         font-size:1.2rem !important;
     }
 
+    .whatsapp-btn-inside,
+    .upper-btn,
     .modern-section.pathway-section p,
     .modern-section.pathway-section ul,
     .modern-section.pathway-section ol,
