@@ -10,6 +10,7 @@
 
     .modern-section.pathway-section p,
     .modern-section.pathway-section ul,
+    .modern-section.pathway-section ol,
     .modern-section.pathway-section li {
         font-size:0.84rem !important;
     }
