@@ -226,17 +226,7 @@
 
                                                                                     /* MAX 375 */
 @media (max-width:375px) {
-    .image-section {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap:1rem !important;
-    }
 
-    .image-section img {
-        width: 90% !important;
-        height:auto !important;
-        margin: 0 auto !important;
-    }
 
     .info-section h1 {
         font-size: 1.8rem !important;

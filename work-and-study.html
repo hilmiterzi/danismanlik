@@ -45,10 +45,12 @@
   }
 
   .image-gallery img {
-    max-width: 30%; /* Set a max-width for each image to make them roughly equal and fit three across */
+    width: 300px;
+    max-width: 200%; /* Set a max-width for each image to make them roughly equal and fit three across */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Apply border-radius for rounded corners as in the example */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 12px; /* Apply border-radius for rounded corners as in the example */
+    box-shadow: 0 2px 8px rgba(26,64,121,0.10); /* Add a subtle shadow */
+    object-fit: cover;
   }
 
 
@@ -63,7 +65,7 @@
       <h1 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1.2rem; text-align: center;">Work and Study Programı</h1>
 
       
-      <div class="image-gallery" style="display: flex; justify-content: center; align-items: center; gap: 24px; margin: 36px 0 36px 0; flex-wrap: wrap;">
+      <div class="image-gallery" style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 32px 0 24px 0; flex-wrap: wrap;">
         <img src="was1.webp" alt="Work and Study Fotoğraf 1">
         <img src="was2.webp" alt="Work and Study Fotoğraf 2">
         <img src="was3.webp" alt="Work and Study Fotoğraf 3">

@@ -3,12 +3,15 @@
         font-size:1.8rem !important;
        
     }
-    .modern-section.pathway-section h2 h3 {
+    .modern-section.pathway-section h2,
+    .modern-section.pathway-section h3 {
         font-size:1.2rem !important;
     }
 
-    .modern-section.pathway-section p ul li {
-        font-size:0.84rem;
+    .modern-section.pathway-section p,
+    .modern-section.pathway-section ul,
+    .modern-section.pathway-section li {
+        font-size:0.84rem !important;
     }
 
     .images-section {
@@ -16,7 +19,7 @@
         justify-content: center !important; /* Center the items */
       }
     .images-section img {
-        width: 100%;
-        height: auto;
+        width: 100% !important;
+        height: auto !important;
     }
 }

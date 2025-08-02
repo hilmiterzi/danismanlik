@@ -303,7 +303,7 @@
 
     .image-gallery {
         display:flex !important;
-        flex-direction: column!important;
+        flex-direction: column !important;
         align-items: center!important;
         gap:1rem!important;
     }
