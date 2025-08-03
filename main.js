@@ -222,22 +222,6 @@
      });
 
 
-     fetch('coming-soon-modal-tr.html')
-     .then(response => response.text())
-     .then(data => {
-        const el = document.getElementById('comingSoonModalContainer');
-        if (el) el.innerHTML = data;
-     });
-
-// Modal functions
-function showComingSoonModal(e) {
-    e.preventDefault();
-    document.getElementById('comingSoonModal').style.display = 'flex';
-}
-
-function closeComingSoonModal() {
-    document.getElementById('comingSoonModal').style.display = 'none';
-}
 
 
 document.addEventListener('DOMContentLoaded', function() {
