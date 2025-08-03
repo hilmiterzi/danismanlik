@@ -15,16 +15,13 @@
     <link rel="stylesheet" href="bilgi-iste-mobile.css">
 
     <style>
-
-
+        /* GENERAL STYLES (Cleaned up for better organization) */
         .contact-container {
-            max-width: 900px;
-            margin-top:3rem;
-            margin-left:10rem;
             background: #fff;
             border-radius: 18px;
             box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
             padding: 2.5rem 2rem 2rem 2rem;
+            margin: 0 auto; /* Center on mobile by default */
         }
         .contact-container h1 {
             text-align: center;
@@ -75,8 +72,6 @@
         .contact-form button:hover {
             background: linear-gradient(90deg, #e63946 40%, #1a4079 100%);
         }
-        
-        
         .close {
             color: #aaa;
             float: right;
@@ -87,234 +82,232 @@
             right: 1rem;
             top: 0.5rem;
         }
-        
         .close:hover {
             color: #1a4079;
         }
 
+        /* --- FLEXBOX FOR MAIN LAYOUT (MOBILE FIRST) --- */
 
+        .wrapper-of-form-and-linfobox {
+            display: flex;
+            flex-direction: column; /* Default: stacked for mobile */
+            align-items: center; /* Center items horizontally when stacked */
+            max-width: 1200px; /* Reduced max-width for tighter overall layout */
+            margin: 3rem auto; /* Overall top margin and center the wrapper */
+            padding: 0 1rem; /* Padding to prevent content from touching screen edges */
+            gap: 2rem; /* Space between form and right-side-stack on mobile */
+        }
 
+        /* Mobile specific adjustments for elements within the wrapper */
+        .contact-container {
+            width: 90%; /* Take 90% width on mobile */
+            max-width: 550px; /* Limit form width on larger mobiles */
+            padding: 1.5rem; /* Smaller padding on mobile */
+        }
+
+        .little-info-box {
+            width: 100%; /* Takes full width of its parent (.right-side-stack) on mobile */
+            max-width: 550px; /* Limit info box width on larger mobiles */
+            box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
+            border-radius: 18px;
+            background: #fff;
+            padding: 1.5rem;
+            margin-top: 0;
+        }
+
+        .little-info-box h1 {
+            color:#1a4079;
+            font-size:1.5rem;
+            text-align: center;
+            padding-top:0.7rem;
+        }
+
+        .little-info-box p {
+            padding-left:1.5rem;
+            padding-right:1.5rem;
+        }
+
+        /* New container for the right-side elements */
+        .right-side-stack {
+            display: flex;
+            flex-direction: column; /* Stack its children vertically */
+            gap: 2rem; /* Space between info box and quick contact */
+            width: 90%; /* Take 90% width of the main wrapper on mobile */
+            max-width: 550px; /* Limit its width on larger mobiles */
+        }
+
+        .hizli-iletisim-section {
+            background: #f8fafd;
+            padding: 3rem 2rem;
+            margin: 0;
+            width: 100%; /* Take full width of its parent (.right-side-stack) */
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
+        }
+
+        /* --- DESKTOP MEDIA QUERY (min-width: 769px) --- */
+        @media (min-width: 769px) {
+            .wrapper-of-form-and-linfobox {
+                flex-direction: row; /* Main items side-by-side */
+                justify-content: center; /* Center the form and right-side-stack */
+                align-items: flex-start; /* Align top edges */
+                gap: 2rem; /* Reduced gap between form and right-side stack */
+                max-width: 1500px; /* Explicitly define overall max-width */
+            }
+
+            .contact-container {
+                width: 900px; /* Adjusted width for desktop form - wider */
+                max-width: none; /* Remove mobile max-width */
+                padding: 2.5rem 2rem 2rem 2rem;
+            }
+
+            .right-side-stack {
+                width: 700px; /* Adjusted width for the entire right column - wider */
+                max-width: none; /* Remove mobile max-width */
+            }
+
+            .little-info-box {
+                width: 100%; /* Take full width of its parent (.right-side-stack) */
+                max-width: none; /* Remove mobile max-width */
+                padding-top: 2.5rem; /* Match the form's padding-top for visual alignment */
+            }
+
+            .hizli-iletisim-section {
+                width: 100%; /* Take full width of its parent (.right-side-stack) */
+                padding: 2.5rem; /* Adjust padding for desktop consistency */
+            }
+
+            /* Hızlı İletişim buttons: Ensure they stay in a row on desktop */
+            .hizli-iletisim-section > div { /* Selects the div containing h2 and button-grid-container */
+                max-width: none; /* Remove inline max-width for better flex control */
+                margin: 0; /* Remove inline margin */
+                text-align: left; /* Align text left, not center */
+            }
+            .hizli-iletisim-section > div > div { /* The div that contains the three buttons */
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap; /* Prevent wrapping */
+                justify-content: space-between; /* Distribute space between them */
+                gap: 1rem; /* Space between buttons */
+            }
+
+            /* Adjust button sizing within the quick contact section to fit in one row */
+            .hizli-iletisim-section > div > div > div { /* The individual button containers */
+                flex-basis: calc(33.33% - 1rem); /* Roughly 1/3 width minus gap */
+                min-width: 120px; /* Slightly reduced min-width if needed to fit */
+                text-align: center; /* Re-center text within each button */
+            }
+        }
+
+        /* --- SMALLER MOBILE MEDIA QUERY (max-width: 768px) --- */
+        @media (max-width: 768px) {
+            .contact-container h1 {
+                font-size: 1.5rem;
+            }
+
+            /* Prevent iOS input zoom - good practice */
+            .contact-form input,
+            .contact-form select,
+            .contact-form textarea {
+                font-size: 16px;
+            }
+
+            /* Hızlı İletişim buttons: Force them to stack on mobile */
+            .hizli-iletisim-section > div > div {
+                display: grid; /* Keep grid for mobile if preferred, or change to flex column */
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            .hizli-iletisim-section > div { /* Reset text alignment for mobile */
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="header"></div>
     <script src="main.js?v=1"></script>
 
-
-
     <h1 style="font-size:2.5rem; color:red; text-align:center; margin-top:3rem;">Bilgi İste</h1>
-        <p style="text-align: center; color: #666; margin-bottom: 2rem; line-height: 1.6; margin-top:0.5rem;">
-            Yurtdışı eğitim programları hakkında detaylı bilgi almak için formu doldurun. 
-            Uzman danışmanlarımız en kısa sürede sizinle iletişime geçecek.
-        </p>
+    <p style="text-align: center; color: #666; margin-bottom: 2rem; line-height: 1.6; margin-top:0.5rem;">
+        Yurtdışı eğitim programları hakkında detaylı bilgi almak için formu doldurun.
+        Uzman danışmanlarımız en kısa sürede sizinle iletişime geçecek.
+    </p>
 
-
-<div class="wrapper-of-form-and-linfobox">
-    <div class="contact-container">
-        <form class="contact-form" action="https://formsubmit.co/info@universitypark.com.tr" method="POST">
-            <label for="adsoyad">Ad Soyad <span style='color:red'>*</span></label>
-            <input type="text" id="adsoyad" name="adsoyad" required>
-            <label for="email">E-posta <span style='color:red'>*</span></label>
-            <input type="email" id="email" name="email" required>
-            <label for="telefon">Telefon Numarası <span style='color:red'>*</span></label>
-            <input type="tel" id="telefon" name="telefon" required>
-            <label for="adres">Adres</label>
-            <input type="text" id="adres" name="adres">
-            <label for="program">Bilgi İstediğiniz Program <span style='color:red'>*</span></label>
-            <select id="program" name="program" required>
-                <option value="">Seçiniz</option>
-                <option>Dil Okulları</option>
-                <option>Master/MBA</option>
-                <option>Work and Travel</option>
-                <option>Work and Study</option>
-                <option>Yaz Okulu</option>
-                <option>Pathway Program</option>
-                <option>Vize İşlemleri</option>
-            </select>
-            <label for="mesaj">Mesajınız <span style='color:red'>*</span></label>
-            <textarea id="mesaj" name="mesaj" required></textarea>
-            <button type="submit">Gönder</button>
-        </form>
-    </div>
-
-    <div class="little-info-box">
-        <h1>Universitypark Hakkında</h1>
-        <p>
-            UniversityPark Yurtdışı Eğitim ve Danışmanlık, 2015 yılında Ali Karakaya tarafından Mersin, Ankara ve İstanbul'da kurulmuştur.<br>
-            Kurucumuz Ali Karakaya, yurtdışında aldığı hukuk eğitimi süresince Türk öğrencilerin temsilciliğini üstlenmiş, bu süreçte birçok<br>
-            öğrenciye gönüllü olarak rehberlik etmiş ve alandaki bilgi birikimini sahada deneyimleyerek geliştirmiştir.<br><br>
-            <a href="biz-kimiz.html">Devamını Oku</a>
-        </p>
-    </div>
-
-
-<style>
-    
-
-    .wrapper-of-form-and-linfobox {
-        position: relative; /* Allows absolute positioning of info box */
-        max-width: 1800px; /* Large enough to contain both elements */
-        margin: 0 auto;
-    }
-
-    /* Position the info box ABSOLUTELY to the right of the form */
-    .little-info-box {
-        position: absolute;
-        left: calc(900px + 12rem); /* Form width + form's left margin + extra space */
-        top: 0;
-        width: 500px;
-        box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
-        border-radius: 18px;
-        height: 350px;
-        background: #fff;
-        padding: 1.5rem;
-    }
-    
-
-    .little-info-box h1 {
-        color:#1a4079;
-        font-size:1.5rem;
-        text-align: center;
-        padding-top:0.7rem;
-    }
-
-    .little-info-box p {
-        padding-left:1.5rem;
-        padding-right:1.5rem;
-    }
-
-
-    @media (max-width:768px) {
-        
-        .little-info-box {
-            display:none;
-        }
-        
-/* 1. Make contact-container mobile-first */
-.contact-container {
-    max-width: 900px;
-    width: 90%; /* Full width on mobile */
-    margin: 3rem auto; /* Center + top margin */
-    padding: 1.5rem; /* Smaller padding on mobile */
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
-}
-
-/* 2. Stack wrapper contents vertically on mobile */
-.wrapper-of-form-and-linfobox {
-    display: flex;
-    flex-direction: column; /* Stack form + info box */
-    align-items: center;
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 0 1rem; /* Prevent edge touching */
-}
-
-.little-info-box {
-    width: 100%; /* Full width on mobile */
-    max-width: 500px; /* Limit expansion */
-    margin-top: 2rem; /* Space between form and box */
-    height: auto; /* Flexible height */
-}
-
-
-/* 5. Prevent iOS input zoom */
-.contact-form input, 
-.contact-form select, 
-.contact-form textarea {
-    font-size: 16px;
-}
-
-
-
-
-
-}
-
-
-/* 3. Desktop-only adjustments (min-width: 1024px) */
-@media (min-width: 1024px) {
-    .wrapper-of-form-and-linfobox {
-        flex-direction: row; /* Side-by-side on desktop */
-        justify-content: center;
-        position: relative;
-    }
-
-}
-
-/* 4. Mobile-specific tweaks */
-@media (max-width: 768px) {
-    .contact-container {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    .contact-container h1 {
-        font-size: 1.5rem; /* Smaller heading */
-    }
-
-
-    /* Force quick-contact buttons to stack */
-    section > div > div {
-        grid-template-columns: 1fr !important;
-        gap: 1rem !important;
-    }
-
-    .contact-form {
-        position:relative !important;
-    }
-    .little-info-box {
-        position: absolute !important;
-        top:2rem !important;
-    }
-
-}
-
-</style>
-
-</div>
-
-
-
-
-    <!-- Hızlı İletişim -->
-    <section style="background: #f8fafd; padding: 3rem 2rem; margin: 3rem 0;">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 style="color: #1a4079; margin-bottom: 2rem; font-size: 2rem;">Hızlı İletişim Seçenekleri</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📞</div>
-                    <h3 style="color: #1a4079; margin-bottom: 1rem;">Telefon</h3>
-                    <p style="color: #666; margin-bottom: 1rem;">Hemen arayın</p>
-                    <a href="tel:+905414304808" style="background: #1a4079; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 8px; display: inline-block;">+90 541 430 4808</a>
-                </div>
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📱</div>
-                    <h3 style="color: #1a4079; margin-bottom: 1rem;">WhatsApp</h3>
-                    <p style="color: #666; margin-bottom: 1rem;">Anında mesaj</p>
-                    <a href="https://wa.me/905414304808" style="background: #25d366; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 8px; display: inline-block;">WhatsApp</a>
-                </div>
-                <div style="background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📧</div>
-                    <h3 style="color: #1a4079; margin-bottom: 1rem;">E-posta</h3>
-                    <p style="color: #666; margin-bottom: 1rem;">Detaylı bilgi</p>
-                    <a href="mailto:info@universitypark.com.tr" style="background: #e63946; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 8px; display: inline-block;">E-posta Gönder</a>
-                </div>
-            </div>
+    <div class="wrapper-of-form-and-linfobox">
+        <div class="contact-container">
+            <form class="contact-form" action="https://formsubmit.co/info@universitypark.com.tr" method="POST">
+                <label for="adsoyad">Ad Soyad <span style='color:red'>*</span></label>
+                <input type="text" id="adsoyad" name="adsoyad" required>
+                <label for="email">E-posta <span style='color:red'>*</span></label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefon">Telefon Numarası <span style='color:red'>*</span></label>
+                <input type="tel" id="telefon" name="telefon" required>
+                <label for="adres">Adres</label>
+                <input type="text" id="adres" name="adres">
+                <label for="program">Bilgi İstediğiniz Program <span style='color:red'>*</span></label>
+                <select id="program" name="program" required>
+                    <option value="">Seçiniz</option>
+                    <option>Dil Okulları</option>
+                    <option>Master/MBA</option>
+                    <option>Work and Travel</option>
+                    <option>Work and Study</option>
+                    <option>Yaz Okulu</option>
+                    <option>Pathway Program</option>
+                    <option>Vize İşlemleri</option>
+                </select>
+                <label for="mesaj">Mesajınız <span style='color:red'>*</span></label>
+                <textarea id="mesaj" name="mesaj" required></textarea>
+                <button type="submit">Gönder</button>
+            </form>
         </div>
-    </section>
 
+        <div class="right-side-stack">
+            <div class="little-info-box">
+                <h1>Universitypark Hakkında</h1>
+                <p>
+                    UniversityPark Yurtdışı Eğitim ve Danışmanlık, 2015 yılında Ali Karakaya tarafından Mersin, Ankara ve İstanbul'da kurulmuştur.<br>
+                    Kurucumuz Ali Karakaya, yurtdışında aldığı hukuk eğitimi süresince Türk öğrencilerin temsilciliğini üstlenmiş, bu süreçte birçok<br>
+                    öğrenciye gönüllü olarak rehberlik etmiş ve alandaki bilgi birikimini sahada deneyimleyerek geliştirmiştir.<br><br>
+                    <a href="biz-kimiz.html">Devamını Oku</a>
+                </p>
+            </div>
+
+            <section class="hizli-iletisim-section">
+                <div>
+                    <h2 style="color: #1a4079; margin-bottom: 2rem; font-size: 2rem;">Hızlı İletişim Seçenekleri</h2>
+                    <div> <div>
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📞</div>
+                            <h3 style="color: #1a4079; margin-bottom: 1rem;">Telefon</h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Hemen arayın</p>
+                            <a href="tel:+905414304808" style="background: #1a4079; color: white; padding: 0.8rem 1.1rem; text-decoration: none; border-radius: 8px; display: inline-block;">+90 541 430 4808</a>
+                        </div>
+                        <div>
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📱</div>
+                            <h3 style="color: #1a4079; margin-bottom: 1rem;">WhatsApp</h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Anında mesaj</p>
+                            <a href="https://wa.me/905414304808" style="background: #25d366; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 8px; display: inline-block;">WhatsApp</a>
+                        </div>
+                        <div>
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📧</div>
+                            <h3 style="color: #1a4079; margin-bottom: 1rem;">E-posta</h3>
+                            <p style="color: #666; margin-bottom: 1rem;">Detaylı bilgi</p>
+                            <a href="mailto:info@universitypark.com.tr" style="background: #e63946; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 8px; display: inline-block;">E-posta Gönder</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 
     <section class="map-section">
         <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.016171813108!2d34.54201719999999!3d36.7701795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f5a3fc0cf713%3A0x8fc275e8cfb6980c!2zVW5pdmVyc2l0eXBhcmsgWXVydGTEscWfxLEgRcSfaXRpbQ!5e0!3m2!1snl!2snl!4v1749205286025!5m2!1snl!2snl" width="100%" height="450" style="border:0; width:100%; display:block; padding-left:1rem; padding-right:1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
-    
-    
+
     <div id="footer"></div>
 
 </body>
 </main>
-</html> 
+</html>
