@@ -1,0 +1,14 @@
+
+@media (max-width:375px) {
+    .little-info-box {
+        position: absolute;
+        left: calc(900px + 12rem); /* Form width + form's left margin + extra space */
+        top: 0;
+        width: 500px;
+        box-shadow: 0 4px 24px rgba(0, 102, 255, 0.1);
+        border-radius: 18px;
+        height: 350px;
+        background: #fff;
+        padding: 1.5rem;
+    }
+}

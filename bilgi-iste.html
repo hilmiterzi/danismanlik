@@ -245,14 +245,30 @@
 
 /* 4. Mobile-specific tweaks */
 @media (max-width: 768px) {
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
     .contact-container h1 {
         font-size: 1.5rem; /* Smaller heading */
     }
+
+
     /* Force quick-contact buttons to stack */
     section > div > div {
         grid-template-columns: 1fr !important;
         gap: 1rem !important;
     }
+
+    .contact-form {
+        position:relative !important;
+    }
+    .little-info-box {
+        position: absolute !important;
+        top:2rem !important;
+    }
+
 }
 
 </style>
