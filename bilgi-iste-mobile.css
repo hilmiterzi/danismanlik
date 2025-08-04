@@ -131,6 +131,14 @@
 
     }
 
+    .contact-form label {
+        font-size:0.84rem !important;
+    }
+
+    .contact-form option {
+        font-size:0.84rem !important;
+    }
+
     .contact-form input, .contact-form select, .contact-form textarea {
         width: 100% !important;
         max-width: none !important;
@@ -164,6 +172,9 @@
             margin-top:2rem !important;
         }
 
+        .hizli-iletisim-section a {
+            font-size:0.84rem !important;
+        }
 
         .hizli-iletisim-section > div { /* The inner div containing h2 and button-grid-container */
             text-align: center !important; /* Align h2 to the left on desktop */
