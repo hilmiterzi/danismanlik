@@ -12,8 +12,11 @@
     }
 
 
-
- 
+    .main-section table {
+        display: block !important;
+        overflow-x: auto !important;
+        
+    }
  
     .main-section p,
     .main-seciton ul,
