@@ -3,267 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sıkça Sorulan Sorular</title>
+    <title>Sıkça Sorulan Sorular - University Park</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="style.css?v=1">
     <link rel="stylesheet" href="header.css?v=1">
     <link rel="stylesheet" href="footer.css?v=9">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
-
-    <style>
-
-
-.SSSandMARK {
-    display: flex;
-    flex-direction: row;
-    width:90%;
-    height: auto;
-
-}
-
-
-.sss-section h2 {
-    font-size:2rem;
-    color:red;
-}
-
-.sss-boxes-wrapper {
-    display: flex;
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-        /* General Body Styles */
-        .questionmark-section svg {
-    width: 500px; /* Adjust size as needed */
-    height: 500px;
-    color: #FF5722; /* Icon color (if stroke="currentColor") */
-    filter: drop-shadow(0 4px 8px rgba(255,87,34,0.3)); /* Modern shadow */
-    transition: transform 0.3s ease;
     
-}
-
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .faq-container {
+            background: #ffffff;
+            min-height: 100vh;
+        }
+        
+        .faq-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .faq-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: #e63946;
+            box-shadow: 0 4px 20px rgba(230, 57, 70, 0.15);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 20px;
+        }
+        
+        .faq-toggle {
+            transition: transform 0.3s ease;
+            font-weight: 300;
+            color: #e63946;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        .hero-section {
+            background: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .floating-icon {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .search-box {
+            background: white;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-tag {
+            background: linear-gradient(135deg, #e63946 0%, #d63384 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .stats-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button {
+            background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26, 64, 121, 0.3);
+        }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <div id="header"></div>
-    <script src="main.js?v=61"></script>
 
-    <main class="SSSandMARK">
+    <!-- Hero Section -->
+    <section class="hero-section py-20 relative">
+        <div class="container mx-auto px-4 text-center">
+            <div class="floating-icon mb-8">
+                <svg class="w-24 h-24 mx-auto text-gray-700 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+                Sıkça Sorulan Sorular
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Yurtdışı eğitim, Work & Travel ve dil okulları hakkında merak ettiğiniz her şey
+            </p>
+            
+            <!-- Search Box -->
+            <div class="search-box rounded-full p-4 max-w-md mx-auto mb-8 border border-gray-200 bg-white shadow-lg">
+                <div class="flex items-center">
+                    <svg class="w-5 h-5 text-gray-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" placeholder="Sorularınızı arayın..." class="bg-transparent text-gray-700 placeholder-gray-500 outline-none flex-1">
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="stats-card rounded-lg p-6 text-center bg-white shadow-lg border border-gray-200">
+                    <div class="text-3xl font-bold text-gray-800 mb-2">500+</div>
+                    <div class="text-gray-600">Başarılı Öğrenci</div>
+                </div>
+                <div class="stats-card rounded-lg p-6 text-center bg-white shadow-lg border border-gray-200">
+                    <div class="text-3xl font-bold text-gray-800 mb-2">25+</div>
+                    <div class="text-gray-600">Ülke Seçeneği</div>
+                </div>
+                <div class="stats-card rounded-lg p-6 text-center bg-white shadow-lg border border-gray-200">
+                    <div class="text-3xl font-bold text-gray-800 mb-2">98%</div>
+                    <div class="text-gray-600">Memnuniyet Oranı</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-        <section class="questionmark-section">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-help-circle">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-               <line x1="12" y1="17" x2="12.01" y2="17"></line>
-            </svg>
-       </section>
-
-
-        <section class="sss-section">
-            <div class="sss-boxes-wrapper">
-                <h2>Sıkça Sorulan Sorular</h2>
-                <div id="sss-boxes">
-                    <div id="sss-box">
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Work & Travel Programı Nedir?</h3>
-                                <span class="sss-toggle">+</span>
+    <!-- FAQ Section -->
+    <section class="faq-container py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="faq-card rounded-2xl p-8 shadow-2xl">
+                    
+                    <!-- Work & Travel Category -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="category-tag mr-3">Work & Travel</span>
+                            Çalışma ve Seyahat Programları
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Work & Travel Programı Nedir?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Work & Travel, üniversite öğrencilerinin yaz tatilinde Amerika'da çalışıp seyahat edebileceği bir kültürel değişim programıdır.</p>
-                        </div>
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Kimler başvurabilir?</h3>
-                                <span class="sss-toggle">+</span>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Work & Travel, üniversite öğrencilerinin yaz tatilinde Amerika'da çalışıp seyahat edebileceği bir kültürel değişim programıdır. 
+                                    Bu program sayesinde öğrenciler hem para kazanabilir hem de farklı bir kültürü deneyimleyebilirler.
+                                </p>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>18-28 yaş arası, en az orta düzeyde İngilizce bilen ve üniversite öğrencisi olan herkes başvurabilir.</p>
                         </div>
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Program süresi ne kadardır?</h3>
-                                <span class="sss-toggle">+</span>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Kimler Work & Travel programına başvurabilir?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Program genellikle 3-4 ay sürer ve yaz tatili döneminde gerçekleşir.</p>
-                        </div>
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Hangi ülkelerde Work & Travel yapılabilir?</h3>
-                                <span class="sss-toggle">+</span>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    18-28 yaş arası, en az orta düzeyde İngilizce bilen ve üniversite öğrencisi olan herkes başvurabilir. 
+                                    Program için gerekli belgeler ve başvuru süreci hakkında detaylı bilgi almak için bizimle iletişime geçebilirsiniz.
+                                </p>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>En popüler ülke Amerika Birleşik Devletleri'dir. Diğer ülkelerde farklı benzer programlar olabilir.</p>
                         </div>
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Yurtdışında üniversite eğitimi için hangi ülkeyi tercih etmeliyim?</h3>
-                                <span class="sss-toggle">+</span>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Program süresi ne kadardır?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Tercih, hedeflerinize ve bütçenize göre değişir. Almanya, Polonya, Çin ve Amerika en çok tercih edilen ülkelerdendir.</p>
-                        </div>
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Yurtdışında ingilizceyi öğrenebileceğim en iyi ülkeler hangisi?</h3>
-                                <span class="sss-toggle">+</span>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Program genellikle 3-4 ay sürer ve yaz tatili döneminde gerçekleşir. 
+                                    Başlangıç tarihleri genellikle Mayıs-Haziran aylarında olup, Eylül ayında sona erer.
+                                </p>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>İngiltere, Amerika, Kanada, İrlanda ve Malta en popüler İngilizce dil eğitimi ülkeleridir.</p>
                         </div>
-
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Yurtdışında burslu okuyabileceğim ülkeler hangisi?</h3>
-                                <span class="sss-toggle">+</span>
+                    </div>
+                    
+                    <!-- Yurtdışı Eğitim Category -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="category-tag mr-3">Eğitim</span>
+                            Yurtdışı Üniversite Eğitimi
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Yurtdışında üniversite eğitimi için hangi ülkeyi tercih etmeliyim?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Almanya, Çin, Polonya ve Macaristan burslu eğitim için öne çıkan ülkelerdir.</p>
-                        </div>
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Yurtdışında mühendislik eğitimi için hangi ülkeleri tercih etmeliyim?</h3>
-                                <span class="sss-toggle">+</span>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Tercih, hedeflerinize ve bütçenize göre değişir. Almanya, Polonya, Çin ve Amerika en çok tercih edilen ülkelerdendir. 
+                                    Her ülkenin kendine özgü avantajları vardır. Detaylı bilgi için danışmanlarımızla görüşebilirsiniz.
+                                </p>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Almanya, Amerika, Kanada ve Polonya mühendislik eğitimi için öne çıkan ülkelerdir.</p>
                         </div>
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Yazılım mühendisliği için hangi ülkeyi tercih etmeliyim?</h3>
-                                <span class="sss-toggle">+</span>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Yurtdışında burslu okuyabileceğim ülkeler hangileridir?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Amerika, Kanada, Almanya ve İngiltere yazılım mühendisliği için popüler ülkelerdir.</p>
-                        </div>
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Doğru bir yurtdışı eğitim danışmanlığı tercihi nasıl olmalıdır?</h3>
-                                <span class="sss-toggle">+</span>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Almanya, Çin, Polonya ve Macaristan burslu eğitim için öne çıkan ülkelerdir. 
+                                    Bu ülkelerde hem devlet hem de özel burs imkanları mevcuttur. Başvuru koşulları ve süreçleri hakkında bilgi almak için bizimle iletişime geçebilirsiniz.
+                                </p>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Şeffaf, deneyimli ve referansları güçlü danışmanlıklar tercih edilmelidir.</p>
                         </div>
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Yurtdışında aldığım diploma Türkiye'de geçerli mi?</h3>
-                                <span class="sss-toggle">+</span>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Yurtdışında aldığım diploma Türkiye'de geçerli mi?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Birçok ülkenin diploması YÖK tarafından denklik alınarak Türkiye'de geçerli olur.</p>
-                        </div>
-
-
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Dünya'da en çok konuşulan diller hangileridir?</h3>
-                                <span class="sss-toggle">+</span>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Birçok ülkenin diploması YÖK tarafından denklik alınarak Türkiye'de geçerli olur. 
+                                    Denklik süreci için gerekli belgeler ve başvuru adımları hakkında detaylı bilgi verebiliriz.
+                                </p>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>İngilizce, Çince, İspanyolca, Fransızca ve Arapça en çok konuşulan dillerdendir.</p>
                         </div>
-
-
-
-
-                        <div class="sss-item">
-                            <div class="sss-question">
-                                <h3>Avrupa'da Üniversite eğitiminin avantajları nelerdir?</h3>
-                                <span class="sss-toggle">+</span>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Yurtdışında mühendislik eğitimi için hangi ülkeleri tercih etmeliyim?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
                             </div>
-
-                            <div class="sss-answer">
-                                <p>Uygun maliyet, yüksek kalite, uluslararası ortam ve iş imkanları başlıca avantajlardır.</p>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Almanya, Amerika, Kanada ve Polonya mühendislik eğitimi için öne çıkan ülkelerdir. 
+                                    Bu ülkelerdeki üniversitelerin mühendislik programları dünya standartlarında eğitim sunmaktadır.
+                                </p>
+                            </div>
                         </div>
-
-
-
-
+                    </div>
+                    
+                    <!-- Dil Eğitimi Category -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="category-tag mr-3">Dil</span>
+                            Dil Eğitimi Programları
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Yurtdışında İngilizceyi öğrenebileceğim en iyi ülkeler hangileridir?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    İngiltere, Amerika, Kanada, İrlanda ve Malta en popüler İngilizce dil eğitimi ülkeleridir. 
+                                    Her ülkenin kendine özgü avantajları ve eğitim programları bulunmaktadır.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Dünyada en çok konuşulan diller hangileridir?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    İngilizce, Çince, İspanyolca, Fransızca ve Arapça en çok konuşulan dillerdendir. 
+                                    Bu dilleri öğrenmek kariyerinizde büyük avantaj sağlayabilir.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Genel Sorular Category -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <span class="category-tag mr-3">Genel</span>
+                            Genel Sorular
+                        </h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Doğru bir yurtdışı eğitim danışmanlığı tercihi nasıl olmalıdır?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Şeffaf, deneyimli ve referansları güçlü danışmanlıklar tercih edilmelidir. 
+                                    University Park olarak 10+ yıllık deneyimimiz ve binlerce başarılı öğrencimizle size en iyi hizmeti sunuyoruz.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question flex justify-between items-center" onclick="toggleAnswer(this)">
+                                <h3 class="text-lg font-semibold text-gray-800">Avrupa'da üniversite eğitiminin avantajları nelerdir?</h3>
+                                <span class="faq-toggle text-2xl">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p class="text-gray-600 leading-relaxed">
+                                    Uygun maliyet, yüksek kalite, uluslararası ortam ve iş imkanları başlıca avantajlardır. 
+                                    Avrupa üniversiteleri dünya standartlarında eğitim sunarken, uygun yaşam maliyetleri de sağlar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact CTA -->
+                    <div class="text-center mt-12 p-8 bg-gradient-to-r from-blue-50 to-red-50 rounded-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Hala sorularınız mı var?</h3>
+                        <p class="text-gray-600 mb-6">Uzman danışmanlarımız size yardımcı olmaya hazır!</p>
+                        <button class="cta-button px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            Bizimle İletişime Geçin
+                        </button>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <div id="footer"></div>
 
-        </section>
-
-
-
-
-
-
-
-
-
-    </main>
-   
-<div id="footer"></div>
+    <!-- Scripts -->
+    <script src="main.js?v=61"></script>
+    
+    <script>
+        function toggleAnswer(questionElement) {
+            const faqItem = questionElement.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+        
+        // Search functionality
+        document.querySelector('input[type="text"]').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('h3').textContent.toLowerCase();
+                const answer = item.querySelector('p').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
