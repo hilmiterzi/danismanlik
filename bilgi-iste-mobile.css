@@ -1,8 +1,9 @@
-@media (max-width: 1633px) {
-    /* Main Layout Adjustments (keep as is, they are general font/layout adjustments) */
+@media (max-width: 1780px) {
+    /* Main Layout Adjustments */
     .main-section {
         width: 100% !important;
         margin: 0 auto !important;
+        
     }
 
     .main-section h1 {
@@ -21,22 +22,17 @@
         font-size:1.07rem !important;
     }
 
-    /* --- Contact Page Wrapper & Content Alignment --- */
     .contact-page-wrapper {
         display: flex !important;
         flex-direction: row !important;
-        width: 90% !important; /* Keep overall width */
+        width:95% !important;
         margin: 0 auto;
-        justify-content: center !important; /* Center the entire block if you prefer it centered on the page */
-        align-items: flex-start !important; /* IMPORTANT: Align items to the top */
-        gap: 2rem; /* Provide a consistent gap between the form and right content */
     }
 
     .contact-form {
-        /* Keep original fixed width for the form */
-        width: 800px !important; 
-        max-width: none !important; /* Ensure it respects this width */
-        /* height: auto; /* Ensure height adjusts to content */ */
+        width: 800px !important;
+        max-width: none !important;
+
     }
 
     .contact-form label {
@@ -51,92 +47,207 @@
         font-size: 1.07rem !important;
     }
 
-    .contact-form input, 
-    .contact-form select, 
-    .contact-form textarea {
-        width: 100% !important; 
-        max-width: none !important; 
+
+    .contact-form input, .contact-form select, .contact-form textarea {
+        width: 100% !important;
+        max-width: none !important;
         padding: 0.7rem 0.5rem;
     }
+
 
     .right-content {
         display: flex !important;
         flex-direction: column !important;
-        /* Allow right-content to grow to fill available space beside the form */
-        flex-grow: 1; /* Allows it to take remaining horizontal space */
-        min-width: 300px; /* Ensure it doesn't get too squished */
-        height: auto !important; /* Let height be determined by content or stretching */
-        margin-left: 0 !important; /* Remove any conflicting margin */
+        width:auto !important;
+        height: auto !important;
+        margin-left: 1.3rem !important;
+        align-items: center !important;
         
-        /* IMPORTANT for vertical alignment and matching height: */
-        /* The image suggests the right content should fill the height of the form. */
-        /* To achieve this, we can set it to stretch if the parent (.contact-page-wrapper) has align-items: stretch,
-           but since you want the Biz Kimiz to start where the form starts, and the quick contact to end where the form ends,
-           we need to make sure 'right-content' itself stretches and its children distribute space. */
-        
-        /* If the goal is for the right column to be *as tall* as the form, AND for the
-           Biz Kimiz and Hızlı İletişim to spread out vertically to fill that height,
-           we would need to control their flex-grow/basis as well.
-           Let's assume the primary goal is top alignment of Biz Kimiz with the form. */
-        justify-content: space-between !important; /* Distribute space vertically between the two boxes */
-        align-items: stretch !important; /* Make its children fill the width */
     }
 
     .biz-kimiz-thumbnail {
-        box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
-        width: 100% !important; /* Fill width of parent */
-        margin-top: none !important; /* No top margin to align with form's top */
-        padding-bottom:1.3rem !important;
-        /* flex-grow: 1; /* Allow it to grow if space permits */ */
-    }
+            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+            width: 100% !important;
+            margin-top: none !important;
+            padding-bottom:1.3rem !important;
 
-    .hizli-iletisim-section {
-        width: 100% !important; /* Fill width of parent */
-        max-width: none;
-        display: flex !important;
-        flex-direction: column !important; 
-        box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
-        padding: 1.3rem 1.2rem !important;
-        margin-top: 2rem !important; /* Keep a gap between Biz Kimiz and this section */
-        /* flex-grow: 1; /* Allow it to grow if space permits */ */
+        }
+
+        .hizli-iletisim-section {
+            width: 100% !important; /* Take full width of its parent (.right-side-stack) */
+            max-width: none;
+            display: flex !important;
+            flex-direction: row !important;
+            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+            padding: 1.3rem 1.2rem !important;
+            margin-top: 2rem !important;
+        }
+
+        .hizli-iletisim-section a {
+            font-size:1.05rem !important;
+            padding: 0.3rem 0.6rem !important;
+            width: 160px !important;
+            
+        }
+
+        .hizli-iletisim-section > div { /* The inner div containing h2 and button-grid-container */
+            text-align: center !important; /* Align h2 to the left on desktop */
+            margin: 0 auto !important;
+        }
+        .hizli-iletisim-section > div > div { /* The div that contains the three buttons */
+            display: flex !important;
+            flex-direction: row !important;
+            gap:100px !important;
+
+        }
+        .hizli-iletisim-section > div > div > div { /* The individual button containers */
+            flex-basis: calc(33.33% - 1rem); /* Roughly 1/3 width minus gap */
+            min-width: 120px; /* Keep a minimum width */
+            text-align: center; /* Re-center text within each button's box */
+        }
+
+
         
-        /* For buttons inside to stretch or distribute space */
-        align-items: stretch !important; 
+  .map-main {
+    width: 90% !important; /* Use a percentage for responsiveness */
+    max-width: none !important; /* Make it wider, e.g., 1200px, or even more if you want it very wide */
+    height: auto; /* Increase height for a "bigger" feel, e.g., 500px or 600px */
+    overflow: hidden; /* Ensure content doesn't spill out */
+}
+
+/* Ensure the iframe fills its parent container */
+.map-main iframe {
+    width: 100% !important;
+    height: 100 !important;
+}
+
+}
+
+
+
+@media (max-width: 1633px) {
+    /* Main Layout Adjustments */
+    .main-section {
+        width: 100% !important;
+        margin: 0 auto !important;
+        
     }
 
-    .hizli-iletisim-section a {
-        font-size:1.05rem !important;
-        padding: 0.3rem 0.6em !important;
+    .main-section h1 {
+        font-size:2.15rem !important;
     }
 
-    .hizli-iletisim-section > div { 
-        text-align: center !important; 
+    .main-section h2 {
+        font-size:1.54rem !important;
     }
-    .hizli-iletisim-section > div > div { 
+
+    .main-section h3 {
+        font-size:1.2rem !important;
+    }
+
+    .main-section p {
+        font-size:1.07rem !important;
+    }
+
+    .contact-page-wrapper {
         display: flex !important;
         flex-direction: row !important;
-        flex-wrap: wrap; 
-        justify-content: space-around; 
-        gap: 1rem; 
-    }
-    .hizli-iletisim-section > div > div > div { 
-        flex-basis: calc(33.33% - 1rem); 
-        min-width: 100px; 
-        text-align: center; 
+        width:95% !important;
+        margin: 0 auto;
     }
 
-    /* --- Map Section (Keep as is unless misalignment observed) --- */
-    .map-main {
-        width: 90% !important; 
-        max-width: none !important; 
-        height: auto; 
-        overflow: hidden; 
+    .contact-form {
+        width: 800px !important;
+        max-width: none !important;
+
     }
 
-    .map-main iframe {
+    .contact-form label {
+        font-size:1.07rem !important;
+    }
+
+    .contact-form option {
+        font-size:1.07rem !important;
+    }
+
+    .contact-form button {
+        font-size: 1.07rem !important;
+    }
+
+
+    .contact-form input, .contact-form select, .contact-form textarea {
         width: 100% !important;
-        height: 100 !important;
+        max-width: none !important;
+        padding: 0.7rem 0.5rem;
     }
+
+
+    .right-content {
+        display: flex !important;
+        flex-direction: column !important;
+        width:45% !important;
+        height: auto !important;
+        
+        margin-left: 1.3rem !important;
+        align-items: center !important;
+        
+    }
+
+    .biz-kimiz-thumbnail {
+            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+            width: 100% !important;
+            margin-top: none !important;
+            padding-bottom:1.3rem !important;
+
+        }
+
+        .hizli-iletisim-section {
+            width: 100% !important; /* Take full width of its parent (.right-side-stack) */
+            max-width: none;
+            display: flex !important;
+            flex-direction: row !important;
+            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+            padding: 1.3rem 1.2rem !important;
+            margin-top: 2rem !important;
+        }
+
+        .hizli-iletisim-section a {
+            font-size:1.05rem !important;
+            padding: 0.3rem 0.6rem !important;
+            width: 160px !important;
+            
+        }
+
+        .hizli-iletisim-section > div { /* The inner div containing h2 and button-grid-container */
+            text-align: center !important; /* Align h2 to the left on desktop */
+            margin: 0 auto !important;
+        }
+        .hizli-iletisim-section > div > div { /* The div that contains the three buttons */
+            display: flex !important;
+            flex-direction: row !important;
+
+        }
+        .hizli-iletisim-section > div > div > div { /* The individual button containers */
+            flex-basis: calc(33.33% - 1rem); /* Roughly 1/3 width minus gap */
+            min-width: 120px; /* Keep a minimum width */
+            text-align: center; /* Re-center text within each button's box */
+        }
+
+
+        
+  .map-main {
+    width: 90% !important; /* Use a percentage for responsiveness */
+    max-width: none !important; /* Make it wider, e.g., 1200px, or even more if you want it very wide */
+    height: auto; /* Increase height for a "bigger" feel, e.g., 500px or 600px */
+    overflow: hidden; /* Ensure content doesn't spill out */
+}
+
+/* Ensure the iframe fills its parent container */
+.map-main iframe {
+    width: 100% !important;
+    height: 100 !important;
+}
+
 }
 
 
