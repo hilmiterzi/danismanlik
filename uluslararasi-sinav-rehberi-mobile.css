@@ -1,6 +1,7 @@
 @media (max-width:375px) {
     .main-section {
-        width: 97% !important;
+        width: 100% !important;
+        margin: 0 auto !important;
     }
 
     .main-section h1 {
@@ -15,7 +16,7 @@
     .main-section table {
         display: block !important;
         overflow-x: auto !important;
-        
+   
     }
  
     .main-section p,
@@ -25,4 +26,6 @@
     .whatsapp-btn-inside {
         font-size: 0.84rem !important;
     }
+
+
 }
