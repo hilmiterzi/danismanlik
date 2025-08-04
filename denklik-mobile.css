@@ -19,7 +19,8 @@
 
     .main-section p,
     .main-section ul,
-    .main-section li {
+    .main-section li,
+    .main-section table td {
         font-size:1.07rem !important;
     }
 
@@ -43,7 +44,8 @@
 
     .main-section p,
     .main-section ul,
-    .main-section li {
+    .main-section li,
+    .main-section table td {
         font-size:1.05rem !important;
     }
 
@@ -67,7 +69,8 @@
 
     .main-section p,
     .main-section ul,
-    .main-section li {
+    .main-section li,
+    .main-section table td {
         font-size:1rem !important;
     }
 
@@ -91,7 +94,8 @@
 
     .main-section p,
     .main-section ul,
-    .main-section li {
+    .main-section li,
+    .main-section table td {
         font-size:0.98rem !important;
     }
 
@@ -115,7 +119,8 @@
 
     .main-section p,
     .main-section ul,
-    .main-section li {
+    .main-section li,
+    .main-section table td {
         font-size:0.95rem !important;
     }
 
@@ -138,7 +143,8 @@
 
     .main-section p,
     .main-section ul,
-    .main-section li {
+    .main-section li,
+    .main-section table td {
         font-size:0.9rem !important;
     }
 
@@ -162,9 +168,12 @@
 
     .main-section p,
     .main-section ul,
-    .main-section li {
+    .main-section li,
+    .main-section table td {
         font-size:0.84rem !important;
     }
+
+
 
     .whatsapp-btn-inside {
         font-size:0.84rem !important;
