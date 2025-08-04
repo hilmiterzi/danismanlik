@@ -124,13 +124,12 @@
 }
 
 
-
+/* --- START OF MEDIA QUERY CHANGES --- */
 @media (max-width: 1633px) {
     /* Main Layout Adjustments */
     .main-section {
         width: 100% !important;
         margin: 0 auto !important;
-        
     }
 
     .main-section h1 {
@@ -154,12 +153,13 @@
         flex-direction: row !important;
         width:95% !important;
         margin: 0 auto;
+        box-sizing: border-box; /* Added */
     }
 
     .contact-form {
         width: 800px !important;
         max-width: none !important;
-
+        box-sizing: border-box; /* Added */
     }
 
     .contact-form label {
@@ -172,82 +172,103 @@
 
     .contact-form button {
         font-size: 1.07rem !important;
+        box-sizing: border-box; /* Added */
     }
-
 
     .contact-form input, .contact-form select, .contact-form textarea {
         width: 100% !important;
         max-width: none !important;
         padding: 0.7rem 0.5rem;
+        box-sizing: border-box; /* Added */
     }
-
 
     .right-content {
         display: flex !important;
-        flex-direction: column !important;
-        width:45% !important;
+        flex-direction: column !important; /* Stack biz-kimiz-thumbnail and hizli-iletisim-section vertically */
+        width:100% !important; /* Adjust if overall layout issues persist */
         height: auto !important;
-        
+        justify-content: flex-start; /* Align items to the start of the column */
         margin-left: 1.3rem !important;
-        align-items: center !important;
-        
+        align-items: center !important; /* Centers its direct children horizontally */
+        box-sizing: border-box; /* Added */
     }
 
     .biz-kimiz-thumbnail {
-            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
-            width: 100% !important;
-            margin-top: none !important;
-            padding-bottom:1.3rem !important;
+        box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+        width: 100% !important; /* Take full width of .right-content */
+        margin-top: none !important;
+        padding-bottom:1.3rem !important;
+        box-sizing: border-box; /* Added */
+    }
 
-        }
+    .hizli-iletisim-section {
+        width: 100% !important; /* Take full width of its parent (.right-content) */
+        max-width: none;
+        /* REMOVED: display: flex !important; flex-direction: row !important; */
+        box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+        padding: 1.3rem 1.2rem !important; /* Keep padding */
+        margin-top: 2rem !important;
+        overflow: hidden; /* Helps contain any slight internal overflow */
+        box-sizing: border-box; /* Crucial: ensures padding is inside the 100% width */
+    }
 
-        .hizli-iletisim-section {
-            width: 100% !important; /* Take full width of its parent (.right-side-stack) */
-            max-width: none;
-            display: flex !important;
-            flex-direction: row !important;
-            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
-            padding: 1.3rem 1.2rem !important;
-            margin-top: 2rem !important;
-        }
+    /* Style the H2 directly. It's now a block-level element within its parent div. */
+    .hizli-iletisim-section h2 {
+        font-size:1.54rem !important; /* Or adjust as needed for this breakpoint */
+        margin-bottom: 2rem !important; /* Spacing below the title */
+        text-align: center !important; /* Center the title */
+        width: 100%; /* Ensure it spans the full width */
+        box-sizing: border-box;
+    }
 
-        .hizli-iletisim-section a {
-            font-size:1.05rem !important;
-            padding: 0.3rem 0.6rem !important;
-            width: 160px !important;
-            
-        }
+    .hizli-iletisim-section > div { /* This is the immediate wrapper for h2 and the button grid */
+        text-align: center !important; /* Still centers its contents */
+        width: 100%; /* Ensure it takes full available width */
+        box-sizing: border-box;
+    }
 
-        .hizli-iletisim-section > div { /* The inner div containing h2 and button-grid-container */
-            text-align: center !important; /* Align h2 to the left on desktop */
-            margin: 0 auto !important;
-        }
-        .hizli-iletisim-section > div > div { /* The div that contains the three buttons */
-            display: flex !important;
-            flex-direction: row !important;
+    .hizli-iletisim-section > div > div { /* The div that contains the three buttons (the flex container) */
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important; /* **CRITICAL**: Allows items to wrap */
+        justify-content: center; /* Center items when they wrap or there's extra space */
+        gap: 1rem !important; /* Use gap for consistent spacing */
+        width: 100%; /* Ensure this flex container takes up its full parent width */
+        box-sizing: border-box; /* Added */
+    }
 
-        }
-        .hizli-iletisim-section > div > div > div { /* The individual button containers */
-            flex-basis: calc(33.33% - 1rem); /* Roughly 1/3 width minus gap */
-            min-width: 120px; /* Keep a minimum width */
-            text-align: center; /* Re-center text within each button's box */
-        }
+    .hizli-iletisim-section > div > div > div { /* The individual button containers (flex items) */
+        flex-basis: 0; /* Let flex-grow distribute space */
+        flex-grow: 1;   /* Allow items to grow to fill space */
+        flex-shrink: 1; /* Allow items to shrink (down to min-width) */
+        min-width: 140px; /* Adjust this value if text still overflows within buttons */
+        max-width: calc(33.33% - 0.75rem); /* Prevents items from becoming too wide */
+        text-align: center;
+        box-sizing: border-box; /* Crucial for calc and padding */
+        padding: 0.5rem; /* Add internal padding if not already present from global styles */
+    }
 
+    .hizli-iletisim-section a { /* The actual buttons inside each div */
+        font-size:1.05rem !important;
+        padding: 0.8rem 1.5rem !important; /* Adjusted padding as per your global style, then overridden to be consistent */
+        width: 100% !important; /* Make the button fill its parent div */
+        box-sizing: border-box; /* Crucial for button width */
+        display: inline-block; /* Ensure it respects width/padding */
+    }
 
-        
-  .map-main {
-    width: 90% !important; /* Use a percentage for responsiveness */
-    max-width: none !important; /* Make it wider, e.g., 1200px, or even more if you want it very wide */
-    height: auto; /* Increase height for a "bigger" feel, e.g., 500px or 600px */
-    overflow: hidden; /* Ensure content doesn't spill out */
-}
+    .map-main {
+        width: 90% !important;
+        max-width: none !important;
+        height: auto;
+        overflow: hidden;
+        box-sizing: border-box; /* Added */
+    }
 
-/* Ensure the iframe fills its parent container */
-.map-main iframe {
-    width: 100% !important;
-    height: 100 !important;
-}
-
+    .map-main iframe {
+        width: 100% !important;
+        height: 100% !important; /* Changed from 100 to 100% */
+        box-sizing: border-box; /* Added */
+    }
 }
 
 
