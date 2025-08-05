@@ -336,7 +336,40 @@
 
         <style>
             /* Geniş ekranlar için varsayılan stil (zaten mevcut) */
-            
+            @media (max-width: 1440px) {
+                .universities-grid {
+                    grid-template-columns: repeat(3, 1fr) !important; /* İki sütuna düşür */
+                    gap: 1.5rem !important; /* Boşluğu ayarla */
+                }
+
+
+                .custom-hero-slider {
+                     height: 400px !important;
+                }
+
+                .custom-hero-text {
+                    font-size:1.6rem !important;
+                }
+
+                .content-section h1 {
+                    font-size: 2.15rem !important;
+                }
+
+                .content-section h2 {
+                     font-size: 1.54rem !important;
+                }
+
+                .content-section p,
+                .content-section ul,
+                .content-section ol,
+                .content-section li {
+                    font-size: 1.07rem !important;
+                }
+
+            }  
+
+
+
 
             @media (max-width: 1200px) {
                 .universities-grid {
