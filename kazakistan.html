@@ -25,83 +25,7 @@
         
 
 
-        /* Responsive Design */
-        @media (max-width: 460px) {
-            .mobile-menu-btn {
-                display: block;
-            }
 
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-color);
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-slide h2 {
-                font-size: 1.8rem;
-            }
-
-            .featured-item {
-                flex-direction: column;
-            }
-
-            .featured-item.reverse {
-                flex-direction: column;
-            }
-
-            .featured-image {
-                width: 100%;
-            }
-
-            .desktop-content {
-                display: none;
-            }
-
-            .mobile-content {
-                display: block;
-            }
-
-            .hero {
-                height: 60vh;
-            }
-
-            .slide-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .slide-content p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (min-width: 461px) and (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .hero {
-                height: 80vh;
-            }
-        }
-
-        
-
-       
         .hero-slider {
             width: 100%;
             height: 400px;
@@ -153,10 +77,6 @@
         .hero-slide.active {
             opacity: 1;
             z-index: 3;
-        }
-        @media (max-width: 768px) {
-            .hero-slider { height: 160px; }
-            .hero-slide { font-size: 1.1rem; }
         }
 
         /* Letonya bayrağı overlay CSS */
@@ -244,7 +164,7 @@
 
         .advantages-list li {
             margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            padding-left: 0.7rem;
             position: relative;
             font-weight: 500;
         }
@@ -328,39 +248,7 @@
         }
 
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .content-section {
-                padding: 1rem;
-                margin-top: 20px;
-            }
-
-            .country-section {
-                padding: 1.5rem;
-            }
-
-            .hero-slider {
-                height: 240px;
-            }
-
-            .hero-slide {
-                font-size: 1.1rem;
-            }
-
-            .logo img {
-                height: 40px;
-            }
-
-            table, th, td {
-                font-size: 0.95rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-        }
-
+ 
 
         .university-card:hover {
                 transform: translateY(-5px);
@@ -583,33 +471,9 @@
         </div>
 
         <style>
-             @media (max-width: 768px) {
-                .universities-grid {
-                    grid-template-columns: repeat(2, 1fr) !important; /* İki sütuna düşür */
-                    gap: 1.5rem !important; /* Boşluğu ayarla */
-                }
-                .university-card .university-content {
-                    padding: 1rem !important; /* İç boşluğu azalt */
-                    height:265px !important;
-                }
-                .university-card h3 {
-                    font-size: 1rem !important; /* Başlık font boyutunu küçült */
-                }
-                .university-card p {
-                    font-size: 0.85rem !important; /* Paragraf font boyutunu küçült */
-                }
-                .university-card .university-btn {
-                    padding: 0.6rem 1.2rem !important; /* Buton boşluğunu azalt */
-                    font-size: 0.8rem !important; /* Buton font boyutunu küçült */
-                }
-                .university-card > div:first-child > div:first-child { /* Image overlay text */
-                    font-size: 1rem !important;
-                    padding: 8px 18px !important;
-                }
-            }
             
-            /* Telefonlar için (örneğin 480px ve altı) */
-            @media (max-width: 480px) {
+            
+            @media (max-width: 375px) {
                 .universities-grid {
                     grid-template-columns: 1fr !important; /* Tek sütuna düşür */
                     gap: 1rem !important; /* Boşluğu daha da azalt */
@@ -641,7 +505,7 @@
             }
 
             .whatsapp-btn-inside {
-                width: 250px !important;
+                width: 450px !important;
             }
         </style>
 
