@@ -1,0 +1,266 @@
+
+
+
+@media (max-width: 1440px) {
+    .hero-slider {
+        height:400px !important;
+    }
+
+    .hero-slide {
+        font-size: 1.6rem !important;
+    }
+
+    .content-section h1 {
+        font-size:2.15rem !important;
+        text-align: center !important;
+    }
+    .universities-grid {
+        grid-template-columns: repeat(3, 1fr) !important; /* Tek sütuna düşür */
+        gap: 1rem !important; /* Boşluğu daha da azalt */
+    }
+    .country-section h2 {
+        font-size: 1.54rem !important; /* Başlık font boyutunu küçült */
+        margin-bottom: 0.3rem !important;
+    }
+    .country-section h2 span {
+        font-size: 1.54rem !important; /* İkon font boyutunu küçült */
+        margin-right: 5px !important;
+    }
+    .country-section p,
+    .university-card p,
+    .university-card h3,
+    .content-section ol,
+    .content-section ul,
+    .content-section li,
+    .content-section span,
+    .content-section table td,
+    .content-section table th {
+        font-size: 1.07rem !important; /* Paragraf font boyutunu küçült */
+    }
+    .university-card .university-content {
+        padding: 0.8rem !important; /* İç boşluğu daha da azalt */
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    .university-card p {
+        font-size: 1rem !important;
+    }
+
+    .university-card h3 {
+        font-size: 1rem !important;
+    }
+
+     .university-btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+
+
+    .whatsapp-btn-inside {
+        width:300px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-slider {
+        height:380px !important;
+    }
+
+    .hero-slide {
+        font-size: 1.5rem !important;
+    }
+
+    .content-section h1 {
+        font-size:2.1rem !important;
+        text-align: center !important;
+    }
+    .universities-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Tek sütuna düşür */
+        gap: 1rem !important; /* Boşluğu daha da azalt */
+    }
+    .country-section h2 {
+        font-size: 1.5rem !important; /* Başlık font boyutunu küçült */
+        margin-bottom: 0.3rem !important;
+    }
+    .country-section h2 span {
+        font-size: 1.5rem !important; /* İkon font boyutunu küçült */
+        margin-right: 5px !important;
+    }
+    .country-section p,
+    .university-card p,
+    .university-card h3,
+    .content-section ol,
+    .content-section ul,
+    .content-section li,
+    .content-section span,
+    .content-section table td,
+    .content-section table th {
+        font-size: 1.05rem !important; /* Paragraf font boyutunu küçült */
+    }
+    .university-card .university-content {
+        padding: 0.8rem !important; /* İç boşluğu daha da azalt */
+        height: auto !important;
+    }
+
+    .university-card p {
+        font-size: 1rem !important;
+    }
+
+    .university-card h3 {
+        font-size: 1rem !important;
+    }
+
+     .university-btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+
+
+    .whatsapp-btn-inside {
+        width:300px !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-slider {
+        height:280px !important;
+    }
+    .hero-slide {
+        font-size: 1.2rem !important;
+    }
+    .content-section h1 {
+        font-size:1.95rem !important;
+        text-align: center !important;
+    }
+    .universities-grid {
+        grid-template-columns: 1fr !important; /* Tek sütuna düşür */
+        gap: 1rem !important; /* Boşluğu daha da azalt */
+    }
+    .country-section h2 {
+        font-size: 1.4rem !important; /* Başlık font boyutunu küçült */
+        margin-bottom: 0.3rem !important;
+    }
+    .country-section h2 span {
+        font-size: 1.4rem !important; /* İkon font boyutunu küçült */
+        margin-right: 5px !important;
+    }
+    .country-section p,
+    .university-card p,
+    .university-card h3,
+    .content-section ol,
+    .content-section ul,
+    .content-section li,
+    .content-section span,
+    .content-section table td,
+    .content-section table th {
+        font-size: 0.98rem !important; /* Paragraf font boyutunu küçült */
+    }
+    .university-card .university-content {
+        padding: 0.8rem !important; /* İç boşluğu daha da azalt */
+    }
+
+    .university-card .university-btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.98rem !important;
+    }
+    .whatsapp-btn-inside {
+        width:250px !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .hero-slider {
+        height:260px !important;
+    }
+    .hero-slide {
+        font-size: 0.9rem !important;
+    }
+    .content-section h1 {
+        font-size:1.85rem !important;
+        text-align: center !important;
+    }
+    .universities-grid {
+        grid-template-columns: 1fr !important; /* Tek sütuna düşür */
+        gap: 1rem !important; /* Boşluğu daha da azalt */
+    }
+    .country-section h2 {
+        font-size: 1.3rem !important; /* Başlık font boyutunu küçült */
+        margin-bottom: 0.3rem !important;
+    }
+    .country-section h2 span {
+        font-size: 1.3rem !important; /* İkon font boyutunu küçült */
+        margin-right: 5px !important;
+    }
+    .country-section p,
+    .university-card p,
+    .university-card h3,
+    .content-section ol,
+    .content-section ul,
+    .content-section li,
+    .content-section span,
+    .content-section table td,
+    .content-section table th {
+        font-size: 0.9rem !important; /* Paragraf font boyutunu küçült */
+    }
+    .university-card .university-content {
+        padding: 0.8rem !important; /* İç boşluğu daha da azalt */
+    }
+
+    .university-card .university-btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    .whatsapp-btn-inside {
+        width:250px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-slider {
+        height:240px !important;
+    }
+    .hero-slide {
+        font-size: 0.84rem !important;
+    }
+    .content-section h1 {
+        font-size:1.8rem !important;
+        text-align: center !important;
+    }
+    .universities-grid {
+        grid-template-columns: 1fr !important; /* Tek sütuna düşür */
+        gap: 1rem !important; /* Boşluğu daha da azalt */
+    }
+    .country-section h2 {
+        font-size: 1.2rem !important; /* Başlık font boyutunu küçült */
+        margin-bottom: 0.3rem !important;
+    }
+    .country-section h2 span {
+        font-size: 1.2rem !important; /* İkon font boyutunu küçült */
+        margin-right: 5px !important;
+    }
+    .country-section p,
+    .university-card p,
+    .university-card h3,
+    .content-section ol,
+    .content-section ul,
+    .content-section li,
+    .content-section span,
+    .content-section table td,
+    .content-section table th  {
+        font-size: 0.84rem !important; /* Paragraf font boyutunu küçült */
+    }
+    .university-card .university-content {
+        padding: 0.8rem !important; /* İç boşluğu daha da azalt */
+    }
+
+    .university-card .university-btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.84rem !important;
+    }
+    .whatsapp-btn-inside {
+        width:250px !important;
+    }
+}
