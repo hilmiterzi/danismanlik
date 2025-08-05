@@ -282,7 +282,7 @@ align-items: center;
     display: flex;
     align-items: center;
     color: #fff;
-    font-size: 0.99rem;
+    font-size: 0.95rem;
     font-weight: 500;
     text-decoration: none;
     box-sizing: border-box;
@@ -308,7 +308,7 @@ align-items: center;
     display: block;
     padding: 10px 20px;
     color: #fff;
-    font-size: 0.99rem;
+    font-size: 0.95rem;
     text-decoration: none;
     transition: background-color 0.3s;
     }
