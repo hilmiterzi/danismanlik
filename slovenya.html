@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="footer.css?v=9">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
+    <link rel="stylesheet" href="slovenya-mobile.css">
 
 
     
@@ -29,84 +30,9 @@
 
         
 
-        /* Responsive Design */
-        @media (max-width: 460px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-color);
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-slide h2 {
-                font-size: 1.8rem;
-            }
-
-            .featured-item {
-                flex-direction: column;
-            }
-
-            .featured-item.reverse {
-                flex-direction: column;
-            }
-
-            .featured-image {
-                width: 100%;
-            }
-
-            .desktop-content {
-                display: none;
-            }
-
-            .mobile-content {
-                display: block;
-            }
-
-            .hero {
-                height: 60vh;
-            }
-
-            .slide-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .slide-content p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (min-width: 461px) and (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .hero {
-                height: 80vh;
-            }
-        }
-
+    
         /* Reviews Section Styles */
         
-
-       
 
         body {
             line-height: 1.6;
@@ -197,11 +123,11 @@
             list-style: none;
             margin-bottom: 1.5rem;
             padding-left: 0;
-            padding-top: 0.5rem;
+            
         }
         .advantages-list li {
             margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            padding-left: 0.7rem;
             position: relative;
             font-weight: 500;
         }
@@ -233,33 +159,6 @@
             background-color: #f9f9f9;
         }
 
-        @media (max-width: 768px) {
-            .content-section {
-                padding: 1rem;
-                margin-top: 20px;
-            }
-            .country-section {
-                padding: 1.5rem;
-            }
-            .hero-slider {
-                height: 160px;
-            }
-            .hero-slide {
-                font-size: 1.1rem;
-            }
-            table, th, td {
-                font-size: 0.95rem;
-            }
-        }
-
-        
-
-        @media (max-width: 768px) {
-        .hero-slider { height: 240px !important;}
-    }
-
-
-        
     </style>
 </head>
 <body>
@@ -428,65 +327,7 @@
                         <a href="#" class="university-btn" style="display: inline-block; background: linear-gradient(90deg, #1a4079, #e63946); color: white; padding: 0.7rem 1.5rem; border-radius: 25px; text-decoration: none; font-size: 0.9rem; font-weight: bold; transition: transform 0.2s ease;">Detaylı Bilgi</a>
                     </div>
                 </div>
-            <style>
-                            /* Küçük tabletler ve büyük telefonlar için (örneğin 768px ve altı) */
-            @media (max-width: 768px) {
-                .universities-grid {
-                    grid-template-columns: 1fr !important; /* İki sütuna düşür */
-                    gap: 1.5rem !important; /* Boşluğu ayarla */
-                }
-
-                .university-card .university-content {
-                    padding: 1rem !important; /* İç boşluğu azalt */
-                }
-                .university-card h3 {
-                    font-size: 1rem !important; /* Başlık font boyutunu küçült */
-                }
-                .university-card p {
-                    font-size: 0.85rem !important; /* Paragraf font boyutunu küçült */
-                }
-                .university-card .university-btn {
-                    padding: 0.6rem 1.2rem !important; /* Buton boşluğunu azalt */
-                    font-size: 0.8rem !important; /* Buton font boyutunu küçült */
-                }
-                .university-card > div:first-child > div:first-child { /* Image overlay text */
-                    font-size: 1rem !important;
-                    padding: 8px 18px !important;
-                }
-            }
-            
-            /* Telefonlar için (örneğin 480px ve altı) */
-            @media (max-width: 480px) {
-                .universities-grid {
-                    grid-template-columns: 1fr !important; /* Tek sütuna düşür */
-                    gap: 1rem !important; /* Boşluğu daha da azalt */
-                }
-                .country-section h2 {
-                    font-size: 1.5rem !important; /* Başlık font boyutunu küçült */
-                    margin-bottom: 0.3rem !important;
-                }
-                .country-section h2 span {
-                    font-size: 1.5rem !important; /* İkon font boyutunu küçült */
-                    margin-right: 5px !important;
-                }
-                .country-section p {
-                    font-size: 1rem !important; /* Paragraf font boyutunu küçült */
-                }
-                .university-card .university-content {
-                    padding: 0.8rem !important; /* İç boşluğu daha da azalt */
-                }
-                .university-card h3 {
-                    font-size: 0.95rem !important;
-                }
-                .university-card p {
-                    font-size: 0.8rem !important;
-                }
-                .university-card .university-btn {
-                    padding: 0.5rem 1rem !important;
-                    font-size: 0.75rem !important;
-                }
-            }
-            </style>
+ 
             </div>
 
     </section>
