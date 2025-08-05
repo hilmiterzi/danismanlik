@@ -1,4 +1,150 @@
+@media (max-width: 1440px) {
+    .universities-grid {
+        grid-template-columns: repeat(3, 1fr) !important; /* İki sütuna düşür */
+        gap: 1.5rem !important; /* Boşluğu ayarla */
+    }
+
+
+    .custom-hero-slider {
+         height: 400px !important;
+    }
+
+    .custom-hero-text {
+        font-size:1.6rem !important;
+    }
+
+    .content-section h1 {
+        font-size: 2.15rem !important;
+    }
+
+    .content-section h2 {
+         font-size: 1.54rem !important;
+    }
+
+    .content-section p,
+    .content-section ul,
+    .content-section ol,
+    .content-section li,
+    .whatsapp-btn-inside  {
+        font-size: 1.07rem !important;
+    }
+
+}  
+
+
+
+
+@media (max-width: 1200px) {
+    .universities-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* İki sütuna düşür */
+        gap: 1.5rem !important; /* Boşluğu ayarla */
+    }
+
+
+    .custom-hero-slider {
+         height: 380px !important;
+    }
+
+    .custom-hero-text {
+        font-size:1.5rem !important;
+    }
+
+    .content-section h1 {
+        font-size: 2.1rem !important;
+    }
+
+    .content-section h2 {
+         font-size: 1.5rem !important;
+    }
+
+    .content-section p,
+    .content-section ul,
+    .content-section ol,
+    .content-section li,
+    .whatsapp-btn-inside  {
+        font-size: 1.05rem !important;
+    }
+
+}
+
+
+/* Küçük tabletler ve büyük telefonlar için (örneğin 768px ve altı) */
+@media (max-width: 768px) {
+    .universities-grid {
+        grid-template-columns: 1fr !important; /* İki sütuna düşür */
+        gap: 1.5rem !important; /* Boşluğu ayarla */
+    }
+
+
+    .custom-hero-slider {
+        height: 280px !important;
+    }
+
+    .custom-hero-text {
+        font-size:1.2rem !important;
+    }
+
+    .content-section h1 {
+        font-size: 1.95rem !important;
+    }
+
+    .content-section h2 {
+         font-size: 1.4rem !important;
+    }
+
+    .content-section p,
+    .content-section ul,
+    .content-section ol,
+    .content-section li,
+    .whatsapp-btn-inside  {
+        font-size: 0.98rem !important;
+    }
+
+}
+
+/* Telefonlar için (örneğin 480px ve altı) */
+@media (max-width: 480px) {
+    .universities-grid {
+        grid-template-columns: 1fr !important; /* Tek sütuna düşür */
+        gap: 1rem !important; /* Boşluğu daha da azalt */
+    }
+
+
+    .custom-hero-slider {
+        height: 260px !important;
+    }
+
+    .custom-hero-text {
+        font-size:0.9rem !important;
+    }
+
+    .content-section h1 {
+        font-size: 1.85rem !important;
+    }
+
+    .content-section h2 {
+        font-size: 1.3rem !important;
+    }
+
+    .content-section p,
+    .content-section ul,
+    .content-section ol,
+    .content-section li,
+    .whatsapp-btn-inside  {
+        font-size: 0.9rem !important;
+    }
+
+}
+
+ 
 @media (max-width:375px) {
+
+    .universities-grid {
+        grid-template-columns: 1fr !important; /* Tek sütuna düşür */
+        gap: 1rem !important; /* Boşluğu daha da azalt */
+    }
+
+
     .custom-hero-slider {
         height: 240px !important;
     }
@@ -12,15 +158,15 @@
     }
 
     .content-section h2 {
-        font-size: 9rem !important;
+        font-size: 1.2rem !important;
     }
 
     .content-section p,
     .content-section ul,
     .content-section ol,
-    .content-section li {
+    .content-section li,
+    .whatsapp-btn-inside {
         font-size: 0.84rem !important;
     }
 
-    
 }

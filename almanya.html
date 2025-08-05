@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="footer.css?v=9">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
-    <link rel="stylesheet" href="almanya-mobile.css">
+    <link rel="stylesheet" href="almanya-mobile.css?v=1">
     <style>
         :root {
             --primary-color: rgb(26,64,121);
@@ -49,12 +49,7 @@
         th, td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
         th { background-color: var(--primary-color); color: white; }
         tr:nth-child(even) { background-color: #f9f9f9; }
-        @media (max-width: 768px) {
-            .content-section { padding: 1rem; margin-top: 20px; }
-            .country-section { padding: 1.5rem; }
-            .country-section h2 { font-size: 1.8rem; }
-            table, th, td { font-size: 0.95rem; }
-        }
+
         .cta-btn {
             display: inline-block;
             background: linear-gradient(90deg, #1a4079 60%, #e63946 100%);
@@ -160,24 +155,7 @@
         letter-spacing: 2px;
         padding: 0 1rem;
     }
-    @media (max-width: 768px) {
-        .custom-hero-slider { height: 240px; }
-        .custom-hero-text { font-size: 1.1rem; }
-    }
 
-    @media (max-width: 768px) {
- 
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 1.2rem;
-    padding: 0 0.2rem;
-  }
-  .country-section h2 img {
-    height: 24px !important;
-    width: 36px !important;
-    margin-right: 6px !important;
-  }
-}
 
 
 </style>
@@ -336,174 +314,7 @@
 
         <style>
             /* Geniş ekranlar için varsayılan stil (zaten mevcut) */
-            @media (max-width: 1440px) {
-                .universities-grid {
-                    grid-template-columns: repeat(3, 1fr) !important; /* İki sütuna düşür */
-                    gap: 1.5rem !important; /* Boşluğu ayarla */
-                }
 
-
-                .custom-hero-slider {
-                     height: 400px !important;
-                }
-
-                .custom-hero-text {
-                    font-size:1.6rem !important;
-                }
-
-                .content-section h1 {
-                    font-size: 2.15rem !important;
-                }
-
-                .content-section h2 {
-                     font-size: 1.54rem !important;
-                }
-
-                .content-section p,
-                .content-section ul,
-                .content-section ol,
-                .content-section li {
-                    font-size: 1.07rem !important;
-                }
-
-            }  
-
-
-
-
-            @media (max-width: 1200px) {
-                .universities-grid {
-                    grid-template-columns: repeat(2, 1fr) !important; /* İki sütuna düşür */
-                    gap: 1.5rem !important; /* Boşluğu ayarla */
-                }
-
-
-                .custom-hero-slider {
-                     height: 380px !important;
-                }
-
-                .custom-hero-text {
-                    font-size:1.5rem !important;
-                }
-
-                .content-section h1 {
-                    font-size: 2.1rem !important;
-                }
-
-                .content-section h2 {
-                     font-size: 1.5rem !important;
-                }
-
-                .content-section p,
-                .content-section ul,
-                .content-section ol,
-                .content-section li {
-                    font-size: 1.05rem !important;
-                }
-
-            }
-
-
-            /* Küçük tabletler ve büyük telefonlar için (örneğin 768px ve altı) */
-            @media (max-width: 768px) {
-                .universities-grid {
-                    grid-template-columns: 1fr !important; /* İki sütuna düşür */
-                    gap: 1.5rem !important; /* Boşluğu ayarla */
-                }
-
-
-                .custom-hero-slider {
-                    height: 280px !important;
-                }
-
-                .custom-hero-text {
-                    font-size:0.98rem !important;
-                }
-
-                .content-section h1 {
-                    font-size: 1.95rem !important;
-                }
-
-                .content-section h2 {
-                     font-size: 1.4rem !important;
-                }
-
-                .content-section p,
-                .content-section ul,
-                .content-section ol,
-                .content-section li {
-                    font-size: 0.98rem !important;
-                }
-
-            }
-            
-            /* Telefonlar için (örneğin 480px ve altı) */
-            @media (max-width: 480px) {
-                .universities-grid {
-                    grid-template-columns: 1fr !important; /* Tek sütuna düşür */
-                    gap: 1rem !important; /* Boşluğu daha da azalt */
-                }
-
-
-                .custom-hero-slider {
-                    height: 260px !important;
-                }
-
-                .custom-hero-text {
-                    font-size:0.9rem !important;
-                }
-
-                .content-section h1 {
-                    font-size: 1.85rem !important;
-                }
-
-                .content-section h2 {
-                    font-size: 1.3rem !important;
-                }
-
-                .content-section p,
-                .content-section ul,
-                .content-section ol,
-                .content-section li {
-                    font-size: 0.9rem !important;
-                }
-
-            }
-
-             
-            @media (max-width:375px) {
-
-                .universities-grid {
-                    grid-template-columns: 1fr !important; /* Tek sütuna düşür */
-                    gap: 1rem !important; /* Boşluğu daha da azalt */
-                }
-
-
-                .custom-hero-slider {
-                    height: 240px !important;
-                }
-
-                .custom-hero-text {
-                    font-size:0.84rem !important;
-                }
-
-                .content-section h1 {
-                    font-size: 1.8rem !important;
-                }
-
-                .content-section h2 {
-                    font-size: 1.2rem !important;
-                }
-
-                .content-section p,
-                .content-section ul,
-                .content-section ol,
-                .content-section li {
-                    font-size: 0.84rem !important;
-                }
-
-            }
-            
             </style>
 
         <div class="country-section">
