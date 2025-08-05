@@ -481,11 +481,17 @@
         margin-bottom: 0.5rem;
         font-size:0.98rem;
     }
+
     .contact-info li {
         justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
         text-align: center;
         flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
         align-items: center;
+    }
+
+    .contact-info li span {
+        font-size: 0.98rem; /* Apply the same font size here */
+        
     }
     .social-icons {
         justify-content: center; /* Sosyal ikonları ortaya hizala */
@@ -501,6 +507,7 @@
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
         padding-top:0;
+        margin: 0 auto !important;
     }
     /* Ensure the iframe scales within its container */
     .map-container iframe {
@@ -509,6 +516,7 @@
         height: 100%; /* Or set a max-height */
         max-height: 300px; /* Adjust as needed for smaller screens */
         object-fit: cover; /* Ensures the iframe content covers the area */
+        margin: 0 auto !important;
     }
 
     .footer-bottom {
