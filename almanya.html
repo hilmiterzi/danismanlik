@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="footer.css?v=9">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
+    <link rel="stylesheet" href="almanya-mobile.css">
     <style>
         :root {
             --primary-color: rgb(26,64,121);
@@ -165,12 +166,7 @@
     }
 
     @media (max-width: 768px) {
-  .country-section h2 {
-    font-size: 1.2rem;
-    line-height: 1.3;
-    margin-bottom: 0.7rem;
-    padding-left: 0.2rem;
-  }
+ 
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 1.2rem;
@@ -341,29 +337,71 @@
         <style>
             /* Geniş ekranlar için varsayılan stil (zaten mevcut) */
             
-            /* Küçük tabletler ve büyük telefonlar için (örneğin 768px ve altı) */
-            @media (max-width: 768px) {
+
+            @media (max-width: 1200px) {
                 .universities-grid {
                     grid-template-columns: repeat(2, 1fr) !important; /* İki sütuna düşür */
                     gap: 1.5rem !important; /* Boşluğu ayarla */
                 }
-                .university-card .university-content {
-                    padding: 1rem !important; /* İç boşluğu azalt */
+
+
+                .custom-hero-slider {
+                     height: 380px !important;
                 }
-                .university-card h3 {
-                    font-size: 1rem !important; /* Başlık font boyutunu küçült */
+
+                .custom-hero-text {
+                    font-size:1.5rem !important;
                 }
-                .university-card p {
-                    font-size: 0.85rem !important; /* Paragraf font boyutunu küçült */
+
+                .content-section h1 {
+                    font-size: 2.1rem !important;
                 }
-                .university-card .university-btn {
-                    padding: 0.6rem 1.2rem !important; /* Buton boşluğunu azalt */
-                    font-size: 0.8rem !important; /* Buton font boyutunu küçült */
+
+                .content-section h2 {
+                     font-size: 1.5rem !important;
                 }
-                .university-card > div:first-child > div:first-child { /* Image overlay text */
-                    font-size: 1rem !important;
-                    padding: 8px 18px !important;
+
+                .content-section p,
+                .content-section ul,
+                .content-section ol,
+                .content-section li {
+                    font-size: 1.05rem !important;
                 }
+
+            }
+
+
+            /* Küçük tabletler ve büyük telefonlar için (örneğin 768px ve altı) */
+            @media (max-width: 768px) {
+                .universities-grid {
+                    grid-template-columns: 1fr !important; /* İki sütuna düşür */
+                    gap: 1.5rem !important; /* Boşluğu ayarla */
+                }
+
+
+                .custom-hero-slider {
+                    height: 280px !important;
+                }
+
+                .custom-hero-text {
+                    font-size:0.98rem !important;
+                }
+
+                .content-section h1 {
+                    font-size: 1.95rem !important;
+                }
+
+                .content-section h2 {
+                     font-size: 1.4rem !important;
+                }
+
+                .content-section p,
+                .content-section ul,
+                .content-section ol,
+                .content-section li {
+                    font-size: 0.98rem !important;
+                }
+
             }
             
             /* Telefonlar için (örneğin 480px ve altı) */
@@ -372,31 +410,67 @@
                     grid-template-columns: 1fr !important; /* Tek sütuna düşür */
                     gap: 1rem !important; /* Boşluğu daha da azalt */
                 }
-                .country-section h2 {
-                    font-size: 1.5rem !important; /* Başlık font boyutunu küçült */
-                    margin-bottom: 0.3rem !important;
+
+
+                .custom-hero-slider {
+                    height: 260px !important;
                 }
-                .country-section h2 span {
-                    font-size: 1.5rem !important; /* İkon font boyutunu küçült */
-                    margin-right: 5px !important;
+
+                .custom-hero-text {
+                    font-size:0.9rem !important;
                 }
-                .country-section p {
-                    font-size: 1rem !important; /* Paragraf font boyutunu küçült */
+
+                .content-section h1 {
+                    font-size: 1.85rem !important;
                 }
-                .university-card .university-content {
-                    padding: 0.8rem !important; /* İç boşluğu daha da azalt */
+
+                .content-section h2 {
+                    font-size: 1.3rem !important;
                 }
-                .university-card h3 {
-                    font-size: 0.95rem !important;
+
+                .content-section p,
+                .content-section ul,
+                .content-section ol,
+                .content-section li {
+                    font-size: 0.9rem !important;
                 }
-                .university-card p {
-                    font-size: 0.8rem !important;
-                }
-                .university-card .university-btn {
-                    padding: 0.5rem 1rem !important;
-                    font-size: 0.75rem !important;
-                }
+
             }
+
+             
+            @media (max-width:375px) {
+
+                .universities-grid {
+                    grid-template-columns: 1fr !important; /* Tek sütuna düşür */
+                    gap: 1rem !important; /* Boşluğu daha da azalt */
+                }
+
+
+                .custom-hero-slider {
+                    height: 240px !important;
+                }
+
+                .custom-hero-text {
+                    font-size:0.84rem !important;
+                }
+
+                .content-section h1 {
+                    font-size: 1.8rem !important;
+                }
+
+                .content-section h2 {
+                    font-size: 1.2rem !important;
+                }
+
+                .content-section p,
+                .content-section ul,
+                .content-section ol,
+                .content-section li {
+                    font-size: 0.84rem !important;
+                }
+
+            }
+            
             </style>
 
         <div class="country-section">
