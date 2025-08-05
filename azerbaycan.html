@@ -24,69 +24,6 @@
     <style>
         
 
-        /* Responsive Design */
-        @media (max-width: 460px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-color);
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-slide h2 {
-                font-size: 1.8rem;
-            }
-
-            .featured-item {
-                flex-direction: column;
-            }
-
-            .featured-item.reverse {
-                flex-direction: column;
-            }
-
-            .featured-image {
-                width: 100%;
-            }
-
-            .desktop-content {
-                display: none;
-            }
-
-            .mobile-content {
-                display: block;
-            }
-
-            .hero {
-                height: 60vh;
-            }
-
-            .slide-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .slide-content p {
-                font-size: 1rem;
-            }
-        }
-
-        
         
 
         .content-section {
@@ -124,7 +61,7 @@
         }
         .advantages-list li {
             margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            padding-left: 0.7rem;
             position: relative;
             font-weight: 500;
         }
@@ -211,10 +148,7 @@
             opacity: 1;
             z-index: 3;
         }
-        @media (max-width: 768px) {
-            .hero-slider { height: 240px; }
-            .hero-slide { font-size: 1.1rem; }
-        }
+
 
         /* Çekya bayrağı overlay CSS */
         .cz-flag-overlay {
@@ -279,50 +213,50 @@
             <h2 style="color:red; font-size:1.3rem; ">1. Azerbaycan Tıp Üniversitesi (Azerbaycan Tibb Universiteti - ATU)</h2>
             <p>Azerbaycan'ın en saygın tıp fakültesi olan ATU, yüz yılı aşkın deneyimi ve uluslararası öğrenci kabulü ile öne çıkmaktadır</p>
             <span style="font-weight: bold; font-size:1.2rem; color:#1a4079;">Bölümler:</span>
-            <ul style="padding-bottom:2rem;">
-                <li><span style="color:rgb(0, 0, 0); font-weight: bold; padding-left:2rem;">Tıp: </span>6 yıl</li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: bold; padding-left:2rem;">Diş Hekimliği: </span>5 yıl</li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: bold; padding-left:2rem;">Eczacılık: </span>5 yıl</li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: bold; padding-left:2rem;">Hemşirelik: </span>4 yıl</li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: bold; padding-left:2rem;">Tıp: </span>6 yıl</li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: bold; padding-left:2rem; padding-bottom:2rem;">Fizyoterapi, Askeri Tıp, Biyomedikal Bilimler: </span>6 yıl</li>
+            <ul style="padding-bottom:2rem; padding-left:2rem;">
+                <li><span style="color:rgb(0, 0, 0); font-weight: bold;">Tıp: </span>6 yıl</li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: bold;">Diş Hekimliği: </span>5 yıl</li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: bold;">Eczacılık: </span>5 yıl</li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: bold;">Hemşirelik: </span>4 yıl</li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: bold;">Tıp: </span>6 yıl</li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: bold; padding-bottom:2rem;">Fizyoterapi, Askeri Tıp, Biyomedikal Bilimler: </span>6 yıl</li>
             </ul>
 
             <span style="font-weight: bold; font-size:1.2rem; color:#1a4079;">Kabul Koşulları:</span>
-            <ul style="padding-bottom:2rem;">
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Lise diploması ve transkript</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Pasaport (en az 1 yıl geçerli)</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">6 adet biyometrik fotoğraf</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Sağlık raporu (bazı durumlarda hepatit/HIV testleri de istenir)</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Başvuru formu (üniversiteye özel)</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Mülakat ve sınav yoktur</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">YKS puanı gerekmemektedir</span></li>
+            <ul style="padding-bottom:2rem; padding-left:2rem;">
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Lise diploması ve transkript</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Pasaport (en az 1 yıl geçerli)</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">6 adet biyometrik fotoğraf</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Sağlık raporu (bazı durumlarda hepatit/HIV testleri de istenir)</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Başvuru formu (üniversiteye özel)</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Mülakat ve sınav yoktur</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">YKS puanı gerekmemektedir</span></li>
             </ul>
 
 
 
             <span style="font-weight: bold; font-size:1.2rem; color:#1a4079;">Hangi Derslere Bakılıyor?</span>
-            <ul style="padding-bottom:2rem;">
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Başvuru değerlendirmelerinde Biyoloji ve Kimya derslerinin notları ön plandadır</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Sayısal ağırlıklı mezuniyet büyük avantaj sağlar.</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Türkiye’deki MF puan türüne denk düşer.</span></li>
+            <ul style="padding-bottom:2rem; padding-left:2rem;">
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Başvuru değerlendirmelerinde Biyoloji ve Kimya derslerinin notları ön plandadır</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Sayısal ağırlıklı mezuniyet büyük avantaj sağlar.</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Türkiye’deki MF puan türüne denk düşer.</span></li>
             </ul>
 
 
 
             <span style="font-weight: bold; font-size:1.2rem; color:#1a4079;">Eğitim Dili</span>
-            <ul style="padding-bottom:2rem;">
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Azerice, İngilizce, Rusça</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">İngilizce düzeyi yeterli olmayanlar için 1 yıl hazırlık eğitimi verilir.</span></li>
+            <ul style="padding-bottom:2rem; padding-left:2rem;">
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Azerice, İngilizce, Rusça</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">İngilizce düzeyi yeterli olmayanlar için 1 yıl hazırlık eğitimi verilir.</span></li>
             </ul>
 
 
 
             <span style="font-weight: bold; font-size:1.2rem; color:#1a4079;">Yıllık Eğitim Ücretleri (Ortalama):</span>
-            <ul style="padding-bottom:2rem;">
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Tıp: 3.500 – 4.000 USD</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Diş Hekimliği: 3.500 – 4.200 USD</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Eczacılık: 2.500 – 3.000 USD</span></li>
+            <ul style="padding-bottom:2rem; padding-left:2rem;">
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Tıp: 3.500 – 4.000 USD</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Diş Hekimliği: 3.500 – 4.200 USD</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Eczacılık: 2.500 – 3.000 USD</span></li>
             </ul>
 
 
@@ -335,11 +269,11 @@
             </p>
 
             <span style="font-weight: bold; font-size:1.2rem; color:#1a4079;">Kabul Şartları:</span>
-            <ul style="padding-bottom:0.5rem;">
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Lise diploması ve transkript</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Kimya ve Biyoloji derslerinde başarılı olmak önemli</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Mülakat yapılmaz</span></li>
-                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold; padding-left:2rem;">Eğitim dili Azerice / İngilizce</span></li>
+            <ul style="padding-bottom:0.5rem; padding-left:2rem;">
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Lise diploması ve transkript</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Kimya ve Biyoloji derslerinde başarılı olmak önemli</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Mülakat yapılmaz</span></li>
+                <li><span style="color:rgb(0, 0, 0); font-weight: semi-bold;">Eğitim dili Azerice / İngilizce</span></li>
             </ul>
 
         </div>
