@@ -21,84 +21,13 @@
     <link rel="stylesheet" href="footer.css?v=9">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
+    <link rel="stylesheet" href="cin-mobile.css">
     <style>
         
 
 
         /* Responsive Design */
-        @media (max-width: 460px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-color);
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-slide h2 {
-                font-size: 1.8rem;
-            }
-
-            .featured-item {
-                flex-direction: column;
-            }
-
-            .featured-item.reverse {
-                flex-direction: column;
-            }
-
-            .featured-image {
-                width: 100%;
-            }
-
-            .desktop-content {
-                display: none;
-            }
-
-            .mobile-content {
-                display: block;
-            }
-
-            .hero {
-                height: 60vh;
-            }
-
-            .slide-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .slide-content p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (min-width: 461px) and (max-width: 768px) {
-            .hero {
-                height: 70vh;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .hero {
-                height: 80vh;
-            }
-        }
-
+    
         
 
        
@@ -210,7 +139,7 @@
         }
 
         .country-section {
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
             background: white;
             padding: 2rem;
             border-radius: 8px;
@@ -240,7 +169,7 @@
 
         .advantages-list li {
             margin-bottom: 0.8rem;
-            padding-left: 1.5rem;
+            padding-left: 0.7rem;
             position: relative;
             font-weight: 500;
         }
@@ -324,38 +253,7 @@
         }
 
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .content-section {
-                padding: 1rem;
-                margin-top: 20px;
-            }
-
-            .country-section {
-                padding: 1.5rem;
-            }
-
-            .hero-slider {
-                height: 240px;
-            }
-
-            .hero-slide {
-                font-size: 1.1rem;
-            }
-
-            .logo img {
-                height: 40px;
-            }
-
-            table, th, td {
-                font-size: 0.95rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-        }
+      
 
     </style>
 </head>
@@ -450,17 +348,8 @@ document.addEventListener('DOMContentLoaded', function() {
             .university-btn:hover {
                 transform: scale(1.05);
             }
-            @media (max-width: 768px) {
-                .universities-grid {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 1rem;
-                }
-            }
-            @media (max-width: 480px) {
-                .universities-grid {
-                    grid-template-columns: 1fr;
-                }
-            }
+
+
         </style>
     </div>
     <div class="country-section">
@@ -563,69 +452,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
 
-        <style>
 
-            @media (max-width: 768px) {
-                .universities-grid {
-                    grid-template-columns: repeat(2, 1fr) !important; /* İki sütuna düşür */
-                    gap: 1.5rem !important; /* Boşluğu ayarla */
-                }
-                .university-card .university-content {
-                    padding: 1rem !important; /* İç boşluğu azalt */
-                }
-                .university-card h3 {
-                    font-size: 1rem !important; /* Başlık font boyutunu küçült */
-                }
-                .university-card p {
-                    font-size: 0.85rem !important; /* Paragraf font boyutunu küçült */
-                }
-                .university-card .university-btn {
-                    padding: 0.6rem 1.2rem !important; /* Buton boşluğunu azalt */
-                    font-size: 0.8rem !important; /* Buton font boyutunu küçült */
-                }
-                .university-card > div:first-child > div:first-child { /* Image overlay text */
-                    font-size: 1rem !important;
-                    padding: 8px 18px !important;
-                }
-            }
-            
-            /* Telefonlar için (örneğin 480px ve altı) */
-            @media (max-width: 480px) {
-                .universities-grid {
-                    grid-template-columns: 1fr !important; /* Tek sütuna düşür */
-                    gap: 1rem !important; /* Boşluğu daha da azalt */
-                }
-                .country-section h2 {
-                    font-size: 1.5rem !important; /* Başlık font boyutunu küçült */
-                    margin-bottom: 0.3rem !important;
-                }
-                .country-section h2 span {
-                    font-size: 1.5rem !important; /* İkon font boyutunu küçült */
-                    margin-right: 5px !important;
-                }
-                .country-section p {
-                    font-size: 1rem !important; /* Paragraf font boyutunu küçült */
-                }
-                .university-card .university-content {
-                    padding: 0.8rem !important; /* İç boşluğu daha da azalt */
-                }
-                .university-card h3 {
-                    font-size: 0.95rem !important;
-                }
-                .university-card p {
-                    font-size: 0.8rem !important;
-                }
-                .university-card .university-btn {
-                    padding: 0.5rem 1rem !important;
-                    font-size: 0.75rem !important;
-                }
-
-                .whatsapp-btn-inside {
-                width: 250px !important;
-                }
-            }
-
-        </style>
 
 
     </div>
