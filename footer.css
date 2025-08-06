@@ -5,18 +5,18 @@
     padding: 4rem;
     margin-top: 4rem;
     max-width: 100%;
-
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 .footer-container {
-  width:100%;
+    width: 100%;
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 4rem;
-    margin:0 auto;
+    gap: 2rem;
+    margin: 0 auto;
 }
 
 .footer-section h3 {
@@ -35,30 +35,27 @@
 
 .footer-section ul li {
     margin-bottom: 0.7rem;
+    /* Default font size for general list items */
+    font-size: 1rem;
 }
 
 .footer-section ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
-    font-size: 1rem;
+    font-size: 1rem; /* Base font size for links */
 }
 
 .footer-section ul li a:hover {
     color: var(--secondary-color);
 }
 
-.contact-info li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.7rem;
-    margin-bottom: 1.1rem;
-    font-size: 0.98rem;
-}
-
-.contact-info span {
-    display: block;
+/* Specific style for contact info list items */
+.footer-section ul.contact-info li {
+    margin-bottom: 0.7rem;
+    font-size: 1rem; /* Base font size for contact details */
     line-height: 1.5;
+    /* Remove any flex properties here if you want them to stack normally by default */
 }
 
 .social-icons {
@@ -66,17 +63,18 @@
     gap: 1.1rem;
     margin-top: 1.2rem;
     font-size: 1.5rem;
+    justify-content: flex-start; /* Default align for desktop */
 }
 
 .social-icons a {
-    color: #25d366;
+    color: #25d366; /* WhatsApp green */
     transition: color 0.3s;
 }
 .social-icons a[title="Instagram"] {
-    color: #e1306c;
+    color: #e1306c; /* Instagram pink */
 }
 .social-icons a[title="E-posta"] {
-    color: #fff;
+    color: #fff; /* Email white */
 }
 .social-icons a:hover {
     color: var(--secondary-color);
@@ -90,12 +88,11 @@
     letter-spacing: 0.5px;
 }
 
-
 .map-container {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    margin-right: 5rem;
+    
 }
 .map-container iframe {
     position: absolute;
@@ -106,9 +103,7 @@
     border: 0;
 }
 
-
-
-
+/* --- Media Queries --- */
 
 @media (max-width: 1440px) {
     .footer {
@@ -118,14 +113,13 @@
     .map-container {
         grid-column: span 4;
         min-height: 380px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 1rem;
         padding-top: 0;
     }
-   
+    
     .map-container iframe {
         position: static;
         width: 100%;
@@ -143,386 +137,316 @@
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
-    .footer-section ul li a,
-    .contact-info li {
+    .footer-section ul li a {
+        font-size: 0.9rem;
+    }
+    /* Ensure contact-info li is also correctly sized at this breakpoint */
+    .footer-section ul.contact-info li {
         font-size: 0.9rem;
     }
     .social-icons {
         font-size: 1.5rem;
     }
+    .map-container {
+        grid-column: 1 / -1; /* Make map span all columns */
+        padding-top: 0; /* Remove the padding-top trick for aspect ratio here */
+        width: 100%; /* Ensure it takes the full width of the grid area */
+        margin: 1rem auto 0; /* Add some top margin for spacing, center horizontally, remove bottom margin */
+        display: flex; /* Ensure flex centering is still active if you want it */
+        justify-content: center;
+        align-items: center;
+    }
+    .map-container iframe {
+        position: static; /* No need for absolute positioning when we control container size */
+        width: 100%;
+        height: 300px; /* Set a fixed height for the map, adjust as desired */
+        border: 0;
+        margin: 0 auto !important; /* Keep this for centering the iframe within its container if needed */
+        display: block; /* Ensure it behaves as a block-level element */
+        object-fit: cover; /* Make sure the iframe content fills the container */
+    }
 }
-
-
-
 
 @media (max-width: 1200px) {
     .footer {
-        padding: 2rem 1rem; /* Padding'i daha da azalt */
+        padding: 2rem 1rem;
     }
     .footer-grid {
-        grid-template-columns: 2fr; /* Tek sütun */
-        gap: 1.5rem; /* Boşluğu azalt */
+        grid-template-columns: repeat(4, 1fr); /* Single column layout for mobile */
+        gap: 1.5rem;
     }
     .footer-section {
-        text-align: center; /* Bölümleri ortaya hizala */
-    }
-    .footer-section h3 {
-        font-size: 1.2rem; /* Başlık font boyutunu daha da küçült */
         text-align: center;
     }
+    .footer-section h3 {
+        font-size: 1rem;
+    }
     .footer-section ul {
-        text-align: center; /* Listeleri ortaya hizala */
+        text-align: center;
     }
     .footer-section ul li {
         margin-bottom: 0.5rem;
-        font-size:1.1rem;
+        font-size: 0.95rem; /* General list item size */
     }
-    .contact-info li {
-        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
-        text-align: center;
-        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
+    .footer-section ul li a {
+        font-size: 0.95rem; /* Adjust link size to match general li */
+    }
+    /* Crucial: Override contact-info li to be smaller if needed here */
+    .footer-section ul.contact-info li {
+        font-size: 0.95rem; /* Set desired size for contact info, make it smaller than 1.1rem if needed */
+        /* Adjust flex properties if you want specific alignment here */
+        display: flex; /* Re-add flex for centering */
+        justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
     .social-icons {
-        justify-content: center; /* Sosyal ikonları ortaya hizala */
+        justify-content: center;
         font-size: 1.2rem;
     }
-    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
 
     .map-container {
-        grid-column: span 2;
+        grid-column: span 1; /* Change to span 1 for single column */
         min-height: 200px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top:0;
+        padding-top: 0;
     }
-    /* Ensure the iframe scales within its container */
     .map-container iframe {
-        position:static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 300px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
+        width: 100%;
+        height: 100%;
+        max-height: 300px;
     }
-
     .footer-bottom {
-        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
+        font-size: 0.85rem;
         padding-top: 1.5rem;
     }
+    .map-container {
+        grid-column: 1 / -1; /* Make map span all columns */
+        padding-top: 0; /* Remove the padding-top trick for aspect ratio here */
+        width: 100%; /* Ensure it takes the full width of the grid area */
+        margin: 1rem auto 0; /* Add some top margin for spacing, center horizontally, remove bottom margin */
+        display: flex; /* Ensure flex centering is still active if you want it */
+        justify-content: center;
+        align-items: center;
+    }
+    .map-container iframe {
+        position: static; /* No need for absolute positioning when we control container size */
+        width: 100%;
+        height: 300px; /* Set a fixed height for the map, adjust as desired */
+        border: 0;
+        margin: 0 auto !important; /* Keep this for centering the iframe within its container if needed */
+        display: block; /* Ensure it behaves as a block-level element */
+        object-fit: cover; /* Make sure the iframe content fills the container */
+    }
 }
-
-
-
 
 @media (max-width: 1024px) {
-    .footer {
-        padding: 2rem 1rem; /* Padding'i daha da azalt */
-    }
-    .footer-grid {
-        grid-template-columns: 2fr; /* Tek sütun */
-        gap: 1.5rem; /* Boşluğu azalt */
-    }
-    .footer-section {
-        text-align: center; /* Bölümleri ortaya hizala */
-    }
-    .footer-section h3 {
-        font-size: 1.2rem; /* Başlık font boyutunu daha da küçült */
-        text-align: center;
-    }
-    .footer-section ul {
-        text-align: center; /* Listeleri ortaya hizala */
-    }
-    .footer-section ul li {
-        margin-bottom: 0.5rem;
-        font-size:1.1rem;
-    }
-    .contact-info li {
-        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
-        text-align: center;
-        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
-        align-items: center;
-    }
-    .social-icons {
-        justify-content: center; /* Sosyal ikonları ortaya hizala */
-        font-size: 1.2rem;
-    }
-    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
+        .footer {
+            padding: 2rem 1rem;
+        }
+        .footer-grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns for the first 4 sections */
+            gap: 1.5rem;
 
-    .map-container {
-        grid-column: span 2;
-        min-height: 200px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top:0;
-    }
-    /* Ensure the iframe scales within its container */
-    .map-container iframe {
-        position:static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 300px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
-    }
+        }
+        
+        /* Explicitly make the map container span both columns and adjust its sizing */
+        .map-container {
+            grid-column: 1 / -1; /* Make map span all columns */
+            padding-top: 0; /* Remove the padding-top trick for aspect ratio here */
+            width: 100%; /* Ensure it takes the full width of the grid area */
+            margin: 1rem auto 0; /* Add some top margin for spacing, center horizontally, remove bottom margin */
+            display: flex; /* Ensure flex centering is still active if you want it */
+            justify-content: center;
+            align-items: center;
+        }
+        .map-container iframe {
+            position: static; /* No need for absolute positioning when we control container size */
+            width: 100%;
+            height: 300px; /* Set a fixed height for the map, adjust as desired */
+            border: 0;
+            margin: 0 auto !important; /* Keep this for centering the iframe within its container if needed */
+            display: block; /* Ensure it behaves as a block-level element */
+            object-fit: cover; /* Make sure the iframe content fills the container */
+        }
 
-    .footer-bottom {
-        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
-        padding-top: 1.5rem;
+        .footer-section {
+            text-align: center;
+        }
+        .footer-section h3 {
+            font-size: 1.15rem;
+        }
+        .footer-section ul {
+            text-align: center;
+        }
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem; /* General list item size */
+        }
+        .footer-section ul li a {
+            font-size: 1.05rem;
+        }
+        .footer-section ul.contact-info li {
+            font-size: 0.95rem; /* Ensure contact info is smaller */
+            display: flex; /* Re-enable flex for centering */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .social-icons {
+            justify-content: center;
+            font-size: 1.15rem;
+        }
+        .footer-bottom {
+            font-size: 0.85rem;
+            padding-top: 1.5rem;
+        }
     }
-}
-
 
 
 @media (max-width: 768px) {
-    .footer {
-        padding: 2rem 1rem; /* Padding'i daha da azalt */
-    }
+    /* Similar to 1200px, but ensure overrides are present */
     .footer-grid {
-        grid-template-columns: 1fr; /* Tek sütun */
-        gap: 1.5rem; /* Boşluğu azalt */
-    }
-    .footer-section {
-        text-align: center; /* Bölümleri ortaya hizala */
+        /* 2 columns for the first 4 sections */
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     .footer-section h3 {
-        font-size: 1.2rem; /* Başlık font boyutunu daha da küçült */
-        text-align: center;
-    }
-    .footer-section ul {
-        text-align: center; /* Listeleri ortaya hizala */
+        font-size: 1.1rem;
     }
     .footer-section ul li {
-        margin-bottom: 0.5rem;
-        font-size:1.1rem;
+        font-size: 1rem;
     }
-    .contact-info li {
-        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
-        text-align: center;
-        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
-        align-items: center;
+    .footer-section ul li a {
+        font-size: 1rem;
+    }
+    .footer-section ul.contact-info li {
+        font-size: 0.95rem; /* Keep it smaller */
     }
     .social-icons {
-        justify-content: center; /* Sosyal ikonları ortaya hizala */
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
-    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
-
     .map-container {
-        grid-column: span 1;
-        min-height: 200px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top:0;
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        margin-right: 0;
+        margin-bottom: 0 !important;
     }
-    /* Ensure the iframe scales within its container */
     .map-container iframe {
-        position:static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 300px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
-    }
-
-    .footer-bottom {
-        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
-        padding-top: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin: 0 auto !important;
     }
 }
-
-
-
-
-
 
 @media (max-width: 600px) {
-    .footer {
-        padding: 2rem 1rem; /* Padding'i daha da azalt */
-    }
-    .footer-grid {
-        grid-template-columns: 1fr; /* Tek sütun */
-        gap: 1.5rem; /* Boşluğu azalt */
-    }
-    .footer-section {
-        text-align: center; /* Bölümleri ortaya hizala */
-    }
     .footer-section h3 {
-        font-size: 1.15rem; /* Başlık font boyutunu daha da küçült */
-        text-align: center;
-    }
-    .footer-section ul {
-        text-align: center; /* Listeleri ortaya hizala */
+        font-size: 1.05rem;
     }
     .footer-section ul li {
-        margin-bottom: 0.5rem;
-        font-size:1.1rem;
+        font-size: 0.95rem;
     }
-    .contact-info li {
-        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
-        text-align: center;
-        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
-        align-items: center;
+    .footer-section ul li a {
+        font-size: 0.95rem;
+    }
+    .footer-section ul.contact-info li {
+        font-size: 0.9rem; /* Further reduce for smaller screens */
     }
     .social-icons {
-        justify-content: center; /* Sosyal ikonları ortaya hizala */
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
-    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
-
     .map-container {
-        grid-column: span 1;
-        min-height: 200px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top:0;
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        margin-right: 0;
     }
-    /* Ensure the iframe scales within its container */
     .map-container iframe {
-        position:static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 300px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
-    }
-
-    .footer-bottom {
-        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
-        padding-top: 1.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin: 0 auto !important;
     }
 }
-
 
 @media (max-width: 480px) {
     .footer {
-        padding: 2rem 1rem; /* Padding'i daha da azalt */
-    }
-    .footer-grid {
-        grid-template-columns: 1fr; /* Tek sütun */
-        gap: 1.5rem; /* Boşluğu azalt */
-    }
-    .footer-section {
-        text-align: center; /* Bölümleri ortaya hizala */
+        padding: 1.5rem 0.75rem; /* Even less padding */
     }
     .footer-section h3 {
-        font-size: 1.05rem; /* Başlık font boyutunu daha da küçült */
-        text-align: center;
-    }
-    .footer-section ul {
-        text-align: center; /* Listeleri ortaya hizala */
+        font-size: 1rem;
     }
     .footer-section ul li {
-        margin-bottom: 0.5rem;
-        font-size:1rem;
+        font-size: 0.9rem;
     }
-    .contact-info li {
-        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
-        text-align: center;
-        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
-        align-items: center;
+    .footer-section ul li a {
+        font-size: 0.9rem;
+    }
+    .footer-section ul.contact-info li {
+        font-size: 0.85rem; /* Smallest size for contact info */
     }
     .social-icons {
-        justify-content: center; /* Sosyal ikonları ortaya hizala */
-        font-size: 1.2rem;
+        font-size: 0.95rem;
     }
-    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
-
-    .map-container {
-        grid-column: span 1;
-        min-height: 200px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top:0;
-    }
-    /* Ensure the iframe scales within its container */
-    .map-container iframe {
-        position:static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 300px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
-    }
-
     .footer-bottom {
-        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
-        padding-top: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .map-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        margin-right: 0;
+    }
+    .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin: 0 auto !important;
     }
 }
-
-
-
 
 @media (max-width: 375px) {
-    .footer {
-        padding: 2rem 1rem; /* Padding'i daha da azalt */
-    }
-    .footer-grid {
-        grid-template-columns: 1fr; /* Tek sütun */
-        gap: 1.5rem; /* Boşluğu azalt */
-    }
-    .footer-section {
-        text-align: center; /* Bölümleri ortaya hizala */
-    }
     .footer-section h3 {
-        font-size: 1rem; /* Başlık font boyutunu daha da küçült */
-        text-align: center;
-    }
-    .footer-section ul {
-        text-align: center; /* Listeleri ortaya hizala */
+        font-size: 0.95rem;
     }
     .footer-section ul li {
-        margin-bottom: 0.5rem;
-        font-size:0.98rem;
+        font-size: 0.88rem;
     }
-
-    .contact-info li {
-        justify-content: center; /* İletişim bilgisi öğelerini ortaya hizala */
-        text-align: center;
-        flex-direction: column; /* Küçük ekranlarda alt alta gelmeleri için */
-        align-items: center;
+    .footer-section ul li a {
+        font-size: 0.88rem;
     }
-
-    .contact-info li span {
-        font-size: 0.98rem; /* Apply the same font size here */
-        
+    /* Apply !important here if you absolutely need to override all else */
+    .footer-section ul.contact-info li {
+        font-size: 0.85rem; /* Ensure consistency */
+        line-height: 1.4;
     }
     .social-icons {
-        justify-content: center; /* Sosyal ikonları ortaya hizala */
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
-    /* Haritanın tek sütun düzeninde tam genişlikte ve ayarlanabilir yükseklikte olması */
 
     .map-container {
-        grid-column: span 1;
-        min-height: 200px;
-        /* Add these for Flexbox centering */
-        display: flex; /* Make it a flex container */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-        padding-top:0;
-        margin: 0 auto !important;
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        margin-right: 0;
     }
-    /* Ensure the iframe scales within its container */
     .map-container iframe {
-        position:static;
-        width: 100%; /* Make iframe responsive within its container */
-        height: 100%; /* Or set a max-height */
-        max-height: 300px; /* Adjust as needed for smaller screens */
-        object-fit: cover; /* Ensures the iframe content covers the area */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
         margin: 0 auto !important;
     }
-
-    .footer-bottom {
-        font-size: 0.85rem; /* Telif hakkı yazısını küçült */
-        padding-top: 1.5rem;
-    }
-
 }
-
