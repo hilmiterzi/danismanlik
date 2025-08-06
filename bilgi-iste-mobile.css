@@ -829,28 +829,31 @@ height: 100 !important;
             width: 100% !important; /* Take full width of its parent (.right-side-stack) */
             max-width: none;
             display: flex !important;
-            flex-direction: column !important;
+            flex-direction: row !important;
             box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
             padding: 2rem 1rem !important;
             margin-top:2rem !important;
         }
 
         .hizli-iletisim-section a {
-            font-size:0.95rem !important;
+            font-size:0.8rem !important;
+            width:120px !important;
         }
 
         .hizli-iletisim-section > div { /* The inner div containing h2 and button-grid-container */
             text-align: center !important; /* Align h2 to the left on desktop */
+            margin: 0 auto !important;
         }
         .hizli-iletisim-section > div > div { /* The div that contains the three buttons */
             display: flex !important;
-            flex-direction: column !important;
+            flex-direction: row !important;
 
         }
         .hizli-iletisim-section > div > div > div { /* The individual button containers */
             flex-basis: calc(33.33% - 1rem); /* Roughly 1/3 width minus gap */
             min-width: 120px; /* Keep a minimum width */
             text-align: center; /* Re-center text within each button's box */
+           
         }
 
 
@@ -939,32 +942,52 @@ height: 100 !important;
             padding-bottom:1.3rem !important;
         }
 
+
+
         .hizli-iletisim-section {
-            width: 100% !important; /* Take full width of its parent (.right-side-stack) */
+            width: 100% !important;
             max-width: none;
             display: flex !important;
             flex-direction: column !important;
-            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important;
             padding: 2rem 1rem !important;
-            margin-top:2rem !important;
+            margin-top: 2rem !important;
+            /* Add these to center the section itself if it's not taking full width of its parent */
+            margin-left: auto !important;
+            margin-right: auto !important;
+            /* Center content horizontally within this flex container */
+            align-items: center !important; /* This will center the items along the cross-axis (horizontal for column flex) */
         }
-
-        .hizli-iletisim-section a {
-            font-size:0.9rem !important;
+    
+        /* This targets the div that contains "Hızlı İletişim Seçenekleri" and the stacked contact options */
+        .hizli-iletisim-section > div {
+            text-align: center !important; /* Ensures "Hızlı İletişim Seçenekleri" is centered */
+            margin: 0 auto !important; /* Also helps center this inner div */
+            width: 100%; /* Ensure it takes full width to respect align-items: center */
         }
-
-        .hizli-iletisim-section > div { /* The inner div containing h2 and button-grid-container */
-            text-align: center !important; /* Align h2 to the left on desktop */
-        }
-        .hizli-iletisim-section > div > div { /* The div that contains the three buttons */
+    
+        /* This targets the container holding the individual contact sections (Telefon, WhatsApp, E-posta) */
+        .hizli-iletisim-section > div > div {
             display: flex !important;
-            flex-direction: column !important;
-
+            flex-direction: column !important; /* KEEP THIS AS COLUMN for stacking */
+            align-items: center !important; /* Center the individual contact blocks */
+            width: 100%; /* Ensure it takes full width to allow centering its content */
         }
-        .hizli-iletisim-section > div > div > div { /* The individual button containers */
-            flex-basis: calc(33.33% - 1rem); /* Roughly 1/3 width minus gap */
-            min-width: 120px; /* Keep a minimum width */
-            text-align: center; /* Re-center text within each button's box */
+    
+        /* This targets the individual button containers (Telefon, WhatsApp, E-posta) */
+        .hizli-iletisim-section > div > div > div {
+            min-width: 120px;
+            text-align: center; /* Ensures content within each box (like the number, WhatsApp button) is centered */
+            margin-bottom: 1.5rem; /* Add some vertical spacing between items */
+        }
+    
+        /* Adjust the button styles specifically to be centered if needed */
+        .hizli-iletisim-section a {
+            font-size: 0.9rem !important;
+            width: 110px !important;
+            display: block !important; /* Important for margin: auto to work on inline elements like <a> */
+            
+
         }
 
 
@@ -1056,32 +1079,51 @@ height: 100 !important;
             padding-bottom:1.3rem;
         }
 
+       
         .hizli-iletisim-section {
-            width: 100% !important; /* Take full width of its parent (.right-side-stack) */
+            width: 100% !important;
             max-width: none;
             display: flex !important;
             flex-direction: column !important;
-            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important; 
+            box-shadow: 0 2px 8px rgba(26,64,121,0.10) !important;
             padding: 2rem 1rem !important;
-            margin-top:2rem !important;
+            margin-top: 2rem !important;
+            /* Add these to center the section itself if it's not taking full width of its parent */
+            margin-left: auto !important;
+            margin-right: auto !important;
+            /* Center content horizontally within this flex container */
+            align-items: center !important; /* This will center the items along the cross-axis (horizontal for column flex) */
         }
-
-        .hizli-iletisim-section a {
-            font-size:0.84rem !important;
+    
+        /* This targets the div that contains "Hızlı İletişim Seçenekleri" and the stacked contact options */
+        .hizli-iletisim-section > div {
+            text-align: center !important; /* Ensures "Hızlı İletişim Seçenekleri" is centered */
+            margin: 0 auto !important; /* Also helps center this inner div */
+            width: 100%; /* Ensure it takes full width to respect align-items: center */
         }
-
-        .hizli-iletisim-section > div { /* The inner div containing h2 and button-grid-container */
-            text-align: center !important; /* Align h2 to the left on desktop */
-        }
-        .hizli-iletisim-section > div > div { /* The div that contains the three buttons */
+    
+        /* This targets the container holding the individual contact sections (Telefon, WhatsApp, E-posta) */
+        .hizli-iletisim-section > div > div {
             display: flex !important;
-            flex-direction: column !important;
-
+            flex-direction: column !important; /* KEEP THIS AS COLUMN for stacking */
+            align-items: center !important; /* Center the individual contact blocks */
+            width: 100%; /* Ensure it takes full width to allow centering its content */
         }
-        .hizli-iletisim-section > div > div > div { /* The individual button containers */
-            flex-basis: calc(33.33% - 1rem); /* Roughly 1/3 width minus gap */
-            min-width: 120px; /* Keep a minimum width */
-            text-align: center; /* Re-center text within each button's box */
+    
+        /* This targets the individual button containers (Telefon, WhatsApp, E-posta) */
+        .hizli-iletisim-section > div > div > div {
+            min-width: 120px;
+            text-align: center; /* Ensures content within each box (like the number, WhatsApp button) is centered */
+            margin-bottom: 1.5rem; /* Add some vertical spacing between items */
+        }
+    
+        /* Adjust the button styles specifically to be centered if needed */
+        .hizli-iletisim-section a {
+            font-size: 0.84rem !important;
+            width: 110px !important;
+            display: block !important; /* Important for margin: auto to work on inline elements like <a> */
+            text-align: center !important;
+
         }
 
 
