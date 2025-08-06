@@ -325,14 +325,6 @@ align-items: center;
 
 
 
-
-
-
-
-
-
-
-
 /* Mobile Styles (<= 768px) */
 @media (max-width: 768px) {
   .header-top-links,
@@ -410,7 +402,7 @@ align-items: center;
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 150vh;
     width: 80vw;
     max-width: 400px;
     background: #fff;
@@ -432,12 +424,14 @@ align-items: center;
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    padding: 2rem 3rem 1.5rem 1.5rem;
+    padding-bottom: 60px;
     background: #fff;
     border-radius: 0;
     box-shadow: none;
     position: relative;
     top: 0;
+    gap:0.2rem !important;
   }
   .mobile-menu-close {
     position: absolute;
@@ -465,18 +459,19 @@ align-items: center;
   .mobile-menu-links, .mobile-menu-bottom {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    margin-top: 2.5rem;
+    gap: 0.2rem;
+    margin-top: 0.2rem !important;
   }
   .mobile-menu-bottom {
     border-top: 1.5px solid #eee;
-    padding-top: 1.5rem;
-    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    margin-top: 0.1rem;
+    gap:0.2rem !important;
   }
   .mobile-menu a, .mobile-menu .dropdown-trigger {
     color: #1a4079;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 0.95rem;
+    font-weight: 400;
     text-decoration: none;
     background: none;
     border: none;
@@ -506,7 +501,7 @@ align-items: center;
   }
   .mobile-menu .dropdown-trigger::after {
     content: '▼';
-    font-size: 0.7em;
+    font-size: 0.7rem;
     margin-left: 5px;
   }
 }
