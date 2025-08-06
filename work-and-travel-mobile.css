@@ -82,6 +82,11 @@
     .whatsapp-btn-inside {
         font-size:0.98rem !important;
     }
+
+    .worktravel-gallery img {
+        width: 45% !important;
+    }
+
 }
 
 
@@ -102,6 +107,9 @@
     }
     .whatsapp-btn-inside {
         font-size:0.95rem !important;
+    }
+    .worktravel-gallery img {
+        width: 80% !important;
     }
 }
 
@@ -128,6 +136,9 @@
     .whatsapp-btn-inside {
         font-size:0.9rem !important;
     }
+    .worktravel-gallery img {
+        width: 90% !important;
+    }
 }
 
 
@@ -149,6 +160,10 @@
     }
     .whatsapp-btn-inside {
         font-size:0.84rem !important;
+    }
+
+    .worktravel-gallery img {
+        width: 90% !important;
     }
 
 }
