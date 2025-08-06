@@ -88,13 +88,13 @@
     letter-spacing: 0.5px;
 }
 
-.map-container {
+.map-containerJkp2 {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
     
 }
-.map-container iframe {
+.map-containerJkp2 iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -110,7 +110,7 @@
         padding: 3rem 1.5rem 1rem;
     }
 
-    .map-container {
+    .map-containerJkp2 {
         grid-column: span 4;
         min-height: 380px;
         display: flex;
@@ -120,7 +120,7 @@
         padding-top: 0;
     }
     
-    .map-container iframe {
+    .map-containerJkp2 iframe {
         position: static;
         width: 100%;
         height: 100%;
@@ -147,7 +147,7 @@
     .social-icons {
         font-size: 1.5rem;
     }
-    .map-container {
+    .map-containerJkp2 {
         grid-column: 1 / -1; /* Make map span all columns */
         padding-top: 0; /* Remove the padding-top trick for aspect ratio here */
         width: 100%; /* Ensure it takes the full width of the grid area */
@@ -156,7 +156,7 @@
         justify-content: center;
         align-items: center;
     }
-    .map-container iframe {
+    .map-containerJkp2 iframe {
         position: static; /* No need for absolute positioning when we control container size */
         width: 100%;
         height: 300px; /* Set a fixed height for the map, adjust as desired */
@@ -205,21 +205,17 @@
         font-size: 1.2rem;
     }
 
-    .map-container {
+    .map-containerJkp2 {
         grid-column: span 1; /* Change to span 1 for single column */
         min-height: 200px;
         padding-top: 0;
     }
-    .map-container iframe {
-        width: 100%;
-        height: 100%;
-        max-height: 300px;
-    }
+  
     .footer-bottom {
         font-size: 0.85rem;
         padding-top: 1.5rem;
     }
-    .map-container {
+    .map-containerJkp2 {
         grid-column: 1 / -1; /* Make map span all columns */
         padding-top: 0; /* Remove the padding-top trick for aspect ratio here */
         width: 100%; /* Ensure it takes the full width of the grid area */
@@ -228,7 +224,7 @@
         justify-content: center;
         align-items: center;
     }
-    .map-container iframe {
+    .map-containerJkp2 iframe {
         position: static; /* No need for absolute positioning when we control container size */
         width: 100%;
         height: 300px; /* Set a fixed height for the map, adjust as desired */
@@ -250,7 +246,7 @@
         }
         
         /* Explicitly make the map container span both columns and adjust its sizing */
-        .map-container {
+        .map-containerJkp2 {
             grid-column: 1 / -1; /* Make map span all columns */
             padding-top: 0; /* Remove the padding-top trick for aspect ratio here */
             width: 100%; /* Ensure it takes the full width of the grid area */
@@ -259,7 +255,7 @@
             justify-content: center;
             align-items: center;
         }
-        .map-container iframe {
+        .map-containerJkp2 iframe {
             position: static; /* No need for absolute positioning when we control container size */
             width: 100%;
             height: 300px; /* Set a fixed height for the map, adjust as desired */
@@ -325,14 +321,14 @@
     .social-icons {
         font-size: 1.1rem;
     }
-    .map-container {
+    .map-containerJkp2 {
         position: relative;
         overflow: hidden;
         padding-top: 56.25%; /* 16:9 Aspect Ratio */
         margin-right: 0;
         margin-bottom: 0 !important;
     }
-    .map-container iframe {
+    .map-containerJkp2 iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -359,13 +355,13 @@
     .social-icons {
         font-size: 1rem;
     }
-    .map-container {
+    .map-containerJkp2 {
         position: relative;
         overflow: hidden;
         padding-top: 56.25%; /* 16:9 Aspect Ratio */
         margin-right: 0;
     }
-    .map-container iframe {
+    .map-containerJkp2 iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -398,13 +394,13 @@
     .footer-bottom {
         font-size: 0.8rem;
     }
-    .map-container {
+    .map-containerJkp2 {
         position: relative;
         overflow: hidden;
         padding-top: 56.25%; /* 16:9 Aspect Ratio */
         margin-right: 0;
     }
-    .map-container iframe {
+    .map-containerJkp2 iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -434,13 +430,13 @@
         font-size: 0.9rem;
     }
 
-    .map-container {
+    .map-containerJkp2 {
         position: relative;
         overflow: hidden;
         padding-top: 56.25%; /* 16:9 Aspect Ratio */
         margin-right: 0;
     }
-    .map-container iframe {
+    .map-containerJkp2 iframe {
         position: absolute;
         top: 0;
         left: 0;

@@ -6,13 +6,23 @@
 
 
 
+@media (max-width:768px) {
+
+    .main-section h1 {
+        margin-top:0 !important;
+    }
 
 
-@media (max-width:480px) {
+    .main-section {
+        width:100% !important;
+        
+    }
 
     .contact-section {
         width: 100% !important;
-        
+        margin: 0 auto !important;
+        padding: 0 !important;
+        margin-top:2rem !important;
     }
 
     .contact-container {
@@ -20,14 +30,15 @@
         flex-direction: column !important;
         align-items: center !important;
         width: 100% !important;
-        margin: 0 !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
         
        
     }
 
     .contact-info-iletisim {
-        width: 100% !important;
         margin: 0 auto !important;
+        width: 100% !important;
     }
 
 
@@ -40,10 +51,168 @@
         }
 
 
+
+
+        .map-section-il {
+            margin: 0 auto !important;
+            padding: 0 !important;
+        }
+
+        .map-container-il iframe {
+            width: 100% !important;
+            height:300px !important;
+            margin: 0 auto !important;
+            margin-top: 2.5rem !important;
+            
+           
+        }
+
+
+        .contact-form {
+            width: 100% !important;
+        }
         .contact-form h2 {
             font-size: 1.5rem !important;
             text-align: center !important;
         }
+
+
+        .contact-form .form-group label,
+        .submit-btn {
+            font-size:0.95rem !important;
+        }
+        .contact-form .form-group input {
+            font-size:0.85rem !important;
+        }
+}
+
+
+@media (max-width:600px) {
+
+    .main-section h1 {
+        margin-top:0 !important;
+    }
+
+
+    .main-section {
+        width:100% !important;
+        
+    }
+
+    .contact-section {
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        margin-top:2rem !important;
+    }
+
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        
+       
+    }
+
+    .contact-info-iletisim {
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+
+
+
+
+        .contact-info-iletisim span,
+        .contact-desc,
+        .contact-hours {
+            font-size: 0.9rem !important;
+        }
+
+
+
+
+        .map-section-il {
+            margin: 0 auto !important;
+            padding: 0 !important;
+        }
+
+        .map-container-il iframe {
+            width: 100% !important;
+            height:300px !important;
+            margin: 0 auto !important;
+            margin-top: 2.5rem !important;
+            
+           
+        }
+
+
+        .contact-form {
+            width: 100% !important;
+        }
+        .contact-form h2 {
+            font-size: 1.5rem !important;
+            text-align: center !important;
+        }
+
+
+        .contact-form .form-group label,
+        .submit-btn {
+            font-size:0.95rem !important;
+        }
+        .contact-form .form-group input {
+            font-size:0.85rem !important;
+        }
+}
+
+@media (max-width:480px) {
+
+    .main-section h1 {
+        margin-top:0 !important;
+    }
+
+
+    .main-section {
+        width:100% !important;
+        
+    }
+
+    .contact-section {
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        margin-top:2rem !important;
+    }
+
+    .contact-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        
+       
+    }
+
+    .contact-info-iletisim {
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+
+
+
+
+        .contact-info-iletisim span,
+        .contact-desc,
+        .contact-hours {
+            font-size: 0.9rem !important;
+        }
+
+
+
 
         .map-section-il {
             margin: 0 auto !important;
@@ -54,7 +223,27 @@
             width:300px !important;
             height:200px !important;
             margin: 0 auto !important;
+            margin-top: 2rem !important;
+            width: 100% !important;
            
+        }
+
+
+        .contact-form {
+            width: 100% !important;
+        }
+        .contact-form h2 {
+            font-size: 1.5rem !important;
+            text-align: center !important;
+        }
+
+
+        .contact-form .form-group label,
+        .submit-btn {
+            font-size:0.95rem !important;
+        }
+        .contact-form .form-group input {
+            font-size:0.85rem !important;
         }
 }
 
@@ -90,7 +279,7 @@
 
     .contact-info-iletisim {
         margin: 0 auto !important;
-        width: 300px !important;
+        width: 100% !important;
     }
 
 
@@ -111,16 +300,17 @@
         }
 
         .map-container-il iframe {
-            width:300px !important;
+            width:200px !important;
             height:200px !important;
             margin: 0 auto !important;
             margin-top: 2rem !important;
+            width: 100% !important;
            
         }
 
 
         .contact-form {
-            width:300px !important;
+            width: 100% !important;
         }
         .contact-form h2 {
             font-size: 1.5rem !important;
