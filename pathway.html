@@ -42,28 +42,27 @@
         main.pathway-section li {
             font-size: 1.1rem !important;
         }
-
         .images-section {
-            display: grid; 
-            grid-template-columns: repeat(3, 300px); 
-            gap: 8px; 
-            justify-content: center; 
-            align-items: stretch; 
-            margin: 0 auto 24px auto; 
-            max-width: 1000px;
+            display: grid;
+            /* Use auto-fit with minmax for better responsiveness on larger screens */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 8px;
+            justify-content: center; /* Centers the tracks if there's extra space */
+            align-items: stretch;
+            margin: 0 auto 24px auto;
+            max-width: 1000px; /* Control the overall width of the grid */
         }
 
         .images-section img {
-             width: 300px;
-             height: 200px;
+            width: 100%; /* Make images fill their grid cell */
+            height: 200px; /* Keep fixed height */
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(26, 64, 121, 0.08);
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto; /* Centers the image within its cell if it doesn't fill 100% width (e.g., if object-fit: contain was used) */
             padding: 0;
-}
+        }
 
 
     </style>

@@ -17,7 +17,7 @@
     }
 
     .images-section {
-        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        grid-template-columns: repeat(3fr, 1) !important; /* Override 3-column inline grid */
         justify-content: center !important; /* Center the items */
       }
     .images-section img {
@@ -45,7 +45,7 @@
     }
 
     .images-section {
-        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        grid-template-columns: repeat(3, 1fr) !important; /* Override 3-column inline grid */
         justify-content: center !important; /* Center the items */
       }
     .images-section img {
@@ -73,7 +73,7 @@
     }
 
     .images-section {
-        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        grid-template-columns: repeat(3fr, 1) !important; /* Override 3-column inline grid */
         justify-content: center !important; /* Center the items */
       }
     .images-section img {
@@ -101,12 +101,14 @@
     }
 
     .images-section {
-        grid-template-columns: 1fr !important; /* Override 3-column inline grid */
+        grid-template-columns: repeat(3, 1fr) !important; /* Override 3-column inline grid */
         justify-content: center !important; /* Center the items */
+        align-items: center !important;
       }
     .images-section img {
         width: 100% !important;
         height: auto !important;
+        margin: 0 auto !important;
     }
 }
 
