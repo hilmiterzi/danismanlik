@@ -51,7 +51,7 @@
 }
 
 /* Specific style for contact info list items */
-.footer-section ul.contact-info li {
+.footer-section ul.contact-infoJkp2 li {
     margin-bottom: 0.7rem;
     font-size: 1rem; /* Base font size for contact details */
     line-height: 1.5;
@@ -140,8 +140,8 @@
     .footer-section ul li a {
         font-size: 0.9rem;
     }
-    /* Ensure contact-info li is also correctly sized at this breakpoint */
-    .footer-section ul.contact-info li {
+    /* Ensure contact-infoJkp2 li is also correctly sized at this breakpoint */
+    .footer-section ul.contact-infoJkp2 li {
         font-size: 0.9rem;
     }
     .social-icons {
@@ -191,8 +191,8 @@
     .footer-section ul li a {
         font-size: 0.95rem; /* Adjust link size to match general li */
     }
-    /* Crucial: Override contact-info li to be smaller if needed here */
-    .footer-section ul.contact-info li {
+    /* Crucial: Override contact-infoJkp2 li to be smaller if needed here */
+    .footer-section ul.contact-infoJkp2 li {
         font-size: 0.95rem; /* Set desired size for contact info, make it smaller than 1.1rem if needed */
         /* Adjust flex properties if you want specific alignment here */
         display: flex; /* Re-add flex for centering */
@@ -281,7 +281,7 @@
         .footer-section ul li a {
             font-size: 1.05rem;
         }
-        .footer-section ul.contact-info li {
+        .footer-section ul.contact-infoJkp2 li {
             font-size: 0.95rem; /* Ensure contact info is smaller */
             display: flex; /* Re-enable flex for centering */
             justify-content: center;
@@ -315,7 +315,7 @@
     .footer-section ul li a {
         font-size: 1rem;
     }
-    .footer-section ul.contact-info li {
+    .footer-section ul.contact-infoJkp2 li {
         font-size: 0.95rem; /* Keep it smaller */
     }
     .social-icons {
@@ -349,7 +349,7 @@
     .footer-section ul li a {
         font-size: 0.95rem;
     }
-    .footer-section ul.contact-info li {
+    .footer-section ul.contact-infoJkp2 li {
         font-size: 0.9rem; /* Further reduce for smaller screens */
     }
     .social-icons {
@@ -385,7 +385,7 @@
     .footer-section ul li a {
         font-size: 0.9rem;
     }
-    .footer-section ul.contact-info li {
+    .footer-section ul.contact-infoJkp2 li {
         font-size: 0.85rem; /* Smallest size for contact info */
     }
     .social-icons {
@@ -422,7 +422,7 @@
         font-size: 0.88rem;
     }
     /* Apply !important here if you absolutely need to override all else */
-    .footer-section ul.contact-info li {
+    .footer-section ul.contact-infoJkp2 li {
         font-size: 0.85rem; /* Ensure consistency */
         line-height: 1.4;
     }
