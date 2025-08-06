@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="header.css?v=1">
     <link rel="stylesheet" href="footer.css?v=9">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
+    <link rel="stylesheet" href="iletisim-mobile.css">
     <style>
 
         .main-section {
@@ -144,29 +145,21 @@
         .submit-btn:hover {
             background-color: #b80000;
         }
-        .map-section {
+        .map-section-il {
             padding: 2rem 2rem;
         }
-        .map-container {
+        .map-container-il {
             max-width: 1200px;
             margin: 0 auto;
         }
-        .map-container iframe {
+        .map-container-il iframe {
             width: 100%;
             height: 570px;
             border: none;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        @media (max-width: 900px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            .map-container iframe {
-                height: 400px;
-            }
-        }
+
     </style>
 </head>
 <body>
@@ -237,8 +230,8 @@
         </div>
     </section>
 
-    <section class="map-section" style="margin-top:2.5rem;">
-        <div class="map-container">
+    <section class="map-section-il" style="margin-top:2.5rem;">
+        <div class="map-container-il">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.0159938467164!2d34.539442276295496!3d36.770183769390364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f5a3fc0cf713%3A0x8fc275e8cfb6980c!2zVW5pdmVyc2l0eXBhcmsgWXVydGTEscWfxLEgRcSfaXRpbQ!5e0!3m2!1str!2str!4v1754179556195!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
