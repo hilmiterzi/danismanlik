@@ -1,0 +1,179 @@
+
+
+
+
+
+@media (max-width:1440px) {
+    .burs-box {
+        width:97% !important;
+        padding-top:0.2rem !important;
+    }
+
+    .burs-box .burs-title {
+        font-size:1.7rem !important;
+    }
+    
+
+
+    .burs-box h3 {
+        font-size:1.15rem !important;
+        text-align: center !important;
+    }
+    .burs-box .burs-section span,
+    .burs-country-info,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 1.07rem !important;
+    }
+}
+
+
+
+@media (max-width:1200px) {
+    .burs-box {
+        width:97% !important;
+        padding-top:0.2rem !important;
+    }
+
+    .burs-box .burs-title {
+        font-size:1.8rem !important;
+    }
+    
+
+
+    .burs-box h3 {
+        font-size:1.18rem !important;
+        text-align: center !important;
+    }
+    .burs-box .burs-section span,
+    .burs-country-info,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 1.05rem !important;
+    }
+}
+
+
+@media (max-width:1024px) {
+    .burs-box {
+        width:97% !important;
+        padding-top:0.2rem !important;
+    }
+
+    .burs-box .burs-title {
+        font-size:1.7rem !important;
+    }
+    
+
+
+    .burs-box h3 {
+        font-size:1.15rem !important;
+        text-align: center !important;
+    }
+    .burs-box .burs-section span,
+    .burs-country-info,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width:768px) {
+    .burs-box {
+        width:97% !important;
+        padding-top:0.2rem !important;
+    }
+
+    .burs-box .burs-title {
+        font-size:1.7rem !important;
+    }
+    
+
+
+    .burs-box h3 {
+        font-size:1.1rem !important;
+        text-align: center !important;
+    }
+    .burs-box .burs-section span,
+    .burs-country-info,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 0.98rem !important;
+    }
+}
+
+@media (max-width:600px) {
+    .burs-box {
+        width:97% !important;
+        padding-top:0.2rem !important;
+    }
+
+    .burs-box .burs-title {
+        font-size:1.7rem !important;
+    }
+    
+
+
+    .burs-box h3 {
+        font-size:1.05rem !important;
+        text-align: center !important;
+    }
+    .burs-box .burs-section span,
+    .burs-country-info,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 0.95rem !important;
+    }
+}
+
+@media (max-width:480px) {
+    .burs-box {
+        width:97% !important;
+        padding-top:0.2rem !important;
+    }
+
+    .burs-box .burs-title {
+        font-size:1.5rem !important;
+    }
+    
+
+
+    .burs-box h3 {
+        font-size:1rem !important;
+        text-align: center !important;
+    }
+    .burs-box .burs-section span,
+    .burs-country-info,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 0.9rem !important;
+    }
+}
+
+
+@media (max-width:375px) {
+    .burs-box {
+        width:97% !important;
+        padding-top:0.2rem !important;
+    }
+
+    .burs-box .burs-title {
+        font-size:1.4rem !important;
+    }
+    
+    .burs-box .burs-section span {
+        font-size:0.84rem !important;
+    }
+
+    .burs-box h3 {
+        font-size:1rem !important;
+        text-align: center !important;
+    }
+
+    .burs-country-info,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 0.84rem !important;
+    }
+
+}
