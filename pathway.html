@@ -17,7 +17,7 @@
     <link rel="preload" as="image" href="Sınavsız-üniversite-mobile.webp" media="(max-width: 300px)" fetchpriority="high">
     <link rel="preload" as="image" href="Sınavsız-üniversite-desktop.webp" media="(min-width: 461px)" fetchpriority="high">
     <link rel="stylesheet" href="style.css?v=1">
-    <link rel="stylesheet" href="header.css?v=98">
+    <link rel="stylesheet" href="header.css?v=1">
     <link rel="stylesheet" href="footer.css?v=98">
     <link rel="stylesheet" href="global.css?v=1">
     <link rel="stylesheet" href="whatsapp-btn-inside.css?v=1">
@@ -42,27 +42,28 @@
         main.pathway-section li {
             font-size: 1.1rem !important;
         }
+
         .images-section {
-            display: grid;
-            /* Use auto-fit with minmax for better responsiveness on larger screens */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 8px;
-            justify-content: center; /* Centers the tracks if there's extra space */
-            align-items: stretch;
-            margin: 0 auto 24px auto;
-            max-width: 1000px; /* Control the overall width of the grid */
+            display: grid; 
+            grid-template-columns: repeat(3, 300px); 
+            gap: 8px; 
+            justify-content: center; 
+            align-items: stretch; 
+            margin: 0 auto 24px auto; 
+            max-width: 1000px;
         }
 
         .images-section img {
-            width: 100%; /* Make images fill their grid cell */
-            height: 200px; /* Keep fixed height */
+             width: 300px;
+             height: 200px;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(26, 64, 121, 0.08);
             display: block;
-            margin: 0 auto; /* Centers the image within its cell if it doesn't fill 100% width (e.g., if object-fit: contain was used) */
+            margin-left: auto;
+            margin-right: auto;
             padding: 0;
-        }
+}
 
 
     </style>
