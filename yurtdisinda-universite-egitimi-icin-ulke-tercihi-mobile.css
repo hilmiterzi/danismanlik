@@ -1,0 +1,158 @@
+
+@media (max-width:1440px) {
+    .main-section {
+        width: 97% !important;
+        margin: 0 auto !important;
+    }
+
+    .burs-box .burs-title {
+        font-size: 1.95rem !important;
+    }
+
+    .burs-box .burs-section-title {
+        font-size: 1.4rem !important;
+    }
+
+    .burs-box span,
+    .burs-box ul,
+    .burs-box li,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 1.07rem !important;
+    }
+}
+
+@media (max-width:1200px) {
+    .main-section {
+        width: 97% !important;
+        margin: 0 auto !important;
+    }
+
+    .burs-box .burs-title {
+        font-size: 1.9rem !important;
+    }
+
+    .burs-box .burs-section-title {
+        font-size: 1.35rem !important;
+    }
+
+    .burs-box span,
+    .burs-box ul,
+    .burs-box li,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 1.05rem !important;
+    }
+}
+@media (max-width:1024px) {
+    .main-section {
+        width: 97% !important;
+        margin: 0 auto !important;
+    }
+
+    .burs-box .burs-title {
+        font-size: 1.85rem !important;
+    }
+
+    .burs-box .burs-section-title {
+        font-size: 1.3rem !important;
+    }
+
+    .burs-box span,
+    .burs-box ul,
+    .burs-box li,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width:768px) {
+    .main-section {
+        width: 97% !important;
+        margin: 0 auto !important;
+    }
+
+    .burs-box .burs-title {
+        font-size: 1.8rem !important;
+    }
+
+    .burs-box .burs-section-title {
+        font-size: 1.25rem !important;
+    }
+
+    .burs-box span,
+    .burs-box ul,
+    .burs-box li,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 0.98rem !important;
+    }
+}
+
+@media (max-width:600px) {
+    .main-section {
+        width: 97% !important;
+        margin: 0 auto !important;
+    }
+
+    .burs-box .burs-title {
+        font-size: 1.75rem !important;
+    }
+
+    .burs-box .burs-section-title {
+        font-size: 1.2rem !important;
+    }
+
+    .burs-box span,
+    .burs-box ul,
+    .burs-box li,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 0.95rem !important;
+    }
+}
+@media (max-width:480px) {
+    .main-section {
+        width: 97% !important;
+        margin: 0 auto !important;
+    }
+
+    .burs-box .burs-title {
+        font-size: 1.7rem !important;
+    }
+
+    .burs-box .burs-section-title {
+        font-size: 1.15rem !important;
+    }
+
+    .burs-box span,
+    .burs-box ul,
+    .burs-box li,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 0.9rem !important;
+    }
+}
+@media (max-width:375px) {
+    .main-section {
+        width: 97% !important;
+        margin: 0 auto !important;
+    }
+
+    .burs-box .burs-title {
+        font-size: 1.6rem !important;
+    }
+
+    .burs-box .burs-section-title {
+        font-size: 1.1rem !important;
+    }
+
+    .burs-box span,
+    .burs-box ul,
+    .burs-box li,
+    .burs-emph,
+    .whatsapp-btn-inside {
+        font-size: 0.84rem !important;
+    }
+}
