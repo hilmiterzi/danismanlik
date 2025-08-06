@@ -39,14 +39,15 @@
     display: flex; /* Make it a flex container */
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically (if they had different heights) */
-    gap: 1.5rem; /* Space between images */
+    gap: 10px; /* Space between images */
     flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
     margin-bottom: 2rem; /* Add some space below the image gallery */
+    margin: 32px 10px 24px 10px;
   }
 
   .image-gallery img {
     width: 300px;
-    max-width: 200%; /* Set a max-width for each image to make them roughly equal and fit three across */
+    max-width: 100%; /* Set a max-width for each image to make them roughly equal and fit three across */
     height: auto; /* Maintain aspect ratio */
     border-radius: 12px; /* Apply border-radius for rounded corners as in the example */
     box-shadow: 0 2px 8px rgba(26,64,121,0.10); /* Add a subtle shadow */
@@ -65,7 +66,7 @@
       <h1 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1.2rem; text-align: center;">Work and Study Programı</h1>
 
       
-      <div class="image-gallery" style="display: flex; justify-content: center; align-items: center; gap: 10px; margin: 32px 0 24px 0; flex-wrap: wrap;">
+      <div class="image-gallery">
         <img src="was1.webp" alt="Work and Study Fotoğraf 1">
         <img src="was2.webp" alt="Work and Study Fotoğraf 2">
         <img src="was3.webp" alt="Work and Study Fotoğraf 3">
