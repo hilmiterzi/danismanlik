@@ -1,0 +1,183 @@
+
+@media (max-width:1440px) {
+
+    .main-section {
+        width:97% !important;
+        margin: 0 auto !important;
+    }
+    
+    .ytekb-main-title {
+        font-size:2.15rem !important;
+    }
+
+
+    .ytekb-mt-underline,
+    .mt-underline-list,
+    .list-underP,
+    .underP-underlist,
+    .YOK-SECTION p,
+    .whatsapp-btn-inside  {
+        font-size: 1.07rem !important;
+    }
+    
+    .YOK-ACİKLAMA {
+        font-size:1.54rem !important;
+    }
+}
+
+@media (max-width:1200px) {
+
+    .main-section {
+        width:97% !important;
+        margin: 0 auto !important;
+    }
+    
+    .ytekb-main-title {
+        font-size:2.1rem !important;
+    }
+
+
+    .ytekb-mt-underline,
+    .mt-underline-list,
+    .list-underP,
+    .underP-underlist,
+    .YOK-SECTION p,
+    .whatsapp-btn-inside  {
+        font-size: 1.05rem !important;
+    }
+    
+    .YOK-ACİKLAMA {
+        font-size:1.5rem !important;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .main-section {
+        width:97% !important;
+        margin: 0 auto !important;
+    }
+    
+    .ytekb-main-title {
+        font-size:2rem !important;
+    }
+
+
+    .ytekb-mt-underline,
+    .mt-underline-list,
+    .list-underP,
+    .underP-underlist,
+    .YOK-SECTION p,
+    .whatsapp-btn-inside  {
+        font-size: 1rem !important;
+    }
+    
+    .YOK-ACİKLAMA {
+        font-size:1.44rem !important;
+    }
+}
+
+
+@media (max-width:768px) {
+
+    .main-section {
+        width:97% !important;
+        margin: 0 auto !important;
+    }
+    
+    .ytekb-main-title {
+        font-size:1.95rem !important;
+    }
+
+
+    .ytekb-mt-underline,
+    .mt-underline-list,
+    .list-underP,
+    .underP-underlist,
+    .YOK-SECTION p,
+    .whatsapp-btn-inside  {
+        font-size: 0.98rem !important;
+    }
+    
+    .YOK-ACİKLAMA {
+        font-size:1.4rem !important;
+    }
+}
+
+@media (max-width:600px) {
+
+    .main-section {
+        width:97% !important;
+        margin: 0 auto !important;
+    }
+    
+    .ytekb-main-title {
+        font-size:1.9rem !important;
+    }
+
+
+    .ytekb-mt-underline,
+    .mt-underline-list,
+    .list-underP,
+    .underP-underlist,
+    .YOK-SECTION p,
+    .whatsapp-btn-inside  {
+        font-size: 0.95rem !important;
+    }
+    
+    .YOK-ACİKLAMA {
+        font-size:1.35rem !important;
+    }
+}
+
+@media (max-width:480px) {
+
+    .main-section {
+        width:97% !important;
+        margin: 0 auto !important;
+    }
+    
+    .ytekb-main-title {
+        font-size:1.85rem !important;
+    }
+
+
+    .ytekb-mt-underline,
+    .mt-underline-list,
+    .list-underP,
+    .underP-underlist,
+    .YOK-SECTION p,
+    .whatsapp-btn-inside  {
+        font-size: 0.9rem !important;
+    }
+    
+    .YOK-ACİKLAMA {
+        font-size:1.3rem !important;
+    }
+}
+
+@media (max-width:375px) {
+
+    .main-section {
+        width:97% !important;
+        margin: 0 auto !important;
+    }
+    
+    .ytekb-main-title {
+        font-size:1.8rem !important;
+    }
+
+
+    .ytekb-mt-underline,
+    .mt-underline-list,
+    .list-underP,
+    .underP-underlist,
+    .YOK-SECTION p,
+    .whatsapp-btn-inside  {
+        font-size: 0.84rem !important;
+    }
+    
+    .YOK-ACİKLAMA {
+        font-size:1.2rem !important;
+    }
+}
