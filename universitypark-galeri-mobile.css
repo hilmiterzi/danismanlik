@@ -492,9 +492,6 @@
 }
 
 
-
-
-
 @media (max-width: 480px) {
     .main-section h1 {
         font-size:1.85rem !important;
@@ -618,8 +615,6 @@
         right: 10px !important;
     }
 }
-
-
 
 
 @media (max-width: 375px) {
