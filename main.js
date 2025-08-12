@@ -222,13 +222,6 @@
      });
 
 
-     fetch('sticky-buttons.html')
-     .then(response => response.text())
-     .then(data => {
-        const el = document.getElementById('sticky-buttons');
-        if (el) el.innerHTML = data;
-     });
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
