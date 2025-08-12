@@ -214,7 +214,12 @@
         if (el) el.innerHTML = data;
      });
 
-
+     fetch('floating-buttons.html')
+     .then(res => res.text())
+     .then(html => {
+       document.getElementById('floating-buttons').innerHTML = html;
+     })
+     .catch(err => console.error(err));
 
      fetch('coming-soon.html')
      .then(response => response.text())
