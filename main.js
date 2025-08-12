@@ -214,6 +214,13 @@
         if (el) el.innerHTML = data;
      });
 
+     fetch('sticky-buttons.html')
+     .then(response => response.text())
+     .then(data => {
+         const el = document.getElementById('sticky-buttons');
+         if (el) el.innerHTML = data;
+     });
+
      fetch('coming-soon.html')
      .then(response => response.text())
      .then(data => {
