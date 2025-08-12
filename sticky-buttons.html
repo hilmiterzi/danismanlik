@@ -1,0 +1,68 @@
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Floating buttons container */
+.floating-buttons {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+/* Button style */
+.floating-buttons .btn {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.floating-buttons .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Colors */
+.floating-buttons .info { background-color: orange; }
+.floating-buttons .call { background-color: royalblue; }
+.floating-buttons .whatsapp { background-color: #25D366; }
+
+/* Smaller on mobile */
+@media (max-width: 600px) {
+  .floating-buttons .btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+
+</style>
+
+
+
+<body>
+<!-- Floating buttons -->
+<div class="floating-buttons">
+    <a href="bilgi-iste.html" class="btn info" title="Bilgi Al"><i class="fas fa-info"></i></a>
+    <a href="tel:+905414304808" class="btn call" title="Arayın"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/905414304808" target="_blank" class="btn whatsapp" title="Whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+    
+    </body>
