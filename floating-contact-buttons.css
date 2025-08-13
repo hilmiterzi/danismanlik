@@ -14,8 +14,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50px;
-        height: 50px;
+        width: 65px;
+        height: 65px;
         border-radius: 50%;
         color: white;
         font-size: 22px;
@@ -23,13 +23,17 @@
         box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         transition: background 0.3s ease;
     }
+
+    #floating-buttons .fab {
+        font-size: 35px; /* bigger icon */
+    }
     
     /* Button colors */
     #floating-buttons .fab-info {
-        background: #007BFF; /* blue */
+        background: #f0c60b; /* blue */
     }
     #floating-buttons .fab-info:hover {
-        background: #0056b3;
+        background: #c09e09;
     }
     
     #floating-buttons .fab-whatsapp {
@@ -40,8 +44,8 @@
     }
     
     #floating-buttons .fab-phone {
-        background: #28a745; /* green */
+        background: #3e93e2; /* green */
     }
     #floating-buttons .fab-phone:hover {
-        background: #1e7e34;
+        background: #2d6da8;
     }
