@@ -49,3 +49,16 @@
     #floating-buttons .fab-phone:hover {
         background: #2d6da8;
     }
+
+    @media (max-width: 480px) {
+        #floating-buttons {
+            bottom: 15px;
+            right: 15px;
+            gap: 8px;
+        }
+        #floating-buttons .fab {
+            width: 55px;  /* smaller circle */
+            height: 55px;
+            font-size: 28px; /* smaller icon */
+        }
+    }
