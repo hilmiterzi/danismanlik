@@ -214,6 +214,14 @@
         if (el) el.innerHTML = data;
      });
 
+     fetch('floating-contact-buttons.html')
+     .then(response => response.text())
+     .then(data => {
+        const el = document.getElementById('floating-contact-buttons');
+        if (el) el.innerHTML = data;
+     });
+
+
 
 
      fetch('coming-soon.html')

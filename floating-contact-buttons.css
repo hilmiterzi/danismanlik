@@ -1,0 +1,47 @@
+    /* Container */
+    #floating-buttons {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* space between buttons */
+        z-index: 9999; /* stay on top */
+    }
+    
+    /* All buttons */
+    #floating-buttons .fab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: white;
+        font-size: 22px;
+        text-decoration: none;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        transition: background 0.3s ease;
+    }
+    
+    /* Button colors */
+    #floating-buttons .fab-info {
+        background: #007BFF; /* blue */
+    }
+    #floating-buttons .fab-info:hover {
+        background: #0056b3;
+    }
+    
+    #floating-buttons .fab-whatsapp {
+        background: #25D366; /* WhatsApp green */
+    }
+    #floating-buttons .fab-whatsapp:hover {
+        background: #1da851;
+    }
+    
+    #floating-buttons .fab-phone {
+        background: #28a745; /* green */
+    }
+    #floating-buttons .fab-phone:hover {
+        background: #1e7e34;
+    }
